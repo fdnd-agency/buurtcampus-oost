@@ -1,6 +1,6 @@
 # Buurtcampus Oost
 
-In Buurtcampus Oost zoeken studenten samen met bewoners, professionals, ondernemers, docenten en onderzoekers gezamenlijk naar oplossingen voor kansrijke uitdagingen uit de buurt.
+De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
 
 ## Resources
 
