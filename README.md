@@ -8,6 +8,6 @@ Bij Buurtcampus wordt op korte termijn een stekjesbieb neergezet. Buurtbewoners 
 
 [Project board](https://github.com/orgs/fdnd-agency/projects/9)
 
-[Styleguide]()
+[Styleguide](https://www.buurtcampusoost.nl)
 
 [Content]()
