@@ -4,10 +4,8 @@ De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom 
 
 ## Resources
 
-[Project board](https://github.com/orgs/fdnd-agency/projects/3)
+[Project board](https://github.com/orgs/fdnd-agency/projects/9)
 
 [Styleguide]()
 
 [Content]()
-
-[API]()
