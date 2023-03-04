@@ -6,7 +6,7 @@ Bij Buurtcampus wordt op korte termijn een stekjesbieb neergezet. Buurtbewoners 
 
 ## Resources
 
-[Project board](https://github.com/orgs/fdnd-agency/projects/3)
+[Backlog](https://github.com/orgs/fdnd-agency/projects/3)
 
 [Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=801340778599)
 
