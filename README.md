@@ -8,7 +8,7 @@ Bij Buurtcampus wordt op korte termijn een stekjesbieb neergezet. Buurtbewoners 
 
 [Backlog](https://github.com/orgs/fdnd-agency/projects/3)
 
-[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=801340778599)
+[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)
 
 [REST API Stekjesbieb ](https://api.buurtcampus-oost.fdnd.nl)
 
