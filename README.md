@@ -9,12 +9,13 @@ Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit d
 
 Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website maken. 
 
-## prototypes
-[Finn](https://buurtcampus-oost.vercel.app/)  
-[Minor 1](https://plantswap-identifier.vercel.app/)  
-[Minor 2](https://plantswap.vercel.app/)  
-[Team Tolga](https://performance-matters-optimized-website.onrender.com/)  
-[Team Joelle](https://fair-plum-chimpanzee-cuff.cyclic.app/)
+## Prototypes
+[Finn @FDND](https://buurtcampus-oost.vercel.app/)
+[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
+[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
+[Minor 1 @CMD](https://plantswap-identifier.vercel.app/)  
+[Minor 2 @CMD](https://plantswap.vercel.app/)  
+
 
 ## Resources
 
