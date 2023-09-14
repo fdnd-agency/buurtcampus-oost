@@ -1,5 +1,3 @@
-# PlantSwap
-
 <img width="193" alt="image" src="https://github.com/fdnd-agency/buurtcampus-oost/assets/1061632/f73db7e3-def1-49be-9a9d-11cebceaaa25">
 
 PlantSwap is het digitale platform dat hoort bij de stekjeskast die in de Buurtcampus Oost staat
