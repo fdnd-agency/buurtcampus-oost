@@ -9,7 +9,14 @@ De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom 
 
 Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit de stekjeskast, maar ook stekjes brengen. De stekjeskast dient als middel om buurtbewoners met elkaar te verbinden. Daarnaast leren bewoners hoe ze op een duurzame manier met planten kunnen omgaan en draagt het bij aan een gezondere leefomgeving in huis.
 
+Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot een website maken. 
 
+## prototypes
+[Finn](https://buurtcampus-oost.vercel.app/)
+[Minor 1](https://plantswap-identifier.vercel.app/)
+[Minor 2](https://plantswap.vercel.app/)
+[Team Tolga](https://performance-matters-optimized-website.onrender.com/)
+[Team Joelle](https://fair-plum-chimpanzee-cuff.cyclic.app/)
 
 ## Resources
 
@@ -17,10 +24,6 @@ Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit d
 
 [Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)
 
-[REST API Stekjesbieb ](https://api.buurtcampus-oost.fdnd.nl)
+[API Stekjesbieb Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
-[Livig styleguide]()
 
-[Styleguide](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/styleguide)
-
-[Content]()
