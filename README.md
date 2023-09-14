@@ -1,6 +1,6 @@
 <img width="193" alt="image" src="https://github.com/fdnd-agency/buurtcampus-oost/assets/1061632/f73db7e3-def1-49be-9a9d-11cebceaaa25">
 
-PlantSwap is het digitale platform dat hoort bij de stekjeskast die in de Buurtcampus Oost staat
+PlantSwap is het digitale platform dat hoort bij de stekjeskast die in de Buurtcampus Oost staat.
 
 ## Buurtcampus Oost
 De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
