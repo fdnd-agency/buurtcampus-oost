@@ -7,16 +7,6 @@ De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom 
 
 Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit de stekjeskast, maar ook stekjes brengen. De stekjeskast dient als middel om buurtbewoners met elkaar te verbinden. Daarnaast leren bewoners hoe ze op een duurzame manier met planten kunnen omgaan en draagt het bij aan een gezondere leefomgeving in huis.
 
-Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website maken. 
-
-## Prototypes
-[Finn @FDND](https://buurtcampus-oost.vercel.app/)  
-[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
-[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
-[Minor 1 @CMD](https://plantswap-identifier.vercel.app/)  
-[Minor 2 @CMD](https://plantswap.vercel.app/)  
-
-
 ## Resources
 
 [Backlog](https://github.com/orgs/fdnd-agency/projects/3)
@@ -26,3 +16,10 @@ Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website 
 [API Stekjesbieb Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
 
+## Prototypes
+Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website maken.  
+[Finn @FDND](https://buurtcampus-oost.vercel.app/)  
+[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
+[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
+[Minor 1 @CMD](https://plantswap-identifier.vercel.app/)  
+[Minor 2 @CMD](https://plantswap.vercel.app/)  
