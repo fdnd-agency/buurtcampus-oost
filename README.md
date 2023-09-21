@@ -25,5 +25,6 @@ Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website 
 [Finn @FDND](https://buurtcampus-oost.vercel.app/)  
 [Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
 [Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
-<!-- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) -->
 [Minor @CMD](https://plantswap.vercel.app/)  
+<!-- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) -->
+
