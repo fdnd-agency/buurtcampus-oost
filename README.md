@@ -28,3 +28,7 @@ Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website 
 [Minor @CMD](https://plantswap.vercel.app/)  
 <!-- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) -->
 
+## Preferred tech stack
+
+Framework: [SvelteKit](https://kit.svelte.dev/)   
+Headless CMS: [Hygraph](https://hygraph.com/)
