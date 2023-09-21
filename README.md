@@ -8,7 +8,7 @@ De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom 
 Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit de stekjeskast, maar ook stekjes brengen. De stekjeskast dient als middel om buurtbewoners met elkaar te verbinden. Daarnaast leren bewoners hoe ze op een duurzame manier met planten kunnen omgaan en draagt het bij aan een gezondere leefomgeving in huis.
 
 ## Design challenge
-
+Ontwerp en ontwikkel het digitale platform voor de Stekjesbieb van Buurtcampus Oost
 
 ## Resources
 
