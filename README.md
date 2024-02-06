@@ -1,21 +1,36 @@
-# PlantSwap
+# Plantswap
+![image](https://github.com/TimOosterveer/buurtcampus_oost_components/assets/112857270/63507a17-2858-4b15-a209-06753fa6b40d)
 
-<img width="637" alt="image" src="https://user-images.githubusercontent.com/1061632/191343981-45d45ebd-d7b1-479e-8ad0-098e1b41e1dd.png">
 
-De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
+<h2 align="center">✨ About ✨ </h2>
+We've cultivated an amazing plant swap website for Stekjesbieb! 🌿 Visitors can explore various plants here and dive deeper into the plantswap initiative. We've added a touch of charm to make the experience even more delightful! ✨🌱
 
-Bij Buurtcampus wordt op korte termijn een stekjesbieb neergezet. Buurtbewoners kunnen stekjes halen uit de stekjesbieb, maar ook stekjes brengen naar de stekjesbieb. De stekjesbieb dient als middel om buurtbewoners met elkaar te verbinden. Daarnaast leren bewoners hoe ze op een duurzame manier met planten kunnen omgaan en draagt het bij aan een gezondere leefomgeving in huis.
+<h2 align="center"> 🍀The Website🍀</h2>
+<br>
+For the Stekjesbieb, we have developed an amazing plant swap website. 🌿
+Visitors can explore plants and learn more about the plant swap initiative. Upon visiting our website, you'll be greeted with an informative homepage. Here, we explain what plant swapping is and how you can participate in this initiative yourself. Furthermore, you can view all available cuttings on the website and find detailed information about each cutting on the individual detail page. 🌱
 
-## Resources
+Additionally, Stekjesbieb offers workshops where you can learn the best practices for caring for your cuttings. 🌸 These workshops can also be found on our website. Finally, on our contact page, you can find all the information about our location and the possibility to get in touch with us. 📌
+<h2 align="center"> 🪚Languages-Frameworks-Tools🪚</h2>
+<br>
+These are the tools, frameworks, and languages that were used to create this project💡
+<div>
+ <br>
+    <img src="https://skillicons.dev/icons?i=html,css,javascript,github"><br>
+    <img src="https://skillicons.dev/icons?i=vscode,svelte,figma">
+</div>
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/3)
+<h2 align="center"> 🔨Instalation guide🔨</h2>
+<br>
 
-[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)
+1. **Fork this repository.**
 
-[REST API Stekjesbieb ](https://api.buurtcampus-oost.fdnd.nl)
+2. **Clone it using GitHub Desktop and open it in your preferred code editor.**
 
-[Livig styleguide]()
+3. **This project utilizes a `.env` file for retrieving the API token.**
 
-[Styleguide](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/styleguide)
+4. **Finally, install the dependencies by using `npm install` in your command line.**
 
-[Content]()
+
+
+
