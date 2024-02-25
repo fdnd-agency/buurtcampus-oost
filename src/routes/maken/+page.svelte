@@ -1,13 +1,11 @@
 <script>
 	export let data;
-	import {HeaderKast, IntroKast, MobileMenu, NavDark, TheMaking, TheMaking2, TheMaking3, TheMaking4, Footer} from '$lib/index.js'
-	import InfoKast from '../../lib/molecules/kast/InfoKast.svelte';
+	import {Navigation, HeaderKast, IntroKast, TheMaking, TheMaking2, TheMaking3, TheMaking4, Footer} from '$lib/index.js'
 </script>
 
-<NavDark />
-<MobileMenu />
+<Navigation />
 <HeaderKast {data} />
-<InfoKast />
+<IntroKast />
 <TheMaking />
 <TheMaking2 />
 <TheMaking3 />

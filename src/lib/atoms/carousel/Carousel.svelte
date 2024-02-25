@@ -1,48 +1,46 @@
-<script>
-    import {onDestroy, onMount} from 'svelte';
-    import image1 from '$lib/assets/carousel-img-1.avif';
-    import image2 from '$lib/assets/carousel-img-2.avif';
-    import image3 from '$lib/assets/carousel-img-3.avif';
-    import ButtonGelijkSwappen from '$lib/atoms/buttons/ButtonGelijkSwappen.svelte';
+    <script>
+        import {onDestroy, onMount} from 'svelte';
+        import image1 from '$lib/assets/carousel-img-1.avif';
+        import image2 from '$lib/assets/carousel-img-2.avif';
+        import image3 from '$lib/assets/carousel-img-3.avif';
+        import ButtonGelijkSwappen from '$lib/atoms/buttons/ButtonGelijkSwappen.svelte';
 
-    export let data;
+        export let data;
 
 
 
-    let intervalId;
+        let intervalId;
 
-    onMount(() => {
-        const carrouselContainer = document.querySelector('.carrousel');
-        const carrousel = document.querySelector('.carrousel-a');
+        onMount(() => {
+            const carrouselContainer = document.querySelector('.carrousel');
+            const carrousel = document.querySelector('.carrousel-a');
 
-        const interval = 8000;
+            const interval = 8000;
 
-        intervalId = setInterval(() => {
-            const currentScroll = carrousel.scrollLeft;
-            const itemWidth = carrouselContainer.clientWidth;
-            const totalWidth = carrousel.scrollWidth;
+            intervalId = setInterval(() => {
+                const currentScroll = carrousel.scrollLeft;
+                const itemWidth = carrouselContainer.clientWidth;
+                const totalWidth = carrousel.scrollWidth;
 
-            const nextScroll = (currentScroll + itemWidth) % totalWidth;
+                const nextScroll = (currentScroll + itemWidth) % totalWidth;
 
-            carrousel.scrollTo({
-                left: nextScroll,
-                behavior: 'smooth'
-            });
-        }, interval);
-    });
+                carrousel.scrollTo({
+                    left: nextScroll,
+                    behavior: 'smooth'
+                });
+            }, interval);
+        });
 
-    onDestroy(() => {
-        clearInterval(intervalId);
-    });
-</script>
+        onDestroy(() => {
+            clearInterval(intervalId);
+        });
+    </script>
 
 <main>
     <div class="carrousel" aria-label="Carousel">
         <div class="overlay"></div>
 
         <h1>Swap nu je stekjes!</h1>
-
-        <!--{data.headers[0].imagesCarousel.url}-->
 
         <ButtonGelijkSwappen/>
         <div class="carrousel-a" role="list" tabindex="0" aria-live="polite">
@@ -73,15 +71,15 @@
 
     }
 
-    .overlay {
+   .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 99.5%;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 100%);
-        z-index: 1;
-    }
+        /* z-index: 1; */
+    } 
 
     .carrousel h1 {
         position: absolute;

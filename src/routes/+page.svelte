@@ -1,13 +1,13 @@
 <script>
   export let data
-    import Home from './home/+page.svelte'
-	import NavDark from '$lib/organisms/NavDark.svelte';
+  import Home from './home/+page.svelte'
+	import Navigation from '../lib/organisms/Navigation.svelte';
 	import Footer from '$lib/organisms/Footer.svelte';
-	import MobileMenu from '$lib/organisms/MobileMenu.svelte';
+
 </script>
 
-<NavDark />
-<MobileMenu />
+<Navigation/>
+
 <Home data={data}/>
 
 <Footer />
