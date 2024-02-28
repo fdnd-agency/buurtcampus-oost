@@ -5,7 +5,7 @@
   height="44"
   viewBox="0 0 24 24"
   stroke-width="1.5"
-  stroke="white"
+  stroke="var(--background-color-light)"
   fill="none"
   stroke-linecap="round"
   stroke-linejoin="round"
