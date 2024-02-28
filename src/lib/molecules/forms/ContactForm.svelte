@@ -150,6 +150,7 @@
     background-color: var(--button-color);
     color: var(--text-color);
     font-weight: bold;
+    cursor: pointer;
   }
 
   input[type='submit']:hover {

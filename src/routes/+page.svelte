@@ -1,14 +1,33 @@
 <script>
   export let data
-    import Home from './home/+page.svelte'
-	import NavDark from '$lib/organisms/NavDark.svelte';
+	import Navigation from '$lib/organisms/Navigation.svelte';
 	import Footer from '$lib/organisms/Footer.svelte';
-	import MobileMenu from '$lib/organisms/MobileMenu.svelte';
+  import Carousel from "$lib/atoms/carousel/Carousel.svelte";
+  import SectionOneHome from "$lib/atoms/sections/SectionOneHome.svelte";
+  import SectionTwoHome from "$lib/atoms/sections/SectionTwoHome.svelte";
+  import SectionThreeHome from "$lib/atoms/sections/SectionThreeHome.svelte";
+  import SectionFourHome from "$lib/atoms/sections/SectionFourHome.svelte";
+  import SectionBannerHome from "$lib/atoms/sections/SectionBannerHome.svelte";
+
 </script>
 
-<NavDark />
-<MobileMenu />
-<Home data={data}/>
+<Navigation/>
+
+<Carousel {data} />
+
+<main>
+  <SectionOneHome />
+  <SectionTwoHome />
+  <SectionThreeHome />
+  <SectionFourHome {data} />
+  <SectionBannerHome />
+</main>
 
 <Footer />
 
+<!--CSS STYLING-->
+<style>
+  main {
+    background-color: var(--background-color);
+  }
+</style>
