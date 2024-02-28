@@ -7,7 +7,6 @@
 </script>
 
 <Navigation/>
-
 <Home data={data}/>
 
 <Footer />
