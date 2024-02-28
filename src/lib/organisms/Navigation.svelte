@@ -31,25 +31,76 @@
   header {
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 96vw;
     align-items: center;
     z-index: 999;
-  }
-
-  nav .cross {
-    background: black;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 
   nav {
     position: fixed;
     inset: 0;
-    background: hotpink;
+    background: var(--background-color-light);
     display: none;
     animation: reveal-nav 0.25s ease-in forwards;
+    padding: 2em;
+    padding-top: 4em;
+  }
+
+  nav .cross {
+    background: none;
+    color: var(--text-color);
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  ul a{
+    font-size: 10vw;
+    color: var(--background-color);
+  }
+
+  @media (min-width: 900px) {
+    .logo{
+      margin-bottom: 9em;
+    }
+
+    nav {
+      position: relative;
+      display: flex;
+      margin-bottom: 1em;
+      background: none;
+    }
+
+    a{
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    ul{
+      list-style: none;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    ul a{
+      font-size: 1em;
+      color: var(--text-color);
+    }
+
+    .hamburger,
+    .cross {
+      display: none;
+    }
   }
 
   @supports selector(:target) {
