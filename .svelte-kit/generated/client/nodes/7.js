@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/maken/+page.svelte";
+export { default as component } from "../../../../src/routes/stekjes_overzicht/+page.svelte";

@@ -1,8 +1,9 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component, f as each, e as escape, h as null_to_empty } from "../../../chunks/ssr.js";
 import "prettier";
-/* empty css                                                        */import { N as NavDark, M as MobileMenu, F as Footer } from "../../../chunks/MobileMenu.js";
-import { V as Vector } from "../../../chunks/Location.svelte_svelte_type_style_lang.js";
+/* empty css                                                        */import { F as Footer } from "../../../chunks/Footer.js";
+/* empty css                                                      */import { V as Vector } from "../../../chunks/vector.js";
 import { V as VectorPlant } from "../../../chunks/vectorplant.js";
+import { N as Navigation } from "../../../chunks/Navigation.js";
 const css$3 = {
   code: "header.svelte-57lkgg{position:relative;display:flex;justify-content:center;align-items:center;width:100%;height:90vh}div.svelte-57lkgg{position:absolute;width:100%;height:100%;z-index:-1}header.svelte-57lkgg::after{content:'';position:absolute;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.117)}img.svelte-57lkgg{width:100%;height:100%;object-fit:cover}h1.svelte-57lkgg{color:white;font-size:6vw;z-index:2;view-transition-name:h1}",
   map: null
@@ -48,7 +49,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$result.css.add(css);
-  return `${validate_component(NavDark, "NavDark").$$render($$result, {}, {}, {})} ${validate_component(MobileMenu, "MobileMenu").$$render($$result, {}, {}, {})} ${validate_component(ImageOverzicht, "HeaderStekje").$$render($$result, { data }, {}, {})} <main class="svelte-olgyn6"> ${validate_component(StekjesCard, "StekjeCard").$$render($$result, { data }, {}, {})}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+  return `${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})} ${validate_component(ImageOverzicht, "HeaderStekje").$$render($$result, { data }, {}, {})} <main class="svelte-olgyn6"> ${validate_component(StekjesCard, "StekjeCard").$$render($$result, { data }, {}, {})}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 export {
   Page as default

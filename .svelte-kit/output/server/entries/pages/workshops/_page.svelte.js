@@ -1,8 +1,9 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component, f as each, e as escape } from "../../../chunks/ssr.js";
 import "prettier";
-/* empty css                                                        */import { V as Vector } from "../../../chunks/Location.svelte_svelte_type_style_lang.js";
+/* empty css                                                        */import { V as Vector } from "../../../chunks/vector.js";
 import { V as VectorPlant } from "../../../chunks/vectorplant.js";
-import { N as NavDark, M as MobileMenu, F as Footer } from "../../../chunks/MobileMenu.js";
+import { F as Footer } from "../../../chunks/Footer.js";
+/* empty css                                                      */import { N as Navigation } from "../../../chunks/Navigation.js";
 const css$5 = {
   code: "header.svelte-1r3bo44{position:relative;display:flex;justify-content:center;align-items:center;width:100%;height:90vh}div.svelte-1r3bo44{position:absolute;width:100%;height:100%;z-index:-1}header.svelte-1r3bo44::after{content:'';position:absolute;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.117)}img.svelte-1r3bo44{width:100%;height:100%;object-fit:cover}h1.svelte-1r3bo44{color:white;font-size:6vw;z-index:2;view-transition-name:h1}",
   map: null
@@ -49,13 +50,12 @@ const ImageWorkshop = create_ssr_component(($$result, $$props, $$bindings, slots
   return `<div class="background-image svelte-1duaj7u"><img${add_attribute("src", workshop.foto[0].url, 0)} alt="" class="svelte-1duaj7u"> </div>`;
 });
 const css$1 = {
-  code: "a.svelte-zy82ej.svelte-zy82ej{position:absolute;background-color:var(--button-color);color:var(--text-color);font-family:var(--main-font);border:none;bottom:2rem;right:2rem;border-radius:var(--bradius);padding:0.5rem 1.1rem;font-size:1rem;transition:0.2s;cursor:pointer;text-decoration:none	}a.svelte-zy82ej.svelte-zy82ej:hover{background-color:var(--text-color);color:orange}a.svelte-zy82ej:hover svg.svelte-zy82ej{fill:orange}svg.svelte-zy82ej.svelte-zy82ej{margin-left:5px;transform:translateY(4px) scale(0.9);fill:var(--text-color)}",
+  code: "a.svelte-15rq86c.svelte-15rq86c{position:absolute;background-color:var(--button-color);color:var(--text-color);font-family:var(--main-font);border:none;bottom:2rem;right:2rem;border-radius:var(--bradius);padding:0.5rem 1.1rem;font-size:1rem;transition:0.2s;cursor:pointer;text-decoration:none}a.svelte-15rq86c.svelte-15rq86c:hover{background-color:var(--text-color);color:orange}a.svelte-15rq86c:hover svg.svelte-15rq86c{fill:orange}svg.svelte-15rq86c.svelte-15rq86c{margin-left:5px;transform:translateY(4px) scale(0.9);fill:var(--text-color)}p.svelte-15rq86c.svelte-15rq86c{display:inline-block;text-align:center;vertical-align:text-top;line-height:0.9em}",
   map: null
 };
 const ButtonWorkshop = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<a href="/contact" class="svelte-zy82ej" data-svelte-h="svelte-7peh4g">Meld je aan 
-	<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-zy82ej"><path d="M17.927 7.57075L4.41288 0.355913C2.41452 -0.710956 0 0.737063 0 3.00238V17.1041C0 19.3443 2.36618 20.7942 4.36214 19.777L17.8763 12.8901C20.0368 11.7891 20.0661 8.71276 17.927 7.57075Z" fill=""></path></svg> </a>`;
+  return `<a href="/contact" class="svelte-15rq86c" data-svelte-h="svelte-10bt0n1"><p class="svelte-15rq86c">Meld je aan</p> <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-15rq86c"><path d="M17.927 7.57075L4.41288 0.355913C2.41452 -0.710956 0 0.737063 0 3.00238V17.1041C0 19.3443 2.36618 20.7942 4.36214 19.777L17.8763 12.8901C20.0368 11.7891 20.0661 8.71276 17.927 7.57075Z" fill=""></path></svg> </a>`;
 });
 const css = {
   code: "section.svelte-18akfwy.svelte-18akfwy{display:flex;flex-direction:column;justify-content:space-between;border-radius:var(--bradius);height:90vh;margin:var(--margin);padding:var(--padding);overflow:hidden;position:sticky;top:2rem}section.svelte-18akfwy.svelte-18akfwy::after{content:'';position:absolute;background-color:rgba(0, 0, 0, 0.07);z-index:-1;inset:0}h2.svelte-18akfwy.svelte-18akfwy{color:white;font-size:32px}ul.svelte-18akfwy.svelte-18akfwy{color:white;list-style:none;font-size:20px}i.svelte-18akfwy.svelte-18akfwy{margin-right:1rem;width:0.5%}@media screen and (min-width: 1800px){div.svelte-18akfwy.svelte-18akfwy{display:flex;gap:2rem;padding:2rem}section.svelte-18akfwy.svelte-18akfwy{width:100%;margin:0}}@media screen and (max-width: 767px){section.svelte-18akfwy.svelte-18akfwy{width:100%;margin:0;margin-top:1rem;margin-bottom:1rem}section.svelte-18akfwy ul.svelte-18akfwy{padding-bottom:5rem}i.svelte-18akfwy.svelte-18akfwy{margin-right:1.5rem}}",
@@ -74,7 +74,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `${validate_component(NavDark, "NavDark").$$render($$result, {}, {}, {})} ${validate_component(MobileMenu, "MobileMenu").$$render($$result, {}, {}, {})} ${validate_component(HeaderImage, "Header").$$render($$result, { data }, {}, {})} ${validate_component(InfoWorkshop, "Info").$$render($$result, {}, {}, {})} ${validate_component(CardWorkshop, "Card").$$render($$result, { data }, {}, {})} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+  return `${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})} ${validate_component(HeaderImage, "Header").$$render($$result, { data }, {}, {})} ${validate_component(InfoWorkshop, "Info").$$render($$result, {}, {}, {})} ${validate_component(CardWorkshop, "Card").$$render($$result, { data }, {}, {})} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 export {
   Page as default

@@ -20,10 +20,10 @@
       <li><a href="/workshops">Workshops</a></li>
       <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>
-      <a class="cross" href="#" role="close">
-        <Cross />
-      </a>
     </ul>
+    <a class="cross" href="#" role="close">
+      <Cross />
+    </a>
   </nav>
 </header>
 

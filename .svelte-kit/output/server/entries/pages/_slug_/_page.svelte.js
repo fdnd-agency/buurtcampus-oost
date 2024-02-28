@@ -1,7 +1,7 @@
 import { c as create_ssr_component, d as add_attribute, e as escape, v as validate_component } from "../../../chunks/ssr.js";
-import { N as NavDark, M as MobileMenu, F as Footer } from "../../../chunks/MobileMenu.js";
+import { F as Footer } from "../../../chunks/Footer.js";
 import { V as VectorPlant } from "../../../chunks/vectorplant.js";
-const imageStekje_svelte_svelte_type_style_lang = "";
+/* empty css                                                            */const imageStekje_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: "section.svelte-3nfa34{position:relative;width:100%;background-color:var(--background-color)}.image-section.svelte-3nfa34{height:90vh}img.svelte-3nfa34{object-fit:cover}h1.svelte-3nfa34{position:absolute;bottom:2rem;left:2rem;right:2rem;color:var(--text-color);font-size:40px;view-transition-name:h1}",
   map: null
@@ -29,7 +29,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `${validate_component(NavDark, "NavDark").$$render($$result, {}, {}, {})} ${validate_component(MobileMenu, "MobileMenu").$$render($$result, {}, {}, {})} ${validate_component(ImageStekje, "ImageStekje").$$render($$result, { data }, {}, {})} ${validate_component(StekjeDescription, "StekjeDescription").$$render($$result, { data }, {}, {})} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+  return `${validate_component(ImageStekje, "ImageStekje").$$render($$result, { data }, {}, {})} ${validate_component(StekjeDescription, "StekjeDescription").$$render($$result, { data }, {}, {})} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 export {
   Page as default

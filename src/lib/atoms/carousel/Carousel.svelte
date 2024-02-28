@@ -7,8 +7,6 @@
 
         export let data;
 
-
-
         let intervalId;
 
         onMount(() => {
