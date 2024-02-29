@@ -3,16 +3,15 @@
 	import {
 		HeaderStekje,
 		Footer,
-		NavDark,
-		MobileMenu,
 		StekjeCard, 
 		StekjesInfo,
 		FilterFunctie
 	} from '$lib/index.js';
+	import Navigation from '../../lib/organisms/Navigation.svelte';
+	
 </script>
 
-<NavDark />
-<MobileMenu />
+<Navigation/>
 <HeaderStekje {data} />
 
 <main>
