@@ -23,9 +23,10 @@
   .flex-wrapper-recent-stekjes {
     display: flex;
     overflow: auto;
-    justify-content: center;
     width: 100%;
     gap: 2em;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center; 
   }
 
   .flex-wrapper-recent-stekjes img {
@@ -34,14 +35,13 @@
   }
 
   .carousel-container {
-    /* width: 100%; */
+    width: 100%;
     display: grid;
     place-items: center;
+    /* padding: 1em; */
   }
 
   a {
-    scroll-snap-type: x mandatory;
-    scroll-snap-align: center;
     text-decoration: none;
   }
 
@@ -77,7 +77,7 @@
   @media screen and (min-width: 64rem) {
     .carousel-container {
       padding: 6em 0 0 0;
-      /* width: 100%; */
+      width: 100%;
       display: grid;
       place-items: center;
     }
@@ -86,25 +86,14 @@
       position: absolute;
       display: flex;
       justify-content: space-between;
-      width: 96%;
+      width: 75%;
       align-items: center;
       padding: 0;
       list-style: none;
     }
 
     .flex-wrapper-recent-stekjes {
-      /* width: 50em; */
-    }
-
-    .flex-wrapper-recent-stekjes img {
-      border-radius: 2rem;
-      scrollbar-width: none;
-    }
-  }
-
-  @media screen and (min-width: 48rem) {
-    .flex-wrapper-recent-stekjes {
-      flex-direction: row;
+      width: 50em;
     }
   }
 </style>

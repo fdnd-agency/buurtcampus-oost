@@ -1,4 +1,4 @@
-<!-- <a href="/stekjes_overzicht">
+<a href="/stekjes_overzicht">
   <button type="button">
     <p>Gelijk Swappen</p>
     <svg
@@ -14,7 +14,7 @@
       />
     </svg>
   </button>
-</a> -->
+</a>
 
 <style>
   button {
@@ -28,7 +28,7 @@
     font-size: 1rem;
     transition: 0.2s;
     cursor: pointer;
-    z-index: 999;
+    z-index: 2;
     left: 28%;
     top: 60%;
   }

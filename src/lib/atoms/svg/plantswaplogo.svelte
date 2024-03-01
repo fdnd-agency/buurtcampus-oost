@@ -1,6 +1,6 @@
 <svg
-      width="251"
-      height="85"
+      width="auto"
+      height="12vh"
       viewBox="0 0 251 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,3 +26,4 @@
         </clipPath>
       </defs>
     </svg>
+
