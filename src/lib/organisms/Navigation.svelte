@@ -2,6 +2,38 @@
   import Plantswaplogo from "../atoms/svg/plantswaplogo.svelte";
   import Hamburger from "../atoms/svg/hamburger.svelte";
   import Cross from "../atoms/svg/cross.svelte";
+  import { onMount } from "svelte";
+
+  let navActive = false;
+
+  onMount(() => {
+    function handleNavClick(ev) {
+      const nav = document.querySelector("nav");
+      if (!nav.contains(ev.target)) {
+        navActive = false;
+        nav.classList.remove("active");
+        document.body.focus();
+      }
+    }
+
+    document.addEventListener("click", handleNavClick);
+
+    return () => {
+      document.removeEventListener("click", handleNavClick);
+    };
+  });
+
+  function toggleNav() {
+    navActive = !navActive;
+    const nav = document.querySelector("nav");
+    if (navActive) {
+      nav.classList.add("active");
+      nav.focus();
+    } else {
+      nav.classList.remove("active");
+      document.body.focus();
+    }
+  }
 </script>
 
 <header>
@@ -21,7 +53,7 @@
       <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <a class="cross" href="#" role="close">
+    <a class="cross" href="#" role="close" on:click|preventDefault={closeNav}>
       <Cross />
     </a>
   </nav>
@@ -30,11 +62,12 @@
 <style>
   header {
     position: absolute;
+    z-index: 999;
+    width: 96vw;
     display: flex;
     justify-content: space-between;
-    width: 96vw;
-    align-items: center;
-    z-index: 999;
+    align-items: flex-start;
+    padding-left: 1.5em;
   }
 
   nav {
@@ -56,51 +89,21 @@
     right: 0;
   }
 
-  ul{
-    list-style: none;
+  .hamburger {
+    margin-top: 1.3em;
   }
 
-  a{
-    text-decoration: none;
-  }
-
-  ul a{
+  ul a {
     font-size: 10vw;
     color: var(--background-color);
   }
 
-  @media (min-width: 900px) {
-    .logo{
-      margin-bottom: 9em;
-    }
+  ul {
+    list-style: none;
+  }
 
-    nav {
-      position: relative;
-      display: flex;
-      margin-bottom: 1em;
-      background: none;
-    }
-
-    a{
-      text-decoration: none;
-      color: var(--text-color);
-    }
-
-    ul{
-      list-style: none;
-      flex-direction: row;
-      width: 100%;
-    }
-
-    ul a{
-      font-size: 1em;
-      color: var(--text-color);
-    }
-
-    .hamburger,
-    .cross {
-      display: none;
-    }
+  a {
+    text-decoration: none;
   }
 
   @supports selector(:target) {
@@ -120,5 +123,46 @@
     to {
       transform: translateY(0);
     }
+  }
+
+  /* Mediaquery's  */
+  /* Desktop styling */
+  @media (min-width: 900px) {
+    .hamburger,
+    .cross {
+      display: none;
+    }
+
+    nav {
+      display: block;
+      position: absolute;
+      background: none;
+      padding: none;
+      top: -1.8em;
+      /* margin-left: 2em; */
+    }
+
+    .logo {
+      position: relative;
+      z-index: 1;
+    }
+
+    ul a {
+      font-size: 1em;
+      color: var(--text-color);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      margin-right: -3em;
+      gap: 2em;
+    }
+
+    a:hover{
+    color: var(--card-color-light);
+  }
   }
 </style>
