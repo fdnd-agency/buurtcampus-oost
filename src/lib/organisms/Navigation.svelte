@@ -165,4 +165,15 @@
     color: var(--card-color-light);
   }
   }
+
+  @media (min-width: 1400px){
+
+nav{
+  position: absolute;
+}
+ul{
+  margin-bottom: 1em;
+}
+
+  }
 </style>
