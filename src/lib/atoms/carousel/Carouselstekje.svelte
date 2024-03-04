@@ -6,8 +6,13 @@
 <div class="carousel-container">
   <div class="flex-wrapper-recent-stekjes">
     {#each data.stekjes as stekje}
-      <a href={stekje.slug}>
-        <img src={stekje.fotos[0].url} alt="foto van een stekje" width="100" />
+      <a class="a-animation" href={stekje.slug}>
+        <img
+          src={stekje.fotos[0].url}
+          alt="foto van een stekje"
+          width="100"
+          loading="lazy"
+        />
         <p>Bekijk stekje</p>
       </a>
     {/each}
@@ -20,11 +25,11 @@
 </div>
 
 <style>
-    .carousel-container {
+  .carousel-container {
     width: 100%;
     display: grid;
     place-items: center;
-    /* padding: 1em; */
+    padding: 1em;
   }
 
   .flex-wrapper-recent-stekjes {
@@ -32,8 +37,8 @@
     overflow: auto;
     width: 100%;
     gap: 2em;
+    white-space: nowrap;
     scroll-snap-type: x mandatory;
-
   }
 
   .flex-wrapper-recent-stekjes img {
@@ -43,7 +48,7 @@
 
   a {
     text-decoration: none;
-    scroll-snap-align: center; 
+    scroll-snap-align: center;
   }
 
   p {
@@ -73,6 +78,34 @@
 
   .left-button {
     transform: rotate(180deg);
+  }
+
+  @supports (animation-timeline: view()) {
+    a {
+      animation-timeline: view(inline);
+      animation-name: animate-in-and-out;
+      animation-range: entry - 10% contain 40%;
+    }
+
+    @keyframes animate-in-and-out {
+      entry 0% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      entry 100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      exit 0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      exit 100% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+    }
   }
 
   @media screen and (min-width: 64rem) {
