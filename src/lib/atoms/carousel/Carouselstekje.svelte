@@ -20,13 +20,20 @@
 </div>
 
 <style>
+    .carousel-container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    /* padding: 1em; */
+  }
+
   .flex-wrapper-recent-stekjes {
     display: flex;
     overflow: auto;
     width: 100%;
     gap: 2em;
     scroll-snap-type: x mandatory;
-    scroll-snap-align: center; 
+
   }
 
   .flex-wrapper-recent-stekjes img {
@@ -34,15 +41,9 @@
     border-radius: 2rem;
   }
 
-  .carousel-container {
-    width: 100%;
-    display: grid;
-    place-items: center;
-    /* padding: 1em; */
-  }
-
   a {
     text-decoration: none;
+    scroll-snap-align: center; 
   }
 
   p {
