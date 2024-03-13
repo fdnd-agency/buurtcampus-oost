@@ -4,36 +4,23 @@
   import Cross from "../atoms/svg/cross.svelte";
   import { onMount } from "svelte";
 
-  let navActive = false;
-
   onMount(() => {
-    function handleNavClick(ev) {
-      const nav = document.querySelector("nav");
-      if (!nav.contains(ev.target)) {
-        navActive = false;
-        nav.classList.remove("active");
+    document
+      .querySelector("a .hamburger")
+      .addEventListener("click", function (ev) {
+        document.querySelector("nav a").classList.add("active");
+        document.querySelector("nav a").focus();
+        ev.preventDefault();
+      });
+
+    document
+      .querySelector("nav .cross")
+      .addEventListener("click", function (ev) {
+        document.querySelector("nav a").classList.remove("active");
         document.body.focus();
-      }
-    }
-
-    document.addEventListener("click", handleNavClick);
-
-    return () => {
-      document.removeEventListener("click", handleNavClick);
-    };
+        ev.preventDefault();
+      });
   });
-
-  function toggleNav() {
-    navActive = !navActive;
-    const nav = document.querySelector("nav");
-    if (navActive) {
-      nav.classList.add("active");
-      nav.focus();
-    } else {
-      nav.classList.remove("active");
-      document.body.focus();
-    }
-  }
 </script>
 
 <header>
@@ -53,7 +40,7 @@
       <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <a class="cross" href="#" role="close" on:click|preventDefault={closeNav}>
+    <a class="cross" href="#" role="close">
       <Cross />
     </a>
   </nav>
@@ -125,8 +112,8 @@
     }
   }
 
-  /* Mediaquery's  */
-  /* Desktop styling */
+  /* Mediaquery's   */
+  /* Desktop styling   */
   @media (min-width: 900px) {
     .hamburger,
     .cross {
@@ -139,7 +126,6 @@
       background: none;
       padding: none;
       top: -1.8em;
-      /* margin-left: 2em; */
     }
 
     .logo {
@@ -161,19 +147,17 @@
       gap: 2em;
     }
 
-    a:hover{
-    color: var(--card-color-light);
+    a:hover {
+      color: var(--card-color-light);
+    }
   }
-  }
 
-  @media (min-width: 1400px){
-
-nav{
-  position: absolute;
-}
-ul{
-  margin-bottom: 1em;
-}
-
+  @media (min-width: 1400px) {
+    nav {
+      position: absolute;
+    }
+    ul {
+      margin-bottom: 1em;
+    }
   }
 </style>

@@ -13,14 +13,11 @@
 </svg>
 
 <style>
-  .svg-arrow {
-    visibility: hidden;
-  }
-
-  @media screen and (min-width: 64rem) {
-    .svg-arrow {
-      visibility: visible;
- 
-    }
+  @media screen and (max-width: 866px){
+  	.svg-arrow {
+		visibility: hidden;
+	}
   }
 </style>
+
+
