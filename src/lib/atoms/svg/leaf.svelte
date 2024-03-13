@@ -26,4 +26,11 @@
       top: 20%;
     }
   }
+
+  @media screen and (min-width: 48rem){
+    /* .svg-leaf {
+      width: 20%;
+      top: -10%;
+    } */
+  }
 </style>
