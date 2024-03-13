@@ -9,7 +9,7 @@
 
 <main>
   <section class="flex-wrapper-2">
-    <!-- <Leaf /> -->
+    <Leaf />
     <div class="container-text">
       <span>
         <Arrow />
