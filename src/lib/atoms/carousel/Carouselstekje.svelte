@@ -72,7 +72,7 @@
     {/each}
   </div>
 
-  <!-- <ul>
+  <ul>
     <li>
       <button id="button-prev" type="button" class="left-button"
         ><Arrow /></button
@@ -82,7 +82,7 @@
     <li>
       <button id="button-next" type="button"><Arrow /></button>
     </li>
-  </ul> -->
+  </ul>
 
   <!-- <span class="carousel-indicator">
     <span class="carousel-indicator-span">
