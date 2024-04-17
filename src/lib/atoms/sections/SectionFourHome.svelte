@@ -9,7 +9,7 @@
 
 <main>
   <section class="flex-wrapper-2">
-    <Leaf />
+    <!-- <Leaf /> -->
     <div class="container-text">
       <span>
         <Arrow />
@@ -89,17 +89,22 @@
     margin-left: -1.2em;
   } */
 
-  @media screen and (min-width: 867px) {
+
+  @media screen and (min-width: 867px) and (min-width: 769px){
+
     .flex-wrapper-2 {
       display: flex;
       flex-direction: column;
       margin-top: 5rem;
       margin-left: 5%;
       width: 90%;
-      height: 125vh;
       border-radius: 40px;
     }
+  }
 
+
+  @media screen and (min-width: 867px) {
+    
     h2 {
       font-size: 4rem;
       margin-top: 1em;
@@ -122,14 +127,12 @@
   }
 
   @media screen and (min-width: 769px) {
+  }
+
+  @media screen and (min-width: 820px) and (min-width: 1180) {
     .flex-wrapper-2 {
-      display: flex;
-      flex-direction: column;
-      margin-top: 5rem;
-      margin-left: 5%;
-      width: 90%;
-      height: 125vh;
-      border-radius: 40px;
+      height: 20vh;
+ 
     }
   }
 </style>

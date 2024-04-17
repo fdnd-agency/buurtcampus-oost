@@ -1,68 +1,27 @@
 <script>
   import { onMount } from "svelte";
-  import { writable } from "svelte/store";
   import Arrow from "../svg/arrow.svelte";
   export let data;
 
-    onMount(() => {
-      const prevButton = document.getElementById("button-prev");
-      prevButton.addEventListener("click", () => {
-        const el = document.querySelector(".flex-wrapper-recent-stekjes");
-        el.scrollBy({ left: -1 * el.offsetWidth });
-      });
-
-      const nextButton = document.getElementById("button-next");
-      nextButton.addEventListener("click", () => {
-        const el = document.querySelector(".flex-wrapper-recent-stekjes");
-        el.scrollBy({ left: el.offsetWidth });
-      });
-    });
-
-  // let activeIndex = 0;
-  // const indicators = writable(Array(10).fill(false));
-
-  // onMount(() => {
-  //   updateIndicators();
-
-  //   const prevButton = document.getElementById("button-prev");
-  //   prevButton.addEventListener("click", () => {
-  //     activeIndex = Math.max(0, activeIndex - 3);
-  //     updateIndicators();
-  //     const el = document.querySelector(".flex-wrapper-recent-stekjes");
-  //     el.scrollBy({ left: -1 * el.offsetWidth });
-  //   });
-
-  //   const nextButton = document.getElementById("button-next");
-  //   nextButton.addEventListener("click", () => {
-  //     activeIndex = Math.min(9, activeIndex + 3);
-  //     updateIndicators();
-  //     const el = document.querySelector(".flex-wrapper-recent-stekjes");
-  //     el.scrollBy({ left: el.offsetWidth });
-  //   });
-  // });
-
-  // function updateIndicators() {
-  //   indicators.update((values) => {
-  //     values.fill(false);
-  //     for (let i = activeIndex; i < activeIndex + 3; i++) {
-  //       values[i] = true;
-  //     }
-  //     return values;
-  //   });
-  // }
-
   onMount(() => {
-    // Als JavaScript is ingeschakeld, toon dan de carousel-elementen
-    const carouselElements = document.querySelectorAll(
-      "button, .carousel-indicator"
-    );
-    carouselElements.forEach(function (element) {
-      element.style.display = "block";
+    const prevButton = document.getElementById("button-prev");
+    prevButton.addEventListener("click", () => {
+      const el = document.querySelector(".flex-wrapper-recent-stekjes");
+      el.scrollBy({ left: -1 * el.offsetWidth });
     });
+
+    const nextButton = document.getElementById("button-next");
+    nextButton.addEventListener("click", () => {
+      const el = document.querySelector(".flex-wrapper-recent-stekjes");
+      el.scrollBy({ left: el.offsetWidth });
+    });
+
+    //Als JavaScript is ingeschakeld, zet dan een class js-enabled op de body
+    document.body.classList.add("js-enabled");
   });
 </script>
 
-<div class="carousel-container">
+<article class="carousel-container">
   <div class="flex-wrapper-recent-stekjes">
     {#each data.stekjes as stekje, index}
       <a class="a-stekjes" href={stekje.slug}>
@@ -72,7 +31,7 @@
     {/each}
   </div>
 
-  <ul>
+  <ul class="caroussel-buttons">
     <li>
       <button id="button-prev" type="button" class="left-button"
         ><Arrow /></button
@@ -83,16 +42,7 @@
       <button id="button-next" type="button"><Arrow /></button>
     </li>
   </ul>
-
-  <!-- <span class="carousel-indicator">
-    <span class="carousel-indicator-span">
-      {#each $indicators as indicator, i}
-        <span class="carousel-indicator-span-span" class:selected={indicator}
-        ></span>
-      {/each}
-    </span>
-  </span>  -->
-</div>
+</article>
 
 <style>
   .carousel-container {
@@ -101,10 +51,6 @@
     place-items: center;
     padding: 1em;
     position: relative;
-  }
-
-  .carousel-indicator {
-    display: none;
   }
 
   .flex-wrapper-recent-stekjes {
@@ -159,14 +105,12 @@
     transform: rotate(180deg);
   }
 
-  button,
-  .carousel-indicator {
+  button {
     display: none;
   }
 
-  .no-js button,
-  .no-js .carousel-indicator {
-    display: block;
+  :global(body.js-enabled button) {
+    display: block !important;
   }
 
   @media screen and (min-width: 64rem) {
@@ -177,7 +121,7 @@
       place-items: center;
     }
 
-    ul {
+    .caroussel-buttons {
       position: absolute;
       display: flex;
       justify-content: space-between;
@@ -189,30 +133,6 @@
 
     .flex-wrapper-recent-stekjes {
       width: 50em;
-    }
-
-    .carousel-indicator {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-    }
-
-    .carousel-indicator-span {
-      display: flex;
-      gap: 10px;
-    }
-
-    .carousel-indicator-span-span {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: var(--button-color);
-    }
-
-    .carousel-indicator-span-span.selected {
-      background-color: #ffc275;
     }
 
     @supports (animation-timeline: view()) {
