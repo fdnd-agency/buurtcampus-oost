@@ -1,34 +1,38 @@
-<img width="193" alt="image" src="https://github.com/fdnd-agency/buurtcampus-oost/assets/1061632/f73db7e3-def1-49be-9a9d-11cebceaaa25">
+# create-svelte
 
-PlantSwap is het digitale platform dat hoort bij de stekjeskast die in de Buurtcampus Oost staat.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Buurtcampus Oost
-De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
+## Creating a project
 
-Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit de stekjeskast, maar ook stekjes brengen. De stekjeskast dient als middel om buurtbewoners met elkaar te verbinden. Daarnaast leren bewoners hoe ze op een duurzame manier met planten kunnen omgaan en draagt het bij aan een gezondere leefomgeving in huis.
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Design challenge
-Ontwerp en ontwikkel het digitale platform voor de Stekjesbieb van Buurtcampus Oost
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-## Resources
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/3)
+## Developing
 
-[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-[API Stekjesbieb Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
+```bash
+npm run dev
 
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## Prototypes
-Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website maken.  
+## Building
 
-[Finn @FDND](https://buurtcampus-oost.vercel.app/)  
-[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
-[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
-[Minor @CMD](https://plantswap.vercel.app/)  
-<!-- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) -->
+To create a production version of your app:
 
-## Preferred tech stack
+```bash
+npm run build
+```
 
-Framework: [SvelteKit](https://kit.svelte.dev/)   
-Headless CMS: [Hygraph](https://hygraph.com/)
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
