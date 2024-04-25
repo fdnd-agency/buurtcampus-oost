@@ -33,10 +33,10 @@
 
   <nav id="hamburger">
     <ul role="menu">
-      <li><a href="/">Home</a></li>
       <li><a href="/stekjes_overzicht">Stekjes</a></li>
-      <li><a href="/workshops">Workshops</a></li>
-      <li><a href="/maken">De kast</a></li>
+      <li><a href="/geveltuin">Geveltuin</a></li>
+      <li><a href="/agenda">Agenda</a></li>
+      <li><a href="/partners">Partners</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
     <!-- svelte-ignore a11y-invalid-attribute -->
