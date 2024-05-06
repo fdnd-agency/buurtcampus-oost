@@ -1,30 +1,36 @@
 <script>
+  import Plantswaplogo from "../atoms/logo/plantswaplogo.svelte";
   import Hamburger from "../atoms/icons/hamburger.svelte";
   import Cross from "../atoms/icons/cross.svelte";
   import { onMount } from "svelte";
 
-  // onMount(() => {
-  //   document
-  //     .querySelector("a .hamburger")
-  //     .addEventListener("click", function (ev) {
-  //       document.querySelector("nav a").classList.add("active");
-  //       document.querySelector("nav a").focus();
-  //       ev.preventDefault();
-  //     });
+  onMount(() => {
+    // @ts-ignore
+    document
+      .querySelector("a .hamburger")
+      .addEventListener("click", function (ev) {
+        // @ts-ignore
+        document.querySelector("nav a").classList.add("active");
+        // @ts-ignore
+        document.querySelector("nav a").focus();
+        ev.preventDefault();
+      });
 
-  //   document
-  //     .querySelector("nav .cross")
-  //     .addEventListener("click", function (ev) {
-  //       document.querySelector("nav a").classList.remove("active");
-  //       document.body.focus();
-  //       ev.preventDefault();
-  //     });
-  // });
+    // @ts-ignore
+    document
+      .querySelector("nav .cross")
+      .addEventListener("click", function (ev) {
+        // @ts-ignore
+        document.querySelector("nav a").classList.remove("active");
+        document.body.focus();
+        ev.preventDefault();
+      });
+  });
 </script>
 
 <header>
   <a href="/" class="logo">
-    Bieb in Bloei
+    <Plantswaplogo />
   </a>
 
   <a class="hamburger" href="#hamburger">
@@ -33,14 +39,13 @@
 
   <nav id="hamburger">
     <ul role="menu">
+      <li><a href="/">Home</a></li>
       <li><a href="/stekjes_overzicht">Stekjes</a></li>
-      <li><a href="/geveltuin">Geveltuin</a></li>
-      <li><a href="/agenda">Agenda</a></li>
-      <li><a href="/partners">Partners</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <!-- svelte-ignore a11y-invalid-attribute -->
-    <a class="cross" href="#">
+    <a class="cross" href="/">
       <Cross />
     </a>
   </nav>
@@ -101,7 +106,8 @@
 
   /* nav.active {
     display: block;
-  } */
+  }
+  */
 
   @keyframes reveal-nav {
     from {
