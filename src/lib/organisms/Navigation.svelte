@@ -1,13 +1,13 @@
 <script>
   import Plantswaplogo from "../atoms/logo/plantswaplogo.svelte";
-  import Hamburger from "../atoms/icons/hamburger.svelte";
-  import Cross from "../atoms/icons/cross.svelte";
+  import MenuIcon from "../atoms/icons/menu.svelte";
+  import CloseIcon from "../atoms/icons/close-menu.svelte";
   import { onMount } from "svelte";
 
   onMount(() => {
     // @ts-ignore
     document
-      .querySelector("a .hamburger")
+      .querySelector("a .menu-icon")
       .addEventListener("click", function (ev) {
         // @ts-ignore
         document.querySelector("nav a").classList.add("active");
@@ -18,7 +18,7 @@
 
     // @ts-ignore
     document
-      .querySelector("nav .cross")
+      .querySelector("nav .close-icon")
       .addEventListener("click", function (ev) {
         // @ts-ignore
         document.querySelector("nav a").classList.remove("active");
@@ -33,11 +33,11 @@
     <Plantswaplogo />
   </a>
 
-  <a class="hamburger" href="#hamburger">
-    <Hamburger />
+  <a class="menu-icon" href="#menu">
+    <MenuIcon />
   </a>
 
-  <nav id="hamburger">
+  <nav id="menu">
     <ul role="menu">
       <li><a href="/">Home</a></li>
       <li><a href="/stekjes_overzicht">Stekjes</a></li>
@@ -45,8 +45,9 @@
       <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <a class="cross" href="/">
-      <Cross />
+    
+    <a class="close-icon" href="/">
+      <CloseIcon />
     </a>
   </nav>
 </header>
@@ -72,16 +73,16 @@
     padding-top: 4em;
   }
 
-  nav .cross {
+  nav .close-icon {
     background: none;
     color: var(--text-color);
-    padding: 1em;
+    padding: 1.5em;
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .hamburger {
+  .menu-icon {
     margin-top: 1.3em;
   }
 
@@ -121,8 +122,8 @@
   /* Mediaquery's   */
   /* Desktop styling   */
   @media (min-width: 900px) {
-    .hamburger,
-    .cross {
+    .menu-icon,
+    .close-icon {
       display: none;
     }
 

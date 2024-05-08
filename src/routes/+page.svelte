@@ -1,12 +1,12 @@
 <script>
     // export let data;
     import Navigation from "$lib/organisms/Navigation.svelte";
-    import Carousel from "$lib/molecules/Carousel.svelte";
+    import HeroSlider from "$lib/molecules/hero-slider.svelte";
     import Footer from "$lib/organisms/Footer.svelte";
 </script>
 
 <Navigation />
-<Carousel/>
+<HeroSlider/>
 <Footer />
 
 <!--CSS STYLING-->
