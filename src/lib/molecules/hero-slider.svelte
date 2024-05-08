@@ -65,7 +65,6 @@
     main {
         background-color: var(--background-color);
     }
-
     .hero-slider {
         width: 100%;
         height: 90vh;
