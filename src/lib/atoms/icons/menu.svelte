@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="44" height="44">
+    <path d="M3 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2z" 
+    transform="scale(8.53333)" fill="#fff" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" 
+    text-anchor="none" style="mix-blend-mode:normal"/>
+</svg>

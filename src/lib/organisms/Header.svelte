@@ -1,47 +1,53 @@
 <script>
-  import Hamburger from "../atoms/icons/hamburger.svelte";
-  import Cross from "../atoms/icons/cross.svelte";
+  import Plantswaplogo from "../atoms/logo/plantswaplogo.svelte";
+  import MenuIcon from "../atoms/icons/menu.svelte";
+  import CloseIcon from "../atoms/icons/close-menu.svelte";
   import { onMount } from "svelte";
 
-  // onMount(() => {
-  //   document
-  //     .querySelector("a .hamburger")
-  //     .addEventListener("click", function (ev) {
-  //       document.querySelector("nav a").classList.add("active");
-  //       document.querySelector("nav a").focus();
-  //       ev.preventDefault();
-  //     });
+  onMount(() => {
+    // @ts-ignore
+    document
+      .querySelector("a .menu-icon")
+      .addEventListener("click", function (ev) {
+        // @ts-ignore
+        document.querySelector("nav a").classList.add("active");
+        // @ts-ignore
+        document.querySelector("nav a").focus();
+        ev.preventDefault();
+      });
 
-  //   document
-  //     .querySelector("nav .cross")
-  //     .addEventListener("click", function (ev) {
-  //       document.querySelector("nav a").classList.remove("active");
-  //       document.body.focus();
-  //       ev.preventDefault();
-  //     });
-  // });
+    // @ts-ignore
+    document
+      .querySelector("nav .close-icon")
+      .addEventListener("click", function (ev) {
+        // @ts-ignore
+        document.querySelector("nav a").classList.remove("active");
+        document.body.focus();
+        ev.preventDefault();
+      });
+  });
 </script>
 
 <header>
   <a href="/" class="logo">
-    Bieb in Bloei
+    <Plantswaplogo />
   </a>
 
-  <a class="hamburger" href="#hamburger">
-    <Hamburger />
+  <a class="menu-icon" href="#menu">
+    <MenuIcon />
   </a>
 
-  <nav id="hamburger">
+  <nav id="menu">
     <ul role="menu">
+      <li><a href="/">Home</a></li>
       <li><a href="/stekjes_overzicht">Stekjes</a></li>
-      <li><a href="/geveltuin">Geveltuin</a></li>
-      <li><a href="/agenda">Agenda</a></li>
-      <li><a href="/partners">Partners</a></li>
+      <li><a href="/workshops">Workshops</a></li>
+      <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <!-- svelte-ignore a11y-invalid-attribute -->
-    <a class="cross" href="#">
-      <Cross />
+    
+    <a class="close-icon" href="/">
+      <CloseIcon />
     </a>
   </nav>
 </header>
@@ -67,16 +73,16 @@
     padding-top: 4em;
   }
 
-  nav .cross {
+  nav .close-icon {
     background: none;
     color: var(--text-color);
-    padding: 1em;
+    padding: 1.5em;
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .hamburger {
+  .menu-icon {
     margin-top: 1.3em;
   }
 
@@ -101,7 +107,8 @@
 
   /* nav.active {
     display: block;
-  } */
+  }
+  */
 
   @keyframes reveal-nav {
     from {
@@ -115,8 +122,8 @@
   /* Mediaquery's   */
   /* Desktop styling   */
   @media (min-width: 900px) {
-    .hamburger,
-    .cross {
+    .menu-icon,
+    .close-icon {
       display: none;
     }
 
