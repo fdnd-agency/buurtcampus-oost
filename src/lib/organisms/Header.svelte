@@ -40,7 +40,7 @@
   <nav id="menu">
     <ul role="menu">
       <li><a href="/">Home</a></li>
-      <li><a href="/stekjes_overzicht">Stekjes</a></li>
+      <li><a href="/stekjes">Stekjes</a></li>
       <li><a href="/workshops">Workshops</a></li>
       <li><a href="/maken">De kast</a></li>
       <li><a href="/contact">Contact</a></li>

@@ -1,13 +1,11 @@
 <script>
-    // export let data;
-    import Header from "$lib/organisms/Header.svelte";
+    export let data;
     import HeroSlider from "$lib/molecules/hero-slider.svelte";
-    import Footer from "$lib/organisms/Footer.svelte";
+
 </script>
 
-<Header />
 <HeroSlider/>
-<Footer />
+
 
 <!--CSS STYLING-->
 
