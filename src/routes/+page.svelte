@@ -6,7 +6,7 @@
 </script>
 
 <Header />
-<HeroSlider/>
+<HeroSlider />
 <Footer />
 
 <!--CSS STYLING-->

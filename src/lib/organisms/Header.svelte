@@ -39,10 +39,11 @@
 
   <nav id="menu">
     <ul role="menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/stekjes_overzicht">Stekjes</a></li>
-      <li><a href="/workshops">Workshops</a></li>
-      <li><a href="/maken">De kast</a></li>
+      <li><a href="/stekjes">Stekjes</a></li>
+      <li><a href="/zaden">Zaden</a></li>
+      <li><a href="/geveltuin">Geveltuin</a></li>
+      <li><a href="/agenda">Agenda</a></li>
+      <li><a href="/partners">Partners</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
     
@@ -56,13 +57,14 @@
   header {
     position: absolute;
     z-index: 999;
-    width: 96vw;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 1.5em;
-  }
+    align-items: center;
+    width: 100%;
 
+    height: 6em;
+    padding: 0 1.5em;
+  }
   nav {
     position: fixed;
     inset: 0;
@@ -80,10 +82,6 @@
     position: absolute;
     top: 0;
     right: 0;
-  }
-
-  .menu-icon {
-    margin-top: 1.3em;
   }
 
   ul a {
@@ -150,7 +148,6 @@
       display: flex;
       flex-direction: row;
       justify-content: end;
-      margin-right: -3em;
       gap: 2em;
     }
 

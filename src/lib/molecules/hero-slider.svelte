@@ -42,7 +42,7 @@
         <div class="overlay"></div>
 
         <header>
-            <h1>Samen <span>Groener</span> Leven</h1>
+            <h1> Samen <span>Groener</span> Leven</h1>
             <h2>Inspireer & Deel je Groene Passie!</h2>
         </header>
 
@@ -67,39 +67,42 @@
     }
     .hero-slider {
         width: 100%;
-        height: 90vh;
+        height: 75vh;
     }
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 90vh;
+        height: 75vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
     header{
-        /* border: 2px solid red; */
         position: absolute;
-        top: 7em;
-        padding: 0 1em;
-        width: 90vw;
-        height: 25em;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
     h1{
-        font-size: 4.5rem;
+        font-family: var(--main-font);
+        font-size: clamp(4em, 15vw, 5em);
         color: var(--text-color);
         font-weight: 900;
         line-height: 1.1em;
+        width: 60%;
     }
-    h1 span{
+    /* h1 span{
         color: var(	--background-color-light);
-    }
+    } */
+
     h2{
         font-size: 1.6rem;
         color: var(--text-color);
         font-weight: 900;
         line-height: 1.1em;
-        margin: 3rem 0;
+        padding-top: 1.5em;
     }
     .hero-slider img {
         width: 100%;
@@ -131,18 +134,24 @@
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
-        h1 {
-            width: 80%;
-            font-size: 4rem;
-            view-transition-name: h1;
+        header {
+            width: 100%;
+            align-items: center;
+        }
+        h1{
+            font-size: clamp(5.8em, 12vw, 7em);
+        }
+        h1, h2 {
+            width: 100%;
+            text-align: center;
         }
     }
-    /* MEDIA QUERY DESKTOP = 1024px */
-    @media (min-width: 64rem) {
-        h1 {
-            width: 60%;
-            font-size: 8vw;
-            line-height: 9rem;
+
+    /* MEDIA QUERY DESKTOP = 1200px */
+    @media (min-width: 75rem) {
+        h1{
+            max-width: 10em;
         }
     }
+
 </style>
