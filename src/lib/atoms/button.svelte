@@ -1,4 +1,3 @@
-@ -0,0 +1,33 @@
 <script>
 	import { Arrow } from '$lib/index.js';
 
