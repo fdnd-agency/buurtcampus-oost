@@ -3,22 +3,14 @@ import {hygraph} from '$lib/utils/hygraph.js';
 
 export async function load() {
     let query = gql`
-		query MyQuery {
-			stekjes {
-				aanmelddatum
-				beschrijving
-				giftig
-				slug
-				voeding
-				verpotten
-				watergeven
-				zonlicht
-				onderhoud
-				fotos {
+		query Homepage {
+			herosSlider {
+				sliderPicture {
 					url
 				}
 			}
-		}
+		}	  
+		
 	`;
 
     return await hygraph.request(query);

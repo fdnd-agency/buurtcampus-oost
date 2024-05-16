@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { onNavigate } from "$app/navigation";
 
   onNavigate((navigation) => {
@@ -11,4 +11,5 @@
       });
     });
   });
-</script>
+</script> -->
+  
