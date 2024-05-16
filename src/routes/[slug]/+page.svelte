@@ -1,7 +1,7 @@
 <script>
   // export let data;
 
-  import Footer from "$lib/organisms/Footer.svelte";
+  import Footer from "$lib/organisms/footer.svelte";
   // import VectorPlant from "$lib/assets/vectorplant.svg";
   // import ImageStekje from "$lib/atoms/headers/imageStekje.svelte";
   // import StekjeDescription from "$lib/organisms/StekjeDescription.svelte";

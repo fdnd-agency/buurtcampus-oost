@@ -1,10 +1,9 @@
     <script>
-// @ts-nocheck
+        export let data;
+        import { HeroSlide1, HeroSlide2, HeroSlide3} from '$lib/index.js';
         import {onDestroy, onMount} from 'svelte';
-        import slide1 from '$lib/assets/slider-img-1.avif';
-        import slide2 from '$lib/assets/slider-img-2.avif';
-        import slide3 from '$lib/assets/slider-img-3.avif';
 
+        // @ts-ignore
         let intervalId;
 
         onMount(() => {
@@ -14,12 +13,16 @@
             const interval = 8000;
 
             intervalId = setInterval(() => {
+                // @ts-ignore
                 const currentScroll = carrousel.scrollLeft;
+                // @ts-ignore
                 const itemWidth = carrouselContainer.clientWidth;
+                // @ts-ignore
                 const totalWidth = carrousel.scrollWidth;
 
                 const nextScroll = (currentScroll + itemWidth) % totalWidth;
 
+                // @ts-ignore
                 carrousel.scrollTo({
                     left: nextScroll,
                     behavior: 'smooth'
@@ -28,17 +31,18 @@
         });
 
         onDestroy(() => {
+            // @ts-ignore
             clearInterval(intervalId);
         });
 
         onDestroy(() => {
+            // @ts-ignore
             clearInterval(intervalId);
         });
-
     </script>
 
 <main>
-    <section class="hero-slider" aria-label="Image slider">
+    <section class="hero-slider">
         <div class="overlay"></div>
 
         <header>
@@ -46,16 +50,15 @@
             <h2>Inspireer & Deel je Groene Passie!</h2>
         </header>
 
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-        <ul class="hero-img-list" role="list" tabindex="0" aria-live="polite">
+        <ul class="hero-img-list">
             <li>
-                <img src={slide1} alt="Slide 1" aria-label="foto-van-stekjes"/>
+                <HeroSlide1 {data}/>
             </li>
             <li>
-                <img src={slide2} loading="”lazy”" alt="Slide 2" aria-label="foto-van-stekjes"/>
+                <HeroSlide2 {data}/>
             </li>
             <li>
-                <img src={slide3} loading="”lazy”" alt="Slide 3" aria-label="foto-van-een-stekje-die-word-gepot"/>
+                <HeroSlide3 {data}/>
             </li>
         </ul>
     </section>
@@ -104,11 +107,12 @@
         line-height: 1.1em;
         padding-top: 1.5em;
     }
-    .hero-slider img {
+    /* .hero-img-list img
+    {
         width: 100%;
         height: 100vh;
         object-fit: cover;
-    }
+    } */
     .hero-slider ul {
         display: flex;
         overflow-x: auto;

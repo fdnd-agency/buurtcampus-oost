@@ -1,8 +1,16 @@
 
-// place files you want to import through the `$lib` alias in this folder.
 
-export { default as Footer } from '$lib/organisms/Footer.svelte';
+// =========== ATOMS ===========
+export { default as HeroSlide1 } from '$lib/atoms/heroPictures/heroSlide1.svelte';
+export { default as HeroSlide2 } from '$lib/atoms/heroPictures/heroSlide2.svelte';
+export { default as HeroSlide3 } from '$lib/atoms/heroPictures/heroSlide3.svelte';
 
-export { default as Navigation} from '$lib/organisms/Navigation.svelte';
+// =========== MOLECULES ===========
+
+
+// =========== ORGANISMS ===========
+
+export { default as Footer } from '$lib/organisms/footer.svelte';
+export { default as Menu} from '$lib/organisms/menu.svelte';
 
 

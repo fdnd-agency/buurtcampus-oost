@@ -1,12 +1,12 @@
 <script>
-    // export let data;
-    import Header from "$lib/organisms/Header.svelte";
+    export let data;
+    import Menu from "$lib/organisms/menu.svelte";
     import HeroSlider from "$lib/molecules/hero-slider.svelte";
-    import Footer from "$lib/organisms/Footer.svelte";
+    import Footer from "$lib/organisms/footer.svelte";
 </script>
 
-<Header />
-<HeroSlider />
+<Menu />
+<HeroSlider {data}/>
 <Footer />
 
 <!--CSS STYLING-->
