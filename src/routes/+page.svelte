@@ -4,7 +4,7 @@
 </script>
 
 <Header />
-<HeroSlider />
+<HeroSlider {data} />
 <Footer />
 <Button
 	buttonText="Bekijk de Bieb"

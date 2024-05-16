@@ -1,5 +1,5 @@
 <script>
-	import { PlantswapLogo, MenuIcon, CloseIcon } from '$lib/index.js';
+  import { Plantswaplogo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
   import { onMount } from "svelte";
 
   onMount(() => {

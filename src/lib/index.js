@@ -1,22 +1,20 @@
-// Hier export je alle atoms ----------------------------------------------------------------------------------------------------------------
-// Hier export je alle atoms ----------------------------------------------------------------------------------------------------------------
-// Hier export je alle atoms ----------------------------------------------------------------------------------------------------------------
-export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
-export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
-export { default as Cross } from '$lib/atoms/icons/cross.svelte';
-export { default as Hamburger } from '$lib/atoms/icons/hamburger.svelte';
-export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
-export { default as PlantswapLogo } from '$lib/atoms/logo/plantswaplogo.svelte';
-export { default as Button } from '$lib/atoms/button.svelte';
+// =========== ATOMS ===========
+export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
 
-// place files you want to import through the `$lib` alias in this folder.
-// Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
-// Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
-// Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
+export { default as HeroSlide1 } from '$lib/atoms/heroPictures/heroSlide1.svelte';
+export { default as HeroSlide2 } from '$lib/atoms/heroPictures/heroSlide2.svelte';
+export { default as HeroSlide3 } from '$lib/atoms/heroPictures/heroSlide3.svelte';
+
+export { default as Plantswaplogo } from '$lib/atoms/logo/plantswaplogo.svelte';
+export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
+export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
+
+
+// =========== MOLECULES ===========
+
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
 
-// Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
-// Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
-// Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
-export { default as Footer } from '$lib/organisms/Footer.svelte';
-export { default as Header } from '$lib/organisms/Header.svelte';
+// =========== ORGANISMS ===========
+
+export { default as Footer } from '$lib/organisms/footer.svelte';
+export { default as Menu} from '$lib/organisms/menu.svelte';
