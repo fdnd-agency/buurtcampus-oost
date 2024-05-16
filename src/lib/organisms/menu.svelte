@@ -1,7 +1,5 @@
 <script>
-  import Plantswaplogo from "../atoms/logo/plantswaplogo.svelte";
-  import MenuIcon from "../atoms/icons/menu.svelte";
-  import CloseIcon from "../atoms/icons/close-menu.svelte";
+  import { Plantswaplogo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
   import { onMount } from "svelte";
 
   onMount(() => {
@@ -39,12 +37,24 @@
 
   <nav id="menu">
     <ul role="menu">
-      <li><a href="/stekjes">Stekjes</a></li>
-      <li><a href="/zaden">Zaden</a></li>
-      <li><a href="/geveltuin">Geveltuin</a></li>
-      <li><a href="/agenda">Agenda</a></li>
-      <li><a href="/partners">Partners</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li>  
+        <Navlink href="/stekjes" title="Stekjes"> </Navlink>
+      </li>
+      <li>        
+        <Navlink href="/zaden" title="Zaden"> </Navlink>
+      </li>
+      <li>        
+        <Navlink href="/geveltuin" title="Geveltuin"> </Navlink>
+      </li>
+      <li>        
+        <Navlink href="/agenda" title="Agenda"> </Navlink>
+      </li>
+      <li>        
+        <Navlink href="/partners" title="Partners"> </Navlink>
+      </li>
+      <li>        
+        <Navlink href="/contact" title="Contact"> </Navlink>
+      </li>
     </ul>
     
     <a class="close-icon" href="/">
@@ -83,18 +93,8 @@
     top: 0;
     right: 0;
   }
-
-  ul a {
-    font-size: 10vw;
-    color: var(--background-color);
-  }
-
   ul {
     list-style: none;
-  }
-
-  a {
-    text-decoration: none;
   }
 
   @supports selector(:target) {
@@ -136,11 +136,6 @@
     .logo {
       position: relative;
       z-index: 1;
-    }
-
-    ul a {
-      font-size: 1em;
-      color: var(--text-color);
     }
 
     ul {
