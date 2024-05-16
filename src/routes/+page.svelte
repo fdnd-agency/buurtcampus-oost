@@ -1,11 +1,9 @@
 <script>
-	// export let data;
-	import { Header, HeroSlider, Footer, Button } from '$lib/index.js';
+	export let data;
+	import { HeroSlider, Button } from '$lib/index.js';
 </script>
 
-<Header />
 <HeroSlider {data} />
-<Footer />
 <Button
 	buttonText="Bekijk de Bieb"
 	buttonBackground="#4E7141"

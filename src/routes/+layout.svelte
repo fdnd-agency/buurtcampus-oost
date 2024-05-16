@@ -1,11 +1,8 @@
 <script>
-  import Viewtransition from "$lib/viewtransitions.svelte";
-  import Header from "$lib/organisms/Header.svelte";
-  import Footer from "$lib/organisms/Footer.svelte";
+  import {Menu, Footer} from "$lib/index";
 </script>
 
-  <Viewtransition />
-  <Header />
+  <Menu />
   <slot/>
   <Footer />
 

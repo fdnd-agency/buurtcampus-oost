@@ -6,4 +6,4 @@
 
 <HeroHeaders 
         heroInfo="{data.heroHeaders[3]}"
-   />
+/>

@@ -9,6 +9,9 @@ export { default as Plantswaplogo } from '$lib/atoms/logo/plantswaplogo.svelte';
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
 export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
 
+export { default as Button } from '$lib/atoms/button.svelte';
+export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
+
 
 // =========== MOLECULES ===========
 

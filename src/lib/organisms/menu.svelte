@@ -1,34 +1,34 @@
 <script>
-  import { Plantswaplogo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
-  import { onMount } from "svelte";
+	import { Plantswaplogo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
+	import { onMount } from "svelte";
 
-  onMount(() => {
-    // @ts-ignore
-    document
-      .querySelector("a .menu-icon")
-      .addEventListener("click", function (ev) {
-        // @ts-ignore
-        document.querySelector("nav a").classList.add("active");
-        // @ts-ignore
-        document.querySelector("nav a").focus();
-        ev.preventDefault();
-      });
+	onMount(() => {
+		// @ts-ignore
+		document
+		.querySelector("a .menu-icon")
+		.addEventListener("click", function (ev) {
+			// @ts-ignore
+			document.querySelector("nav a").classList.add("active");
+			// @ts-ignore
+			document.querySelector("nav a").focus();
+			ev.preventDefault();
+		});
 
-    // @ts-ignore
-    document
-      .querySelector("nav .close-icon")
-      .addEventListener("click", function (ev) {
-        // @ts-ignore
-        document.querySelector("nav a").classList.remove("active");
-        document.body.focus();
-        ev.preventDefault();
-      });
-  });
+		// @ts-ignore
+		document
+		.querySelector("nav .close-icon")
+		.addEventListener("click", function (ev) {
+			// @ts-ignore
+			document.querySelector("nav a").classList.remove("active");
+			document.body.focus();
+			ev.preventDefault();
+		});
+	});
 </script>
 
 <header>
 	<a href="/" class="logo">
-		<PlantswapLogo />
+		<Plantswaplogo />
 	</a>
 
 	<a class="menu-icon" href="#menu">
@@ -37,11 +37,24 @@
 
 	<nav id="menu">
 		<ul role="menu">
-			<li><a href="/">Home</a></li>
-			<li><a href="/stekjes_overzicht">Stekjes</a></li>
-			<li><a href="/workshops">Workshops</a></li>
-			<li><a href="/maken">De kast</a></li>
-			<li><a href="/contact">Contact</a></li>
+			<li>  
+				<Navlink href="/stekjes" title="Stekjes"> </Navlink>
+			</li>
+			<li>        
+				<Navlink href="/zaden" title="Zaden"> </Navlink>
+			</li>
+			<li>        
+				<Navlink href="/geveltuin" title="Geveltuin"> </Navlink>
+			</li>
+			<li>        
+				<Navlink href="/agenda" title="Agenda"> </Navlink>
+			</li>
+			<li>        
+				<Navlink href="/partners" title="Partners"> </Navlink>
+			</li>
+			<li>        
+				<Navlink href="/contact" title="Contact"> </Navlink>
+			</li>
 		</ul>
 
 		<a class="close-icon" href="/">
@@ -82,11 +95,6 @@ header {
 
 	.menu-icon {
 		margin-top: 1.3em;
-	}
-
-	ul a {
-		font-size: 10vw;
-		color: var(--background-color);
 	}
 
 	ul {
@@ -136,11 +144,6 @@ header {
 		.logo {
 			position: relative;
 			z-index: 1;
-		}
-
-		ul a {
-			font-size: 1em;
-			color: var(--text-color);
 		}
 
 		ul {
