@@ -1,7 +1,7 @@
     <script>
         export let data;
-        import { HeroSlide1, HeroSlide2, HeroSlide3} from '$lib/index.js';
-        import {onDestroy, onMount} from 'svelte';
+        import { HeroSlide1, HeroSlide2, HeroSlide3 } from '$lib/index.js';
+        import { onDestroy, onMount } from 'svelte';
 
         // @ts-ignore
         let intervalId;

@@ -3,9 +3,9 @@
 </script>
 
 <header>
-<div class="overlay"></div>
-<h1>{heroInfo.heading1}</h1>   
-<img src="{heroInfo.image.url}" alt="stekjes">
+    <div class="overlay"></div>
+    <h1>{heroInfo.heading1}</h1>   
+    <img src="{heroInfo.image.url}" alt="stekjes">
 </header>
 
 <!-- <section> -->
@@ -13,8 +13,8 @@
 <p>{heroInfo.description}</p>
 <h2>{heroInfo.heading2}</h2>
 <!-- </section> -->
+
 <style>
-  
     .overlay {
         position: absolute;
         top: 0;
@@ -23,7 +23,6 @@
         height: 40vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
-
     h1{
         position: absolute;
         color: var(--text-color);
@@ -54,8 +53,6 @@
         font-size: 1em;
         color: var(--card-color-dark);
     }
-
-  
     p::before{
         content: url('/Circle-Orange.svg');
         display: inline-flex;
@@ -68,13 +65,12 @@
             left: 38%;  
         } 
         h2{
-        padding: 0 6em;
-
-    } 
+            padding: 0 6em;
+        } 
     }
 
     @media (min-width: 64rem) {
-  
+
         .overlay, img{
             width: 100%;
             height: 50vh;
@@ -90,14 +86,13 @@
         margin: auto;
         padding: 2em;
         width: 45vw;
-        background-color: var(--background-color-light);
-        
-    }
-    h2{
-        margin: 5em 0 0 0;
-        padding: 0 4em;
-        font-size: 2em;
-    }
+        background-color: var(--background-color-light);   
+        }
+        h2{
+            margin: 5em 0 0 0;
+            padding: 0 4em;
+            font-size: 2em;
+        }
     }
 
 

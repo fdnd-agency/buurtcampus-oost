@@ -1,5 +1,5 @@
 <script>
-  import {Menu, Footer} from "$lib/index";
+  import { Menu, Footer } from "$lib/index";
 </script>
 
   <Menu />

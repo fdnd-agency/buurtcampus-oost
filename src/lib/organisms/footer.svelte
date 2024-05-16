@@ -85,7 +85,7 @@
 	footer {
 		position: relative;
 		width: 100%;
-		height: 55vh;
+		height: 65vh;
 		color: white;
 		background-color: var(	--background-color-light);
 		overflow: hidden;
