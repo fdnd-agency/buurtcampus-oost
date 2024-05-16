@@ -18,5 +18,3 @@ export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
 
 export { default as Footer } from '$lib/organisms/footer.svelte';
 export { default as Menu} from '$lib/organisms/menu.svelte';
-
-
