@@ -9,11 +9,11 @@ export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
 export { default as PlantswapLogo } from '$lib/atoms/logo/plantswaplogo.svelte';
 export { default as Button } from '$lib/atoms/button.svelte';
 
-// place files you want to import through the `$lib` alias in this folder.
 // Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
 // Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
 // Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
+export { default as AgendaCard } from '$lib/molecules/agenda-card.svelte';
 
 // Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
 // Hier export je alle organisms ------------------------------------------------------------------------------------------------------------

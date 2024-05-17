@@ -5,10 +5,8 @@
 </script>
 
 <button style="background-color: {buttonBackground}; color: {buttonColor};">
-	{buttonText}
-	<span>
-		<Arrow {svgFill} />
-	</span>
+	<span>{buttonText}</span>
+	<Arrow {svgFill} />
 </button>
 
 <style>
@@ -18,7 +16,7 @@
 		justify-content: center;
 		width: 10rem;
 		border: none;
-		border-radius: 1rem;
+		border-radius: 2rem;
 		padding: 0.5rem 0;
 		font-size: 1rem;
 	}
@@ -28,6 +26,6 @@
 	}
 
 	span {
-		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 </style>
