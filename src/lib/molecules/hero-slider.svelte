@@ -87,6 +87,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 1em;
     }
     h1{
         font-family: var(--main-font);

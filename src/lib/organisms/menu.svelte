@@ -1,5 +1,5 @@
 <script>
-	import { Plantswaplogo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
+	import { Logo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
 	import { onMount } from "svelte";
 
 	onMount(() => {
@@ -28,7 +28,7 @@
 
 <header>
 	<a href="/" class="logo">
-		<Plantswaplogo />
+		<Logo />
 	</a>
 
 	<a class="menu-icon" href="#menu">
@@ -64,41 +64,40 @@
 </header>
 
 <style>
-header {
+	header {
 		position: absolute;
-		z-index: 999;
-		width: 96vw;
+		z-index: 99;
+		width: 100%;
+		padding: 1em 2.5em 1em 2em;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		align-items: flex-start;
-		padding-left: 1.5em;
 	}
 
+	.menu-icon{
+		width: 30px;
+		height: 30px;
+	}
 	nav {
 		position: fixed;
 		inset: 0;
 		background: var(--background-color-light);
 		display: none;
 		animation: reveal-nav 0.25s ease-in forwards;
-		padding: 2em;
-		padding-top: 4em;
 	}
-
 	nav .close-icon {
 		background: none;
 		color: var(--text-color);
-		padding: 1.5em;
+		padding: 2em 2.5em;
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
-
-	.menu-icon {
-		margin-top: 1.3em;
-	}
-
 	ul {
 		list-style: none;
+		display: flex;
+		flex-direction: column;
+		padding: 5em 2em;
 	}
 
 	a {
@@ -110,11 +109,6 @@ header {
 			display: block;
 		}
 	}
-
-	/* nav.active {
-    display: block;
-  }
-  */
 
 	@keyframes reveal-nav {
 		from {
@@ -128,44 +122,37 @@ header {
 	/* Mediaquery's   */
 	/* Desktop styling   */
 	@media (min-width: 900px) {
-		.menu-icon,
+		.menu-icon,		
 		.close-icon {
 			display: none;
 		}
-
 		nav {
-			display: block;
+			display: flex;
 			position: absolute;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-content: center;
 			background: none;
-			padding: none;
-			top: -1.8em;
+			padding: 1.5em 2.5em;
 		}
-
 		.logo {
 			position: relative;
 			z-index: 1;
 		}
-
 		ul {
-			list-style: none;
-			display: flex;
 			flex-direction: row;
-			justify-content: end;
-			margin-right: -3em;
+			width: max-content;
 			gap: 2em;
+			padding: 0;
 		}
-
 		a:hover {
 			color: var(--card-color-light);
 		}
 	}
-
+	
 	@media (min-width: 1400px) {
 		nav {
 			position: absolute;
-		}
-		ul {
-			margin-bottom: 1em;
 		}
 	}
 </style>
