@@ -28,6 +28,7 @@
 		justify-content: space-between;
 		height: 12.5rem;
 		width: 20rem;
+		flex-shrink: 0;
 		padding: 1rem 0.5rem 0.5rem 1rem;
 		border-radius: 1rem;
 		background-color: hotpink;

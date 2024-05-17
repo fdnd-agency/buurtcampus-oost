@@ -14,6 +14,7 @@ export { default as Button } from '$lib/atoms/button.svelte';
 // Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
 export { default as AgendaCard } from '$lib/molecules/agenda-card.svelte';
+export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
 
 // Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
 // Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
