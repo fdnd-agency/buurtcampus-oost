@@ -1,6 +1,7 @@
     <script>
-        export let data;
-        import { HeroSlide1, HeroSlide2, HeroSlide3 } from '$lib/index.js';
+        export let data; 
+
+        // import { HeroSlide } from '$lib/index.js';
         import { onDestroy, onMount } from 'svelte';
 
         // @ts-ignore
@@ -50,16 +51,14 @@
             <h2>Inspireer & Deel je Groene Passie!</h2>
         </header>
 
-        <ul class="hero-img-list">
-            <li>
-                <HeroSlide1 {data}/>
-            </li>
-            <li>
-                <HeroSlide2 {data}/>
-            </li>
-            <li>
-                <HeroSlide3 {data}/>
-            </li>
+        <ul class="hero-img-list">   
+                {#each data.herosSlider as hero}
+                    <li>
+                        <picture>
+                            <img src="{hero.sliderPicture.url}" alt="{hero.sliderPicture.altText}" />
+                        </picture>
+                    </li>
+                {/each}
         </ul>
     </section>
 </main>
@@ -77,12 +76,12 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 75vh;
+        height: 80vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
     header{
         position: absolute;
-        height: 75vh;
+        height: 90vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -106,14 +105,14 @@
         color: var(--text-color);
         font-weight: 900;
         line-height: 1.1em;
-        padding-top: 1.5em;
+        padding: 1.5em 0;
     }
-    /* .hero-img-list img
+    .hero-img-list img
     {
         width: 100%;
         height: 100vh;
         object-fit: cover;
-    } */
+    }
     .hero-slider ul {
         display: flex;
         overflow-x: auto;
