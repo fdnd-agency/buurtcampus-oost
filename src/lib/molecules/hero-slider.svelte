@@ -42,7 +42,7 @@
         });
     </script>
 
-<main>
+<section>
     <section class="hero-slider">
         <div class="overlay"></div>
 
@@ -61,13 +61,12 @@
                 {/each}
         </ul>
     </section>
-</main>
+</section>
 
 <style>
-    main {
-        background-color: var(--background-color);
-    }
+
     .hero-slider {
+        background-color: var(--background-color);
         width: 100%;
         height: 75vh;
     }
@@ -76,12 +75,12 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 80vh;
+        height: 75vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
     header{
         position: absolute;
-        height: 90vh;
+        height: 75vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -105,7 +104,8 @@
         color: var(--text-color);
         font-weight: 900;
         line-height: 1.1em;
-        padding: 1.5em 0;
+        padding: .5em 0;
+        margin: 0;
     }
     .hero-img-list img
     {
@@ -126,6 +126,7 @@
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 100%;
+        height: 75vh;
         scroll-snap-align: start;
     }
 
