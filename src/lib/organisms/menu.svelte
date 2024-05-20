@@ -81,13 +81,13 @@
 	nav {
 		position: fixed;
 		inset: 0;
-		background: var(--background-color-light);
+		background: var(--main-color-beige);
 		display: none;
 		animation: reveal-nav 0.25s ease-in forwards;
 	}
 	nav .close-icon {
 		background: none;
-		color: var(--text-color);
+		color: var(--text-color-white);
 		padding: 2em 2.5em;
 		position: absolute;
 		top: 0;
@@ -146,7 +146,7 @@
 			padding: 0;
 		}
 		a:hover {
-			color: var(--card-color-light);
+			color: var(--main-color-orange);
 		}
 	}
 	

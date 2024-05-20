@@ -84,7 +84,7 @@
 		width: 100%;
 		height: 65vh;
 		color: white;
-		background-color: var(--background-color-light);
+		background-color: var(--main-color-beige);
 		overflow: hidden;
 		padding: 1em;
         display: flex;
@@ -113,7 +113,7 @@
 		gap: 5em;
 		margin-left: 10vw;
         width: 50%;
-		color: var(--background-color);
+		color: var(--main-color-green);
 	}
     ul { 
         width: 30%;
@@ -144,7 +144,6 @@
 			margin-left: 1em;
 		}
 		svg {
-			/* display: none; */
 			z-index: 0;
 			opacity: .3;
 		}

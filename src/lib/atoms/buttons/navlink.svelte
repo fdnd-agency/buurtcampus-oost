@@ -7,14 +7,14 @@
 <style>
     a{
         font-size: 10vw;
-        color: var(--background-color);
+        color: var(--main-color-green);
         text-decoration: none;
     }
 
     @media (min-width: 900px) {
         a{
         font-size: 1em;
-        color: var(--text-color);
+        color: var(--text-color-white);
         }
     }
 

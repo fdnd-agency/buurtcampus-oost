@@ -66,7 +66,7 @@
 <style>
 
     .hero-slider {
-        background-color: var(--background-color);
+        background-color: var(--main-color-green);
         width: 100%;
         height: 75vh;
     }
@@ -88,9 +88,9 @@
         padding: 0 1em;
     }
     h1{
-        font-family: var(--main-font);
+        font-family: var(--header-font);
         font-size: clamp(4em, 15vw, 5em);
-        color: var(--text-color);
+        color: var(--text-color-white);
         font-weight: 900;
         line-height: 1.1em;
         width: 60%;
@@ -101,7 +101,7 @@
 
     h2{
         font-size: 1.6rem;
-        color: var(--text-color);
+        color: var(--text-color-white);
         font-weight: 900;
         line-height: 1.1em;
         padding: .5em 0;
