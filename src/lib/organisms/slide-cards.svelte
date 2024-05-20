@@ -1,4 +1,5 @@
 <script> 
+    export let data;
     import { Dot } from '$lib/index.js';
 </script> 
 
@@ -6,20 +7,23 @@
     <article class="card-stekjes">
         <div>
             <Dot svgFill="var(--main-color-orange)"/>
-            <h2>Onze stekjes bieb</h2>
+            <h2>{data.cardSlides[0].titleCard}</h2>
         </div>
+        <p>{data.cardSlides[0].paragraphCard}</p>
     </article>
     <article class="card-zaden">
         <div>
             <Dot svgFill="var(--main-color-beige)"/>
-            <h2>Onze zaden bieb</h2>
+            <h2>{data.cardSlides[1].titleCard}</h2>
         </div>
+        <p>{data.cardSlides[1].paragraphCard}</p>
     </article>
     <article class="card-gevel">
         <div>
             <Dot svgFill="var(--main-color-orange)"/>
-            <h2>Onze gevel tuin</h2>
+            <h2>{data.cardSlides[2].titleCard}</h2>
         </div>
+        <p>{data.cardSlides[2].paragraphCard}</p>
     </article>
 </section>
 

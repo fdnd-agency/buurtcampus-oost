@@ -9,6 +9,10 @@ export async function load() {
 					url
 				}
 			}
+			cardSlides {
+				titleCard
+				paragraphCard
+			}
 		}	  
 		
 	`;

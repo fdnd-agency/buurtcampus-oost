@@ -4,7 +4,7 @@
 </script>
 
 <HeroSlider {data} />
-<SlideCards />
+<SlideCards {data} />
 
 <!--CSS STYLING-->
 
