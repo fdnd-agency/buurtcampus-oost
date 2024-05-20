@@ -12,6 +12,11 @@ export async function load() {
 			cardSlides {
 				titleCard
 				paragraphCard
+				paragraphCard2
+				imageCard {
+					url
+				}
+				imageCardAltText
 			}
 		}	  
 		

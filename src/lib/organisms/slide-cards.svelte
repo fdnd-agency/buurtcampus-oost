@@ -5,25 +5,43 @@
 
 <section>
     <article class="card-stekjes">
-        <div>
+        <div class="header-card">
             <Dot svgFill="var(--main-color-orange)"/>
             <h2>{data.cardSlides[0].titleCard}</h2>
         </div>
-        <p>{data.cardSlides[0].paragraphCard}</p>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[0].paragraphCard}</p>
+            <p>{data.cardSlides[0].paragraphCard2}</p>
+        </div>
+        <picture>
+            <img src="{data.cardSlides[0].imageCard.url}" alt="{data.cardSlides[0].imageCardAltText}}" />
+        </picture>
     </article>
     <article class="card-zaden">
-        <div>
+        <div class="header-card">
             <Dot svgFill="var(--main-color-beige)"/>
             <h2>{data.cardSlides[1].titleCard}</h2>
         </div>
-        <p>{data.cardSlides[1].paragraphCard}</p>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[1].paragraphCard}</p>
+            <p>{data.cardSlides[1].paragraphCard2}</p>
+        </div>
+        <picture>
+            <img src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
+        </picture>
     </article>
     <article class="card-gevel">
-        <div>
+        <div class="header-card">
             <Dot svgFill="var(--main-color-orange)"/>
             <h2>{data.cardSlides[2].titleCard}</h2>
         </div>
-        <p>{data.cardSlides[2].paragraphCard}</p>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[2].paragraphCard}</p>
+            <p>{data.cardSlides[2].paragraphCard2}</p>
+        </div>
+        <picture>
+            <img src="{data.cardSlides[2].imageCard.url}" alt="{data.cardSlides[2].imageCardAltText}}" />
+        </picture>
     </article>
 </section>
 
@@ -43,7 +61,7 @@
         padding: 1em;
     }
 
-    article div{
+    .header-card{
         display: flex;
         gap: 1em;
     }
@@ -64,5 +82,14 @@
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
     }
+    .paragraph-card{
+        padding: 3em;
+    }
+
+    .paragraph-card p{
+        max-width: 32em;
+        padding: 1em 0;
+    }
+
     
 </style>
