@@ -44,6 +44,8 @@ html {
 	--header-font: 'Poppins-Black', sans-serif;
 	--sub-header-font: 'Poppins-Bold', sans-serif;
 	--paragraph-font: 'Poppins-Medium', sans-serif;
+
+	--border-bigCard: 2em;
 }
 
 @keyframes fade-in {
