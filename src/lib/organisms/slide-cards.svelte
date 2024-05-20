@@ -33,7 +33,7 @@
 
     .card-stekjes{
         background-color: var(--background-color-light);
-        color: var(--)
+        color: var(--background-color);
     }
 
 </style>
