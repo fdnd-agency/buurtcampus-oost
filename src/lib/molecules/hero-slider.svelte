@@ -68,19 +68,19 @@
     .hero-slider {
         background-color: var(--main-color-green);
         width: 100%;
-        height: 75vh;
+        height: 85vh;
     }
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 75vh;
+        height: 85vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
     header{
         position: absolute;
-        height: 75vh;
+        height: 85vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -95,10 +95,6 @@
         line-height: 1.1em;
         width: 60%;
     }
-    /* h1 span{
-        color: var(	--background-color-light);
-    } */
-
     h2{
         font-size: 1.6rem;
         color: var(--text-color-white);
@@ -116,6 +112,7 @@
     .hero-slider ul {
         display: flex;
         overflow-x: auto;
+        height: 85vh;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
