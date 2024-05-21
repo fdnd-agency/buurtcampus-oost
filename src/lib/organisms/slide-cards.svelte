@@ -1,6 +1,7 @@
 <script> 
     export let data;
     import { Dot } from '$lib/index.js';
+	import { onMount } from 'svelte';
 
     let paragraphs; // Declare variable for paragraphs
 
@@ -30,16 +31,14 @@
             <Dot svgFill="var(--main-color-orange)"/>
             <h2>{data.cardSlides[0].titleCard}</h2>
         </header>
-        <section>
-            <picture>
-                <img src="{data.cardSlides[0].imageCard.url}" alt="{data.cardSlides[0].imageCardAltText}}" />
-            </picture>
-            <div class="paragraph-card">
-                <p>{data.cardSlides[0].paragraphCard}</p>
-                <p>{data.cardSlides[0].paragraphCard2}</p>
-                <button class="toggle-button">Lees meer</button>
-            </div>
-        </section>
+        <picture>
+            <img src="{data.cardSlides[0].imageCard.url}" alt="{data.cardSlides[0].imageCardAltText}}" />
+        </picture>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[0].paragraphCard}</p>
+            <p>{data.cardSlides[0].paragraphCard2}</p>
+            <button class="toggle-button">Lees meer</button>
+        </div>
     </article>
 
     <article class="card-zaden">
@@ -47,33 +46,29 @@
             <Dot svgFill="var(--main-color-beige)"/>
             <h2>{data.cardSlides[1].titleCard}</h2>
         </header>
-        <section>
-            <picture>
-                <img src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
-            </picture>
-            <div class="paragraph-card">
-                <p>{data.cardSlides[1].paragraphCard}</p>
-                <p>{data.cardSlides[1].paragraphCard2}</p>
-                <button class="toggle-button">Lees meer</button>
-            </div>
-        </section>
+        <picture>
+            <img src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
+        </picture>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[1].paragraphCard}</p>
+            <p>{data.cardSlides[1].paragraphCard2}</p>
+            <button class="toggle-button">Lees meer</button>
+        </div>
     </article>
 
     <article class="card-gevel">
         <header class="header-card">
             <Dot svgFill="var(--main-color-orange)"/>
             <h2>{data.cardSlides[2].titleCard}</h2>
-        </header>  
-        <section>      
-            <picture>
-                <img src="{data.cardSlides[2].imageCard.url}" alt="{data.cardSlides[2].imageCardAltText}}" />
-            </picture>
-            <div class="paragraph-card">
-                <p>{data.cardSlides[2].paragraphCard}</p>
-                <p>{data.cardSlides[2].paragraphCard2}</p>
-                <button class="toggle-button">Lees meer</button>
-            </div>
-        </section>
+        </header>    
+        <picture>
+            <img src="{data.cardSlides[2].imageCard.url}" alt="{data.cardSlides[2].imageCardAltText}}" />
+        </picture>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[2].paragraphCard}</p>
+            <p>{data.cardSlides[2].paragraphCard2}</p>
+            <button class="toggle-button">Lees meer</button>
+        </div>
     </article>
 </section>
 
@@ -90,6 +85,11 @@
         width: 100vw;
         padding: 1em 0;
         border-radius: var(--border-bigCard);
+    }
+
+    .card-container article::before{
+        content: "";
+
     }
     .header-card{
         display: flex;
@@ -111,9 +111,6 @@
     .card-gevel{
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
-    }
-    article section{
-        padding: 1em 3em;
     }
     .paragraph-card p{
         max-width: 32em;
