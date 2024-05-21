@@ -9,6 +9,15 @@ export async function load() {
 					url
 				}
 			}
+			cardSlides {
+				titleCard
+				paragraphCard
+				paragraphCard2
+				imageCard {
+					url
+				}
+				imageCardAltText
+			}
 		}	  
 		
 	`;

@@ -25,7 +25,7 @@
     } 
     h1{
         position: absolute;
-        color: var(--text-color);
+        color: var(--text-color-white);
         top: 15%;
         left: 20%;
         font-size: 4.5rem;
@@ -41,8 +41,8 @@
         left: 10%;
         padding: 2em;
         width: 80vw;
-        background-color: var(--background-color-light);
-        color: var(--card-color-dark);
+        background-color: var(--main-color-beige);
+        color: var(--main-color-brown);
         font-weight: 900;
         border-radius: 17px;
         
@@ -51,10 +51,10 @@
         margin: 13em 0 2em 0;
         padding: 0 3em;
         font-size: 1em;
-        color: var(--card-color-dark);
+        color: var(--main-color-brown);
     }
     p::before{
-        content: url('/Circle-Orange.svg');
+        content: url('/assets/Circle-Orange.svg');
         display: inline-flex;
         padding: 1em  1em 0 1em;
     }
@@ -85,8 +85,7 @@
         left: 28%;
         margin: auto;
         padding: 2em;
-        width: 45vw;
-        background-color: var(--background-color-light);   
+        width: 45vw;  
         }
         h2{
             margin: 5em 0 0 0;

@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+ */
+
+@font-face {
+	font-family: "Poppins-Black";
+	src: local("Poppins Black"), local("Poppins-Black"),
+		url("/fonts/Poppins/Poppins-Black.ttf");
+}
+@font-face {
+	font-family: "Poppins-Bold";
+	src: local("Poppins Bold"), local("Poppins-Bold"),
+		url("/fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+	font-family: "Poppins-Medium";
+	src: local("Poppins Medium"), local("Poppins-Medium"),
+		url("/fonts/Poppins/Poppins-Medium.ttf");
+}
 
 html {
 	font-family: 'Mulish', sans-serif;
@@ -13,17 +30,22 @@ html {
 }
 
 :root {
-	--background-color: #4e7141;
-	--background-color-light: #f9e9c2;
-	--button-color: #ff8d06;
-	--card-color-dark: #491b02;
-	--card-color-light: #ffd9b8;
-	--text-color: #fff;
-	--main-font: 'Poppins', sans-serif;
-	
-	--margin: 2rem;
-	--padding: 2rem;
-	--bradius: 15px;
+	--main-color-green: #4e7141;
+	--main-color-beige: #f9e9c2;
+	--main-color-orange: #ff8d06;
+	--main-color-brown: #491b02;
+
+	--card-color-orange:#FF9A41;
+	--card-color-green:#3C593E;
+
+	--text-color-white: #fff;
+	--text-color-black: #000;
+
+	--header-font: 'Poppins-Black', sans-serif;
+	--sub-header-font: 'Poppins-Bold', sans-serif;
+	--paragraph-font: 'Poppins-Medium', sans-serif;
+
+	--border-bigCard: 2em;
 }
 
 @keyframes fade-in {
