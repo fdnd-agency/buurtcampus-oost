@@ -3,24 +3,21 @@
  */
 
 @font-face {
-	font-family: "Poppins-Black";
-	src: local("Poppins Black"), local("Poppins-Black"),
-		url("/fonts/Poppins/Poppins-Black.ttf");
+	font-family: 'Poppins-Black';
+	src: local('Poppins Black'), local('Poppins-Black'), url('/fonts/Poppins/Poppins-Black.ttf');
 }
 @font-face {
-	font-family: "Poppins-Bold";
-	src: local("Poppins Bold"), local("Poppins-Bold"),
-		url("/fonts/Poppins/Poppins-Bold.ttf");
+	font-family: 'Poppins-Bold';
+	src: local('Poppins Bold'), local('Poppins-Bold'), url('/fonts/Poppins/Poppins-Bold.ttf');
 }
 @font-face {
-	font-family: "Poppins-Medium";
-	src: local("Poppins Medium"), local("Poppins-Medium"),
-		url("/fonts/Poppins/Poppins-Medium.ttf");
+	font-family: 'Poppins-Medium';
+	src: local('Poppins Medium'), local('Poppins-Medium'), url('/fonts/Poppins/Poppins-Medium.ttf');
 }
 
 html {
 	font-family: 'Mulish', sans-serif;
-    line-height: 1.6;
+	line-height: 1.6;
 }
 
 * {
@@ -35,8 +32,8 @@ html {
 	--main-color-orange: #ff8d06;
 	--main-color-brown: #491b02;
 
-	--card-color-orange:#FF9A41;
-	--card-color-green:#3C593E;
+	--card-color-orange: #ff9a41;
+	--card-color-green: #3c593e;
 
 	--text-color-white: #fff;
 	--text-color-black: #000;
@@ -46,6 +43,8 @@ html {
 	--paragraph-font: 'Poppins-Medium', sans-serif;
 
 	--border-bigCard: 2em;
+
+	--image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 @keyframes fade-in {

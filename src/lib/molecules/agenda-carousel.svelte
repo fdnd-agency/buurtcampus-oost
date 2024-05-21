@@ -1,16 +1,6 @@
 <script>
 	import { AgendaCard } from '$lib/index.js';
 
-	export let agendaItems = [
-		{
-			event: '{event}',
-			date: '{date}',
-			address: '{address}',
-			price: '{price}',
-			image: '{image}'
-		}
-	];
-
 	export let data;
 	const agenda = data.agendas[0];
 	console.log(agenda.address);
@@ -19,7 +9,7 @@
 <div>
 	<section>
 		<div class="cards">
-			{#each agendaItems as { event, date, address, price, image }}
+			{#each data.agendas as agenda (agenda.id)}
 				<div>
 					<AgendaCard
 						cardEvent={agenda.event}
@@ -27,42 +17,6 @@
 						cardAddress={agenda.address}
 						cardPrice={agenda.price}
 						cardImage={agenda.cardImage.url}
-					/>
-				</div>
-				<div>
-					<AgendaCard
-						cardEvent={event}
-						cardDate={date}
-						cardAddress={address}
-						cardPrice={price}
-						cardImage={image}
-					/>
-				</div>
-				<div>
-					<AgendaCard
-						cardEvent={event}
-						cardDate={date}
-						cardAddress={address}
-						cardPrice={price}
-						cardImage={image}
-					/>
-				</div>
-				<div>
-					<AgendaCard
-						cardEvent={event}
-						cardDate={date}
-						cardAddress={address}
-						cardPrice={price}
-						cardImage={image}
-					/>
-				</div>
-				<div>
-					<AgendaCard
-						cardEvent={event}
-						cardDate={date}
-						cardAddress={address}
-						cardPrice={price}
-						cardImage={image}
 					/>
 				</div>
 			{/each}

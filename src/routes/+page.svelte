@@ -1,11 +1,11 @@
 <script>
 	export let data;
 
-	import { HeroSlider, SlideCards, AgendaCarousel } from '$lib/index.js';
+	import { HeroSlider, SlideCards, AgendaCarousel, Agenda } from '$lib/index.js';
 </script>
 
 <HeroSlider {data} />
 <SlideCards {data} />
-<AgendaCarousel {data} />
+<Agenda {data} />
 
 <!--CSS STYLING-->
