@@ -1,8 +1,8 @@
 <script>
-  import Viewtransition from "$lib/viewtransitions.svelte";
+  import { Menu, Footer } from "$lib/index";
 </script>
 
-  <Viewtransition />
-  
+  <Menu />
   <slot/>
+  <Footer />
 

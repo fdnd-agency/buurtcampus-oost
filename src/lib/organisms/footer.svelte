@@ -75,73 +75,60 @@
 			</ul>
 		</div>
 	</div>
-
-	<div class="left-wrapper">
-	
-	</div>
+	<div class="left-wrapper"></div>
 </footer>
 
 <style>
 	footer {
 		position: relative;
 		width: 100%;
-		height: 55vh;
+		height: 65vh;
 		color: white;
-		background-color: var(	--background-color-light);
+		background-color: var(--main-color-beige);
 		overflow: hidden;
 		padding: 1em;
         display: flex;
         align-items: center;
         justify-content: center;
 	}
-
 	.background {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 	}
-
 	.right-svg {
 		position: absolute;
 		top: 0;
 		right: -20%;
         transition: .6s;
 	}
-
 	.left-svg {
 		position: absolute;
 		top: 20%;
 		left: -20%;
         transition: .6s;
 	}
-
 	.information {
 		display: flex;
 		gap: 5em;
 		margin-left: 10vw;
         width: 50%;
-		color: var(--background-color);
+		color: var(--main-color-green);
 	}
-
     ul { 
         width: 30%;
     }
-
 	li {
 		list-style-type: none;
 	}
-
 	.title {
 		font-size: 2em;
 		margin-bottom: 1rem;
 		font-weight: 700;
-		/* color: var(--color-secundair); */
 	}
-
     .background:hover .left-svg {
         transform: translateY(20%) translateX(-20%) rotate(-20deg);
     }
-
     .background:hover .right-svg {
         transform: translateY(-5%) translateX(20%) rotate(20deg);
     }
@@ -150,37 +137,28 @@
 			height: max-content;
 			padding: 4em 1em;
 		}
-
-
 		.information {
 			flex-direction: column;
 			gap: 1em;
 			width: 80%;
 			margin-left: 1em;
 		}
-		
 		svg {
-			/* display: none; */
 			z-index: 0;
 			opacity: .3;
 		}
-		
 		ul { 
 			width: 100%;
 			z-index: 2;
-
 		}
 		.title {
-		font-size: 2em;
-		margin-bottom: 0rem;
-		font-weight: 700;
-		/* color: var(--color-secundair); */
-	}
-
-	.right-svg {
-		display: none;
-	}
-    
+			font-size: 2em;
+			margin-bottom: 0rem;
+			font-weight: 700;
+		}
+		.right-svg {
+			display: none;
+		}
 	}
 
 </style>

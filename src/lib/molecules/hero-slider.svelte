@@ -1,10 +1,10 @@
     <script>
-// @ts-nocheck
-        import {onDestroy, onMount} from 'svelte';
-        import slide1 from '$lib/assets/slider-img-1.avif';
-        import slide2 from '$lib/assets/slider-img-2.avif';
-        import slide3 from '$lib/assets/slider-img-3.avif';
+        export let data; 
 
+        // import { HeroSlide } from '$lib/index.js';
+        import { onDestroy, onMount } from 'svelte';
+
+        // @ts-ignore
         let intervalId;
 
         onMount(() => {
@@ -14,12 +14,16 @@
             const interval = 8000;
 
             intervalId = setInterval(() => {
+                // @ts-ignore
                 const currentScroll = carrousel.scrollLeft;
+                // @ts-ignore
                 const itemWidth = carrouselContainer.clientWidth;
+                // @ts-ignore
                 const totalWidth = carrousel.scrollWidth;
 
                 const nextScroll = (currentScroll + itemWidth) % totalWidth;
 
+                // @ts-ignore
                 carrousel.scrollTo({
                     left: nextScroll,
                     behavior: 'smooth'
@@ -28,80 +32,79 @@
         });
 
         onDestroy(() => {
+            // @ts-ignore
             clearInterval(intervalId);
         });
 
         onDestroy(() => {
+            // @ts-ignore
             clearInterval(intervalId);
         });
-
     </script>
 
-<main>
-    <section class="hero-slider" aria-label="Image slider">
+<section>
+    <section class="hero-slider">
         <div class="overlay"></div>
 
         <header>
-            <h1>Samen <span>Groener</span> Leven</h1>
+            <h1> Samen <span>Groener</span> Leven</h1>
             <h2>Inspireer & Deel je Groene Passie!</h2>
         </header>
 
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-        <ul class="hero-img-list" role="list" tabindex="0" aria-live="polite">
-            <li>
-                <img src={slide1} alt="Slide 1" aria-label="foto-van-stekjes"/>
-            </li>
-            <li>
-                <img src={slide2} loading="”lazy”" alt="Slide 2" aria-label="foto-van-stekjes"/>
-            </li>
-            <li>
-                <img src={slide3} loading="”lazy”" alt="Slide 3" aria-label="foto-van-een-stekje-die-word-gepot"/>
-            </li>
+        <ul class="hero-img-list">   
+                {#each data.herosSlider as hero}
+                    <li>
+                        <picture>
+                            <img src="{hero.sliderPicture.url}" alt="{hero.sliderPicture.altText}" />
+                        </picture>
+                    </li>
+                {/each}
         </ul>
     </section>
-</main>
+</section>
 
 <style>
-    main {
-        background-color: var(--background-color);
-    }
+
     .hero-slider {
+        background-color: var(--main-color-green);
         width: 100%;
-        height: 90vh;
+        height: 85vh;
     }
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 90vh;
+        height: 85vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
     header{
-        /* border: 2px solid red; */
         position: absolute;
-        top: 7em;
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
         padding: 0 1em;
-        width: 90vw;
-        height: 25em;
     }
     h1{
-        font-size: 4.5rem;
-        color: var(--text-color);
+        font-family: var(--header-font);
+        font-size: clamp(4em, 15vw, 5em);
+        color: var(--text-color-white);
         font-weight: 900;
         line-height: 1.1em;
-    }
-    h1 span{
-        color: var(	--background-color-light);
+        width: 60%;
     }
     h2{
         font-size: 1.6rem;
-        color: var(--text-color);
+        color: var(--text-color-white);
         font-weight: 900;
         line-height: 1.1em;
-        margin: 3rem 0;
+        padding: .5em 0;
+        margin: 0;
     }
-    .hero-slider img {
+    .hero-img-list img
+    {
         width: 100%;
         height: 100vh;
         object-fit: cover;
@@ -109,6 +112,7 @@
     .hero-slider ul {
         display: flex;
         overflow-x: auto;
+        height: 85vh;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
@@ -119,6 +123,7 @@
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 100%;
+        height: 75vh;
         scroll-snap-align: start;
     }
 
@@ -131,18 +136,24 @@
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
-        h1 {
-            width: 80%;
-            font-size: 4rem;
-            view-transition-name: h1;
+        header {
+            width: 100%;
+            align-items: center;
+        }
+        h1{
+            font-size: clamp(5.8em, 12vw, 7em);
+        }
+        h1, h2 {
+            width: 100%;
+            text-align: center;
         }
     }
-    /* MEDIA QUERY DESKTOP = 1024px */
-    @media (min-width: 64rem) {
-        h1 {
-            width: 60%;
-            font-size: 8vw;
-            line-height: 9rem;
+
+    /* MEDIA QUERY DESKTOP = 1200px */
+    @media (min-width: 75rem) {
+        h1{
+            max-width: 10em;
         }
     }
+
 </style>

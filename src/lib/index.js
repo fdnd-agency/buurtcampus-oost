@@ -1,23 +1,24 @@
-// Hier export je alle atoms ----------------------------------------------------------------------------------------------------------------
-// Hier export je alle atoms ----------------------------------------------------------------------------------------------------------------
-// Hier export je alle atoms ----------------------------------------------------------------------------------------------------------------
-export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
-export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
-export { default as Cross } from '$lib/atoms/icons/cross.svelte';
-export { default as Hamburger } from '$lib/atoms/icons/hamburger.svelte';
-export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
-export { default as PlantswapLogo } from '$lib/atoms/logo/plantswaplogo.svelte';
-export { default as Button } from '$lib/atoms/button.svelte';
+// =========== ATOMS ===========
 
-// Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
-// Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
-// Hier export je alle molecules ------------------------------------------------------------------------------------------------------------
+// === Buttons ===
+export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
+export { default as Button } from '$lib/atoms/buttons/button.svelte';
+
+// === Icons ===
+export { default as Logo } from '$lib/atoms/icons/logo.svelte';
+export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
+export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
+export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
+export { default as Dot } from '$lib/atoms/icons/round-dot.svelte';
+
+// =========== MOLECULES ===========
+
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
 export { default as AgendaCard } from '$lib/molecules/agenda-card.svelte';
 export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
 
-// Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
-// Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
-// Hier export je alle organisms ------------------------------------------------------------------------------------------------------------
-export { default as Footer } from '$lib/organisms/Footer.svelte';
-export { default as Header } from '$lib/organisms/Header.svelte';
+// =========== ORGANISMS ===========
+
+export { default as Menu } from '$lib/organisms/menu.svelte';
+export { default as SlideCards } from '$lib/organisms/slide-cards.svelte';
+export { default as Footer } from '$lib/organisms/footer.svelte';
