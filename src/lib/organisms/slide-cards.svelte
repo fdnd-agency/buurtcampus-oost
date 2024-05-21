@@ -1,6 +1,27 @@
 <script> 
     export let data;
     import { Dot } from '$lib/index.js';
+
+    let paragraphs; // Declare variable for paragraphs
+
+    onMount(() => {
+        paragraphs = document.querySelectorAll('.paragraph-card p');
+
+        paragraphs.forEach(paragraph => {
+            paragraph.addEventListener('click', function() {
+                // Use the current paragraph element
+                if (paragraph.classList.contains('show-more')) {
+                    paragraph.classList.remove('show-more');
+                    paragraph.textContent = 'Lees meer';
+                } else {
+                    paragraph.classList.add('show-more');
+                    paragraph.textContent = 'Lees minder';
+                }
+            });
+        });
+    });
+
+    
 </script> 
 
 <section class="card-container">
@@ -16,6 +37,7 @@
             <div class="paragraph-card">
                 <p>{data.cardSlides[0].paragraphCard}</p>
                 <p>{data.cardSlides[0].paragraphCard2}</p>
+                <button class="toggle-button">Lees meer</button>
             </div>
         </section>
     </article>
@@ -32,6 +54,7 @@
             <div class="paragraph-card">
                 <p>{data.cardSlides[1].paragraphCard}</p>
                 <p>{data.cardSlides[1].paragraphCard2}</p>
+                <button class="toggle-button">Lees meer</button>
             </div>
         </section>
     </article>
@@ -48,6 +71,7 @@
             <div class="paragraph-card">
                 <p>{data.cardSlides[2].paragraphCard}</p>
                 <p>{data.cardSlides[2].paragraphCard2}</p>
+                <button class="toggle-button">Lees meer</button>
             </div>
         </section>
     </article>
@@ -94,6 +118,19 @@
     .paragraph-card p{
         max-width: 32em;
         padding: .5em 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+
+    /* Style for the toggle button */
+    .toggle-button {
+        display: block;
+        text-align: right;
+        cursor: pointer;
+        margin-top: 0.5em;
     }
     article img{
         width: 80%;
