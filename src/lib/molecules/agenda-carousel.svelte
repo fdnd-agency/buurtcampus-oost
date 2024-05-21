@@ -6,23 +6,21 @@
 	console.log(agenda.address);
 </script>
 
-<div>
-	<section>
-		<div class="cards">
-			{#each data.agendas as agenda (agenda.id)}
-				<div>
-					<AgendaCard
-						cardEvent={agenda.event}
-						cardDate={agenda.date}
-						cardAddress={agenda.address}
-						cardPrice={agenda.price}
-						cardImage={agenda.cardImage.url}
-					/>
-				</div>
-			{/each}
-		</div>
-	</section>
-</div>
+<section>
+	<div class="cards">
+		{#each data.agendas as agenda (agenda.id)}
+			<div class="card">
+				<AgendaCard
+					cardEvent={agenda.event}
+					cardDate={agenda.date}
+					cardAddress={agenda.address}
+					cardPrice={agenda.price}
+					cardImage={agenda.cardImage.url}
+				/>
+			</div>
+		{/each}
+	</div>
+</section>
 
 <style>
 	section {
@@ -30,19 +28,24 @@
 		justify-content: center;
 		flex-direction: column;
 		overflow-x: auto;
-		margin: 0 auto;
-		scrollbar-width: none;
-		-webkit-scrollbar: none;
+		/* scrollbar-width: none;
+		-webkit-scrollbar: none; */
 		scroll-snap-type: x mandatory;
+		z-index: 3;
+		width: 80vw;
 	}
 
 	.cards {
 		display: flex;
 	}
 
-	div {
+	.card {
 		scroll-snap-align: start;
-		padding: 0rem 2rem;
+		padding-right: 1rem;
+	}
+
+	.card:not(:first-of-type) {
+		padding-left: 1rem;
 	}
 
 	/* MEDIA QUERY DESKTOP = 1024px */
