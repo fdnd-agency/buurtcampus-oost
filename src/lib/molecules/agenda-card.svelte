@@ -5,7 +5,6 @@
 </script>
 
 <section style="background-image: url({cardImage});">
-	<!-- <h2>{cardEvent}</h2> -->
 	<div class="data">
 		<time> {cardDate} </time>
 		<address>{cardAddress}</address>

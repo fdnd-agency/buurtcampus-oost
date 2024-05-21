@@ -3,13 +3,12 @@
 
 	export let data;
 	const agenda = data.agendas[0];
-	console.log(agenda.address);
 </script>
 
 <section>
-	<div class="cards">
+	<ul class="cards">
 		{#each data.agendas as agenda (agenda.id)}
-			<div class="card">
+			<li class="card">
 				<AgendaCard
 					cardEvent={agenda.event}
 					cardDate={agenda.date}
@@ -17,9 +16,9 @@
 					cardPrice={agenda.price}
 					cardImage={agenda.cardImage.url}
 				/>
-			</div>
+			</li>
 		{/each}
-	</div>
+	</ul>
 </section>
 
 <style>
@@ -28,8 +27,6 @@
 		justify-content: center;
 		flex-direction: column;
 		overflow-x: auto;
-		/* scrollbar-width: none;
-		-webkit-scrollbar: none; */
 		scroll-snap-type: x mandatory;
 		z-index: 3;
 		width: 80vw;
@@ -37,6 +34,7 @@
 
 	.cards {
 		display: flex;
+		list-style-type: none;
 	}
 
 	.card {
