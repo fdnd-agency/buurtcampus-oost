@@ -2,8 +2,6 @@
     export let data;
     import { Dot, Button } from '$lib/index.js';
 	import { onMount } from 'svelte';
-
-    
 </script> 
 
 <section class="card-container">
@@ -18,6 +16,8 @@
         <div class="paragraph-card">
             <p>{data.cardSlides[0].paragraphCard}</p>
             <p>{data.cardSlides[0].paragraphCard2}</p>
+        </div>
+        <div class="btn-container">
             <Button 
                 buttonText="Bekijk de Bieb"
                 buttonBackground="var(--main-color-green)"
@@ -38,6 +38,8 @@
         <div class="paragraph-card">
             <p>{data.cardSlides[1].paragraphCard}</p>
             <p>{data.cardSlides[1].paragraphCard2}</p>
+        </div>
+        <div class="btn-container">
             <Button 
                 buttonText="Bekijk de Bieb"
                 buttonBackground="var(--main-color-brown)"
@@ -58,6 +60,8 @@
         <div class="paragraph-card">
             <p>{data.cardSlides[2].paragraphCard}</p>
             <p>{data.cardSlides[2].paragraphCard2}</p>
+        </div>
+        <div class="btn-container">
             <Button 
                 buttonText="Bekijk de Bieb"
                 buttonBackground="var(--main-color-beige)"
@@ -112,8 +116,6 @@
     }
     .paragraph-card p{
         max-width: 24em;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
     .paragraph-card p:nth-of-type(2){
         display: none;
@@ -121,74 +123,108 @@
     article picture{
         display: flex;
         justify-content: start;
-    }
-    article img{
         max-width: 18em;
         min-width: 13em;
         margin: 2em 3.5em;
+        overflow: hidden;
         min-height: 16em;
+        border-radius: var(--border-bigCard);
+    }
+    article img{
         display: flex;
         justify-content: center;
         border-radius: var(--border-bigCard);
+        width: 100%;
+    }
+    .btn-container{
+        margin: 2em 3.5em;
     }
 
     /* MEDIA QUERY MOBILE = 400px */
     @media (min-width: 25rem) {
-        h2{
-            max-width: 7em;
-        }
-        article img{
-            max-width: 25em;
-            min-width: 18em;
-            min-height: 18em;
-        }
-    }
 
-    /* MEDIA QUERY TABLET = 500px */
-    @media (min-width: 31.25rem) {
-        .card-container article{
-            padding: 2em;
-        }
-    }
-
-    /* MEDIA QUERY TABLET = 600px */
-    @media (min-width: 37.50rem) {
         .card-container article {
             width: 95vw;
             display: grid;
-            justify-content: center;
-        }
 
-        article img{
-            max-width: 24em;
+            justify-content: center;
+            padding: 2em;
+        }
+        h2{
+            max-width: 7em;
+        }
+        article picture{
+            justify-content: center;
+            max-width: 23em;
+            min-width: 18em;
         }
     }
 
    /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
         .card-container article{
-            grid-template-columns: 1fr 2fr;
-            justify-content: flex-start;
+            grid-template-columns: 23em 2fr;
+            justify-content: start;
+            gap: 2em;
             padding: 2em;
-        }
-        article picture{
-            justify-content: flex-end;
-            grid-column-start: 2;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        picture img{
-            margin: 0;
-        }
-        .paragraph-card{
-            margin: 1em 3.5em 0;
-            display: grid;
-            grid-column-start: 1;
-            grid-row-start: 2;
-            grid-row-end: 3;
+            height: 48em;
         }
         h2{
             font-size: 5em;
+            width: 4em;
+        }
+        article picture{
+            justify-content: end;
+            min-width: 100%;
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            margin: 0;  
+        }
+        article img{
+            height: 100%;
+            width: 32em;
+        }
+        .paragraph-card p:nth-of-type(2){
+            display: block;
+        }
+
+        .paragraph-card, .btn-container{
+            margin: 1em 0 0 4.2em;
+        }
+        .btn-container{
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1100px */
+    @media (min-width: 68.75rem) {
+
+        h2{
+            font-size: 6em;
+        }
+        .card-container article{
+            grid-template-columns: 28em 2fr;
+        }
+        .paragraph-card p{
+            max-width: 29em;
+        }
+        .paragraph-card, .btn-container{
+            margin: 1em 0 0 5.5em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        h2{
+            font-size: 7em;
+        }
+        .card-container article{
+            grid-template-columns: 36em 2fr;
+        }
+        .paragraph-card p{
+            max-width: 32em;
         }
     }
 </style>
