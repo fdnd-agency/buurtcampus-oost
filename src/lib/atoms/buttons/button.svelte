@@ -1,10 +1,9 @@
 <script>
 	import { Arrow } from '$lib/index.js';
-
 	export let buttonText, buttonBackground, svgFill, buttonColor;
 </script>
 
-<button style="background-color: {buttonBackground}; color: {buttonColor};">
+<button style="background-color: {buttonBackground}; color: {buttonColor}; ">
 	{buttonText}
 	<span>
 		<Arrow {svgFill} />
@@ -25,9 +24,12 @@
 
 	button:hover {
 		cursor: pointer;
+		background-color: var(--text-color-white);
+		color: var(--text-color-black);
 	}
 
 	span {
 		padding-left: 1rem;
 	}
+
 </style>

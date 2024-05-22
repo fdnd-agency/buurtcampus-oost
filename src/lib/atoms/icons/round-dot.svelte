@@ -11,4 +11,12 @@
     svg{
         margin: 1em;
     }
+
+    /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        svg{
+            margin: 1em;
+            width: 3em;
+        }
+    }
 </style>
