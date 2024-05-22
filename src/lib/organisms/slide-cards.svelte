@@ -81,11 +81,36 @@
         align-items: center;
         position: relative;
         bottom: 3em;
+        margin: 0 auto;
+        border-radius: var(--border-bigCard);
+    }
+    .card-container, article{
+        width: 100vw;
+        overflow: hidden;
     }
     .card-container article{
-        width: 100vw;
-        padding: 1em 0 2em;
         border-radius: var(--border-bigCard);
+        padding: 1em 0 2em;
+    }
+
+    .card-stekjes::before, .card-zaden::before, .card-gevel::before{
+        width: 20em;
+        height: 20em;
+        position: absolute;
+        z-index: 0;
+        left: -4em;
+        transform: rotate(135deg);
+
+    }
+    .card-stekjes::before, .card-zaden::before{
+        content: url(/assets/leaf-orange.svg);
+    }
+    .card-gevel::before{
+        content: url(/assets/leaf-green.svg);
+    }
+    .header-card, picture, .paragraph-card, .btn-container{
+        z-index: 2;
+        position: relative;
     }
     .header-card{
         display: flex;
@@ -142,11 +167,11 @@
 
     /* MEDIA QUERY MOBILE = 400px */
     @media (min-width: 25rem) {
-
-        .card-container article {
+        .card-container, article{
             width: 95vw;
+        }
+        .card-container article {
             display: grid;
-
             justify-content: center;
             padding: 2em;
         }
@@ -217,6 +242,10 @@
 
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
+        .card-stekjes::before, .card-zaden::before, .card-gevel::before{
+            width: 26em;
+            height: 26em;
+        }
         h2{
             font-size: 7em;
         }
@@ -230,7 +259,7 @@
 
     /* MEDIA QUERY DESKTOP = 1500px */
     @media (min-width: 93.75rem) {
-        .card-container article {
+        .card-container, article {
             width: 85vw;
         }
     }

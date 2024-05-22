@@ -10,6 +10,7 @@ export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
 export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
 export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
 export { default as Dot } from '$lib/atoms/icons/round-dot.svelte';
+export { default as Leaf } from '$lib/atoms/icons/leaf.svelte';
 
 // =========== MOLECULES ===========
 
