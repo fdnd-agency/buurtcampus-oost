@@ -156,8 +156,8 @@
         }
     }
 
-    /* MEDIA QUERY DESKTOP = 1500px */
-    @media (min-width: 93.75rem) {
+    /* MEDIA QUERY DESKTOP = 1700px */
+    @media (min-width: 106.25rem) {
         h1{
             font-size: clamp(5.8em, 12vw, 10em);
         }
