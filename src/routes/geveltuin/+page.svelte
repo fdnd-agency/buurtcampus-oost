@@ -1,6 +1,6 @@
 <script>
     export let data;
-	import HeroHeaders from '$lib/molecules/hero-headers.svelte';
+	import { HeroHeaders } from '$lib/index.js';
 
 </script>
 

@@ -46,6 +46,8 @@ html {
 	--paragraph-font: 'Poppins-Medium', sans-serif;
 
 	--border-bigCard: 2em;
+	--border-card: 1.0625em
+
 }
 
 @keyframes fade-in {

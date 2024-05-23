@@ -14,6 +14,8 @@ export { default as Dot } from '$lib/atoms/icons/round-dot.svelte';
 // =========== MOLECULES ===========
 
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
+export { default as HeroHeaders } from '$lib/molecules/hero-headers.svelte';
+export { default as OverViewPages } from '$lib/molecules/over-view-page.svelte';
 
 // =========== ORGANISMS ===========
 
