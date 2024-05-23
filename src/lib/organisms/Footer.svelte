@@ -94,6 +94,7 @@
     }
 
 	/* MEDIA QUERY MOBILE = 1400px */
+
 	@media (min-width: 87.5em) {
 		.information {
 			width: 50%;
