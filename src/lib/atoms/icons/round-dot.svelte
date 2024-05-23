@@ -9,6 +9,30 @@
     
 <style>
     svg{
-        margin: 1em;
+        margin: .7em;
     }
-</style>
+
+    /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        svg{
+            position: relative;
+            top: .5em;
+            margin: 1em;
+            width: 3em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1100px */
+    @media (min-width: 68.75rem) {
+        svg{
+            top: .7em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        svg{
+            top: 1.2em;
+        }
+    }
+    </style>

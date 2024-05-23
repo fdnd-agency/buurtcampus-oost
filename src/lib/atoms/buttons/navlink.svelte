@@ -9,7 +9,7 @@
         font-size: 10vw;
         color: var(--main-color-green);
         text-decoration: none;
-        font-family: var(--sub-header-font);
+        font-family: var(--link-font);
     }
 
     a:hover{
