@@ -73,7 +73,6 @@
 </section>
 
 <style>
-
     .card-container{
         display: flex;
         flex-direction: column;
@@ -91,8 +90,7 @@
     .card-container article{
         border-radius: var(--border-bigCard);
         padding: 1em 0 2em;
-    }
-
+    }   
     .card-stekjes::before, .card-zaden::before, .card-gevel::before{
         width: 20em;
         height: 20em;
@@ -100,7 +98,6 @@
         z-index: 0;
         left: -4em;
         transform: rotate(135deg);
-
     }
     .card-stekjes::before, .card-zaden::before{
         content: url(/assets/leaf-orange.svg);
