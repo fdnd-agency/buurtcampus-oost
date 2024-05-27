@@ -1,8 +1,8 @@
-import {gql} from 'graphql-request';
-import {hygraph} from '$lib/utils/hygraph.js';
+import { gql } from 'graphql-request';
+import { hygraph } from '$lib/utils/hygraph.js';
 
 export async function load() {
-    let query = gql`
+	let query = gql`
 		query Homepage {
 			herosSlider {
 				sliderPicture {
@@ -18,9 +18,19 @@ export async function load() {
 				}
 				imageCardAltText
 			}
-		}	  
-		
+			agendas {
+				cardImage {
+					url
+				}
+				date
+				event
+				price
+				address
+				buttonText
+			}
+		}
 	`;
 
-    return await hygraph.request(query);
+	const data = await hygraph.request(query);
+	return data;
 }

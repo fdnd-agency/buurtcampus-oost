@@ -1,28 +1,7 @@
 <script> 
     export let data;
-    import { Dot } from '$lib/index.js';
+    import { Dot, Button } from '$lib/index.js';
 	import { onMount } from 'svelte';
-
-    let paragraphs; // Declare variable for paragraphs
-
-    onMount(() => {
-        paragraphs = document.querySelectorAll('.paragraph-card p');
-
-        paragraphs.forEach(paragraph => {
-            paragraph.addEventListener('click', function() {
-                // Use the current paragraph element
-                if (paragraph.classList.contains('show-more')) {
-                    paragraph.classList.remove('show-more');
-                    paragraph.textContent = 'Lees meer';
-                } else {
-                    paragraph.classList.add('show-more');
-                    paragraph.textContent = 'Lees minder';
-                }
-            });
-        });
-    });
-
-    
 </script> 
 
 <section class="card-container">
@@ -37,7 +16,14 @@
         <div class="paragraph-card">
             <p>{data.cardSlides[0].paragraphCard}</p>
             <p>{data.cardSlides[0].paragraphCard2}</p>
-            <button class="toggle-button">Lees meer</button>
+        </div>
+        <div class="btn-container">
+            <Button 
+                buttonText="Bekijk de Bieb"
+                buttonBackground="var(--main-color-green)"
+                svgFill="var(--main-color-beige)"
+                buttonColor="var(--main-color-beige)"
+            />
         </div>
     </article>
 
@@ -52,7 +38,14 @@
         <div class="paragraph-card">
             <p>{data.cardSlides[1].paragraphCard}</p>
             <p>{data.cardSlides[1].paragraphCard2}</p>
-            <button class="toggle-button">Lees meer</button>
+        </div>
+        <div class="btn-container">
+            <Button 
+                buttonText="Bekijk de Bieb"
+                buttonBackground="var(--main-color-brown)"
+                svgFill="var(--main-color-beige)"
+                buttonColor="var(--main-color-beige)"
+            />
         </div>
     </article>
 
@@ -67,7 +60,14 @@
         <div class="paragraph-card">
             <p>{data.cardSlides[2].paragraphCard}</p>
             <p>{data.cardSlides[2].paragraphCard2}</p>
-            <button class="toggle-button">Lees meer</button>
+        </div>
+        <div class="btn-container">
+            <Button 
+                buttonText="Bekijk de Bieb"
+                buttonBackground="var(--main-color-beige)"
+                svgFill="var(--main-color-green)"
+                buttonColor="var(--main-color-green)"
+            />
         </div>
     </article>
 </section>
@@ -80,16 +80,34 @@
         align-items: center;
         position: relative;
         bottom: 3em;
-    }
-    .card-container article{
-        width: 100vw;
-        padding: 1em 0;
+        margin: 0 auto;
         border-radius: var(--border-bigCard);
     }
-
-    .card-container article::before{
-        content: "";
-
+    .card-container, article{
+        width: 100vw;
+        overflow: hidden;
+    }
+    .card-container article{
+        border-radius: var(--border-bigCard);
+        padding: 1em 0 2em;
+    }   
+    .card-stekjes::before, .card-zaden::before, .card-gevel::before{
+        width: 20em;
+        height: 20em;
+        position: absolute;
+        z-index: 0;
+        left: -4em;
+        transform: rotate(135deg);
+    }
+    .card-stekjes::before, .card-zaden::before{
+        content: url(/assets/leaf-orange.svg);
+    }
+    .card-gevel::before{
+        content: url(/assets/leaf-green.svg);
+    }
+    .header-card, picture, .paragraph-card, .btn-container{
+        z-index: 2;
+        position: relative;
     }
     .header-card{
         display: flex;
@@ -112,30 +130,134 @@
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
     }
-    .paragraph-card p{
-        max-width: 32em;
-        padding: .5em 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* Number of lines to show */
-        -webkit-box-orient: vertical;
+    .paragraph-card{
+        margin: 0 3.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
     }
-
-    /* Style for the toggle button */
-    .toggle-button {
-        display: block;
-        text-align: right;
-        cursor: pointer;
-        margin-top: 0.5em;
+    .paragraph-card p{
+        max-width: 24em;
+    }
+    .paragraph-card p:nth-of-type(2){
+        display: none;
+    }
+    article picture{
+        display: flex;
+        justify-content: start;
+        max-width: 18em;
+        min-width: 13em;
+        margin: 2em 3.5em;
+        overflow: hidden;
+        min-height: 16em;
+        border-radius: var(--border-bigCard);
     }
     article img{
-        width: 80%;
-        max-width: 20em;
-        height: 20em;
         display: flex;
         justify-content: center;
         border-radius: var(--border-bigCard);
+        width: 100%;
     }
-    
+    .btn-container{
+        margin: 2em 3.5em;
+    }
+
+    /* MEDIA QUERY MOBILE = 400px */
+    @media (min-width: 25rem) {
+        .card-container, article{
+            width: 95vw;
+        }
+        .card-container article {
+            display: grid;
+            justify-content: center;
+            padding: 2em;
+        }
+        h2{
+            max-width: 7em;
+        }
+        article picture{
+            justify-content: center;
+            max-width: 23em;
+            min-width: 18em;
+        }
+    }
+
+   /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        .card-container article{
+            grid-template-columns: 23em 2fr;
+            justify-content: start;
+            gap: 2em;
+            padding: 2em;
+            height: 48em;
+        }
+        h2{
+            font-size: 5em;
+            width: 4em;
+        }
+        article picture{
+            justify-content: end;
+            min-width: 100%;
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            margin: 0;  
+        }
+        article img{
+            height: 100%;
+            width: 32em;
+        }
+        .paragraph-card p:nth-of-type(2){
+            display: block;
+        }
+
+        .paragraph-card, .btn-container{
+            margin: 1em 0 0 4.2em;
+        }
+        .btn-container{
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1100px */
+    @media (min-width: 68.75rem) {
+
+        h2{
+            font-size: 6em;
+        }
+        .card-container article{
+            grid-template-columns: 28em 2fr;
+        }
+        .paragraph-card p{
+            max-width: 29em;
+        }
+        .paragraph-card, .btn-container{
+            margin: 1em 0 0 5.5em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        .card-stekjes::before, .card-zaden::before, .card-gevel::before{
+            width: 26em;
+            height: 26em;
+        }
+        h2{
+            font-size: 7em;
+        }
+        .card-container article{
+            grid-template-columns: 36em 2fr;
+        }
+        .paragraph-card p{
+            max-width: 32em;
+        }
+    }
+
+    /* MEDIA QUERY DESKTOP = 1500px */
+    @media (min-width: 93.75rem) {
+        .card-container, article {
+            width: 85vw;
+        }
+    }
 </style>
