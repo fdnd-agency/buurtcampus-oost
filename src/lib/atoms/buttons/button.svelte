@@ -9,7 +9,6 @@
 		<Arrow {svgFill} />
 	</span>
 </button>
-=======
 
 <style>
 	button {
