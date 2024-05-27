@@ -12,7 +12,7 @@ console.log(viewPageData.fotos);
 <article>
     <a href="{item.slug}" >
         <h3>{item.naam}</h3>
-        <img src="{item.fotos[0].url}" alt="{item.naam}" loading="lazy" height="60vh" width="24%">
+        <!-- <img src="{item.fotos[0].url}" alt="{item.naam}" loading="lazy" height="60vh" width="24%"> -->
     </a>
 </article>
 {/each} 
