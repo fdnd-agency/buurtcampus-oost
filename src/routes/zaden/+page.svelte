@@ -1,7 +1,6 @@
 <script>
     export let data;
     import { HeroHeaders, OverViewPages } from '$lib/index.js';
-    console.log(data.OverViewPages);
 
 </script>
 
