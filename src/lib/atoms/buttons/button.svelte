@@ -3,12 +3,13 @@
 	export let buttonText, buttonBackground, svgFill, buttonColor;
 </script>
 
-<button style="background-color: {buttonBackground}; color: {buttonColor};" >
+<button style="background-color: {buttonBackground}; color: {buttonColor};">
 	{buttonText}
 	<span>
 		<Arrow {svgFill} />
 	</span>
 </button>
+=======
 
 <style>
 	button {
@@ -17,7 +18,7 @@
 		justify-content: center;
 		width: 10rem;
 		border: none;
-		border-radius: 1rem;
+		border-radius: 2rem;
 		padding: 0.5rem 0;
 		font-size: 1rem;
 	}
@@ -28,7 +29,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-left: 1rem;
+		padding: 0 1rem;
 	}
-
 </style>

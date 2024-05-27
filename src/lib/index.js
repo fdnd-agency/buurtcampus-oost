@@ -16,9 +16,12 @@ export { default as LeafLeft } from '$lib/atoms/icons/leaf-left.svelte';
 // =========== MOLECULES ===========
 
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
+export { default as AgendaCard } from '$lib/molecules/agenda-card.svelte';
+export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
 
 // =========== ORGANISMS ===========
 
-export { default as Menu} from '$lib/organisms/menu.svelte';
-export { default as SlideCards} from '$lib/organisms/slide-cards.svelte';
+export { default as Menu } from '$lib/organisms/menu.svelte';
+export { default as SlideCards } from '$lib/organisms/slide-cards.svelte';
 export { default as Footer } from '$lib/organisms/footer.svelte';
+export { default as Agenda } from '$lib/organisms/agenda.svelte';
