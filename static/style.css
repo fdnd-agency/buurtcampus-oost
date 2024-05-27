@@ -49,8 +49,10 @@ html {
 	--link-font: 'Poppins-Regular', sans-serif;
 
 	--border-bigCard: 2em;
+	--border-card: 1.0625em
 
 	--image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+
 }
 
 @keyframes fade-in {

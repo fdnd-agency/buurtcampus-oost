@@ -16,8 +16,11 @@ export { default as LeafLeft } from '$lib/atoms/icons/leaf-left.svelte';
 // =========== MOLECULES ===========
 
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
+export { default as HeroHeaders } from '$lib/molecules/hero-headers.svelte';
+export { default as OverViewPages } from '$lib/molecules/over-view-page.svelte';
 export { default as AgendaCard } from '$lib/molecules/agenda-card.svelte';
 export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
+
 
 // =========== ORGANISMS ===========
 

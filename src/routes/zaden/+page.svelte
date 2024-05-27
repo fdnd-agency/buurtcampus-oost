@@ -1,10 +1,11 @@
 <script>
     export let data;
-    // console.log(data.heroHeaders[1]);
-	import HeroHeaders from '$lib/molecules/hero-headers.svelte';
+    import { HeroHeaders, OverViewPages } from '$lib/index.js';
 
 </script>
 
 <HeroHeaders 
     heroInfo="{data.heroHeaders[1]}"
 />
+
+<OverViewPages viewPageData= "{data.overviewPages[1]}"/>

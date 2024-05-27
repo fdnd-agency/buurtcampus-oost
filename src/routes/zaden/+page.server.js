@@ -7,10 +7,45 @@ export async function load() {
 		query MyQuery {
             heroHeaders {
                 heading1
-                heading2
                 description
                 image {
                   url
+                }
+              }
+              overviewPages {
+                titel
+                product {
+                  ... on Zaden {
+                    id
+                    aanmelddatum
+                    beschrijving
+                    categorie {
+                      naam
+                    }
+                    fotos {
+                      url
+                    }
+                    giftig
+                    naam
+                    landvanherkomst
+                    onderhoud
+                    slug
+                    stage
+                    stekken
+                    temperatuur
+                    voeding
+                    watergeven
+                    zonlicht
+                  }
+                }
+                cardSlide {
+                  titleCard
+                  imageCard {
+                    url
+                  }
+                  paragraphCard2
+                  paragraphCard
+                  imageCardAltText
                 }
               }
 		}
