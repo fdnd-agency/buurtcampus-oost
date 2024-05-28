@@ -11,27 +11,25 @@
 </a>
 
 <style>
-	a {
+	a{
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		justify-content: space-evenly;
-		width: 10rem;
-		border: none;
-		border-radius: 2rem;
-		padding: 0.3rem 0;
+		border-radius: 2em;
+		padding: 0.4em 1em;
 		text-decoration: none;
-		font-size: 1rem;
-		transition: ease-in-out .2s;
+		font-size: 1em;
+		transition: ease-in .1s;
 	}
 	a:hover {
 		cursor: pointer;
-		transform: scale(1.03);
+		transform: scale(1.05);
 	}
 	span {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		
+		padding: 0 0 .05em .7em;
 	}
 
 </style>
