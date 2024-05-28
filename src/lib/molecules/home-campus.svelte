@@ -17,6 +17,7 @@
 
     section{
         padding: 0 3em 3em;
+        height: 70vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -65,7 +66,6 @@
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
         section{
-            height: 65vh;
             padding: 0 7.5em 3em;
         }
         h2{
@@ -90,7 +90,7 @@
             height: 70vh;
         }
         p{  
-            max-width: 46em;
+            max-width: 68em;
         }
     }
 
@@ -98,9 +98,6 @@
     @media (min-width: 93.75rem) {
         section{
             padding: 0 15em 3em;
-        }
-        p{  
-            max-width: 58em;
         }
     }
 </style>

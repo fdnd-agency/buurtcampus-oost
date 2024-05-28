@@ -1,7 +1,6 @@
 <script>
 	import { Button } from '$lib/index.js';
-
-	export let cardEvent, cardDate, cardAddress, cardPrice, cardImage;
+	export let cardDate, cardAddress, cardPrice, cardImage;
 </script>
 
 <section style="background-image: url({cardImage});">
@@ -12,8 +11,9 @@
 	</div>
 	<div class="button">
 		<Button
+			href="/agenda"
 			buttonText="Meld je aan"
-			buttonBackground=" var(--main-color-green)"
+			buttonBackground=" var(--main-color-brown)"
 			svgFill="var(--main-color-beige)"
 			buttonColor="var(--main-color-beige)"
 		/>
@@ -34,7 +34,6 @@
 		background-size: cover;
 		background-position: center;
 	}
-
 	section::after {
 		content: '';
 		position: absolute;
@@ -45,13 +44,11 @@
 		border-radius: 1rem;
 		background: var(--image-gradient);
 	}
-
 	.data {
 		z-index: 1;
 		font-family: var(--sub-header-font);
 		color: var(--text-color-white);
 	}
-
 	.button {
 		z-index: 1;
 		align-self: flex-end;
