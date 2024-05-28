@@ -139,6 +139,7 @@
 			align-items: center;
 		}
 		h1 {
+			max-width: 9em;
 			font-size: clamp(5.8em, 12vw, 7em);
 		}
 		h1,
