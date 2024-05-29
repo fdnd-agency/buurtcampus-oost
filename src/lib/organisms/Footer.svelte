@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	console.log(data.footers[0])
+	// console.log(data.footers[0])
     import { LeafRight, LeafLeft } from '$lib/index.js';
 </script>
 
