@@ -14,6 +14,7 @@
 <style>
 	section {
 		display: flex;
+		height: 70vh;
 		justify-content: flex-start;
 		padding: 3rem;
 		background: var(--main-color-beige);
@@ -38,7 +39,7 @@
 
 	h2 {
 		font-size: 3.5rem;
-		padding: 0 0 4rem 0;
+		padding-bottom: .7em;
 		font-family: var(--sub-header-font);
 		color: var(--main-color-brown);
 		align-self: baseline;

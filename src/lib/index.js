@@ -20,7 +20,8 @@ export { default as HeroHeaders } from '$lib/molecules/hero-headers.svelte';
 export { default as OverViewPages } from '$lib/molecules/over-view-page.svelte';
 export { default as AgendaCard } from '$lib/molecules/agenda-card.svelte';
 export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
-export { default as CampusInfo } from '$lib/molecules/campus-info.svelte';
+export { default as HomeCampus } from '$lib/molecules/home-campus.svelte';
+export { default as HomePartners } from '$lib/molecules/home-partners.svelte';
 
 
 // =========== ORGANISMS ===========
