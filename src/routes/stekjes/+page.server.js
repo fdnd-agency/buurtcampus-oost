@@ -28,6 +28,7 @@ export async function load() {
                     stekken
                     temperatuur
                     verpotten
+                    projectnaam
                     voeding
                     watergeven
                     zonlicht

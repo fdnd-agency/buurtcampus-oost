@@ -32,6 +32,7 @@ export async function load() {
                     slug
                     stage
                     stekken
+                    projectnaam
                     temperatuur
                     voeding
                     watergeven

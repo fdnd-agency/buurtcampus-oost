@@ -8,7 +8,7 @@
 <section>
 	{#each viewPageData.product as item}
 		<article>
-			<a href={item.slug}>
+			<a href=/{item.projectnaam}/{item.slug}>
 				<h3>{item.naam}</h3>
 				<img src={item.fotos[0].url} alt={item.naam} loading="lazy" height="60vh" width="24%" />
 			</a>
