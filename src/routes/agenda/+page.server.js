@@ -24,6 +24,11 @@ export async function load() {
 				agendaParagraph2
 				agendaParagraph3
 			}
+			agendaTexts {
+				agendaParagraph1
+				agendaParagraph2
+				agendaParagraph3
+			}
 		}
 	`;
 

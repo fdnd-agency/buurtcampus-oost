@@ -1,50 +1,74 @@
 <script>
 	import { HeroHeaders, Button } from '$lib/index.js';
 	export let data;
-	const agenda = data.agendas[0];
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[3]} />
 
 <section>
 	<ul>
-		{#each data.agendas as agenda (agenda.id)}
-			<li>
-				<picture>
-					<img src={agenda.cardImage.url} alt="" />
-				</picture>
-				<h2>{agenda.event}</h2>
-				<div>
-					<address>{agenda.address}</address>
-					<span>{agenda.price}</span>
-					<time>{agenda.date}</time>
-					<Button
-						buttonText="Meld je aan"
-						buttonBackground=" var(--main-color-green)"
-						svgFill="var(--main-color-beige)"
-						buttonColor="var(--main-color-beige)"
-					/>
-				</div>
-			</li>
-		{/each}
-	</ul>
+		<li class="recent-card">
+			<picture>
+				<img src={data.agendas[0].cardImage.url} alt="" />
+			</picture>
+			<h2>{data.agendas[0].event}</h2>
+			<div>
+				<address>{data.agendas[0].address}</address>
+				<span>{data.agendas[0].price}</span>
+				<time>{data.agendas[0].date}</time>
+				<Button
+					buttonText="Meld je aan"
+					buttonBackground=" var(--main-color-green)"
+					svgFill="var(--main-color-beige)"
+					buttonColor="var(--main-color-beige)"
+				/>
+			</div>
+		</li>
 
-	<article>
-		<p>{agenda.agendaParagraph1}</p>
-		<details>
-			<summary><span class="closed">Lees meer</span><span class="open">Lees minder</span></summary>
-			<p>{agenda.agendaParagraph2}</p>
-			<p>{agenda.agendaParagraph3}</p>
-		</details>
-	</article>
+		<article>
+			<p>{data.agendaTexts[0].agendaParagraph1}</p>
+			<details id="details">
+				<summary><span class="closed">Lees meer</span><span class="open">Lees minder</span></summary
+				>
+				<p>{data.agendaTexts[0].agendaParagraph2}</p>
+				<p>{data.agendaTexts[0].agendaParagraph3}</p>
+			</details>
+		</article>
+
+		<div class="rest-cards">
+			{#each data.agendas.slice(1, 5) as agenda (agenda.id)}
+				<li>
+					<picture>
+						<img src={agenda.cardImage.url} alt="" />
+					</picture>
+					<h2>{agenda.event}</h2>
+					<div>
+						<address>{agenda.address}</address>
+						<span>{agenda.price}</span>
+						<time>{agenda.date}</time>
+						<Button
+							buttonText="Meld je aan"
+							buttonBackground=" var(--main-color-green)"
+							svgFill="var(--main-color-beige)"
+							buttonColor="var(--main-color-beige)"
+						/>
+					</div>
+				</li>
+			{/each}
+		</div>
+	</ul>
 </section>
 
 <style>
 	section {
+		padding: 2rem;
+	}
+
+	ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 1rem;
+		gap: 1rem;
 	}
 
 	li {
@@ -53,7 +77,8 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		margin: 1rem 0;
+		align-content: flex-start;
+		overflow-x: hidden;
 	}
 
 	li picture,
@@ -67,18 +92,15 @@
 		border-radius: 1rem;
 	}
 
-	/* first card */
-	/* first card */
-	/* first card */
-
-	li:first-of-type {
+	.recent-card {
 		height: 25rem;
 		color: var(--text-color-white);
 		justify-content: space-between;
 		position: relative;
+		overflow: hidden;
 	}
 
-	li:first-of-type::after {
+	.recent-card::after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -90,23 +112,23 @@
 		border-radius: 1rem;
 	}
 
-	li:first-of-type picture {
+	.recent-card picture {
 		border-radius: 1rem;
 		position: absolute;
 	}
 
-	li:first-of-type img {
+	.recent-card img {
 		z-index: 1;
 		position: relative;
 	}
 
-	li:first-of-type h2 {
+	.recent-card h2 {
 		position: relative;
 		z-index: 2;
 		padding: 1rem 0 0 1rem;
 	}
 
-	li:first-of-type div {
+	.recent-card div {
 		position: relative;
 		z-index: 2;
 		display: flex;
@@ -114,31 +136,40 @@
 		padding: 1rem;
 	}
 
-	/* rest of the cards */
-	/* rest of the cards */
-	/* rest of the cards */
+	.rest-cards {
+		grid-area: rest;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
 
-	li:not(:first-of-type) {
+	.rest-cards > li {
 		background-color: var(--main-color-beige);
 		height: 15rem;
 		flex-direction: column;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
-	li:not(:first-of-type) picture {
+	.rest-cards > li picture {
 		width: 40%;
 		padding: 1rem;
 	}
 
-	li:not(:first-of-type) div {
+	.rest-cards > li div {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.rest-cards > li h2 {
+		padding: 0 0 2rem 0;
 	}
 
 	article {
 		background-color: var(--main-color-beige);
 		border-radius: 1rem;
 		padding: 1rem;
+		width: 90vw;
 	}
 
 	article p {
@@ -157,5 +188,55 @@
 
 	summary {
 		color: var(--main-color-orange);
+		cursor: pointer;
+	}
+
+	/* MEDIA QUERY TABLET = 768px */
+	@media (min-width: 48rem) {
+		ul {
+			gap: 2rem;
+		}
+
+		li {
+			width: 90vw;
+		}
+	}
+
+	/* MEDIA QUERY TABLET = 1100px */
+	@media (min-width: 68.75rem) {
+		li {
+			width: auto;
+			margin: 0;
+		}
+
+		ul {
+			display: grid;
+			grid-template-columns: 2fr 2fr;
+			grid-template-rows: repeat(5, 1fr);
+			grid-template-areas:
+				'recent rest'
+				'recent rest'
+				'recent rest'
+				'article rest'
+				'article rest';
+			gap: 2rem;
+			width: 100%;
+			height: 100%;
+		}
+
+		.recent-card {
+			grid-area: recent;
+			height: 100%;
+		}
+
+		article {
+			grid-area: article;
+			height: 100%;
+		}
+
+		article {
+			padding: 2rem 5rem;
+			width: auto;
+		}
 	}
 </style>
