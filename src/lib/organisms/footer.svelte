@@ -38,7 +38,7 @@
 	footer {
 		position: relative;
 		width: 100%;
-		height: 50vh;
+		height: 70vh;
 		background-color: var(--main-color-beige);
 		overflow: hidden;
 		padding: 1em;
