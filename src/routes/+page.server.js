@@ -28,6 +28,12 @@ export async function load() {
 				address
 				buttonText
 			}
+			campusInfos {
+				title
+				title2
+				paragraph
+				paragraph2
+			}
 		}
 	`;
 

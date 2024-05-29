@@ -1,34 +1,35 @@
 <script>
 	import { Arrow } from '$lib/index.js';
-	export let buttonText, buttonBackground, svgFill, buttonColor;
+	export let href, buttonText, buttonBackground, svgFill, buttonColor;
 </script>
 
-<button style="background-color: {buttonBackground}; color: {buttonColor};">
+<a href={href} style="background-color: {buttonBackground}; color: {buttonColor};">
 	{buttonText}
 	<span>
 		<Arrow {svgFill} />
 	</span>
-</button>
-=======
+</a>
 
 <style>
-	button {
+	a{
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		width: 10rem;
-		border: none;
-		border-radius: 2rem;
-		padding: 0.5rem 0;
-		font-size: 1rem;
+		align-items: center;
+		border-radius: 2em;
+		padding: 0.4em 1em;
+		text-decoration: none;
+		font-size: 1em;
+		transition: ease-in .1s;
 	}
-	button:hover {
+	a:hover {
 		cursor: pointer;
+		transform: scale(1.05);
 	}
 	span {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0 1rem;
+		padding: 0 0 .05em .7em;
 	}
+
 </style>

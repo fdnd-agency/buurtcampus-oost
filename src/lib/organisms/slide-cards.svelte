@@ -1,7 +1,7 @@
 <script> 
     export let data;
     import { Dot, Button } from '$lib/index.js';
-	import { onMount } from 'svelte';
+	// import { onMount } from 'svelte';
 </script> 
 
 <section class="card-container">
@@ -19,6 +19,7 @@
         </div>
         <div class="btn-container">
             <Button 
+                href="/stekjes"
                 buttonText="Bekijk de Bieb"
                 buttonBackground="var(--main-color-green)"
                 svgFill="var(--main-color-beige)"
@@ -41,6 +42,7 @@
         </div>
         <div class="btn-container">
             <Button 
+                href="/zaden"
                 buttonText="Bekijk de Bieb"
                 buttonBackground="var(--main-color-brown)"
                 svgFill="var(--main-color-beige)"
@@ -63,6 +65,7 @@
         </div>
         <div class="btn-container">
             <Button 
+                href="/geveltuin"
                 buttonText="Bekijk de Bieb"
                 buttonBackground="var(--main-color-beige)"
                 svgFill="var(--main-color-green)"
@@ -162,6 +165,8 @@
         margin: 2em 3.5em;
     }
 
+
+
     /* MEDIA QUERY MOBILE = 400px */
     @media (min-width: 25rem) {
         .card-container, article{
@@ -233,7 +238,7 @@
             max-width: 29em;
         }
         .paragraph-card, .btn-container{
-            margin: 1em 0 0 5.5em;
+            margin: 1em 0 0 6.2em;
         }
     }
 
