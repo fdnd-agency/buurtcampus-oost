@@ -8,9 +8,9 @@
 	<img src={heroInfo.image.url} alt="stekjes" />
 </header>
 
-<!-- <section>
+<section>
 	<p>{heroInfo.description}</p>
-</section> -->
+</section>
 
 <style>
 	.overlay {

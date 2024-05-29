@@ -4,4 +4,4 @@
 
 <Menu />
 <slot />
-<!-- <Footer /> -->
+<Footer />
