@@ -1,4 +1,6 @@
 <script>
+	export let data;
+	// console.log(data.footers[0])
     import { LeafRight, LeafLeft } from '$lib/index.js';
 </script>
 
@@ -12,25 +14,22 @@
 		</div>
 	</section>
 	<section class="information">
-		<ul>
-			<li class="title">ADRES</li>
-			<li>OBA Linnaeusstraat</li>
-			<li>Linnaeusstraat 44</li>
-			<li>1092 CL Amsterdam</li>
-		</ul>
-		<ul>
-			<li class="title">CONTACT</li>
-			<li>buurtcampusoost@hva.nl</li>
-			<li>06 43450198</li>
-			<li>BTW 0055.81.205.B01</li>
-		</ul>
-		<ul>
-			<li class="title">SAMENWERKEN</li>
-			<li>
-				Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke
-				uitdagingen van Amsterdam Oost? Stuur een e-mail naar buurtcampusoost@hva.nl.
-			</li>
-		</ul>
+			<ul>
+				<li class="title">{data.footers[0].titleAdres}</li>
+				<li>{data.footers[0].location}</li>
+				<li>{data.footers[0].adres}</li>
+				<li>{data.footers[0].postalCode}</li>
+			</ul>
+			<ul>
+				<li class="title">{data.footers[0].titleContact}</li>
+				<li>{data.footers[0].email}</li>
+				<li>{data.footers[0].number}</li>
+				<li>{data.footers[0].btwCode}</li>
+			</ul>
+			<ul>
+				<li class="title">{data.footers[0].titleCollaborate}</li>
+				<li>{data.footers[0].collaborateParagraph}</li>
+			</ul>
 	</section>
 </footer>
 
@@ -38,7 +37,7 @@
 	footer {
 		position: relative;
 		width: 100%;
-		height: 50vh;
+		height: 70vh;
 		background-color: var(--main-color-beige);
 		overflow: hidden;
 		padding: 1em;
