@@ -28,6 +28,7 @@ export async function load() {
                     stekken
                     temperatuur
                     verpotten
+                    projectnaam
                     voeding
                     watergeven
                     zonlicht
@@ -38,15 +39,6 @@ export async function load() {
                       url
                     }
                   }
-                }
-                cardSlide {
-                  titleCard
-                  imageCard {
-                    url
-                  }
-                  paragraphCard2
-                  paragraphCard
-                  imageCardAltText
                 }
               }
 		}
