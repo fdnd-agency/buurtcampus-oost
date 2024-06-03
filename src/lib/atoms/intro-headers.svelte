@@ -11,28 +11,31 @@
     section{
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
-    p{
-        position: absolute;
-        margin-top: 2em;
-        padding: 2em;
-        width: 60vw;
+        position: relative;
+        gap: 1.5em;
+        margin: -2em auto;
+        padding: 1.5em 1.5em 1.5em .5em;
+        width: 80vw;
         background-color: var(--main-color-beige);
         color: var(--main-color-brown);
-        font-weight: 900;
+        font-weight: 500;
+        font-size: 1.4em;
         border-radius: 17px;
         
     }
-    p::before{
+ 
+    section::before{
         content: url('/assets/Circle-Orange.svg');
         display: inline-flex;
-        padding: 0  1em 0 1em;
+
     }
     
     @media (min-width: 48rem){
-        p{
-            margin-top: 0em;
+        section{
+            margin:-2em auto;
+            align-items: center;
+            width: 60vw;
+            padding: 2em;
         } 
     }
 
