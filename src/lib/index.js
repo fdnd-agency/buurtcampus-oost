@@ -13,6 +13,8 @@ export { default as Dot } from '$lib/atoms/icons/round-dot.svelte';
 export { default as LeafRight } from '$lib/atoms/icons/leaf-right.svelte';
 export { default as LeafLeft } from '$lib/atoms/icons/leaf-left.svelte';
 
+export {default as IntroHeaders } from '$lib/atoms/intro-headers.svelte'
+
 // =========== MOLECULES ===========
 
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
