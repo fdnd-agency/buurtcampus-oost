@@ -8,9 +8,9 @@
     <img src="{heroInfo.image.url}" alt="stekjes">
 </header>
 
-<section>
+<!-- <section>
 <p>{heroInfo.description}</p>
-</section>
+</section> -->
 
 <style>
     .overlay {
@@ -36,7 +36,7 @@
         height: 40vh;
         object-fit: cover;
     } 
-    section{
+    /* section{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -62,7 +62,7 @@
         p{
             margin-top: 0em;
         } 
-    }
+    } */
     @media (min-width: 64rem) {
 
         .overlay, img{
