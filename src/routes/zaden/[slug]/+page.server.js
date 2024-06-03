@@ -17,15 +17,10 @@ export const load = async ({ params }) => {
 				watergeven
                 voeding
                 temperatuur
-				
-            
-        
 			}
 		}
 	`;
 	const slug = params.slug;
-	// console.log(slug);
 	let result = await hygraph.request(query, { slug });
-	// console.log(result);
 	return result;
 };

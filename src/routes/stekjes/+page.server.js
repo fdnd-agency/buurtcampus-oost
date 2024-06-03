@@ -40,15 +40,6 @@ export async function load() {
                     }
                   }
                 }
-                cardSlide {
-                  titleCard
-                  imageCard {
-                    url
-                  }
-                  paragraphCard2
-                  paragraphCard
-                  imageCardAltText
-                }
               }
 		}
 	`;

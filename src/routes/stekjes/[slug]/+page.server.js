@@ -23,8 +23,6 @@ export const load = async ({ params }) => {
 		}
 	`;
 	const slug = params.slug;
-	// console.log(slug);
 	let result = await hygraph.request(query, { slug });
-	// console.log(result);
 	return result;
 };
