@@ -1,7 +1,7 @@
 <script>
     export let data;
     console.log(data.contacts[0].title);
-	import { HeroHeaders, Dot } from '$lib/index.js';
+	import { HeroHeaders, ContactForm } from '$lib/index.js';
 
 </script>
 
@@ -15,6 +15,7 @@
             <h2>{data.contacts[0].title}</h2>
             <p>{data.contacts[0].contactIntro}</p>
         </header>
+        <ContactForm />
     </section>
 </main>
 
@@ -26,17 +27,17 @@
     }
 
     section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background-color: var(--main-color-beige);
         border-radius: var(--border-card);
         height: 100%;
         width: 100%;
-        top: 18em;
-        position: absolute;
+        top: -1em;
+        position: relative;
+        padding: 2.5em;
         overflow: hidden;
-    }
-
-    header{
-        width: 100%;
     }
     section::after{
         content: url(/assets/leaf-orange.svg);
@@ -48,12 +49,15 @@
         top: -3em;
         transform: rotate(-45deg);
     }
-    
+    header{
+        padding: 1.5em 0;
+        width: 60%;
+    }
     header::after{
         content: url(/assets/Circle-Orange.svg);
         position: absolute;
         top: 2em;
-        padding: 0 1.5em;
+        margin: 0 -2.5em;
     }
     h2{
         position: relative;
@@ -79,16 +83,35 @@
         section{
             width: 90%;
         }
+        
+        header{
+            width: 65%;
+        }
+        header::after{
+            top: 4em;
+            margin: 0 -5em;
+        }
         h2{
             font-size: 4em;
             margin: .3em 0;
         }
     }
 
-    /* MEDIA QUERY TABLET = 1024px */
-    @media (min-width: 64rem) {
+    /* MEDIA QUERY TABLET = 1200px */
+    @media (min-width: 75rem) {
+        header{
+            width: 75%;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1500px */
+    @media (min-width: 93rem) {
+
         section{
-            top: 23em;
+            top: -3em;
+        }
+        header{
+            width: 80%;
         }
     }
 
