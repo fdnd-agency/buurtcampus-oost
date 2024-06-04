@@ -1,8 +1,6 @@
 <script>
-
+    import { Button } from '$lib/index.js';
 </script>
-
-
 
 <form action="https://api.web3forms.com/submit" method="POST">
     <input
@@ -38,7 +36,7 @@
             value="question"
             checked
         />
-        <label for="question">Ik heb een vraag</label>
+        <label for="question" class="radio-question">Ik heb een vraag</label>
     </div>
 
     <div class="radio-2">
@@ -48,7 +46,7 @@
             name="contact-reason"
             value="workshop"
         />
-        <label for="workshop">
+        <label for="workshop" class="radio-question">
             Ik wil mij aanmelden voor een workshop
         </label>
     </div>
@@ -114,8 +112,9 @@ form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 4px;
+    gap: .8em;
     margin-top: 2rem;
+    color: var(--card-color-green);
 }
 
 .radio-2 {
@@ -128,27 +127,31 @@ input[type='tel'],
 textarea {
     border: none;
     padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-radius: var(--bradius);
+    border-radius: var(--border-card);
     font-family: 'Mulish', sans-serif;
 }
 
 input[type='submit'] {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    border-radius: 2em;
+    padding: 0.4em 1em;
+    text-decoration: none;
+    font-size: 1em;
+    transition: ease-in .1s;
+    background-color: var(--main-color-green);
+    color: var(	--text-color-white);
     border: none;
-    border-radius: var(--bradius);
-    padding: 0.5rem;
-    width: 6rem;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    font-weight: bold;
     cursor: pointer;
+    width: 8rem;
+    margin: .5em 0;
 }
 
 input[type='submit']:hover {
-    color: var(--button-color);
-    background-color: var(--text-color);
+    background-color: var(--main-color-orange);
 }
+
+.radio-question{
+    font-family: var(--paragraph-font);
+}
+
 
 </style>
