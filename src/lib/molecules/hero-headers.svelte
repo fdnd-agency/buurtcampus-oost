@@ -8,10 +8,6 @@
     <img src="{heroInfo.image.url}" alt="stekjes">
 </header>
 
-<!-- <section>
-<p>{heroInfo.description}</p>
-</section> -->
-
 <style>
     .overlay {
         position: absolute;
@@ -27,49 +23,26 @@
         align-items: center;
     }
     h1{
+        font-family: var(--header-font);
         position: absolute;
         color: var(--text-color-white);
-        font-size: 4.5rem;
+        font-size: clamp(4em, 15vw, 5em);
     }
     img{
         width: 100%;
         height: 40vh;
         object-fit: cover;
     } 
-    /* section{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (min-width: 48rem) {
+        h1 {
+            font-size: clamp(5.8em, 13vw, 6em);
+        }
     }
-    p{
-        position: absolute;
-        margin-top: 2em;
-        padding: 2em;
-        width: 60vw;
-        background-color: var(--main-color-beige);
-        color: var(--main-color-brown);
-        font-weight: 900;
-        border-radius: 17px;
-        
-    }
-    p::before{
-        content: url('/assets/Circle-Orange.svg');
-        display: inline-flex;
-        padding: 0  1em 0 1em;
-    }
-    
-    @media (min-width: 48rem){
-        p{
-            margin-top: 0em;
-        } 
-    } */
     @media (min-width: 64rem) {
-
         .overlay, img{
             width: 100%;
             height: 50vh;
         } 
     }
-
 
 </style>

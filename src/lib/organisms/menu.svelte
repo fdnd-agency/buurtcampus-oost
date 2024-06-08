@@ -120,8 +120,9 @@
 	}
 
 	/* Mediaquery's   */
-	/* Desktop styling   */
-	@media (min-width: 900px) {
+
+	/* 900px*/
+	@media (min-width: 56.25em) {
 		.menu-icon,		
 		.close-icon {
 			display: none;
@@ -149,8 +150,9 @@
 			color: var(--main-color-orange);
 		}
 	}
-	
-	@media (min-width: 1400px) {
+
+	/* 1400px */
+	@media (min-width: 87.5em) {
 		nav {
 			position: absolute;
 		}
