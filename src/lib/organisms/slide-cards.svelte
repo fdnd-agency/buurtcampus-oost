@@ -1,10 +1,9 @@
 <script> 
     export let data;
     import { Dot, Button } from '$lib/index.js';
-	// import { onMount } from 'svelte';
 </script> 
 
-<section class="card-container">
+<div class="card-container">
     <article class="card-stekjes">
         <header class="header-card">
             <Dot svgFill="var(--main-color-orange)"/>
@@ -73,7 +72,7 @@
             />
         </div>
     </article>
-</section>
+</div>
 
 <style>
     .card-container{
