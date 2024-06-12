@@ -7,6 +7,7 @@
 
 <section>
 	<ul>
+		<!-- laad de meest recente event in -->
 		<li class="recent-card">
 			<picture>
 				<img src={data.agendas[0].cardImage.url} alt="" />
@@ -25,7 +26,7 @@
 			</div>
 		</li>
 
-		<article>
+		<li class="no-styling">
 			<p>{data.agendaTexts[0].agendaParagraph1}</p>
 			<details id="details">
 				<summary><span class="closed">Lees meer</span><span class="open">Lees minder</span></summary
@@ -33,10 +34,11 @@
 				<p>{data.agendaTexts[0].agendaParagraph2}</p>
 				<p>{data.agendaTexts[0].agendaParagraph3}</p>
 			</details>
-		</article>
+		</li>
 
 		<div class="rest-cards">
 			{#each data.agendas.slice(1, 5) as agenda (agenda.id)}
+				<!-- laad de 4 meest recente events na de eerste in -->
 				<li>
 					<picture>
 						<img src={agenda.cardImage.url} alt="" />
@@ -153,7 +155,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		max-height: 12.5rem;
-		padding-right: 2rem; /* Add this line */
+		padding-right: 2rem;
 	}
 
 	.rest-cards > li picture {
@@ -171,7 +173,7 @@
 		font-size: 1.1rem;
 	}
 
-	article {
+	.no-styling {
 		background-color: var(--main-color-beige);
 		border-radius: 1rem;
 		padding: 1rem;
@@ -180,7 +182,7 @@
 		position: relative;
 	}
 
-	article p {
+	.no-styling p {
 		margin: 0 0 1rem 0;
 	}
 
@@ -230,8 +232,8 @@
 				'recent rest'
 				'recent rest'
 				'recent rest'
-				'article rest'
-				'article rest';
+				'text rest'
+				'text rest';
 			gap: 2rem;
 			width: 100%;
 			height: 100%;
@@ -242,15 +244,20 @@
 			height: 100%;
 		}
 
-		article {
-			grid-area: article;
+		.no-styling {
+			grid-area: text;
 			height: 100%;
 			padding: 2rem 5rem;
 			width: auto;
 		}
 
-		article::after {
-			content: url('./assets/leaf-light-green.svg');
+		.no-styling p,
+		.no-styling details {
+			z-index: 1;
+		}
+
+		.no-styling::after {
+			content: url('assets/leaf-light-green.svg');
 			position: absolute;
 			height: 75%;
 			width: 75%;
