@@ -1,5 +1,5 @@
 <script>
-	import { HeroHeaders, Button } from '$lib/index.js';
+	import { HeroHeaders, Button, LeafRight } from '$lib/index.js';
 	export let data;
 </script>
 
@@ -46,12 +46,6 @@
 						<address>{agenda.address}</address>
 						<span>{agenda.price}</span>
 						<time>{agenda.date}</time>
-						<Button
-							buttonText="Meld je aan"
-							buttonBackground=" var(--main-color-green)"
-							svgFill="var(--main-color-beige)"
-							buttonColor="var(--main-color-beige)"
-						/>
 					</div>
 				</li>
 			{/each}
@@ -126,6 +120,7 @@
 		position: relative;
 		z-index: 2;
 		padding: 1rem 0 0 1rem;
+		font-size: 3rem;
 	}
 
 	.recent-card div {
@@ -134,6 +129,14 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+	}
+
+	div {
+		font-weight: 600;
+	}
+
+	.recent-card time {
+		padding-bottom: 1rem;
 	}
 
 	.rest-cards {
@@ -149,6 +152,8 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
+		max-height: 12.5rem;
+		padding-right: 2rem; /* Add this line */
 	}
 
 	.rest-cards > li picture {
@@ -163,6 +168,7 @@
 
 	.rest-cards > li h2 {
 		padding: 0 0 2rem 0;
+		font-size: 1.1rem;
 	}
 
 	article {
@@ -170,6 +176,8 @@
 		border-radius: 1rem;
 		padding: 1rem;
 		width: 90vw;
+		overflow: hidden;
+		position: relative;
 	}
 
 	article p {
@@ -184,6 +192,11 @@
 	details[open] summary .open,
 	details:not([open]) summary .closed {
 		display: inline;
+	}
+
+	details {
+		margin: 0;
+		padding: 0;
 	}
 
 	summary {
@@ -232,11 +245,17 @@
 		article {
 			grid-area: article;
 			height: 100%;
-		}
-
-		article {
 			padding: 2rem 5rem;
 			width: auto;
+		}
+
+		article::after {
+			content: url('./assets/leaf-light-green.svg');
+			position: absolute;
+			height: 75%;
+			width: 75%;
+			rotate: -25deg;
+			transform: translateX(10rem);
 		}
 	}
 </style>
