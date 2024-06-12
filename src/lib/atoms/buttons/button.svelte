@@ -76,4 +76,7 @@
 	.svg-green{
         --svg-fill: var(--main-color-green);
     }
+	.svg-brown{
+        --svg-fill: var(--main-color-brown);
+    }
 </style>

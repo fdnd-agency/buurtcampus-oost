@@ -13,9 +13,8 @@
 		<Button
 			href="/agenda"
 			buttonText="Meld je aan"
-			buttonBackground=" var(--main-color-brown)"
-			svgFill="var(--main-color-beige)"
-			buttonColor="var(--main-color-beige)"
+			btnClass="btn-brown"
+			svgFill="svg-beige"
 		/>
 	</div>
 </section>
