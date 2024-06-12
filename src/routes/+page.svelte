@@ -1,6 +1,5 @@
 <script>
 	export let data;
-
 	import { HeroSlider, SlideCards, Agenda, HomeCampus, HomePartners } from '$lib/index.js';
 </script>
 
