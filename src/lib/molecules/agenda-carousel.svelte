@@ -46,10 +46,10 @@
 		padding-left: 1rem;
 	}
 
-	/* MEDIA QUERY DESKTOP = 1024px */
-	@media (min-width: 64rem) {
+    /* MEDIA QUERY DESKTOP = 1500px */
+    @media (min-width: 93.75rem) {
 		section {
-			width: 80vw;
+			width: 70vw;
 		}
 	}
 </style>

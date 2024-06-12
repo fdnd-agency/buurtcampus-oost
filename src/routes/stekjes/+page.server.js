@@ -18,30 +18,26 @@ export async function load() {
 						id
 						aanmelddatum
 						beschrijving
-						fotos {
-							url
+						createdAt
+						categories {
+							naam
 						}
 						giftig
-						naam
-						landvanherkomst
-						onderhoud
 						slug
-						stage
 						stekken
 						temperatuur
+						verpotten
+						projectnaam
 						voeding
 						watergeven
 						zonlicht
+						onderhoud
+						landvanherkomst
+						naam
+						fotos {
+							url
+						}
 					}
-				}
-				cardSlide {
-					titleCard
-					imageCard {
-						url
-					}
-					paragraphCard2
-					paragraphCard
-					imageCardAltText
 				}
 			}
 		}

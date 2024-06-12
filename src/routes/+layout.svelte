@@ -1,7 +1,9 @@
 <script>
-	import { Menu, Footer } from '$lib/index';
+  export let data;
+  import { Menu, Footer } from '$lib/index.js';
 </script>
 
-<Menu />
-<slot />
-<Footer />
+  <Menu />
+  <slot/>
+  <Footer {data}/>
+
