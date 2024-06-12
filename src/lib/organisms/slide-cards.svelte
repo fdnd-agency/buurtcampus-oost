@@ -1,6 +1,7 @@
 <script> 
     export let data;
     import { Dot, Button } from '$lib/index.js';
+    let isHovered = false;
 </script> 
 
 <div class="card-container">
@@ -18,11 +19,10 @@
         </div>
         <div class="btn-container">
             <Button 
+                btnClass="btn-green"
                 href="/stekjes"
                 buttonText="Bekijk de Bieb"
-                buttonBackground="var(--main-color-green)"
-                svgFill="var(--main-color-beige)"
-                buttonColor="var(--main-color-beige)"
+                svgFill="svg-beige"
             />
         </div>
     </article>
@@ -41,11 +41,10 @@
         </div>
         <div class="btn-container">
             <Button 
+                btnClass="btn-brown"
                 href="/zaden"
                 buttonText="Bekijk de Bieb"
-                buttonBackground="var(--main-color-brown)"
-                svgFill="var(--main-color-beige)"
-                buttonColor="var(--main-color-beige)"
+                svgFill="svg-beige"
             />
         </div>
     </article>
@@ -64,17 +63,17 @@
         </div>
         <div class="btn-container">
             <Button 
+                btnClass="btn-beige"
                 href="/geveltuin"
                 buttonText="Bekijk de Bieb"
-                buttonBackground="var(--main-color-beige)"
-                svgFill="var(--main-color-green)"
-                buttonColor="var(--main-color-green)"
+                svgFill="svg-green"
             />
         </div>
     </article>
 </div>
 
 <style>
+
     .card-container{
         display: flex;
         flex-direction: column;
