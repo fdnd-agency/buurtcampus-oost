@@ -10,9 +10,8 @@
     <Button 
         href="/partners"
         buttonText="Bekijk onze partners"
-        buttonBackground="var(--main-color-beige)"
-        svgFill="var(--main-color-green)"
-        buttonColor="var(--main-color-green)"
+        btnClass="btn-beige"
+        svgFill="svg-green"
     />
 </section>
 
