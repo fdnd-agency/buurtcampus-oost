@@ -87,6 +87,7 @@
 		padding: 0 1em;
 	}
 	h1 {
+		view-transition-name: h1;
 		font-family: var(--header-font);
 		font-size: clamp(4em, 15vw, 5em);
 		color: var(--text-color-white);

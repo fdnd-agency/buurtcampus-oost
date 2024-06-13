@@ -1,160 +1,164 @@
 <script>
-	import { Logo, MenuIcon, CloseIcon, Navlink } from '$lib/index.js';
-	import { onMount } from "svelte";
+	import { Logo, OpenMenu, CloseMenu, Navlink } from '$lib/index.js';
 
-	onMount(() => {
-		// @ts-ignore
-		document
-		.querySelector("a .menu-icon")
-		.addEventListener("click", function (ev) {
-			// @ts-ignore
-			document.querySelector("nav a").classList.add("active");
-			// @ts-ignore
-			document.querySelector("nav a").focus();
-			ev.preventDefault();
-		});
+    let navActive = false;
 
-		// @ts-ignore
-		document
-		.querySelector("nav .close-icon")
-		.addEventListener("click", function (ev) {
-			// @ts-ignore
-			document.querySelector("nav a").classList.remove("active");
-			document.body.focus();
-			ev.preventDefault();
-		});
-	});
+    const toggleNav = () => {
+        navActive = !navActive;
+    };
 </script>
 
 <header>
-	<a href="/" class="logo">
-		<Logo />
-	</a>
-
-	<a class="menu-icon" href="#menu">
-		<MenuIcon />
-	</a>
-
-	<nav id="menu">
-		<ul role="menu">
-			<li>  
-				<Navlink href="/stekjes" title="Stekjes"> </Navlink>
-			</li>
-			<li>        
-				<Navlink href="/zaden" title="Zaden"> </Navlink>
-			</li>
-			<li>        
-				<Navlink href="/geveltuin" title="Geveltuin"> </Navlink>
-			</li>
-			<li>        
-				<Navlink href="/agenda" title="Agenda"> </Navlink>
-			</li>
-			<li>        
-				<Navlink href="/partners" title="Partners"> </Navlink>
-			</li>
-			<li>        
-				<Navlink href="/contact" title="Contact"> </Navlink>
-			</li>
-		</ul>
-
-		<a class="close-icon" href="/">
-			<CloseIcon />
+    <div class="container">
+        <a href="/" class="logo" >
+			<Logo />
 		</a>
-	</nav>
+        <button aria-expanded={navActive} on:click={toggleNav}>
+            <img class="menu-icon" src={navActive ? CloseMenu : OpenMenu} alt="Navigation button" />
+        </button>
+    </div>
+
+    <nav class:active={navActive}>
+        <ul role="menu">
+			<li>  
+				<Navlink href="/stekjes" title="Stekjes" on:click={toggleNav} /> 
+			</li>
+			<li>        
+				<Navlink href="/zaden" title="Zaden" on:click={toggleNav} /> 
+			</li>
+			<li>        
+				<Navlink href="/geveltuin" title="Geveltuin" on:click={toggleNav} /> 
+			</li>
+			<li>        
+				<Navlink href="/agenda" title="Agenda" on:click={toggleNav} /> 
+			</li>
+			<li>        
+				<Navlink href="/partners" title="Partners" on:click={toggleNav} /> 
+			</li>
+			<li>        
+				<Navlink href="/contact" title="Contact" on:click={toggleNav} /> 
+			</li>
+        </ul>
+    </nav>
 </header>
 
 <style>
 	header {
+		width: 100%;
+	}
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		position: absolute;
 		z-index: 99;
 		width: 100%;
-		padding: 1em 2.5em 1em 2em;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.menu-icon{
-		width: 30px;
-		height: 30px;
+		padding: 1em 2.5em 1em 1.5em;
 	}
 	nav {
-		position: fixed;
-		inset: 0;
 		background: var(--main-color-beige);
-		display: none;
-		animation: reveal-nav 0.25s ease-in forwards;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 1em;
+        visibility: hidden;
+        transform: translateY(-100%);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        z-index: 99;
 	}
-	nav .close-icon {
-		background: none;
-		color: var(--text-color-white);
-		padding: 2em 2.5em;
-		position: absolute;
-		top: 0;
-		right: 0;
+    nav.active {
+        visibility: visible;
+        transform: translateY(0);
+        opacity: 1;
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out visibility 0s linear 0.5s;
 	}
 	ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding: 5em 0;
+        font-size: 2em;
 		list-style: none;
-		display: flex;
-		flex-direction: column;
-		padding: 5em 2em;
 	}
-
+    nav li{
+        width: 80%;
+        border-bottom: 2px solid var(--main-color-green);
+    }
+	nav li:hover{
+        border-color: var(--main-color-orange);
+    }
+    .logo{
+		position: relative;
+        z-index: 1;
+        height: auto;
+	}
+	.logo:hover {
+		cursor: pointer;
+        transform: scale(1.1);
+	}
+	button{
+		border: none;
+		background: none;
+		transform: rotate(180deg);
+		cursor: pointer;
+	}
 	a {
 		text-decoration: none;
-	}
-
-	@supports selector(:target) {
-		nav:target {
-			display: block;
-		}
-	}
-
-	@keyframes reveal-nav {
-		from {
-			transform: translateY(-100%);
-		}
-		to {
-			transform: translateY(0);
-		}
 	}
 
 	/* Mediaquery's   */
 
 	/* 900px*/
 	@media (min-width: 56.25em) {
-		.menu-icon,		
-		.close-icon {
-			display: none;
+
+		header{
+			position: absolute;
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			height: 8em;
+			padding: 1em 2.5em;
+		}
+
+		.container{
+			position: relative;
+			padding: 0;
 		}
 		nav {
-			display: flex;
-			position: absolute;
-			flex-wrap: wrap;
-			justify-content: flex-end;
-			align-content: center;
-			background: none;
-			padding: 1.5em 2.5em;
-		}
-		.logo {
 			position: relative;
-			z-index: 1;
-		}
+            display: flex;
+            background: none;
+            padding: .7em 2.5em;
+            width: auto;
+            height: unset;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
 		ul {
 			flex-direction: row;
-			width: max-content;
 			gap: 2em;
 			padding: 0;
+			font-size: 1em;
+		}
+        nav li{
+            width: inset;
+            border-bottom: none;
+        }
+
+		.menu-icon {
+            display: none;
 		}
 		a:hover {
 			color: var(--main-color-orange);
 		}
 	}
 
-	/* 1400px */
-	@media (min-width: 87.5em) {
-		nav {
-			position: absolute;
-		}
-	}
 </style>

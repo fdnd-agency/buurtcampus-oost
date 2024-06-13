@@ -4,12 +4,9 @@
   import Viewtransition from '$lib/viewtransition.svelte';
 </script>
 
-<div class="app">
+<Viewtransition />
 
-  <Viewtransition />
-  <Menu />
-  <slot/>
-  <Footer {data}/>
-
-</div>
+<Menu />
+<slot/>
+<Footer {data}/>
 
