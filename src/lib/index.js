@@ -1,15 +1,10 @@
-// =========== ATOMS ===========
-
-// === SVG's ===
-export { default as CloseMenu } from '$lib/atoms/icons/close-menu.svg';
-export { default as OpenMenu } from '$lib/atoms/icons/open-menu.svg';
+// =========== ATOMS ===========x
 
 // === Buttons ===
 export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
 export { default as Button } from '$lib/atoms/buttons/button.svelte';
 
 // === Icons ===
-export { default as Logo } from '$lib/atoms/icons/logo.svelte';
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
 export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
 export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';

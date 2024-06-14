@@ -1,48 +1,82 @@
 <script>
-	import { Logo, Navlink } from '$lib/index.js';
-	
+	import { Navlink } from '$lib/index.js';
+    import { onMount } from 'svelte'; 
+
     let navOpen = false;
+    let lastScrollY = 0;
+    let headerHidden = false;
 
-    function handleNav() {
+    onMount(() => {
+        const handleResize = () => {
+        if (window.innerWidth >= 900) {
+            navOpen = false;
+        }
+        };
+
+        const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        headerHidden = currentScrollY > lastScrollY && currentScrollY > 80; // Verberg bij scrollen naar beneden en voorbij 80px
+        lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
+    const handleNav = () => {
+        if (window.innerWidth < 900) {
         navOpen = !navOpen;
-		console.log('navOpen:', navOpen); 
-    }
-
+        }
+    };
 </script>
 
-<header>
+<header class:hidden={headerHidden} class:mobile-header={navOpen}>
     <div class="container">
-        <a href="/" class="logo">
-            <Logo />
-        </a>
+        <a href="/" class="logo" class:logo2={navOpen}> </a>
         <button class:change={navOpen} on:click={handleNav}></button>
     </div>
 
     <nav class:active={navOpen}>
         <ul role="menu">
-            <li><Navlink href="/stekjes" title="Stekjes" on:click={handleNav} /></li>
-            <li><Navlink href="/zaden" title="Zaden" on:click={handleNav} /></li>
-            <li><Navlink href="/geveltuin" title="Geveltuin" on:click={handleNav} /></li>
-            <li><Navlink href="/agenda" title="Agenda" on:click={handleNav} /></li>
-            <li><Navlink href="/partners" title="Partners" on:click={handleNav} /></li>
-            <li><Navlink href="/contact" title="Contact" on:click={handleNav} /></li>
+            <li><Navlink {handleNav} href="/stekjes" title="Stekjes"/></li>
+            <li><Navlink {handleNav} href="/zaden" title="Zaden"/></li>
+            <li><Navlink {handleNav} href="/geveltuin" title="Geveltuin" /></li>
+            <li><Navlink {handleNav} href="/agenda" title="Agenda"/></li>
+            <li><Navlink {handleNav} href="/partners" title="Partners"/></li>
+            <li><Navlink {handleNav} href="/contact" title="Contact"/></li>
         </ul>
     </nav>
 </header>
 
 <style>
 header {
+    box-shadow: inset 0px 216px 51px -157px rgba(0,0,0,0.41);
     width: 100%;
-    transition: all 0.5s;
+    transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+    transform: translateY(-100%); 
+    z-index: 100;
+}
+.mobile-header {
+    position: fixed;
+    z-index: 6;
 }
 .container {
+    box-shadow: inset 0px 216px 51px -157px rgba(0,0,0,0.41);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    z-index: 99;
+    position: fixed;
+    z-index: 7;
     width: 100%;
-    padding: 1em 2.5em 1em 1.5em;
+    padding: 1em 2.5em;
+    transition: transform 0.3s ease-in-out;
 }
 nav {
     background: var(--main-color-beige);
@@ -79,9 +113,20 @@ nav li:hover {
     border-color: var(--main-color-orange);
 }
 .logo {
+	height: 5em;
+	width: 7em;
+	background-image: url(/assets/Logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: relative;
     z-index: 1;
-    height: auto;
+    mix-blend-mode: difference;
+}
+
+.logo2 {
+	background-image: url(/assets/Logo-green.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .logo:hover {
     cursor: pointer;
@@ -99,7 +144,7 @@ button {
     transform: rotate(180deg);
 }
 button.change {
-    background-image: url(../atoms/icons/close-menu.svg);
+    background-image: url(/assets/close-menu.svg);
 }
 button:hover {
     cursor: pointer;
@@ -112,14 +157,16 @@ a {
 /* 900px */
 @media (min-width: 56.25em) {
     header {
-        position: absolute;
+        position: fixed;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 8em;
         padding: 1em 2.5em;
+        z-index: 6;
     }
     .container {
+        box-shadow: unset;
         position: relative;
         width: auto;
         padding: 0;
@@ -133,6 +180,7 @@ a {
         height: unset;
         transform: none;
     }
+
     ul {
         flex-direction: row;
         gap: 2em;
@@ -143,6 +191,10 @@ a {
         width: unset;
         border-bottom: none;
     }
+
+	button{
+		display: none;
+	}
     a:hover {
         color: var(--main-color-orange);
     }

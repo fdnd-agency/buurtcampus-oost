@@ -1,26 +1,29 @@
 <script>
-	export let href, title;
+	export let handleNav, href, title;
 </script>
 
-<a {href}>{title}</a>
+<a on:click={handleNav} {href}>{title}</a>
 
 <style>
     a{
+        display: block;
+        width: 100%;
         font-size: 1.5em;
         color: var(--main-color-green);
         text-decoration: none;
         font-family: var(--link-font);
     }
-
     a:hover{
         color: var(--main-color-orange);
-        scale: 1.2;
     }
 
     @media (min-width: 900px) {
         a{
-        font-size: 1em;
-        color: var(--text-color-white);
+            font-size: 1em;
+            color: var(--text-color-white);
+        }
+        a:hover{
+            scale: 1.2;
         }
     }
 
