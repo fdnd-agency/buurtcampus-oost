@@ -193,7 +193,7 @@ a {
         flex-direction: row;
         gap: 2em;
         padding: 0;
-        font-size: 1em;
+        font-size: 1.2em;
     }
     nav li {
         width: unset;
