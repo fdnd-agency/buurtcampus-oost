@@ -1,5 +1,5 @@
 <script>
-	import { HeroHeaders, Button, LeafRight } from '$lib/index.js';
+	import { HeroHeaders, Button } from '$lib/index.js';
 	export let data;
 </script>
 
@@ -18,10 +18,10 @@
 				<span>{data.agendas[0].price}</span>
 				<time>{data.agendas[0].date}</time>
 				<Button
+					href="/agenda"
 					buttonText="Meld je aan"
-					buttonBackground=" var(--main-color-green)"
-					svgFill="var(--main-color-beige)"
-					buttonColor="var(--main-color-beige)"
+					btnClass="btn-green"
+					svgFill="svg-beige"
 				/>
 			</div>
 		</li>
@@ -37,7 +37,7 @@
 		</li>
 
 		<div class="rest-cards">
-			{#each data.agendas.slice(1, 5) as agenda (agenda.id)}
+			{#each data.agendas.slice(1, 5) as agenda}
 				<!-- laad de 4 meest recente events na de eerste in -->
 				<li>
 					<picture>
