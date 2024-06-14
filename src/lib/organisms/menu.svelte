@@ -145,14 +145,15 @@ button {
     background-size: contain;
     width: 3em;
     height: 2.5em;
-    transform: rotate(180deg);
+    rotate: calc(180deg);
+    transition: transform 0.2s ease-in-out;
 }
 button.change {
     background-image: url(/assets/close-menu.svg);
 }
 button:hover {
     cursor: pointer;
-    width: 3.7em;
+    transform: scale(1.15);
 }
 a {
     text-decoration: none;
