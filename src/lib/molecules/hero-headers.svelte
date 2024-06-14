@@ -1,11 +1,11 @@
 <script>
-    export let heroInfo;
+	export let heroInfo;
 </script>
 
 <header>
-    <div class="overlay"></div>
-    <h1>{heroInfo.heading1}</h1>   
-    <img src="{heroInfo.image.url}" alt="stekjes">
+	<div class="overlay"></div>
+	<h1>{heroInfo.heading1}</h1>
+	<img src={heroInfo.image.url} alt="stekjes" />
 </header>
 
 <style>
