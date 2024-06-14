@@ -1,18 +1,16 @@
-// =========== ATOMS ===========
+// =========== ATOMS ===========x
 
 // === Buttons ===
 export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
 export { default as Button } from '$lib/atoms/buttons/button.svelte';
 
 // === Icons ===
-export { default as Logo } from '$lib/atoms/icons/logo.svelte';
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
 export { default as CloseIcon } from '$lib/atoms/icons/close-menu.svelte';
 export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
 export { default as Dot } from '$lib/atoms/icons/round-dot.svelte';
 export { default as LeafRight } from '$lib/atoms/icons/leaf-right.svelte';
 export { default as LeafLeft } from '$lib/atoms/icons/leaf-left.svelte';
-
 export {default as IntroHeaders } from '$lib/atoms/intro-headers.svelte'
 
 // =========== MOLECULES ===========
@@ -25,7 +23,6 @@ export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte
 export { default as HomeCampus } from '$lib/molecules/home-campus.svelte';
 export { default as HomePartners } from '$lib/molecules/home-partners.svelte';
 export { default as ContactForm } from '$lib/molecules/contact-form.svelte';
-
 
 // =========== ORGANISMS ===========
 

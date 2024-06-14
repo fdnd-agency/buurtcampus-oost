@@ -23,6 +23,7 @@
         align-items: center;
     }
     h1{
+        view-transition-name: h1;
         font-family: var(--header-font);
         position: absolute;
         color: var(--text-color-white);

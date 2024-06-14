@@ -7,10 +7,9 @@
 
 <section>
 	<ul class="cards">
-		{#each data.agendas as agenda (agenda.id)}
+		{#each data.agendas as agenda}
 			<li class="card">
 				<AgendaCard
-					cardEvent={agenda.event}
 					cardDate={agenda.date}
 					cardAddress={agenda.address}
 					cardPrice={agenda.price}
