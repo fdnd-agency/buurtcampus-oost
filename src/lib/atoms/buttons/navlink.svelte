@@ -8,7 +8,7 @@
     a{
         display: block;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1.2em;
         color: var(--main-color-green);
         text-decoration: none;
         font-family: var(--link-font);
@@ -21,9 +21,10 @@
         a{
             font-size: 1em;
             color: var(--text-color-white);
+            transition: transform 0.2s ease-in-out;
         }
         a:hover{
-            scale: 1.2;
+            transform: scale(1.1);
         }
     }
 

@@ -96,6 +96,7 @@
 		width: 60%;
 	}
 	h2 {
+		view-transition-name: h2;
 		font-size: 1.6rem;
 		color: var(--text-color-white);
 		font-weight: 900;

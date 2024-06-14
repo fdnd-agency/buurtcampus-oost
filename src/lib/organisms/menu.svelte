@@ -8,22 +8,20 @@
 
     onMount(() => {
         const handleResize = () => {
-        if (window.innerWidth >= 900) {
-            navOpen = false;
-        }
+            if (window.innerWidth >= 900) {
+                navOpen = false;
+            }
         };
-
         const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        headerHidden = currentScrollY > lastScrollY && currentScrollY > 80; // Verberg bij scrollen naar beneden en voorbij 80px
-        lastScrollY = currentScrollY;
+            const currentScrollY = window.scrollY;
+            headerHidden = currentScrollY > lastScrollY && currentScrollY > 80; // Verberg bij scrollen naar beneden en voorbij 80px
+            lastScrollY = currentScrollY;
         };
-
         window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
         return () => {
-        window.removeEventListener('resize', handleResize);
-        window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
         };
     });
 
@@ -35,7 +33,7 @@
 </script>
 
 <header class:hidden={headerHidden} class:mobile-header={navOpen}>
-    <div class="container">
+    <div class:container-active={navOpen} class:container-unactive={!navOpen} class="container">
         <a href="/" class="logo" class:logo2={navOpen}> </a>
         <button class:change={navOpen} on:click={handleNav}></button>
     </div>
@@ -68,7 +66,6 @@ header.hidden {
     z-index: 6;
 }
 .container {
-    box-shadow: inset 0px 216px 51px -157px rgba(0,0,0,0.41);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,6 +74,12 @@ header.hidden {
     width: 100%;
     padding: 1em 2.5em;
     transition: transform 0.3s ease-in-out;
+}
+.container-unactive{
+    box-shadow: inset 0px 216px 51px -157px rgba(0,0,0,0.41);
+}
+.container-active{
+    background-color: var(--main-color-beige);
 }
 nav {
     background: var(--main-color-beige);
@@ -92,9 +95,11 @@ nav {
     height: 0;
     z-index: 6;
     transition: height 0.25s ease-in-out;
+
 }
 nav.active {
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 ul {
     display: flex;
@@ -120,9 +125,8 @@ nav li:hover {
     background-size: contain;
     position: relative;
     z-index: 1;
-    mix-blend-mode: difference;
+    transition: transform 0.2s ease-in-out;
 }
-
 .logo2 {
 	background-image: url(/assets/Logo-green.svg);
     background-repeat: no-repeat;
@@ -139,7 +143,7 @@ button {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 3.5em;
+    width: 3em;
     height: 2.5em;
     transform: rotate(180deg);
 }
@@ -166,10 +170,13 @@ a {
         z-index: 6;
     }
     .container {
-        box-shadow: unset;
         position: relative;
         width: auto;
         padding: 0;
+    }
+
+    .container-unactive{
+        box-shadow: none;
     }
     nav {
         position: relative;
@@ -191,7 +198,6 @@ a {
         width: unset;
         border-bottom: none;
     }
-
 	button{
 		display: none;
 	}
