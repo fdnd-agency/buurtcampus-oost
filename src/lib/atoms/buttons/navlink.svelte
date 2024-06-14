@@ -6,7 +6,7 @@
 
 <style>
     a{
-        font-size: 10vw;
+        font-size: 1.5em;
         color: var(--main-color-green);
         text-decoration: none;
         font-family: var(--link-font);
