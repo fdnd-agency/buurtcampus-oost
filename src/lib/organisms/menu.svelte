@@ -76,7 +76,7 @@ header.hidden {
     transition: transform 0.3s ease-in-out;
 }
 .container-unactive{
-    box-shadow: inset 0px 216px 51px -157px rgba(0,0,0,0.41);
+    box-shadow: inset 0px 215px 53px -159px rgb(0 0 0 / 58%);
 }
 .container-active{
     background-color: var(--main-color-beige);
@@ -94,11 +94,11 @@ nav {
     width: 100%;
     height: 0;
     z-index: 6;
-    transition: height 0.25s ease-in-out;
+    transition: height 0.3s ease-in-out;
 
 }
 nav.active {
-    min-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
 }
 ul {
