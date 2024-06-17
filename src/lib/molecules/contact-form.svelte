@@ -1,6 +1,6 @@
 
 <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="59b62920-afbb-4637-be5f-736618bec604"/>
+    <input type="hidden" name="access_key" value="25decdef-5f8c-436d-bbf1-9c2af8bda1e4">
     <fieldset class="question">
         <legend>Reden voor contact:</legend>
             <label  for="question">Ik heb een vraag</label>
@@ -32,17 +32,6 @@
 
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required/>
-
-        <label for="phone-number">Telefoonnummer:</label>
-        <input
-            type="tel"
-            id="phone-number"
-            name="phone-number"
-            inputmode="numeric"
-            pattern="[0-9]*"
-            placeholder="Voer je telefoonnummer in"
-            required
-        />
 
         <label for="message">
             Stel je vraag of vertel voor welke workshop je je wilt
@@ -116,7 +105,6 @@ fieldset{
 }
 fieldset input[type='text'],
 fieldset input[type='email'],
-fieldset input[type='tel'],
 fieldset textarea { 
     border: none;
     padding: 0.5rem;
@@ -126,7 +114,6 @@ fieldset textarea {
 /* form focus styling  */
 fieldset input[type='text']:focus,
 fieldset input[type='email']:focus,
-fieldset input[type='tel']:focus,
 fieldset textarea:focus { 
     background-color: lightgoldenrodyellow;
 }
@@ -134,7 +121,6 @@ fieldset textarea:focus {
 /* form focus valid  */
 fieldset input[type='text']:valid,
 fieldset input[type='email']:valid,
-fieldset input[type='tel']:valid,
 fieldset textarea:valid { 
     border: 2px solid var(--main-color-green);
     background-color: rgb(237 255 237);
@@ -143,12 +129,10 @@ fieldset textarea:valid {
 /* form focus invalid  */
 fieldset input[type='text']:user-invalid,
 fieldset input[type='email']:user-invalid,
-fieldset input[type='tel']:user-invalid,
 fieldset textarea:user-invalid { 
     border: 2px solid var(--invalid-color-red);
     background-color: #fffcfc;
 }
-
 input[type='submit'] {
     border-radius: 2em;
     padding: 0.4em 1em;
@@ -162,7 +146,6 @@ input[type='submit'] {
     width: 8rem;
     margin: .5em 0;
 }
-
 input[type='submit']:hover {
     background-color: var(--main-color-orange);
 }
