@@ -37,6 +37,7 @@
 			clearInterval(intervalId);
 		}
 	});
+
 </script>
 
 <section>
@@ -52,7 +53,7 @@
 			{#each data.herosSlider as hero}
 				<li>
 					<picture>
-						<img width="1280" height="840" src={hero.sliderPicture.url} alt={hero.sliderPicture.altText} />
+						<img width="1280" height="840" src={hero.sliderPicture.url} alt={hero.sliderPictureAltText} />
 					</picture>
 				</li>
 			{/each}
@@ -103,7 +104,7 @@
 	}
 	.hero-img-list img {
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		object-fit: cover;
 	}
 	.hero-slider ul {

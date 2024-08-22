@@ -8,6 +8,7 @@ export async function load() {
 				sliderPicture {
 					url
 				}
+				sliderPictureAltText
 			}
 			cardSlides {
 				titleCard
