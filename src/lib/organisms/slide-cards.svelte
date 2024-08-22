@@ -1,7 +1,6 @@
 <script> 
     export let data;
     import { Dot, Button } from '$lib/index.js';
-    let isHovered = false;
 </script> 
 
 <div class="card-container">
@@ -11,7 +10,7 @@
             <h2>{data.cardSlides[0].titleCard}</h2>
         </header>
         <picture>
-            <img src="{data.cardSlides[0].imageCard.url}" alt="{data.cardSlides[0].imageCardAltText}}" />
+            <img width="783" height="982" loading="lazy" src="{data.cardSlides[0].imageCard.url}" alt="{data.cardSlides[0].imageCardAltText}}" />
         </picture>
         <div class="paragraph-card">
             <p>{data.cardSlides[0].paragraphCard}</p>
@@ -33,7 +32,7 @@
             <h2>{data.cardSlides[1].titleCard}</h2>
         </header>
         <picture>
-            <img src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
+            <img width="783" height="982" loading="lazy" src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
         </picture>
         <div class="paragraph-card">
             <p>{data.cardSlides[1].paragraphCard}</p>
@@ -55,7 +54,7 @@
             <h2>{data.cardSlides[2].titleCard}</h2>
         </header>    
         <picture>
-            <img src="{data.cardSlides[2].imageCard.url}" alt="{data.cardSlides[2].imageCardAltText}}" />
+            <img width="783" height="982" loading="lazy" src="{data.cardSlides[2].imageCard.url}" alt="{data.cardSlides[2].imageCardAltText}}" />
         </picture>
         <div class="paragraph-card">
             <p>{data.cardSlides[2].paragraphCard}</p>
@@ -158,6 +157,7 @@
         justify-content: center;
         border-radius: var(--border-bigCard);
         width: 100%;
+        height: 100%;
     }
     .btn-container{
         margin: 2em 3.5em;
