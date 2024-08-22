@@ -34,18 +34,18 @@
 
 <header class:hidden={headerHidden} class:mobile-header={navOpen}>
     <div class:container-active={navOpen} class:container-unactive={!navOpen} class="container">
-        <a href="/" class="logo" class:logo2={navOpen}> </a>
-        <button class:change={navOpen} on:click={handleNav}></button>
+        <a href="/" aria-label="home button" class="logo" class:logo2={navOpen}> </a>
+        <button aria-label="Open menu" class:change={navOpen} on:click={handleNav}></button>
     </div>
 
-    <nav class:active={navOpen}>
-        <ul role="menu">
-            <li><Navlink {handleNav} href="/stekjes" title="Stekjes"/></li>
-            <li><Navlink {handleNav} href="/zaden" title="Zaden"/></li>
-            <li><Navlink {handleNav} href="/geveltuin" title="Geveltuin" /></li>
-            <li><Navlink {handleNav} href="/agenda" title="Agenda"/></li>
-            <li><Navlink {handleNav} href="/partners" title="Partners"/></li>
-            <li><Navlink {handleNav} href="/contact" title="Contact"/></li>
+    <nav aria-label="Main Navigation" class:active={navOpen}>
+        <ul role="menubar">
+            <li role="menuitem"><Navlink {handleNav} href="/stekjes" title="Stekjes"/></li>
+            <li role="menuitem"><Navlink {handleNav} href="/zaden" title="Zaden"/></li>
+            <li role="menuitem"><Navlink {handleNav} href="/geveltuin" title="Geveltuin" /></li>
+            <li role="menuitem"><Navlink {handleNav} href="/agenda" title="Agenda"/></li>
+            <li role="menuitem"><Navlink {handleNav} href="/partners" title="Partners"/></li>
+            <li role="menuitem"><Navlink {handleNav} href="/contact" title="Contact"/></li>
         </ul>
     </nav>
 </header>
