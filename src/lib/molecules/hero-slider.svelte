@@ -1,29 +1,30 @@
 <script>
 	export let data;
-
-	// import { HeroSlide } from '$lib/index.js';
 	import { onDestroy, onMount } from 'svelte';
 
-	// @ts-ignore
+	/**
+	 * @type {number | undefined}
+	 */
 	let intervalId;
 
 	onMount(() => {
 		const carrouselContainer = document.querySelector('.hero-slider');
 		const carrousel = document.querySelector('.hero-img-list');
 
+		if (!carrousel || !carrouselContainer) {
+			console.error('Carrousel elements not found.');
+			return;
+		}
+
 		const interval = 8000;
 
 		intervalId = setInterval(() => {
-			// @ts-ignore
 			const currentScroll = carrousel.scrollLeft;
-			// @ts-ignore
 			const itemWidth = carrouselContainer.clientWidth;
-			// @ts-ignore
 			const totalWidth = carrousel.scrollWidth;
 
 			const nextScroll = (currentScroll + itemWidth) % totalWidth;
 
-			// @ts-ignore
 			carrousel.scrollTo({
 				left: nextScroll,
 				behavior: 'smooth'
@@ -32,13 +33,9 @@
 	});
 
 	onDestroy(() => {
-		// @ts-ignore
-		clearInterval(intervalId);
-	});
-
-	onDestroy(() => {
-		// @ts-ignore
-		clearInterval(intervalId);
+		if (intervalId) {
+			clearInterval(intervalId);
+		}
 	});
 </script>
 
@@ -55,7 +52,7 @@
 			{#each data.herosSlider as hero}
 				<li>
 					<picture>
-						<img src={hero.sliderPicture.url} alt={hero.sliderPicture.altText} />
+						<img width="1280" height="840" src={hero.sliderPicture.url} alt={hero.sliderPicture.altText} />
 					</picture>
 				</li>
 			{/each}
@@ -106,7 +103,7 @@
 	}
 	.hero-img-list img {
 		width: 100%;
-		height: 100vh;
+		height: 115%;
 		object-fit: cover;
 	}
 	.hero-slider ul {
