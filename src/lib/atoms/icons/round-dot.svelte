@@ -10,6 +10,7 @@
 <style>
     svg{
         margin: .7em;
+        z-index: 1;
     }
 
     /* MEDIA QUERY TABLET = 768px */
