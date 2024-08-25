@@ -18,7 +18,7 @@
         width: 80vw;
         background-color: var(--main-color-beige);
         font-weight: 500;
-        font-size: 1.2em;
+        font-size: 1em;
         border-radius: var(--border-card);
         
     }
@@ -33,7 +33,7 @@
             margin:-2em auto;
             align-items: center;
             width: 60vw;
-            padding: 2em;
+            padding: 1em 2em;
         } 
     }
 
