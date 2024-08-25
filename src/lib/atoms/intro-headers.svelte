@@ -14,16 +14,14 @@
         position: relative;
         gap: 1.5em;
         margin: -2em auto;
-        padding: 1.5em 1.5em 1.5em .5em;
+        padding: .5em;
         width: 80vw;
         background-color: var(--main-color-beige);
-        color: var(--main-color-brown);
         font-weight: 500;
-        font-size: 1.4em;
-        border-radius: 17px;
+        font-size: 1.2em;
+        border-radius: var(--border-card);
         
     }
- 
     section::before{
         content: url('/assets/Circle-Orange.svg');
         display: inline-flex;
