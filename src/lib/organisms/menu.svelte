@@ -72,7 +72,7 @@ header.hidden {
     position: fixed;
     z-index: 7;
     width: 100%;
-    padding: 1em 2.5em;
+    padding: 1em 1.5em;
     transition: transform 0.3s ease-in-out;
 }
 .container-unactive{
@@ -118,8 +118,8 @@ nav li:hover {
     border-color: var(--main-color-orange);
 }
 .logo {
-	height: 5em;
-	width: 7em;
+	height: 3em;
+	width: 4em;
 	background-image: url(/assets/Logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -143,8 +143,8 @@ button {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 3em;
-    height: 2.5em;
+    width: 2.5em;
+    height: 1.5em;
     rotate: calc(180deg);
     transition: transform 0.2s ease-in-out;
 }
@@ -157,6 +157,20 @@ button:hover {
 }
 a {
     text-decoration: none;
+}
+
+@media (min-width: 500px){
+    .logo {
+        height: 5em;
+        width: 7em;
+    }
+    .container {
+        padding: 1em 2.5em;
+    }
+    button {
+        width: 3em;
+        height: 2.5em;
+    }
 }
 
 /* 900px */

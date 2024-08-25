@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 40vh;
+        height: 50vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
     header{
@@ -31,7 +31,7 @@
     }
     img{
         width: 100%;
-        height: 40vh;
+        height: 50vh;
         object-fit: cover;
     } 
     @media (min-width: 48rem) {
