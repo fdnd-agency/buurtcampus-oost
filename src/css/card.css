@@ -1,0 +1,187 @@
+.card {
+    --sun-color: rgba(255, 232, 109, 0.8);
+    --moon-color: rgba(199, 238, 255, 0.8);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--h-padding-small);
+    z-index: 2;
+
+    height: min-content;
+    width: 100%;
+    margin: var(--margin-small) 5rem;
+    margin-top: calc(var(--margin-small) * -1);
+    padding: var(--h-padding-small);
+
+    align-self: center;
+
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
+
+    background-image: var(--leaf-image);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    background-position: calc(var(--margin-small) + 1rem);
+
+    article {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2 {
+        position: relative;
+        line-height: 1.1em;
+        margin-bottom: .25em;
+    }
+
+    p {
+        margin-bottom: 1em;
+        max-width: 75ch;
+    }
+
+    .card-image-container {
+        display: none;
+        --position-x: 0;
+        --position-y: 0;
+
+        background-image: var(--background-image);
+        background-size: cover;
+        background-position: center;
+        border-radius: 3rem;
+        transition: all .8s;
+
+        &:hover {
+            box-shadow: inset var(--box-shadow-color) var(--position-x) var(--position-y) 5rem;
+        }
+    }
+}
+
+svg {
+    transition: 200ms;
+}
+
+.card {
+    .button {
+        transition: 200ms;
+
+        &:hover {
+            padding: .5rem 1.5rem;
+
+            svg {
+                transform: translateX(0.5rem);
+            }
+        }
+    }
+}
+
+/* first card with attribute "card" */
+
+
+.card:nth-of-type(3n + 2) {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+    h2:before {
+        background-color: var(--tertiary-color);
+    }
+
+    .button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+
+        &:focus-visible {
+            outline: 4px dashed var(--primary-color);
+            outline-offset: 4px;
+        }
+
+        svg {
+            fill: var(--secondary-color);
+        }
+    }
+}
+
+.card:nth-of-type(3n + 3) {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+
+    h2:before {
+        background-color: var(--secondary-color);
+    }
+
+    .button {
+        background-color: var(--quaternary-color);
+        color: var(--secondary-color);
+
+        &:focus-visible {
+            outline: 4px dashed var(--quaternary-color);
+            outline-offset: 4px;
+        }
+
+        svg {
+            fill: var(--secondary-color);
+        }
+    }
+}
+
+.card:nth-of-type(3n + 4) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    h2:before {
+        background-color: var(--tertiary-color);
+    }
+
+    .button {
+        background-color: var(--secondary-color);
+        color: var(--quaternary-color);
+
+        &:focus-visible {
+            outline: 4px dashed var(--secondary-color);
+            outline-offset: 4px;
+        }
+
+        svg {
+            fill: var(--quaternary-color);
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .card{
+        width: unset;
+        border-radius: 5rem;
+        max-width: clamp(30rem, 100%, 100rem);
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .card {
+        padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium) var(--h-padding-large);
+        grid-template-columns: 1fr 1fr;
+        margin-top: calc(var(--margin-small) * -2);
+
+        .card-image-container {
+                display: block;
+        }
+
+
+        h2 {
+            max-width: 7ch;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: .5em;
+                left: calc(var(--h-padding-large) / -2);
+                transform: translate(-50%, -50%);
+                height: .4em;
+                width: .4em;
+                border-radius: 50%;
+            }
+        }
+    }
+}

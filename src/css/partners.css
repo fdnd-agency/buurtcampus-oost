@@ -1,0 +1,35 @@
+.partners {
+    padding: var(--v-padding-medium) var(--h-padding-small);
+    background-color: var(--primary-color);
+    height: auto;
+    justify-content: center;
+
+    background-image: var(--leaf-pattern);
+    background-repeat: repeat;
+    background-size: 20%;
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    color: white;
+}
+
+.partners>div {
+    margin-top: var(--margin-small);
+    display: flex;
+    width: min-content;
+    padding: 1rem;
+    background-color: var(--tertiary-color);
+    border-radius: 17px;
+    gap: 1rem;
+    align-items: center;
+}
+
+.partners>div svg {
+    height: 5rem;
+    fill: var(--quaternary-color);
+}
+
+@media (min-width: 1000px) {
+    .partners {
+        padding: var(--v-padding-large) var(--h-padding-large);
+    }
+}

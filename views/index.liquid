@@ -1,0 +1,68 @@
+{% layout "layouts/base.liquid" %}
+
+{% block head %}
+  <style>
+    :root {
+        --amount: {{ amount }};
+        --cloud: {{ cloud }}
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  {% include "partials/image-slider.liquid" %}
+
+  {% for card in cardData %}
+    {% include "partials/card.liquid"
+      , {card} %}
+  {% endfor %}
+
+
+  <section class="Buurtcampus">
+    <h2 class="smaller">Buurtcampus
+      <span class="invert">Oost</span>
+    </h2>
+    <p>
+      De Buurtcampus-Oost heeft als doel Amsterdam-Oost duurzamer,    
+        inclusiever en gezonder te maken. Bieb & Bloei Amsterdam zorgt ervoor dat 
+        plantenliefhebbers elkaar ontmoeten in de bibliotheek. 
+        Daarnaast hebben planten in huis een positief effect op je lichamelijke en geestelijke 
+        gezondheid.
+    </p>
+    <p>
+      Veel mensen weten niet goed hoe ze voor planten moeten zorgen en    
+        kopen nieuwe als ze dood gaan. In het kader van duurzaamheid, gezondheid en meer 
+        sociale connectie, is Bieb & Bloei Amsterdam een plek van sociale ontmoeting, 
+        waar mensen samen leren over planten.
+    </p>
+  </section>
+
+  <section class="agenda">
+    <h2 class="smaller">Agenda</h2>
+    <ol class="agenda-items scroll scroll-horizontal">
+      {% for agendaItem in agendaData %}
+        <li>
+          {% include "partials/agenda.liquid"
+            , {agendaItem} %}
+        </li>
+      {% endfor %}   
+    </ol>
+  </section>
+
+  <section class="partners">
+    <h2 class="smaller">Partners</h2>
+    <p>
+      Bieb & Bloei is een initiatief van de Hogeschool van Amsterdam (HvA) 
+      en de Openbare Bibliotheek Amsterdam (OBA). 
+      In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van 
+      de studenten en de locaties en publieksprogramma’s van de bibliotheek.
+    </p>
+    {% comment %} <div>
+      {% include "components/oba.liquid"%}
+      {% include "components/hva.liquid"%}
+    </div> {% endcomment %}
+
+
+  </section>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% layout "layouts/base.liquid" %}
+
+
+{% block content %}
+{% include "partials/hero.liquid" %}
+<div class="halloharry">
+  <a href="/stekjes/gynura#weertips" class="harryknop">
+    {% include "components/harry.liquid" %}
+  </a>
+</div>
+
+<section id="plant" class="card" data="card">
+  <article id="general">
+    <h2>Algemene informatie</h2>
+    <div>
+      <h3>Beschrijving</h3>
+      <p>{{ plant.description }}</p>
+      <h3>Land van herkomst</h3>
+      <p>{{ plant.origin }}</p>
+      <h3>Giftig</h3>
+      <p>{{ plant.toxicity }}</p>
+    </div>
+  </article>
+  <div class="card-image-container" style="--background-image: url('{{ plant.image.src }}')">
+  </div>
+</section>
+
+<div id="weertips">
+  <div>
+    <button class="harryknop">
+      {% include "components/harry.liquid" %}
+    </button>
+    <span id="tips">
+      {% if harry.temp %}
+      <p>{{ harry.temp }}</p>
+      {% endif %}
+      {% if harry.weer %}
+      <p>{{ harry.weer }}</p>
+      {% endif %}
+      {% if harry.voeding %}
+      <p>{{ harry.voeding }}</p>
+      {% endif %}
+    </span>
+  </div>
+</div>
+
+<section id="care">
+  <div>
+    <h2>Verzorging</h2>
+
+    <h3>Moeilijkheidsgraad</h3>
+    <p>{{ plant.difficulty }}</p>
+    <h3>Temperatuur</h3>
+    <p>{{ plant.temp }}</p>
+    <h3>Zonlicht</h3>
+    <p>{{ plant.sunlight }}</p>
+    <h3>Stekken</h3>
+    <p>{{ plant.cutting }}</p>
+    <h3>Water geven</h3>
+    <p>{{ plant.watering }}</p>
+    <h3>Voeding</h3>
+    <p>{{ plant.feeding }}</p>
+  </div>
+
+
+</section>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+    });
+  });
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,71 @@
+#plant{
+    background-color: var(--tertiary-color);
+    margin-bottom: var(--margin-large);
+
+    & h2::before{
+        background-color: var(--secondary-color);
+    }
+}
+
+#general {
+    color: var(--quaternary-color);
+
+    p {
+        margin-top: 0;
+    }
+}
+
+#weertips{
+    display: flex;
+    justify-content: center;
+}
+
+#weertips div{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#care{
+    margin-bottom: var(--margin-large);
+    color: var(--primary-color);
+    padding-left: 0;
+    padding: var(--h-padding-small) var(--v-padding-medium);
+    display: flex;
+    justify-content: left;
+    position: relative;
+
+
+    h2{
+        margin-bottom: 1rem;
+    }
+}
+
+#care div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+
+    h3{
+        margin-top: 1rem;
+    }
+    p {
+        margin: 0 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    #care{
+        padding-left: calc(var(--margin-large) + var(--h-padding-large));
+    }
+
+    #weertips div {
+        flex-direction: row;
+    }
+}
+
+

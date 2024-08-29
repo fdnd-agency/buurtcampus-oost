@@ -1,0 +1,17 @@
+<section class="card" data="card">
+  <article>
+    <h2>
+      {{ card.title }}
+    </h2>
+    {{ card.content }}
+    {% if card.button %}
+    {% include "./components/button.liquid"
+      , button: card.button %}
+    {% endif %}
+  </article>
+  <div 
+    class="card-image-container" 
+    style="--background-image: url('{{ card.image.src }}')"
+  >
+  </div>
+</section>

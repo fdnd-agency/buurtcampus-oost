@@ -1,0 +1,46 @@
+<html lang="nl-NL">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href={{ weatherCSS }}>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="">
+
+    <style > :root
+    {
+      --amount: {{ amount }}
+    }
+  </style>
+
+  <title>
+    Bieb in Bloei
+    {% if pageTitle %}
+      | {{ pageTitle }}
+    {% endif %}
+  </title>
+  {% block head %}
+  {% endblock %}
+</head>
+
+<body class="scroll scroll-vertical">
+  {% include "partials/header.liquid" %}
+  {% include "partials/access-menu.liquid" %}
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <img class="transition-image fade-in" src="{{ transition_image }}">
+
+
+  {% include "partials/footer.liquid" %}
+  {% include "components/scripts.liquid" %}
+
+</body></html>
