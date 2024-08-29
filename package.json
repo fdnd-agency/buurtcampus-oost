@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "bieb-in-bloei-experimenten",
   "private": true,
   "scripts": {
     "start": "node index.js"
