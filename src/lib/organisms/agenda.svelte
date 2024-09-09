@@ -7,7 +7,6 @@
 	<div>
 		<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
 		<h2>Agenda</h2>
-		<h1>test</h1>
 		<AgendaCarousel {data} />
 	</div>
 </section>
