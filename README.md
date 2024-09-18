@@ -1,6 +1,6 @@
-<img width="193" alt="image" src="https://github.com/fdnd-agency/buurtcampus-oost/assets/1061632/f73db7e3-def1-49be-9a9d-11cebceaaa25">
 
-PlantSwap is het digitale platform dat hoort bij de stekjeskast die in de Buurtcampus Oost staat.
+
+Bieb in Bloeiis het digitale platform dat hoort bij de duurzame projecten van de Buurtcampus Oost.
 
 ## Buurtcampus Oost
 De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
@@ -8,7 +8,7 @@ De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom 
 Bij Buurtcampus staat een stekjeskast . Buurtbewoners kunnen stekjes halen uit de stekjeskast, maar ook stekjes brengen. De stekjeskast dient als middel om buurtbewoners met elkaar te verbinden. Daarnaast leren bewoners hoe ze op een duurzame manier met planten kunnen omgaan en draagt het bij aan een gezondere leefomgeving in huis.
 
 ## Design challenge
-Ontwerp en ontwikkel het digitale platform voor de Stekjesbieb van Buurtcampus Oost
+Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oost
 
 ## Resources
 
@@ -16,7 +16,7 @@ Ontwerp en ontwikkel het digitale platform voor de Stekjesbieb van Buurtcampus O
 
 [Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)
 
-[API Stekjesbieb Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
+[API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
 
 ## Prototypes
