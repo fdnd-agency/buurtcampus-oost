@@ -5,6 +5,7 @@
 	const agenda = data.agendas[0];
 </script>
 
+
 <section>
 	<ul class="cards">
 		{#each data.agendas as agenda}
@@ -19,6 +20,8 @@
 		{/each}
 	</ul>
 </section>
+
+
 
 <style>
 	section {
@@ -45,8 +48,8 @@
 		padding-left: 1rem;
 	}
 
-    /* MEDIA QUERY DESKTOP = 1500px */
-    @media (min-width: 93.75rem) {
+	/* MEDIA QUERY DESKTOP = 1500px */
+	@media (min-width: 93.75rem) {
 		section {
 			width: 70vw;
 		}
