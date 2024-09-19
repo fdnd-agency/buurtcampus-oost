@@ -15,10 +15,12 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 [Backlog](https://github.com/orgs/fdnd-agency/projects/3)
 
-[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)
+[Content](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/content)
 
 [API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
+
+<!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)-->
 
 ## Prototypes
 Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website maken.  
