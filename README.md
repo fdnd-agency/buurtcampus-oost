@@ -23,13 +23,16 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 <!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)-->
 
 ## Prototypes
-Er zijn eerste prototypes gemaakt en dit semester gaan we dit tot één website maken.  
+  
 
-[Finn @FDND](https://buurtcampus-oost.vercel.app/)  
+[Live site](https://bieb-in-bloei.vercel.app/)    
+[Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
+<!--
 [Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
 [Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
 [Minor @CMD](https://plantswap.vercel.app/)  
-<!-- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) -->
+[Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
+-->
 
 ## Preferred tech stack
 
