@@ -1,13 +1,33 @@
 <script>
 	import CloseMenu from '$lib/atoms/icons/close-menu.svelte';
+
+	/**
+	 * @type {HTMLDialogElement}
+	 */
+	let popoverElement;
+
+	// Functie om de popover te sluiten
+	function hidePopover() {
+		popoverElement.hidePopover();
+	}
+
+	// Scroll event listener toevoegen wanneer de popover wordt getoond
+	function handleScroll() {
+		window.addEventListener('scroll', hidePopover);
+	}
+
+	// Scroll event listener verwijderen wanneer de popover is gesloten
+	function removeScrollListener() {
+		window.removeEventListener('scroll', hidePopover);
+	}
 </script>
 
-<button popovertarget="mypopover">
+<button type="button" popovertarget="mypopover" on:click={handleScroll}>
 	<img src="./assets/info-round-button-svgrepo-com.svg" alt="info-icon" />
 </button>
 
-<dialog id="mypopover" popover="manual">
-	<button class="close-button" popovertarget="mypopover" popovertargetaction="hide"
+<dialog id="mypopover" popover="manual" bind:this={popoverElement}>
+	<button type="button" class="close-button" popovertarget="mypopover" popovertargetaction="hide"
 		><CloseMenu /></button
 	>
 
@@ -26,23 +46,6 @@
 </dialog>
 
 <style>
-	button {
-		z-index: 5;
-		height: 40px;
-		width: 40px;
-		border: none;
-		padding: 0.3em;
-		margin-bottom: 1em;
-		border-radius: 50%;
-		background-color: var(--main-color-brown);
-	}
-
-	img {
-		width: 2em;
-		margin-bottom: 0.5em;
-		margin-top: 0.2em;
-	}
-
 	dialog {
 		border-radius: 1em;
 		border: none;
@@ -55,10 +58,36 @@
 		overflow: hidden;
 	}
 
+	button {
+		z-index: 5;
+		height: 40px;
+		width: 40px;
+		border: none;
+		padding: 0.3em;
+		cursor: pointer;
+		margin-bottom: 1em;
+		border-radius: 50%;
+		background-color: var(--main-color-brown);
+	}
+
+	button:hover {
+		background: var(--main-color-green);
+	}
+
 	.close-button {
 		background: none;
 		margin-bottom: 0.5em;
 		margin-left: 23em;
+	}
+
+	.close-button:hover {
+		background: var(--main-color-brown);
+	}
+
+	img {
+		width: 2em;
+		margin-bottom: 0.5em;
+		margin-top: 0.2em;
 	}
 
 	p {

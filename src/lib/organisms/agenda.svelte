@@ -1,7 +1,7 @@
 <script>
 	import { AgendaCarousel } from '$lib/index.js';
 	import AgendaInfoButton from '$lib/molecules/agenda-info-button.svelte';
-	// export let data;
+	export let data;
 </script>
 
 <section>
@@ -9,7 +9,7 @@
 		<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
 		<h2>Agenda</h2>
 		<AgendaInfoButton />
-		<!-- <AgendaCarousel {data} /> -->
+		<AgendaCarousel {data}/>
 	</div>
 </section>
 
@@ -36,7 +36,7 @@
 		rotate: 120deg;
 		left: 0;
 		transform: translateY(200px) translateX(150px);
-		z-index: 1;
+		/* z-index: 1; */
 	}
 
 	h2 {
