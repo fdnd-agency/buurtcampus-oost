@@ -50,8 +50,6 @@
 		border-radius: 1em;
 		border: none;
 		background: white;
-		margin-top: 20em;
-		margin-left: 6em;
 		height: 25em;
 		width: 25em;
 		padding: 2em;
