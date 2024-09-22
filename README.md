@@ -13,7 +13,7 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 ## Resources
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/3)
+<!-- [Backlog](https://github.com/orgs/fdnd-agency/projects/3) -->
 
 [Content](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/content)
 
