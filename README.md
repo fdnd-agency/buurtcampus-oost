@@ -17,13 +17,6 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 [Content](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/content)
 
-## Resources Semester 2
-
-[API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
-
-
-<!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)-->
-
 ## Prototypes
   
 [Live site](https://bieb-in-bloei.vercel.app/)    
@@ -34,6 +27,12 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 [Minor @CMD](https://plantswap.vercel.app/)  
 [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
 -->
+
+## Resources Semester 2
+
+[API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
+
+<!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)-->
 
 ## Preferred tech stack Semester 3
 
