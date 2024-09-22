@@ -17,6 +17,8 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 [Content](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/content)
 
+## Resources Semester 2
+
 [API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
 
@@ -24,7 +26,6 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 ## Prototypes
   
-
 [Live site](https://bieb-in-bloei.vercel.app/)    
 [Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
 <!--
@@ -34,7 +35,7 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
 -->
 
-## Preferred tech stack
+## Preferred tech stack Semester 3
 
 Framework: [SvelteKit](https://kit.svelte.dev/)   
 Headless CMS: [Hygraph](https://hygraph.com/)
