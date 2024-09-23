@@ -1,13 +1,15 @@
 <script>
 	import CloseMenu from '$lib/atoms/icons/close-menu.svelte';
 
-	/**
-	 * @type {HTMLDialogElement}
-	 */
+	// /**
+	//  * @type {HTMLDialogElement}
+	//  */
+	// @ts-ignore
 	let popoverElement;
 
 	// Functie om de popover te sluiten
 	function hidePopover() {
+		// @ts-ignore
 		popoverElement.hidePopover();
 	}
 
