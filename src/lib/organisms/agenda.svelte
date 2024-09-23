@@ -16,7 +16,7 @@
 <style>
 	section {
 		display: flex;
-		height: 70vh;
+		/* height: 70vh; */
 		justify-content: flex-start;
 		padding: 3rem;
 		background: var(--main-color-beige);
