@@ -39,7 +39,7 @@
 
 	img {
 		width: 25em;
-		height: 17em;
+		height: 18em;
 		object-fit: cover;
 		border-radius: 0.5em;
 	}
