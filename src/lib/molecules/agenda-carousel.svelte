@@ -23,18 +23,18 @@
 <style>
 	/* agenda-carousel styling */
 	article {
-		display: flex;
 		z-index: 3;
 		width: 85vw;
+		display: flex;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 	}
 
 	.card {
-		position: relative;
-		scroll-snap-align: start;
-		padding-right: 1rem;
 		width: auto;
+		position: relative;
+		padding-right: 1rem;
+		scroll-snap-align: start;
 	}
 
 	img {
@@ -46,23 +46,22 @@
 
 	.card::before {
 		content: '';
-		position: absolute;
 		bottom: 0;
-		background-color: var(--main-color-brown);
-		height: 10em;
 		width: 25em;
+		height: 10em;
+		position: absolute;
 		border-bottom-left-radius: 0.5em;
 		border-bottom-right-radius: 0.5em;
+		background-color: var(--main-color-brown);
 	}
 
 	.content {
-		position: absolute;
-		margin: 1em;
 		bottom: 0;
+		margin: 1em;
 		display: flex;
+		position: absolute;
 		flex-direction: column;
 		justify-content: center;
-		z-index: 2;
 		color: var(--main-color-beige);
 	}
 </style>
