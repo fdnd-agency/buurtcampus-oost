@@ -57,7 +57,8 @@
 	.card::before {
 		content: '';
 		width: 13em;
-		height: 15em;
+		height: 14em;
+		padding: 0.5em;
 		position: absolute;
 		border-top-left-radius: 0.8em;
 		border-bottom-left-radius: 0.8em;
