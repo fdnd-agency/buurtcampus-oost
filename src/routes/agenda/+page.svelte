@@ -16,6 +16,7 @@
 			<div>
 				<address>{data.agendas[0].address}</address>
 				<span>{data.agendas[0].price}</span>
+				<time>{data.agendas[0].time}</time>
 				<time>{data.agendas[0].date}</time>
 				<Button
 					href="/agenda"

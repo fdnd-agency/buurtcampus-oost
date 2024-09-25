@@ -17,6 +17,7 @@ export async function load() {
 				}
 				date
 				event
+				time
 				price
 				address
 				buttonText

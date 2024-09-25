@@ -1,4 +1,5 @@
 <script>
+	import Button from '$lib/atoms/buttons/button.svelte';
 	export let data;
 	const agenda = data.agendas[0];
 </script>
@@ -6,12 +7,14 @@
 <article>
 	{#each data.agendas as agenda}
 		<div class="card">
-			<img src={agenda.cardImage.url} alt="workshop" width="100" />
-			
-			<!-- <h2>{agenda.event}</h2>
+			<h2>{agenda.event}</h2>
 			<time>{agenda.date}</time>
+			<time>{agenda.time}</time>
 			<address>{agenda.address}</address>
-			<p>{agenda.price}</p>  -->
+			<p>{agenda.price}</p>
+			<!-- <Button href="/agenda" buttonText="Aanmelden" btnClass="btn-beige" svgFill="svg-brown" /> -->
+
+			<img src={agenda.cardImage.url} alt="workshop" width="100" />
 		</div>
 	{/each}
 </article>
@@ -26,8 +29,10 @@
 	}
 
 	.card {
+		position: relative;
 		scroll-snap-align: start;
 		padding-right: 1rem;
+		width: auto;
 	}
 
 	img {
