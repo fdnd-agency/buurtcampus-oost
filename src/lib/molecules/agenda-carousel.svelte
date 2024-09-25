@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/atoms/buttons/button.svelte';
+	import { AgendaButton } from '$lib/index.js';
 	export let data;
 	const agenda = data.agendas[0];
 </script>
@@ -13,7 +13,13 @@
 				<time>{agenda.time}</time>
 				<address>{agenda.address}</address>
 				<p>{agenda.price}</p>
-				<!-- <Button href="/agenda" buttonText="Aanmelden" btnClass="btn-beige" svgFill="svg-brown" /> -->
+
+				<AgendaButton
+					href="/agenda"
+					buttonText="Aanmelden"
+					btnClass="btn-beige"
+					svgFill="svg-brown"
+				/>
 			</div>
 			<img src={agenda.cardImage.url} alt="workshop" width="100" />
 		</div>
@@ -37,26 +43,28 @@
 		scroll-snap-align: start;
 	}
 
+	h2 {
+		font-size: 20px;
+	}
+
 	img {
 		width: 25em;
-		height: 18em;
+		height: 15em;
 		object-fit: cover;
-		border-radius: 0.5em;
+		border-radius: 0.8em;
 	}
 
 	.card::before {
 		content: '';
-		bottom: 0;
-		width: 25em;
-		height: 10em;
+		width: 13em;
+		height: 15em;
 		position: absolute;
-		border-bottom-left-radius: 0.5em;
-		border-bottom-right-radius: 0.5em;
+		border-top-left-radius: 0.8em;
+		border-bottom-left-radius: 0.8em;
 		background-color: var(--main-color-brown);
 	}
 
 	.content {
-		bottom: 0;
 		margin: 1em;
 		display: flex;
 		position: absolute;
