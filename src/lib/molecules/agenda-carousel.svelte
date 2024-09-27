@@ -8,7 +8,7 @@
 	{#each data.agendas as agenda}
 		<div class="card">
 			<div class="content">
-				<h2>{agenda.event}</h2>
+				<h3>{agenda.event}</h3>
 				<time>{agenda.date}</time>
 				<time>{agenda.time}</time>
 				<address>{agenda.address}</address>
@@ -43,7 +43,7 @@
 		scroll-snap-align: start;
 	}
 
-	h2 {
+	h3 {
 		font-size: 20px;
 	}
 
