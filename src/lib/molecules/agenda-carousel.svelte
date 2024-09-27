@@ -74,7 +74,8 @@
 		color: var(--main-color-beige);
 	}
 
-	@media screen and (min-width: 64rem) {
+	/* MEDIA QUERY STYLING */
+	@media (min-width: 64rem) {
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
 		@supports (animation-timeline: view()) {
 			.card {
