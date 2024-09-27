@@ -80,7 +80,6 @@
 			.card {
 				animation-timeline: view(inline);
 				animation-name: animate-in-and-out;
-				animation-range: entry - 10% contain 40%;
 			}
 
 			@keyframes animate-in-and-out {
