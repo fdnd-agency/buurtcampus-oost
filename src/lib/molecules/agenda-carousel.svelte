@@ -27,7 +27,7 @@
 </article>
 
 <style>
-	/* agenda-carousel styling */
+	/* AGENDA-CAROUSEL STYLING */
 	article {
 		z-index: 3;
 		width: 85vw;
@@ -72,5 +72,36 @@
 		flex-direction: column;
 		justify-content: center;
 		color: var(--main-color-beige);
+	}
+
+	@media screen and (min-width: 64rem) {
+		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
+		@supports (animation-timeline: view()) {
+			.card {
+				animation-timeline: view(inline);
+				animation-name: animate-in-and-out;
+				animation-range: entry - 10% contain 40%;
+			}
+
+			@keyframes animate-in-and-out {
+				entry 0% {
+					opacity: 0;
+					transform: translateY(100%);
+				}
+				entry 100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+
+				exit 0% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				exit 100% {
+					opacity: 0;
+					transform: translateY(-100%);
+				}
+			}
+		}
 	}
 </style>
