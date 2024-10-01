@@ -4,6 +4,20 @@
 	const agenda = data.agendas[0];
 </script>
 
+<!-- AGENDA-CAROUSEL - PREV-NEXT BUTTON CODE -->
+<article>
+	<div class="caroussel-buttons">
+		<button type="button" aria-label="previous-button"
+			><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
+		>
+
+		<button type="button" aria-label="next-button"
+			><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
+		>
+	</div>
+</article>
+
+<!-- AGENDA-CAROUSEL - CARD CODE -->
 <article>
 	{#each data.agendas as agenda}
 		<div class="card">
@@ -26,8 +40,8 @@
 	{/each}
 </article>
 
+<!-- AGENDA-CAROUSEL STYLING  -->
 <style>
-	/* AGENDA-CAROUSEL STYLING */
 	article {
 		z-index: 3;
 		width: 85vw;
@@ -41,17 +55,6 @@
 		position: relative;
 		padding-right: 1rem;
 		scroll-snap-align: start;
-	}
-
-	h3 {
-		font-size: 20px;
-	}
-
-	img {
-		width: 25em;
-		height: 15em;
-		object-fit: cover;
-		border-radius: 0.8em;
 	}
 
 	.card::before {
@@ -74,8 +77,52 @@
 		color: var(--main-color-beige);
 	}
 
+	h3 {
+		font-size: 20px;
+	}
+
+	img {
+		width: 25em;
+		height: 15em;
+		object-fit: cover;
+		border-radius: 0.8em;
+	}
+
+	button {
+		display: none;
+	}
+
 	/* MEDIA QUERY STYLING */
 	@media (min-width: 64rem) {
+		/* PREV-NEXT BUTTON STYLING */
+		.caroussel-buttons {
+			width: 6em;
+			display: flex;
+			margin-bottom: 1em;
+			justify-content: space-between;
+		}
+
+		button {
+			width: 40px;
+			height: 40px;
+			border: none;
+			padding: 0.3em;
+			display: block;
+			cursor: pointer;
+			border-radius: 50%;
+			background-color: var(--main-color-brown);
+		}
+
+		button:hover {
+			background: var(--main-color-green);
+		}
+
+		.arrow {
+			width: 2em;
+			height: 2em;
+			margin-top: 0.2em;
+		}
+
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
 		@supports (animation-timeline: view()) {
 			.card {
@@ -102,6 +149,12 @@
 					transform: translate(-10%);
 				}
 			}
+		}
+	}
+
+	@media (min-width: 100rem) {
+		article {
+			width: 75vw;
 		}
 	}
 </style>
