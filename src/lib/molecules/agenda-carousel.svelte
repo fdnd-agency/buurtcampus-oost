@@ -7,11 +7,11 @@
 <!-- AGENDA-CAROUSEL - PREV-NEXT BUTTON CODE -->
 <article>
 	<div class="caroussel-buttons">
-		<button type="button" aria-label="previous-button"
+		<button id="button-prev" type="button" aria-label="previous-button"
 			><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
 		>
 
-		<button type="button" aria-label="next-button"
+		<button id="button-next" type="button" aria-label="next-button"
 			><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
 		>
 	</div>
