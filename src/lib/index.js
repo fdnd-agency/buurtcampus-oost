@@ -3,6 +3,7 @@
 // === Buttons ===
 export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
 export { default as Button } from '$lib/atoms/buttons/button.svelte';
+export { default as HarryWeather } from '$lib/atoms/buttons/harryWeather.svelte';
 
 // === Icons ===
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
