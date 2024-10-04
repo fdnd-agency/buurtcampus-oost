@@ -1,7 +1,11 @@
 <script>
     export let data;
+    
+    import Harry from '$lib/atoms/harry.svelte';
+    let mood = "twerk"; // default mood
     // console.log(data.naam);
-  </script>
+</script>
+
  <div class="overlay"></div>
   <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
   <section class="container">
@@ -244,6 +248,7 @@
         </details>
       </div>
     </div>
+    <Harry {mood} />
   </section>
   
   <style>
