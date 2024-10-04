@@ -94,7 +94,7 @@ input[type="checkbox"][id^="menu"] {
 }
 
 /* Focus outline for icon */
-.icon:has(input:focus) {
+.icon:has(input:focus-visible) {
     border: 2px solid red;
 }
 
@@ -120,6 +120,7 @@ input[type="checkbox"][id^="menu"] {
 .content label {
     display: flex;
     justify-content: space-between;
+    padding: 0px 2px;
 }
 
 /* Focus and hover state for label */
@@ -128,8 +129,8 @@ input[type="checkbox"][id^="menu"] {
 }
 
 .content label:focus-within {
-    outline: 3px solid red;
-    outline-offset: 3px;
+    background: #d4eaff;
+    outline: 2px solid #2997FF;
     border-radius: 5px;
 }
 
