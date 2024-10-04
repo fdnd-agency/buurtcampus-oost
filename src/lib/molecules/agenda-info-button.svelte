@@ -1,9 +1,6 @@
 <script>
 	import CloseMenu from '$lib/atoms/icons/close-menu.svelte';
 
-	// /**
-	//  * @type {HTMLDialogElement}
-	//  */
 	// @ts-ignore
 	let popoverElement;
 

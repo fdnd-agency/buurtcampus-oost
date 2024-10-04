@@ -20,29 +20,7 @@
             <Button 
                 btnClass="btn-green"
                 href="/stekjes"
-                buttonText="Bekijk de Stekjes"
-                svgFill="svg-beige"
-            />
-        </div>
-    </article>
-
-    <article class="card-zaden">
-        <header class="header-card">
-            <Dot svgFill="var(--main-color-beige)"/>
-            <h2>{data.cardSlides[1].titleCard}</h2>
-        </header>
-        <picture>
-            <img width="783" height="982" loading="lazy" src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
-        </picture>
-        <div class="paragraph-card">
-            <p>{data.cardSlides[1].paragraphCard}</p>
-            <p>{data.cardSlides[1].paragraphCard2}</p>
-        </div>
-        <div class="btn-container">
-            <Button 
-                btnClass="btn-brown"
-                href="/zaden"
-                buttonText="Bekijk de Zaden"
+                buttonText="Bekijk de stekjes"
                 svgFill="svg-beige"
             />
         </div>
@@ -64,11 +42,35 @@
             <Button 
                 btnClass="btn-beige"
                 href="/geveltuin"
-                buttonText="Bekijk de Tuin"
+                buttonText="Bekijk de tuin"
                 svgFill="svg-green"
             />
         </div>
     </article>
+
+    <article class="card-zaden">
+        <header class="header-card">
+            <Dot svgFill="var(--main-color-beige)"/>
+            <h2>{data.cardSlides[1].titleCard}</h2>
+        </header>
+        <picture>
+            <img width="783" height="982" loading="lazy" src="{data.cardSlides[1].imageCard.url}" alt="{data.cardSlides[1].imageCardAltText}}" />
+        </picture>
+        <div class="paragraph-card">
+            <p>{data.cardSlides[1].paragraphCard}</p>
+            <p>{data.cardSlides[1].paragraphCard2}</p>
+        </div>
+        <div class="btn-container">
+            <Button 
+                btnClass="btn-brown"
+                href="/zaden"
+                buttonText="Bekijk de zaden"
+                svgFill="svg-beige"
+            />
+        </div>
+    </article>
+
+
 </div>
 
 <style>

@@ -1,24 +1,45 @@
 <script>
 	import { AgendaButton } from '$lib/index.js';
+	import { onMount } from 'svelte';
 	export let data;
-	const agenda = data.agendas[0];
+
+	// @ts-ignore
+	let agendaContainer;
+
+	// Scroll left by the container's width
+	function scrollPrev() {
+		// @ts-ignore
+		agendaContainer.scrollBy({ left: -agendaContainer.offsetWidth });
+	}
+	// Scroll right by the container's width
+	function scrollNext() {
+		// @ts-ignore
+		agendaContainer.scrollBy({ left: agendaContainer.offsetWidth });
+	}
+
+	onMount(() => {
+		const buttons = document.querySelector('.caroussel-buttons');
+		if (buttons) {
+			buttons.classList.remove('hidden');
+		}
+	});
 </script>
 
 <!-- AGENDA-CAROUSEL - PREV-NEXT BUTTON CODE -->
 <article>
-	<div class="caroussel-buttons">
-		<button id="button-prev" type="button" aria-label="previous-button"
+	<div class="caroussel-buttons hidden">
+		<button type="button" aria-label="previous-button" on:click={scrollPrev}
 			><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
 		>
 
-		<button id="button-next" type="button" aria-label="next-button"
+		<button type="button" aria-label="next-button" on:click={scrollNext}
 			><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
 		>
 	</div>
 </article>
 
 <!-- AGENDA-CAROUSEL - CARD CODE -->
-<article>
+<article bind:this={agendaContainer}>
 	{#each data.agendas as agenda}
 		<div class="card">
 			<div class="content">
@@ -43,7 +64,6 @@
 <!-- AGENDA-CAROUSEL STYLING  -->
 <style>
 	article {
-		z-index: 3;
 		width: 85vw;
 		display: flex;
 		overflow-x: auto;
@@ -92,10 +112,15 @@
 		display: none;
 	}
 
+	.hidden {
+		display: none !important;
+	}
+
 	/* MEDIA QUERY STYLING */
 	@media (min-width: 64rem) {
 		/* PREV-NEXT BUTTON STYLING */
 		.caroussel-buttons {
+			z-index: 3;
 			width: 6em;
 			display: flex;
 			margin-bottom: 1em;
