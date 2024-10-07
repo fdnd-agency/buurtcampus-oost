@@ -8,7 +8,7 @@
     export let name;
 
     // Weather
-    let city = 'Amsterdam';
+    let city = 'Delh';
     let weather;
 
     // Harry
@@ -55,7 +55,7 @@
 <aside>
     <div class="weather-bubble">
         <blockquote>
-            “{sentence}” <span class="home_page"> {detail}</span>
+            “{sentence} <span class="home_page"> {detail}”</span>
         </blockquote>
     </div>
     <Harry {mood} {environment} {textTemp}/>
