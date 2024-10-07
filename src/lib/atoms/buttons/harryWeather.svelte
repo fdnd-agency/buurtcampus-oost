@@ -44,10 +44,12 @@
 {/if}
 
 <style>
+    
     aside {
         position: absolute;
         right: 0;
         color: black;
+        z-index: 999;
     }
 
     .weather-bubble {

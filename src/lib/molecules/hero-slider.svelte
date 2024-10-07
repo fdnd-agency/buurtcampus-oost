@@ -85,7 +85,6 @@
 		flex-direction: column;
 		align-items: flex-start;
 		padding: 0 1em;
-		overflow: hidden;
 	}
 	h1 {
 		view-transition-name: h1;
