@@ -32,17 +32,17 @@
         mood = 'blij';
         environment = 'fel';
         sentence = `Het is ${currentTemp.toFixed(1)}°C, heet!`;
-        detail = `Te warm voor de ${name}! ${numericTextTemp}°C is ideaal`;
+        detail = ` Te warm voor de ${name}! ${numericTextTemp}°C is ideaal`;
     } else if (currentTemp >= numericTextTemp - 5 && currentTemp <= numericTextTemp + 5) {
         mood = 'blij';
         environment = 'neutraal';
         sentence = `Het is ${currentTemp.toFixed(1)}°C, aangenaam weertje!`;
-        detail = `Prima voor de ${name}.`;
+        detail = ` Prima voor de ${name}.`;
     } else {
         mood = 'neutraal';
         environment = 'koud';
         sentence = `Het is ${currentTemp.toFixed(1)}°C, brrrr!`;
-        detail = `Te koud voor de ${name}! ${numericTextTemp}°C is ideaal`;
+        detail = ` Te koud voor de ${name}! ${numericTextTemp}°C is ideaal`;
     }
 }
 
@@ -55,7 +55,7 @@
 <aside>
     <div class="weather-bubble">
         <blockquote>
-            “{sentence} <span class="home_page"> {detail}”</span>
+            “{sentence}<span class="home_page"> {detail}</span>”
         </blockquote>
     </div>
     <Harry {mood} {environment} {textTemp}/>

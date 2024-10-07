@@ -35,7 +35,7 @@
 }
 
 .stekjes_detail .home_page {
-    display: inline-block;
+    display: inline;
 }
 
 aside {
@@ -87,11 +87,10 @@ aside {
 .weather-bubble blockquote {
     font-style: italic;
     border-left: 4px solid rgba(255, 255, 255, 0.6);
-
 }
 
 .weather-bubble blockquote span {
-    display: none;
+    display: none;    
 }
 
 @keyframes popUp {
