@@ -4,6 +4,8 @@
     import { HarryWeather } from '$lib/index.js';
     let mood; 
     let environment; 
+    console.log(data.stekje);
+    data.stekje.absoluteTemperatuur
 
     // console.log(data.naam);
 </script>

@@ -2,8 +2,11 @@
     import { onMount } from 'svelte'; 
     import Harry from '$lib/atoms/harry.svelte'; // Harry toevoegen
 
+    // OpenweatherAPI
     let city = 'Amsterdam';
     let weather; 
+
+    // Harry
     let mood; 
     let environment; 
     let sentence;
