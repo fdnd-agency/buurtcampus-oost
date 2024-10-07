@@ -9,8 +9,8 @@ function toggleMenu() {
 
 </script>
 
-<form title="Accessibility Options" aria-label="Accessibility Options">
-    <label for="menu" class="icon">
+<form aria-label="Accessibility Options">
+    <label title="Accessibility Options" for="menu" class="icon">
         <input type="checkbox" 
             id="menu" 
             aria-expanded={isExpanded ? "true" : "false"}
@@ -70,6 +70,13 @@ form {
     /* flex-direction: row-reverse; */
     width: calc(14rem + 5rem);
     transition: right 0.3s;
+    display: none;
+}
+
+@supports selector(:has(*)) {
+    form {
+        display: flex;
+    }
 }
 
 /* Menu is shown when checkbox is checked */
@@ -133,7 +140,8 @@ input[type="checkbox"][id^="menu"] {
     display: flex;
     justify-content: space-between;
     padding: 0px 2px;
-    transition: 0.1s ease-in-out;
+    border-radius: 5px;
+    /* transition: 0.1s ease-in-out; */
 }
 
 /* Focus and hover state for label */
@@ -142,7 +150,6 @@ input[type="checkbox"][id^="menu"] {
 .content label:hover {
     background: #d4eaff;
     outline: 2px solid #2997FF;
-    border-radius: 5px;
     cursor: pointer;
 }
 
