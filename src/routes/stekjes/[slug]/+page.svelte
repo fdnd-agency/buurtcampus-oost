@@ -4,10 +4,7 @@
     import { HarryWeather } from '$lib/index.js';
     let mood; 
     let environment; 
-    console.log(data.stekje);
-    // data.stekje.absoluteTemperatuur
 
-    // console.log(data.naam);
 </script>
  <div class="overlay"></div>
   <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
