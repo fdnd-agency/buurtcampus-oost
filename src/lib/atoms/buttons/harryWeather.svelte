@@ -8,7 +8,7 @@
     export let name;
 
     // Weather
-    let city = 'Delh';
+    let city = 'Amsterdam';
     let weather;
 
     // Harry
