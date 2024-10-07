@@ -1,49 +1,96 @@
-    <script>
-        import { onMount } from 'svelte'; 
-        let city = 'Amsterdam';
-        let weather; 
+<script>
+    import { onMount } from 'svelte'; 
+    import Harry from '$lib/atoms/harry.svelte'; // Harry toevoegen
 
-        async function getWeather() {
-            const res = await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=52d2a223715e49a67159446b130d4482&lang=nl&units=metric`
-            );
-            weather = await res.json();
+    let city = 'Amsterdam';
+    let weather; 
+    let mood; 
+    let environment; 
+    let sentence;
+
+    async function getWeather() {
+        const res = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=52d2a223715e49a67159446b130d4482&lang=nl&units=metric`
+        );
+        weather = await res.json();
+
+        if (weather.main.temp > 22) {
+            mood = 'blij';
+            environment = 'fel';
+            sentence = `Het is ${weather.main.temp.toFixed(1)}°C, perfect om in de tuin te werken!`
+        } else if (weather.main.temp > 10){
+            mood = 'blij';
+            environment = 'neutraal';
+            sentence = `Het is ${weather.main.temp.toFixed(1)}°C, aan de frisse kant nog`
+        } else {
+            mood = 'neutraal';
+            environment = 'koud';
+            sentence = `Het is ${weather.main.temp.toFixed(1)}°C, brrrrr!`
         }
+    }
 
-        onMount(() => {
-            getWeather(); 
-        });
-    </script>
+    onMount(() => {
+        getWeather(); 
+    });
+</script>
 
-    {#if weather}
-    <button>
-        {weather.main.temp.toFixed(1)}°C | 
-        <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description}/>
-    </button>
-    {/if}
+{#if weather}
+<aside>
+    <div class="weather-bubble">
+        <blockquote>“{sentence}”</blockquote>
+    </div>
+    <Harry {mood} {environment}/>
+</aside>
+{/if}
 
-    <style>
-        button {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            border-radius: 0 1rem 0 0;
-            z-index: 12000000000;
-            border: none;
-            background-color: var(--main-color-green);
-            width: 6rem;
-            height: 2.5rem;
-            color: white;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+<style>
+    aside {
+        position: absolute;
+        right: 0;
+        color: black;
+    }
 
-        button img {
-            width: 2.5rem;
-            aspect-ratio: 1/1;
-        }
-    </style>
+    .weather-bubble {
+        position: relative;
+        padding: .5rem;
+        background-color: white;
+        max-width: 12rem;
+        border-radius: 0.5rem;
+        margin-bottom: .75rem;
+        filter: drop-shadow(1px 0px 2px rgb(0 0 0 / .25));
+        opacity: 0; 
+        transform: scale(0.5);
+        animation: popUp 0.5s ease forwards;
+        animation-delay: 1400ms; 
+        text-align: center;
+    }
+
+    .weather-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        right: 40px;
+        height: 20px;
+        width: 20px;
+        background: inherit;
+        transform: rotate(45deg);
+        border-radius: 2px;
+        z-index: -1;
+    }
+
+    .weather-bubble blockquote {
+        font-style: italic;
+        border-left: 4px solid rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Small at first */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Full size */
+    }
+}
+</style>
