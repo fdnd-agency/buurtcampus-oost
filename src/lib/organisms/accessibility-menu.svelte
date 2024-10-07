@@ -1,13 +1,24 @@
 <script>
 import {Accessibility, Moon, Translate, FontIncrease} from '$lib/index.js'; //Switch
+
+let isExpanded = false;
+
+function toggleMenu() {
+    isExpanded = !isExpanded;
+}
+
 </script>
 
 <form title="Accessibility Options" aria-label="Accessibility Options">
     <label for="menu" class="icon">
-        <input type="checkbox" id="menu">
+        <input type="checkbox" 
+            id="menu" 
+            aria-expanded={isExpanded ? "true" : "false"}
+            aria-controls="accessibility-options" 
+            on:change={toggleMenu}>
          <Accessibility />
     </label>
-    <div class="content">
+    <div class="content" id="accessibility-options" aria-hidden={!isExpanded}>
         <ul>
             <li>
                 <label for="toggle-darkmode">
@@ -52,19 +63,19 @@ import {Accessibility, Moon, Translate, FontIncrease} from '$lib/index.js'; //Sw
 /* Form Styles */
 form {
     position: fixed;
-    top: 20vh;
-    left: -15rem; /* Hidden by default */
+    bottom: 7dvh;
+    right: -15rem; 
     z-index: 10000;
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     width: calc(14rem + 5rem);
-    transition: left 0.3s;
+    transition: right 0.3s;
 }
 
 /* Menu is shown when checkbox is checked */
 form:has(.icon input:checked) {
-    left: -1rem; /* Slide out to show the menu */
-    transition: left 0.3s;
+    right: -1rem; /* Slide out to show the menu */
+    transition: right 0.3s;
 }
 
 /* Hide content when checkbox is unchecked */
@@ -74,13 +85,13 @@ form:not(:has(.icon input:checked)) > .content ul {
 
 /* Accessibility menu hidden height */
 form:not(:has(.icon input:checked)) > .content {
-    height: 117.781px;
+    height: 9rem;
 }
 
 /* Menu toggle checkbox hidden off-screen */
 input[type="checkbox"][id^="menu"] {
     position: absolute;
-    left: -50%;
+    right: -50%;
 }
 
 /* Icon container for the menu */
@@ -89,21 +100,22 @@ input[type="checkbox"][id^="menu"] {
     width: 4rem;
     height: 4rem;
     background-color: white;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px 0px 0px 10px;
     cursor: pointer;
 }
 
 /* Focus outline for icon */
 .icon:has(input:focus-visible) {
-    border: 2px solid red;
+    outline: 2px solid red;
+    outline-offset: -3px;
 }
 
 /* Content styles */
 .content {
     width: 14rem;
-    height: max-content;
+    height: 9rem;
     background-color: white;
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 0px 10px;
 }
 
 /* List styles inside the content */
@@ -121,17 +133,17 @@ input[type="checkbox"][id^="menu"] {
     display: flex;
     justify-content: space-between;
     padding: 0px 2px;
+    transition: 0.1s ease-in-out;
 }
 
 /* Focus and hover state for label */
+.content label:focus-within,
+.content label:active,
 .content label:hover {
-    cursor: pointer;
-}
-
-.content label:focus-within {
     background: #d4eaff;
     outline: 2px solid #2997FF;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Container for icons and text in labels */
