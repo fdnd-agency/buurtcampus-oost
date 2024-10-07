@@ -6,6 +6,10 @@
     z-index: 999;
 }
 
+.stekjes_detail .home_page {
+    display: inline-block;
+}
+
 aside {
     position: absolute;
     right: 0;
@@ -44,6 +48,11 @@ aside {
 .weather-bubble blockquote {
     font-style: italic;
     border-left: 4px solid rgba(255, 255, 255, 0.6);
+
+}
+
+.weather-bubble blockquote span {
+    display: none;
 }
 
 @keyframes popUp {

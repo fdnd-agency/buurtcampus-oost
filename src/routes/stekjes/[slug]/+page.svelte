@@ -5,14 +5,14 @@
     let mood; 
     let environment; 
     console.log(data.stekje);
-    data.stekje.absoluteTemperatuur
+    // data.stekje.absoluteTemperatuur
 
     // console.log(data.naam);
 </script>
  <div class="overlay"></div>
   <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
   <section class="container stekjes_detail">
-    <HarryWeather />
+    <HarryWeather textTemp={data.stekje.absoluteTemperatuur} />
     <div class="stekje-container">
       <div class="left">
         <div class="beschrijving-tag">

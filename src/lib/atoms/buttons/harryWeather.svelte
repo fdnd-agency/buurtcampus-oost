@@ -2,6 +2,8 @@
     import { onMount } from 'svelte'; 
     import Harry from '$lib/atoms/harry.svelte'; // Harry toevoegen
 
+    export let textTemp;
+
     // OpenweatherAPI
     let city = 'Amsterdam';
     let weather; 
@@ -40,8 +42,8 @@
 {#if weather}
 <aside>
     <div class="weather-bubble">
-        <blockquote>“{sentence}”</blockquote>
+        <blockquote>“{sentence}<span class="home_page">{textTemp}</span>”</blockquote>
     </div>
-    <Harry {mood} {environment}/>
+    <Harry {mood} {environment} {textTemp}/>
 </aside>
 {/if}
