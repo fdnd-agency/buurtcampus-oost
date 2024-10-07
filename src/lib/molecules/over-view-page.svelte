@@ -35,15 +35,20 @@
 		position: relative;
 		min-height: 50vh;
 		width: 20%;
-		padding: 1rem;
 		border-radius: var(--border-card);
 		overflow: hidden;
 		margin-top: 1rem;
 	}
 	article a {
 		text-decoration: none;
-	}
 
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	article a:hover img {
+		scale: 1.10;
+	}
 	img {
 		position: absolute;
 		left: 0;
@@ -51,26 +56,43 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: ease-out .35s;
 	}
-
 	h3 {
 		position: relative;
 		color: white;
 		font-size: 2rem;
 		line-height: 1.5em;
 		z-index: 5;
+		padding: 1rem;
+		width: 100%;
+		height: min-content;
 	}
-
-	article::after {
+	article h3:before {
 		content: '';
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
+		left: 0;
 		right: 0;
-		background-color: rgba(40, 40, 40, 0.199);
-		z-index: 1;
+		bottom: 0;
+		background: linear-gradient(to bottom, rgb(0 0 0 / 90%), rgba(0, 0, 0, 0) 80%);
+		z-index: -1;
 	}
+
+	/* article::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(to bottom, rgb(0 0 0 / 70%), rgba(0, 0, 0, 0) 40%);
+		z-index: 1;
+	} */
 	@media (max-width: 26.5625em) {
 		/* 425px / 16 = 26.5625em */
 		article {
