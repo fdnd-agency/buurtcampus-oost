@@ -22,10 +22,7 @@
         width: 8rem;
     }
 }
-.cartoon{
-    width: 16rem;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-}
+
 .cartoon g, .cartoon path{
     transform-box: fill-box;
     transform-origin: center;
@@ -61,7 +58,7 @@
     .neutraal{
         opacity: 1;
     }
-    .arm_r {
+    .arm_l {
         animation: wave 20s infinite;
     }
 }
@@ -72,8 +69,8 @@
     .neutraal{
         opacity: 1;
     }
-    .arm_r {
-        animation: wave 20s infinite;
+    .arm_l {
+        animation: wave 20s infinite 1400ms;
     }
 }
 .harry[data-mood="dorst"]{
@@ -209,31 +206,31 @@
 /* ANIMATIONS */
 @keyframes wave {
     0% {    
-        transform: translateY(-20px) translateX(10px) rotate(55deg);
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
     }
 
-    25% {
-        transform: translateY(-20px) translateX(10px) rotate(55deg);
+    1% {
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
     }
 
-    30% {
-        transform: translateY(-20px) translateX(10px) rotate(-45deg);
+    6% {
+        transform: translateY(-20px) translateX(-10px) rotate(45deg);
     }
 
-    31% {
-        transform: translateY(-20px) translateX(10px) rotate(-25deg);
+    7% {
+        transform: translateY(-20px) translateX(-10px) rotate(25deg);
     }
 
-    32% {
-        transform: translateY(-20px) translateX(10px) rotate(-45deg);
+    8% {
+        transform: translateY(-20px) translateX(-10px) rotate(45deg);
     }
 
-    35% {
-        transform: translateY(-20px) translateX(10px) rotate(55deg);    
+    11% {
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);    
     }
 
     100% {
-        transform: translateY(-20px) translateX(10px) rotate(55deg);
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
     }
 }
 @keyframes angry {

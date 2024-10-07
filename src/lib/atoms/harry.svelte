@@ -1,5 +1,6 @@
 <script>
     export let mood = "neutraal"; // default mood
+    export let environment = "zonnig"
 </script>
 
 <div class="harry">
@@ -164,7 +165,7 @@
                 d="m115.42,81.8C124.46,34.54,152.97,1.89,178.71,2c31.86.14,54.36,52.67,64.98,77.39,8.58,19.97,12.69,37.87,14.83,50.78.9,3.66,1.52,9.01-1.14,13.61-2.78,4.8-8.36,9.36-25.2,9.36-34.11,0-54.35-.46-54.35-.46l-72.82-17.19s.32-29.51,10.41-53.69Z" />
         </clipPath>
     </defs>
-    <g class="harry" data-mood="{mood}">
+    <g class="harry" data-mood="{mood}" data-environment="{environment}">
         <path class="been_l cls-17"
             d="m132.65,319.05l8.36,34.18c1.25,5.24,5.73,8.47,10,7.72,3.41-.6,6.26-3.67,7.12-7.72,1.58-11.39,3.16-22.78,4.74-34.18h-30.22Z" />
         <path class="been_r cls-17"
