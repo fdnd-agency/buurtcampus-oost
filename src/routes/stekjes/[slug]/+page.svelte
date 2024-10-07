@@ -12,7 +12,7 @@
  <div class="overlay"></div>
   <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
   <section class="container stekjes_detail">
-    <HarryWeather textTemp={data.stekje.absoluteTemperatuur} />
+    <HarryWeather textTemp={data.stekje.absoluteTemperatuur}, name={data.stekje.naam} />
     <div class="stekje-container">
       <div class="left">
         <div class="beschrijving-tag">
