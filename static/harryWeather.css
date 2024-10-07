@@ -1,9 +1,37 @@
 .stekjes_detail aside {
     position: absolute;
-    right: 100px;
-    top: -100px;
+    right: 10rem;
+    bottom: -10rem;
     color: black;
-    z-index: 998;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    animation: appearStekje 300ms ease-out 800ms forwards;
+}
+
+.stekjes_detail .cartoon{
+    width: 10rem;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    position: absolute;
+    rotate: 8deg;
+}
+.stekjes_detail .weather-bubble {
+    display: flex;
+    min-height: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.stekjes_detail .weather-bubble:after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    bottom: 15%;
+    height: 20px;
+    width: 20px;
+    background: inherit;
+    border-radius: 2px;
+    z-index: -1;
 }
 
 .stekjes_detail .home_page {
@@ -31,6 +59,7 @@ aside {
     animation-delay: 1400ms; 
     text-align: center;
 }
+
 .weather-bubble:before {
     content: '🌸 Harry';
     font-style: italic;
@@ -76,15 +105,6 @@ aside {
     }
 }
 
-.stekjes_detail .cartoon{
-    width: 10rem;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-    position: absolute;
-    rotate: -40deg;
-    right: -9rem;
-    animation: appear 300ms ease-in-out 800ms forwards;
-}
-
 .hero-slider .cartoon{
     width: 10rem;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
@@ -102,5 +122,14 @@ aside {
     100% {
         rotate: -18deg ;
         right: -3rem;
+    }
+}
+
+@keyframes appearStekje {
+    0% {
+        bottom: -10rem;
+    }
+    100% {
+        bottom: 0.5rem;
     }
 }

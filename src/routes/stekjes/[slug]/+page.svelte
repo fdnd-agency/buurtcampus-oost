@@ -6,10 +6,15 @@
     let environment; 
 
 </script>
- <div class="overlay"></div>
+
+<section class="stekjes_detail">
+  <div class="overlay"></div>
+  <HarryWeather textTemp={data.stekje.absoluteTemperatuur}, name={data.stekje.naam} />
   <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
-  <section class="container stekjes_detail">
-    <HarryWeather textTemp={data.stekje.absoluteTemperatuur}, name={data.stekje.naam} />
+</section>
+  
+  
+  <section class="container">
     <div class="stekje-container">
       <div class="left">
         <div class="beschrijving-tag">
