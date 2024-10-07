@@ -2,7 +2,7 @@
     export let data;
     
     import Harry from '$lib/atoms/harry.svelte';
-    let mood = "twerk"; // default mood
+    let mood = 'twerk'; // default mood
     // console.log(data.naam);
 </script>
 
@@ -248,6 +248,7 @@
         </details>
       </div>
     </div>
+
     <Harry {mood} />
   </section>
   
