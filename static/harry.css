@@ -22,25 +22,7 @@
         width: 8rem;
     }
 }
-.cartoon{
-    width: 10rem;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-    position: absolute;
-    rotate: -40deg;
-    right: -9rem;
-    animation: appear 300ms ease-in-out 800ms forwards;
-}
 
-@keyframes appear {
-    0% {
-        rotate: -40deg ;
-        right: -9rem;
-    }
-    100% {
-        rotate: -18deg ;
-        right: -3rem;
-    }
-}
 .cartoon g, .cartoon path{
     transform-box: fill-box;
     transform-origin: center;
