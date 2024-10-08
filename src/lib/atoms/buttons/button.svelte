@@ -30,6 +30,7 @@
 		text-decoration: none;
 		font-size: 1em;
 		transition: ease-in 0.1s;
+		width: 12em;
 	}
 
 	/* button variants */
