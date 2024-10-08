@@ -1,34 +1,31 @@
-<!-- <script>
+<script>
     export let id = "toggle";
-    export let label = "Toggle";
-</script> -->
-<!-- 
-<label for={id}>
-    <span>{label}</span>
-    <input type="checkbox" id={id} role="switch">
-    <span class="state">
-        <span class="container">
-          <span class="position"> </span>
-        </span>
-    </span>
-</label> -->
+</script>
 
-<!-- <style>
-    
-label input[role="switch"] {
+<input type="checkbox" id={id} role="switch">
+<span class="state">
+    <span class="container">
+      <span class="position"> </span>
+    </span>
+</span>
+
+
+<style>
+
+input {
   opacity: 0;
 }
 
-label input[role="switch"] ~ .state {
+input ~ .state {
   display: inline-block;
   user-select: none;
 }
 
-label input[role="switch"] ~ .state > .container {
+input ~ .state > .container {
   position: relative;
-  top: 4px;
+  top: 2px;
   display: inline-block;
-  border: 2px solid #919191;
+ 	border: 2px solid #919191;
   background: #919191;
   width: 40px;
   height: 20px;
@@ -36,7 +33,7 @@ label input[role="switch"] ~ .state > .container {
   transition: 0.1s ease-in-out;
 }
 
-label input[role="switch"] ~ .state > .container > .position {
+input ~ .state > .container > .position {
   position: absolute;
   top: 1px;
   left: 2px;
@@ -48,18 +45,23 @@ label input[role="switch"] ~ .state > .container > .position {
   transition: 0.1s ease-in-out;
 }
 
-label input[role="switch"]:checked ~ .state > .container > .position {
+input:checked ~ .state > .container > .position {
   left: 20px;
-  background: #fff;
 }
 
-label input[role="switch"]:checked ~ .state > .container {
+input:checked ~ .state > .container {
   border: 2px solid #005CDC;
   background: #005CDC;
 }
 
-label:hover {
-  cursor: pointer;
+input:hover ~ .state > .container {
+  border: 2px solid #3D3D3D;
+  background: #3D3D3D;
 }
 
-</style>  -->
+input:checked:hover ~ .state > .container {
+  border: 2px solid #3D94FF;
+  background: #3D94FF;
+}
+
+</style> 

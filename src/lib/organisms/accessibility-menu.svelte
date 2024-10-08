@@ -1,5 +1,8 @@
 <script>
-import {Accessibility, Moon, Translate, FontIncrease} from '$lib/index.js'; //Switch
+import {Accessibility, Moon, Translate, FontIncrease, Switch} from '$lib/index.js';
+
+let darkModeId = "toggle-darkmode";
+let fontSizeId = "toggle-font-size";
 
 let isExpanded = false;
 
@@ -10,49 +13,36 @@ function toggleMenu() {
 </script>
 
 <form aria-label="Accessibility Options">
-    <label title="Accessibility Options" for="menu" class="icon">
-        <input type="checkbox" 
-            id="menu" 
+    <input type="checkbox" class="toggle-menu"
+            id="menu"
             aria-expanded={isExpanded ? "true" : "false"}
             aria-controls="accessibility-options" 
             on:change={toggleMenu}>
+    <label title="Accessibility Options" for="menu" class="icon">
          <Accessibility />
     </label>
     <div class="content" id="accessibility-options" aria-hidden={!isExpanded}>
         <ul>
             <li>
                 <label for="toggle-darkmode">
-                    <div>
-                        <Moon/>
-                        <span>Dark mode</span>
-                    </div>
-                    <input type="checkbox" id="toggle-darkmode" role="switch">
-                    <span class="state">
-                        <span class="container">
-                          <span class="position"></span>
-                        </span>
+                    <span class="label-container">
+                        <Moon/>Dark mode
                     </span>
+                    <Switch id={darkModeId}/>
                 </label>
             </li>
             <li>
-                <label for="font-size">
-                    <div>
-                        <FontIncrease />
-                        <span>Grotere letters</span>
-                    </div>
-                    <input type="checkbox" id="font-size" role="switch">
-                    <span class="state">
-                        <span class="container">
-                          <span class="position"></span>
-                        </span>
+                <label for="toggle-font-size">
+                    <span class="label-container">
+                        <FontIncrease/>Increase Text
                     </span>
+                    <Switch id={fontSizeId}/>
                 </label>
             </li>
             <li id="google_translate_element">
-                <div>
-                    <Translate />
-                    <span>Vertaal deze website</span>  
-                </div>  
+                <span class="label-container">
+                    <Translate/>Translate this website 
+                </span>  
             </li>
         </ul>
     </div>
@@ -60,72 +50,66 @@ function toggleMenu() {
 
 <style>
 
-/* Form Styles */
 form {
     position: fixed;
-    bottom: 7dvh;
-    right: -15rem; 
+    bottom: 2rem;
+    right: 0;
     z-index: 10000;
     display: flex;
-    /* flex-direction: row-reverse; */
-    width: calc(14rem + 5rem);
-    transition: right 0.3s;
-    display: none;
-}
-
-@supports selector(:has(*)) {
-    form {
-        display: flex;
-    }
-}
-
-/* Menu is shown when checkbox is checked */
-form:has(.icon input:checked) {
-    right: -1rem; /* Slide out to show the menu */
+    flex-direction: column-reverse;
+    align-items: flex-end;
     transition: right 0.3s;
 }
 
-/* Hide content when checkbox is unchecked */
-form:not(:has(.icon input:checked)) > .content ul {
-    display: none;
+.toggle-menu:checked ~ .content{
+	right: 0;
+	transition: right 0.5s ease-in-out;
 }
 
-/* Accessibility menu hidden height */
-form:not(:has(.icon input:checked)) > .content {
+.toggle-menu:checked ~ .icon {
+	border-radius: 0 0 0 0.6rem;
+	transition: border-radius 0.5s ease-in-out
+}
+
+.toggle-menu:not(:checked) ~ .content ul {
+	display: none;
+}
+
+.toggle-menu:not(:checked) ~ .content {
     height: 9rem;
 }
 
-/* Menu toggle checkbox hidden off-screen */
 input[type="checkbox"][id^="menu"] {
     position: absolute;
     right: -50%;
 }
 
-/* Icon container for the menu */
+.toggle-menu:focus-visible ~ label {
+    outline: 2px solid #005CDC;
+    outline-offset: -0.25rem;
+}
+
 .icon {
-    padding: 5px;
+    padding: 0.3rem;
     width: 4rem;
     height: 4rem;
-    background-color: white;
-    border-radius: 10px 0px 0px 10px;
+    background-color: #fff;
+    border-radius: 0.6rem 0px 0px 0.6rem;
     cursor: pointer;
+    transition: border-radius 0.5s ease-in-out;
 }
 
-/* Focus outline for icon */
-.icon:has(input:focus-visible) {
-    outline: 2px solid red;
-    outline-offset: -3px;
-}
-
-/* Content styles */
 .content {
-    width: 14rem;
-    height: 9rem;
-    background-color: white;
-    border-radius: 0px 0px 0px 10px;
+	position: absolute;
+	bottom: 4rem;
+	right: -15rem;
+	background: #fff;
+	height: 9rem;
+	width: 15rem;
+	border-radius: 0.6rem 0 0 0.6rem;
+	transition: right 0.5s ease-in-out;
 }
 
-/* List styles inside the content */
 .content ul {
     padding: 0.5rem;
 }
@@ -135,91 +119,24 @@ input[type="checkbox"][id^="menu"] {
     margin: 0.4rem;
 }
 
-/* Label and interactive elements */
 .content label {
     display: flex;
     justify-content: space-between;
-    padding: 0px 2px;
-    border-radius: 5px;
-    /* transition: 0.1s ease-in-out; */
+    padding: 2px;
+    border-radius: 0.3rem;
 }
 
-/* Focus and hover state for label */
-.content label:focus-within,
-.content label:active,
-.content label:hover {
-    background: #d4eaff;
-    outline: 2px solid #2997FF;
+.content label:hover,
+.content label:focus-within {
+	background: #d4eaff;
+    outline: 2px solid #005CDC;
     cursor: pointer;
 }
 
-/* Container for icons and text in labels */
-.content div {
+.label-container {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-/* Switch input styles */
-label input[role="switch"] {
-    opacity: 0; /* Hidden but focusable */
-    cursor: pointer;
-}
-
-/* State container for switch */
-label input[role="switch"] ~ .state {
-    display: inline-block;
-    user-select: none;
-}
-
-/* Switch container */
-label input[role="switch"] ~ .state > .container {
-    position: relative;
-    top: 4px;
-    display: inline-block;
-    border: 2px solid #919191;
-    background: #919191;
-    width: 40px;
-    height: 20px;
-    border-radius: 11px;
-    transition: 0.1s ease-in-out;
-}
-
-/* Hover state for switch container */
-label input[role="switch"]:hover ~ .state > .container {
-    border: 2px solid #3D3D3D;
-    background: #3D3D3D;
-}
-
-/* Switch position (knob) */
-label input[role="switch"] ~ .state > .container > .position {
-    position: absolute;
-    top: 1px;
-    left: 2px;
-    display: inline-block;
-    border-radius: 9px;
-    width: 14px;
-    height: 14px;
-    background: #fff;
-    transition: 0.1s ease-in-out;
-}
-
-/* Checked state for switch knob */
-label input[role="switch"]:checked ~ .state > .container > .position {
-    left: 20px;
-    background: #fff;
-}
-
-/* Checked state for switch container */
-label input[role="switch"]:checked ~ .state > .container {
-    border: 2px solid #005CDC;
-    background: #005CDC;
-}
-
-/* Hover state for checked switch */
-label input[role="switch"]:checked:hover ~ .state > .container {
-    border: 2px solid #3D94FF;
-    background: #3D94FF;
 }
 
 </style>
