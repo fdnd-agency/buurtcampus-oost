@@ -55,7 +55,6 @@ export async function load() {
 				id
 				title
 				description
-				bulletText2
 				createdAt
 			}
 		}
