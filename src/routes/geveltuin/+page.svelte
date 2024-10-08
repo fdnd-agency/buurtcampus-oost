@@ -7,7 +7,7 @@
 
 <HeroHeaders heroInfo={data.heroHeaders[2]} />
 
-<section>
+<section class="beige">
 	<article>
 		<h2>{data.geveltuins[0].title}</h2>
 
@@ -20,14 +20,14 @@
 		</ul>
 	</article>
 
-	<picture>
+	<!-- <picture>
 		<img src={data.geveltuins[0].image.url} alt="geveltuin-roses" />
-	</picture>
+	</picture> -->
 </section>
 
 <section>
 	<article>
-		<h2>{data.facadeGardenActions[0].title}</h2>
+		<h2 class="action-title">{data.facadeGardenActions[0].title}</h2>
 
 		<p>{data.facadeGardenActions[0].description}</p>
 
@@ -42,12 +42,40 @@
 </section>
 
 <style>
+	section {
+		padding: 3em;
+	}
+
+	.beige {
+		background-color: var(--main-color-beige);
+	}
+
+	p,
 	ul {
-		list-style-type: disc; 
-		padding-left: 20px; 
+		margin-top: 3em;
+		margin-bottom: 2em;
+		font-family: 'Poppins-Regular';
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-left: 20px;
 	}
 
 	li {
-		margin-bottom: 1em; 
+		margin-bottom: 1em;
+	}
+
+	h2 {
+		text-align: justify;
+		font-family: var(--header-font);
+		font-size: 3em;
+		line-height: 1.1em;
+		max-width: 7em;
+		color: var(--main-color-brown);
+	}
+
+	.action-title {
+		color: var(--main-color-green);
 	}
 </style>
