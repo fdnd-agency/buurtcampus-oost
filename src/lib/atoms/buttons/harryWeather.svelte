@@ -8,11 +8,11 @@
     export let name;
 
     // Weather
-    let city = 'df';
+    let city = 'Amsterdam';
     let weather;
 
     // Harry
-    let mood = 'twerk';
+    let mood = 'neutraal';
     let environment = 'blij';
     let sentence = 'Ik ben even in de war';
     let detail = '';
