@@ -30,6 +30,7 @@
 		text-decoration: none;
 		font-size: 1em;
 		transition: ease-in 0.1s;
+		width: 10vw;
 	}
 
 	/* button variants */
@@ -37,30 +38,17 @@
 		--color-accent: var(--main-color-green);
 		--color-text: var(--main-color-beige);
 	}
-	.btn-brown {
-		--color-accent: var(--main-color-brown);
-		--color-text: var(--main-color-beige);
-	}
-	.btn-beige {
-		--color-accent: var(--main-color-beige);
-		--color-text: var(--card-color-green);
-	}
-
-	.btn-beige-agenda {
-		--color-accent: var(--main-color-beige);
-		--color-text: var(--card-color-green);
-	}
 
 	/* button hover */
 	a:hover {
 		cursor: pointer;
 		transform: scale(1.05);
-		--color-accent: var(--text-color-white);
-		--color-text: var(--main-color-orange);
+		--color-accent: var(--text-color-black);
+		--color-text: white;
 	}
 	a:hover .svg-beige,
 	a:hover .svg-green {
-		--svg-fill: var(--main-color-orange);
+		--svg-fill: white;
 	}
 	/* svg style */
 	span {
@@ -70,18 +58,12 @@
 		padding: 0 0 0.05em 0.7em;
 	}
 	svg {
-		--svg-fill: var(--main-color-beige);
+		--svg-fill: var(--main-color-white);
 		fill: var(--svg-fill);
 		width: 16px;
 		height: 18px;
 	}
 	.svg-beige {
 		--svg-fill: var(--main-color-beige);
-	}
-	.svg-green {
-		--svg-fill: var(--main-color-green);
-	}
-	.svg-brown {
-		--svg-fill: var(--main-color-brown);
 	}
 </style>

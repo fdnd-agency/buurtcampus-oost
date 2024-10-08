@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import { Button } from '$lib/index.js';
+	import { GeveltuinButton } from '$lib/index.js';
 	import { HeroHeaders, Dot } from '$lib/index.js';
 
 	const bulletPoints1 = data.geveltuins[0].bulletText1.split('.');
@@ -43,7 +43,12 @@
 			{/each}
 		</ul>
 
-		<Button btnClass="btn-green" href="/contact" buttonText="Meld je aan" svgFill="svg-beige" />
+		<GeveltuinButton
+			btnClass="btn-green"
+			href="/contact"
+			buttonText="Meld je aan"
+			svgFill="svg-beige"
+		/>
 	</article>
 </section>
 
