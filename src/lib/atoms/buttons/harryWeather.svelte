@@ -36,7 +36,7 @@
         detail = ` Te warm voor de ${name}! ${numericTextTemp}°C is ideaal.`;
     } else if (currentTemp >= numericTextTemp - 5 && currentTemp <= numericTextTemp + 5) {
         mood = 'blij';
-        environment = 'sombrero';
+        environment = 'zonnig';
         sentence = `Het is ${currentTemp.toFixed(1)}°C, aangenaam weertje!`;
         detail = ` Bevalt de ${name} goed.`;
     } else if (currentTemp < numericTextTemp - 8) {
