@@ -149,6 +149,9 @@ input[type='submit'] {
 input[type='submit']:hover {
     background-color: var(--main-color-orange);
 }
-
+input,
+textarea {
+    font-family: var(--paragraph-font);
+}
 
 </style>
