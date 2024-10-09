@@ -13,6 +13,9 @@ Wij hebben de opdracht gekregen om de huidige live bieb-in-bloei website te opti
 * mascotte Harry: geeft op een speelse manier tips over de verzorging van de stekjes en zaadjes. 
 * accessibility menu: een menu waar je als gebruiker de mogelijkheid hebt om darkmode, grotere letters of vertaling toe te passen.
 
+## Visual
+
+![Untitled (1)](https://github.com/user-attachments/assets/d9166e67-513a-409d-85a2-3e7fbb2805d0)
 
 ## Kenmerken
 Dit project is opgezet met Sveltekit en met de headless CMS Hygraph. In dit project hebben gewerkt met componenten in Sveltekit.
