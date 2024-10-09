@@ -28,22 +28,29 @@
     const currentTemp = weather.main.temp;
 
 
+
     if (currentTemp > numericTextTemp + 8) {
         mood = 'blij';
         environment = 'fel';
         sentence = `Het is ${currentTemp.toFixed(1)}°C, heet!`;
-        detail = ` Te warm voor de ${name}! ${numericTextTemp}°C is ideaal`;
+        detail = ` Te warm voor de ${name}! ${numericTextTemp}°C is ideaal.`;
     } else if (currentTemp >= numericTextTemp - 5 && currentTemp <= numericTextTemp + 5) {
         mood = 'blij';
-        environment = 'neutraal';
+        environment = 'sombrero';
         sentence = `Het is ${currentTemp.toFixed(1)}°C, aangenaam weertje!`;
-        detail = ` Prima voor de ${name}.`;
-    } else {
-        mood = 'neutraal';
+        detail = ` Bevalt de ${name} goed.`;
+    } else if (currentTemp < numericTextTemp - 8) {
+        mood = 'verdrietig';
         environment = 'koud';
-        sentence = `Het is ${currentTemp.toFixed(1)}°C, brrrr!`;
-        detail = ` Te koud voor de ${name}! ${numericTextTemp}°C is ideaal`;
+        sentence = `Het is ${currentTemp.toFixed(1)}°C, te koud!`;
+        detail = ` Te koud voor de ${name}! ${numericTextTemp}°C is ideaal.`;
+    } else {
+        mood = 'blij';
+        environment = 'neutraal';
+        sentence = `Het is ${currentTemp.toFixed(1)}°C!`;
+        detail = ` Prima voor de ${name}! ${numericTextTemp}°C is ideaal.`;
     }
+
 }
 
     onMount(() => {
