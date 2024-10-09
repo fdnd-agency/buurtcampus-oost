@@ -4,7 +4,6 @@ Bieb in Bloei is een digitaal platform met daarop een overzicht van de duurzame 
 
 ## Buurtcampus Oost
 De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
-
 Bij de buurtcampus draaien verschillende duurzame projecten; De Stekjes bieb, De Zadenbieb en de Geveltuin.. en er komen binnenkort nog meer duurzame projecten bij. Op het platform Bieb in Bloei krijgen deze projecten een gezicht.
 
 ## Beschrijving
@@ -36,15 +35,5 @@ Dit project is opgezet met Sveltekit en met de headless CMS Hygraph. In dit proj
 [Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
 [Hygraph](https://hygraph.com)
 [Sveltekit](https://kit.svelte.dev/docs/introduction)
-
-
-<!-- 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/3) 
-[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
-[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
-[Minor @CMD](https://plantswap.vercel.app/)  
-[Content](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/content)
-[API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
-
--->
+[Project board](https://github.com/orgs/fdnd-agency/projects/3/views/1)
 

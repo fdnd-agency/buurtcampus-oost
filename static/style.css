@@ -1,0 +1,101 @@
+
+@font-face {
+	font-family: 'Poppins-Black';
+	src: local('Poppins Black'), local('Poppins-Black'), url('/fonts/Poppins/Poppins-Black.ttf');
+}
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: local('Poppins Bold'), local('Poppins-Bold'), url('/fonts/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+	font-family: 'Poppins-Medium';
+	src: local('Poppins Medium'), local('Poppins-Medium'), url('/fonts/Poppins/Poppins-Medium.ttf');
+}
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: local('Poppins Regular'), local('Poppins-Regular'), url('/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+html {
+	font-family: 'Mulish', sans-serif;
+	line-height: 1.5;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--main-color-green: #4e7141;
+	--main-color-beige: #f9e9c2;
+	--main-color-orange: #ff8d06;
+	--main-color-brown: #491b02;
+
+	--card-color-orange: #ff9a41;
+	--card-color-green: #3c593e;
+
+	--text-color-white: #fff;
+	--text-color-black: #000;
+	--invalid-color-red: #ff0000;
+
+	--header-font: 'Poppins-Black', sans-serif;
+	--sub-header-font: 'Poppins-Bold', sans-serif;
+	--paragraph-font: 'Poppins-Medium', sans-serif;
+	--link-font: 'Poppins-Regular', sans-serif;
+
+	--border-bigCard: 2em;
+	--border-card: 1.0625em;
+
+	--image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+.btn-gevel {
+    outline: 1px solid red;
+}
+
+
+/* View transition animation */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes slide-from-right {
+	from {
+		scale: 1.6;
+	}
+}
+
+@keyframes slide-to-left {
+	to {
+		scale: 0.9;
+	}
+}
+
+::view-transition-old(root) {
+	animation:
+		90ms cubic-bezier(0.4, 0, 1, 1) 90ms both fade-out,
+		1000ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(root) {
+	animation:
+		210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+		1000ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+
+.btn-gevel {
+	outline: 1px solid red;
+}
+
