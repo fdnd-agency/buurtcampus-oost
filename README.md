@@ -2,6 +2,8 @@
 
 Bieb in Bloei is een digitaal platform met daarop een overzicht van de duurzame projecten van de Buurtcampus Oost. 
 
+## Buurtcampus Oost
+De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
 Bij de buurtcampus draaien verschillende duurzame projecten; De Stekjes bieb, De Zadenbieb en de Geveltuin.. en er komen binnenkort nog meer duurzame projecten bij. Op het platform Bieb in Bloei krijgen deze projecten een gezicht.
 
 ## Beschrijving
