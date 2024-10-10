@@ -20,7 +20,6 @@ Wij hebben de opdracht gekregen om de huidige live bieb-in-bloei website te opti
 Dit project is opgezet met Sveltekit en met de headless CMS Hygraph. In dit project hebben gewerkt met componenten in Sveltekit.
 
 ## Installatie
-1. Ga naar de release-cadidate-bieb-in-bloei
 1. Clone dit project
 2. Open dit project in je editor
 3. Run `npm install` in de terminal
