@@ -145,6 +145,7 @@ button {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 2.5em;
     height: 1.5em;
     rotate: calc(180deg);

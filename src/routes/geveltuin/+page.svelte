@@ -103,7 +103,7 @@
         font-family: 'Poppins-Regular';
         color: var(--main-color-brown);
         margin: 2em 3.5em;
-        list-style-image: url("/assets/Ellipse-Green.png");
+        list-style-image: url("/assets/circle-green.svg");
         font-size: 1em;
     }
 
