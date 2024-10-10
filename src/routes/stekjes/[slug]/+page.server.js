@@ -14,6 +14,7 @@ export const load = async ({ params }) => {
 				landvanherkomst
 				naam
 				temperatuur
+				absoluteTemperatuur
 				voeding
 				verpotten
 				watergeven

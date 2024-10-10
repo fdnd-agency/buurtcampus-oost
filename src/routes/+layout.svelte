@@ -5,7 +5,6 @@
 </script>
 
 <Viewtransition />
-
 <Menu />
 
 <AccessibilityMenu />

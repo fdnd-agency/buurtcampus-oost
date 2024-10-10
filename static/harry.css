@@ -1,0 +1,397 @@
+.harryknop{
+    background-color: transparent;
+    border: none;
+}
+.halloharry .harryknop{
+    position: absolute;
+    z-index: 1;
+    right: 7vw;
+    top: calc(50vh - var(--margin-large) - 3rem);
+    transform: rotate(20deg);
+    transition: 200ms;
+    animation-timeline: view();
+    animation-name: hide;
+    animation-fill-mode: forwards;
+    animation-range-start: 80vh;
+    animation-range-end: 100vh;
+
+    &:hover{
+        transform: rotate(20deg) translate(.3rem, -.5rem);
+    }
+    .cartoon{
+        width: 8rem;
+    }
+}
+
+.cartoon g, .cartoon path{
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: 200ms;
+}
+.harry {
+    .fluit, .sip, .dorst, .blij, .neutraal-2, .gek, .sangry, .neutraal, .bril, .sombrero, .sjaal, .billen{
+        opacity: 0;    
+    }
+    .sangry, .neutraal{
+        transform-origin: center;
+        animation: blink 10s infinite;
+    }
+    .arm_l, .arm_r ,.been_l ,.been_r {
+        stroke-width: 6px;
+        stroke-miterlimit: 10;
+        fill: #c17052;
+        stroke: black;
+     }
+    .arm_l{
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+        transform-origin: right center;
+    }
+    .arm_r{
+        transform: translateY(-20px) translateX(10px) rotate(55deg);
+        transform-origin: left center;
+    }
+}
+.harry[data-mood="neutraal"]{
+    .neutraal-2{
+        opacity: 1;
+    }
+    .neutraal{
+        opacity: 1;
+    }
+    .arm_l {
+        animation: wave 20s infinite;
+    }
+}
+.harry[data-mood="blij"]{
+    .blij {
+        opacity: 1;
+    }
+    .neutraal{
+        opacity: 1;
+    }
+    .arm_l {
+        animation: wave 20s infinite 1400ms;
+    }
+}
+.harry[data-mood="dorst"]{
+    .dorst{
+        opacity: 1;
+    }
+    .neutraal{
+        opacity: 1;
+    }
+}
+.harry[data-mood="verdrietig"]{
+    .sip{
+        opacity: 1;
+    }
+    .sangry{
+        opacity: 1;
+    }
+    .plant{
+        opacity: 0;
+    }
+    .arm_l{
+        --rotatearm: -65deg; 
+        --translateXarm: -10px;
+        --translateYarm: -20px;     
+        transform-origin: right center;
+    }
+    .arm_r{
+        --rotatearm: 65deg;
+        --translateXarm: 10px;
+        --translateYarm: -20px;
+        transform-origin: left center;
+    }
+    .arm_r,
+    .arm_l {
+        animation: shoulders 5s infinite;
+    }
+    .pot {
+        animation: sad 5s infinite;
+        transform-origin: center;
+    }
+}
+.harry[data-mood="boos"]{
+    .sip {
+            opacity: 1;
+    }
+    .sangry {
+        opacity: 1;
+
+        .oog_l {
+            transform: rotate(45deg);
+        }
+
+        .oog_r {
+            transform: rotate(-45deg);
+        }
+    }
+    .pot {
+        animation: angry 0.3s infinite;
+        transform-origin: center;
+        --normaal: 0deg;
+        --tril: 2deg;
+    }
+}
+.harry[data-mood="gek"] {
+    .gek{
+        opacity: 1;
+    }
+
+    .neutraal{
+        opacity: 1;
+    }
+}
+
+.harry[data-mood="twerk"] {
+    .pot{
+        animation: twerkbody 0.7s infinite;
+        transform-origin: top;
+    }
+    .billen{
+        opacity: 1;
+        animation: twerkbody 0.7s infinite;
+    }
+    .bil_l{
+        animation-delay: 0.2s;
+        animation: twerk 0.7s infinite;
+    }
+    .bil_r{
+        animation: twerk 0.7s infinite;
+    }
+    .plant{
+        transform: rotateY(180deg);
+        animation: twerkbody 0.7s infinite;
+        transform-origin: bottom;
+    }
+    .been_l, .been_r{
+        transform: translateY(-10px);
+    }
+    .arm_l{
+        animation: twerkarms 0.7s infinite;
+        --rotatearm: 45deg;
+    }
+    .arm_r{
+        animation: twerkarms 0.7s infinite;
+        --rotatearm: -45deg;
+    }
+    .pot, .billen, .bil_l, .bil_r, .plant, .arm_l, .arm_r{
+        animation-timing-function: ease-in;
+    }
+}
+
+.harry[data-environment="zonnig"]{
+    .sombrero{
+        opacity: 1;
+    }
+    .plant{
+        opacity: 0;
+    }
+}
+.harry[data-environment="koud"]{
+    .sjaal{
+        opacity: 1;
+    }
+    .mond{
+        opacity: 0;
+    }
+}
+.harry[data-environment="fel"]{
+    .bril{
+        opacity: 1;
+    }
+}
+
+/* ANIMATIONS */
+@keyframes wave {
+    0% {    
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+    }
+
+    1% {
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+    }
+
+    6% {
+        transform: translateY(-20px) translateX(-10px) rotate(45deg);
+    }
+
+    7% {
+        transform: translateY(-20px) translateX(-10px) rotate(25deg);
+    }
+
+    8% {
+        transform: translateY(-20px) translateX(-10px) rotate(45deg);
+    }
+
+    11% {
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);    
+    }
+
+    100% {
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+    }
+}
+@keyframes angry {
+    0% {
+        transform: rotate(var(--normaal));
+    }
+
+    50% {
+        transform: rotate(var(--tril));
+    }
+
+    100% {
+        transform: rotate(var(--normaal));
+    }
+}
+@keyframes blink {
+    0% {
+        transform: scaleY(1);
+    }
+
+    2% {
+        transform: scaleY(0.1);
+    }
+    4% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes sad {
+    0% {
+        transform: scale(1);
+    }
+
+    40%{
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.01);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    55% {
+        transform: scale(1.01);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: rotate(1);
+    }
+}
+@keyframes shoulders {
+    0%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    40%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    45%{
+        transform:  translateX(var(--translateXarm)) translateY(calc(var(--translateYarm) + 5px)) rotate(var(--rotatearm));
+    }
+
+    50%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    55%{
+        transform:  translateX(var(--translateXarm)) translateY(calc(var(--translateYarm) + 5px)) rotate(var(--rotatearm));
+    }
+
+    60%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    100%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+}
+@keyframes hide {
+    0%{
+    transform: rotate(20deg) translate(0);    
+    }
+
+    100%{
+       transform: rotate(20deg) translate(-2vw, 3rem);    
+    }
+
+}
+@keyframes twerk {
+    0%{
+        transform: translateX(0) rotate(0) scaleY(1);
+    }
+
+    25%{
+        transform: translateX(-35px) rotate(-15deg) scaleY(1.2);
+    }
+
+    50%{
+        transform: translateX(0) rotate(0)  scaleY(1);
+    }
+
+    75%{
+        transform: translateX(35px) rotate(15deg) scaleY(1.2);
+    }
+
+    100%{
+        transform: translateX(0) rotate(0) scaleY(1);
+    }
+}
+@keyframes twerkbody {
+    0%{
+        transform: rotate(0);
+    }
+
+    20%{
+        transform: rotate(10deg);
+    }
+
+    50%{
+        transform: rotate(0);
+    }
+
+    80%{
+        transform: rotate(-10deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes twerkarms {
+
+    0%{
+        transform: translateX(0) rotate(var(--rotatearm));
+    }
+
+    20%{
+        transform: translateX(-10px) rotate(var(--rotatearm));
+    }
+
+    50%{
+        transform: translateX(0) rotate(var(--rotatearm));
+    }
+
+    80%{
+        transform: translateX(10px) rotate(var(--rotatearm));
+    }
+
+    100%{
+        transform: translateX(0) rotate(var(--rotatearm));
+    }
+}
+

@@ -26,6 +26,7 @@ export async function load() {
 						slug
 						stekken
 						temperatuur
+						absoluteTemperatuur
 						verpotten
 						projectnaam
 						voeding

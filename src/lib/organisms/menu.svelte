@@ -30,6 +30,8 @@
         navOpen = !navOpen;
         }
     };
+
+
 </script>
 
 <header class:hidden={headerHidden} class:mobile-header={navOpen}>
@@ -47,7 +49,7 @@
             <li role="menuitem"><Navlink {handleNav} href="/partners" title="Partners"/></li>
             <li role="menuitem"><Navlink {handleNav} href="/contact" title="Contact"/></li>
         </ul>
-    </nav>
+        </nav>
 </header>
 
 <style>
