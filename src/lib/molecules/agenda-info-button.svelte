@@ -49,8 +49,8 @@
 		border-radius: 1em;
 		border: none;
 		background: white;
-		height: 25em;
-		width: 25em;
+		height: 33em;
+		width: 23em;
 		padding: 2em;
 		overflow: hidden;
 	}
@@ -74,7 +74,7 @@
 	.close-button {
 		background: none;
 		margin-bottom: 0.5em;
-		margin-left: 23em;
+		margin-left: 19em;
 	}
 
 	.close-button:hover {
@@ -94,5 +94,16 @@
 
 	p:nth-of-type(2) {
 		font-weight: bold;
+	}
+
+	@media (min-width: 64rem) {
+		dialog {
+			height: 25em;
+			width: 25em;
+		}
+
+		.close-button {
+			margin-left: 23em;
+		}
 	}
 </style>
