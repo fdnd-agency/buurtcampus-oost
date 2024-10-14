@@ -182,4 +182,10 @@
 			max-width: 70vw;
 		}
 	}
+
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		article {
+			max-width: 75vw;
+		}
+	}
 </style>
