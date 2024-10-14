@@ -83,8 +83,9 @@
 
 	img {
 		width: 2em;
-		margin-bottom: 0.5em;
-		margin-top: 0.2em;
+		position: relative;
+		/* margin-bottom: 0.5em;
+		margin-top: 0.2em; */
 	}
 
 	p {
