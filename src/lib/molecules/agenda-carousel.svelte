@@ -117,6 +117,7 @@
 	}
 
 	/* MEDIA QUERY STYLING */
+	/* DESKTOP */
 	@media (min-width: 64rem) {
 		/* PREV-NEXT BUTTON STYLING */
 		.caroussel-buttons {
@@ -177,12 +178,14 @@
 		}
 	}
 
+	/* BIG SCREENS (DESKTOP) */
 	@media (min-width: 100rem) {
 		article {
 			max-width: 70vw;
 		}
 	}
 
+	/* TABLET */
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		article {
 			max-width: 75vw;
