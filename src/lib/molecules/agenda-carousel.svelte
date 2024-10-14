@@ -179,7 +179,7 @@
 
 	@media (min-width: 100rem) {
 		article {
-			width: 75vw;
+			max-width: 75vw;
 		}
 	}
 </style>
