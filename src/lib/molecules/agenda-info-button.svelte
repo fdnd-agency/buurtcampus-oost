@@ -14,11 +14,6 @@
 	function handleScroll() {
 		window.addEventListener('scroll', hidePopover);
 	}
-
-	// Scroll event listener verwijderen wanneer de popover is gesloten
-	function removeScrollListener() {
-		window.removeEventListener('scroll', hidePopover);
-	}
 </script>
 
 <button type="button" popovertarget="mypopover" on:click={handleScroll}>
