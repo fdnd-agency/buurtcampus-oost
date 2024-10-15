@@ -88,6 +88,14 @@
 		background-color: var(--main-color-brown);
 	}
 
+	.card {
+		scrollbar-width: none;
+	}
+
+	.card::-webkit-scrollbar {
+		display: none;
+	}
+
 	.content {
 		margin: 1em;
 		display: flex;
