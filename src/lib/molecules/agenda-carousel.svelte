@@ -88,11 +88,11 @@
 		background-color: var(--main-color-brown);
 	}
 
-	.card {
+	article {
 		scrollbar-width: none;
 	}
 
-	.card::-webkit-scrollbar {
+	article::-webkit-scrollbar {
 		display: none;
 	}
 
