@@ -26,16 +26,14 @@
 </script>
 
 <!-- AGENDA-CAROUSEL - PREV-NEXT BUTTON CODE -->
-<article>
-	<div class="caroussel-buttons hidden">
-		<button type="button" aria-label="previous-button" on:click={scrollPrev}
-			><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
-		>
+<article class="caroussel-buttons hidden">
+	<button type="button" aria-label="previous-button" on:click={scrollPrev}
+		><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
+	>
 
-		<button type="button" aria-label="next-button" on:click={scrollNext}
-			><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
-		>
-	</div>
+	<button type="button" aria-label="next-button" on:click={scrollNext}
+		><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
+	>
 </article>
 
 <!-- AGENDA-CAROUSEL - CARD CODE -->
