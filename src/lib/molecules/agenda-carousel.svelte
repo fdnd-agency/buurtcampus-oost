@@ -70,6 +70,14 @@
 		scroll-snap-type: x mandatory;
 	}
 
+	article {
+		scrollbar-width: none;
+	}
+
+	article::-webkit-scrollbar {
+		display: none;
+	}
+
 	.card {
 		width: auto;
 		position: relative;
@@ -86,14 +94,6 @@
 		border-top-left-radius: 0.8em;
 		border-bottom-left-radius: 0.8em;
 		background-color: var(--main-color-brown);
-	}
-
-	article {
-		scrollbar-width: none;
-	}
-
-	article::-webkit-scrollbar {
-		display: none;
 	}
 
 	.content {
