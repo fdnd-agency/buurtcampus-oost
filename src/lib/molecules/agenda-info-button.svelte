@@ -74,7 +74,7 @@
 	.close-button {
 		background: none;
 		margin-bottom: 0.5em;
-		margin-left: 19em;
+		margin-left: 20em;
 	}
 
 	.close-button:hover {
@@ -82,10 +82,8 @@
 	}
 
 	img {
-		width: 2em;
+		width: 1.7em;
 		position: relative;
-		/* margin-bottom: 0.5em;
-		margin-top: 0.2em; */
 	}
 
 	p {
@@ -101,6 +99,7 @@
 		dialog {
 			height: 25em;
 			width: 25em;
+			margin-left: 2em;
 		}
 
 		.close-button {
