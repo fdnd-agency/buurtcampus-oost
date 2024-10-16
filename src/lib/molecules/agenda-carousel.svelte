@@ -66,7 +66,7 @@
 		display: flex;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
-		scrollbar-width: none;
+		/* scrollbar-width: none; */
 	}
 
 	.card {
