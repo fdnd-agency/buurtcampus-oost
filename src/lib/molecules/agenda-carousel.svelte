@@ -64,9 +64,10 @@
 	article {
 		width: 85vw;
 		display: flex;
-		overflow-x: auto;
+		overflow: scroll;
+		/* overflow-x: auto; */
 		scroll-snap-type: x mandatory;
-		/* scrollbar-width: none; */
+		scrollbar-width: none;
 	}
 
 	.card {
