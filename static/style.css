@@ -27,6 +27,9 @@ html {
 }
 
 
+body {
+	overflow-x: hidden;
+}
 
 :root {
 	--main-color-green: #4e7141;
