@@ -66,14 +66,7 @@
 		display: flex;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
-	}
-
-	article {
 		scrollbar-width: none;
-	}
-
-	article::-webkit-scrollbar {
-		display: none;
 	}
 
 	.card {
