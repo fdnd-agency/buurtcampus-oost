@@ -64,7 +64,8 @@
 	article {
 		width: 85vw;
 		display: flex;
-		overflow-x: auto;
+		overflow: auto;
+		/* overflow-x: hidden; */
 		scroll-snap-type: x mandatory;
 		scrollbar-width: none;
 	}
