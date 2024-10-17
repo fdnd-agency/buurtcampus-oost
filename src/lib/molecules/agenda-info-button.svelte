@@ -41,19 +41,19 @@
 
 <style>
 	dialog {
-		border-radius: 1em;
-		border: none;
-		background: white;
-		height: 33em;
 		width: 23em;
+		height: 33em;
 		padding: 2em;
+		border: none;
 		overflow: hidden;
+		border-radius: 1em;
+		background: white;
 	}
 
 	button {
 		z-index: 5;
-		height: 40px;
 		width: 40px;
+		height: 40px;
 		border: none;
 		padding: 0.3em;
 		cursor: pointer;
@@ -68,12 +68,12 @@
 
 	.close-button {
 		background: none;
-		margin-bottom: 0.5em;
 		margin-left: 20em;
+		margin-bottom: 0.5em;
 	}
 
 	.close-button:hover {
-		background: var(--main-color-brown);
+		background: var(--main-color-beige);
 	}
 
 	img {
@@ -92,8 +92,8 @@
 
 	@media (min-width: 64rem) {
 		dialog {
-			height: 25em;
 			width: 25em;
+			height: 25em;
 			margin-left: 2em;
 		}
 
