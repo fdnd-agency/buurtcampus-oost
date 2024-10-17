@@ -65,9 +65,8 @@
 		width: 85vw;
 		display: flex;
 		overflow: auto;
-		/* overflow-x: hidden; */
 		scroll-snap-type: x mandatory;
-		scrollbar-width: none;
+		/* scrollbar-width: none; */
 	}
 
 	.card {
