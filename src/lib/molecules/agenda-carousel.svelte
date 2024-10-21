@@ -28,11 +28,23 @@
 <!-- AGENDA-CAROUSEL - PREV-NEXT BUTTON CODE -->
 <article class="caroussel-buttons hidden">
 	<button type="button" aria-label="previousbutton" on:click={scrollPrev}
-		><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
+		><img
+			class="arrow"
+			src="./assets/arrow-prev.svg"
+			alt="arrow-prev"
+			width="100"
+			loading="lazy"
+		/></button
 	>
 
 	<button type="button" aria-label="nextbutton" on:click={scrollNext}
-		><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
+		><img
+			class="arrow"
+			src="./assets/arrow-next.svg"
+			alt="arrow-next"
+			width="100"
+			loading="lazy"
+		/></button
 	>
 </article>
 
@@ -55,7 +67,7 @@
 						svgFill="svg-brown"
 					/>
 				</div>
-				<img src={agenda.cardImage.url} alt="workshop" width="100" />
+				<img src={agenda.cardImage.url} alt="workshop" width="100" loading="lazy" />
 			</div>
 		{/each}
 	</div>
