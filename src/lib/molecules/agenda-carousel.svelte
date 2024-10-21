@@ -180,7 +180,7 @@
 	/* BIG SCREENS (DESKTOP) */
 	@media (min-width: 100rem) {
 		article {
-			min-width: 40vw;
+			max-width: 70vw;
 		}
 	}
 
