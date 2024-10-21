@@ -191,11 +191,11 @@
 	}
 
 	/* BIG SCREENS (DESKTOP) */
-	/* @media (min-width: 100rem) {
+	@media (min-width: 100rem) {
 		article {
-			max-width: 70vw;
+			max-width: 75vw;
 		}
-	} */
+	}
 
 	/* TABLET */
 	@media (min-width: 48rem) {
