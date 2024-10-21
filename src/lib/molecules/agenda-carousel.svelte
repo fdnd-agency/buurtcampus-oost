@@ -37,32 +37,38 @@
 </article>
 
 <!-- AGENDA-CAROUSEL - CARD CODE -->
-<article bind:this={agendaContainer}>
-	{#each data.agendas as agenda}
-		<div class="card">
-			<div class="content">
-				<h3>{agenda.event}</h3>
-				<time>{agenda.date}</time>
-				<time>{agenda.time}</time>
-				<address>{agenda.address}</address>
-				<p>{agenda.price}</p>
-
-				<AgendaButton
-					href="/agenda"
-					buttonText="Aanmelden"
-					btnClass="btn-beige"
-					svgFill="svg-brown"
-				/>
+<article >
+	<div class="scroll-container" bind:this={agendaContainer}>
+		{#each data.agendas as agenda}
+			<div class="card">
+				<div class="content">
+					<h3>{agenda.event}</h3>
+					<time>{agenda.date}</time>
+					<time>{agenda.time}</time>
+					<address>{agenda.address}</address>
+					<p>{agenda.price}</p>
+	
+					<AgendaButton
+						href="/agenda"
+						buttonText="Aanmelden"
+						btnClass="btn-beige"
+						svgFill="svg-brown"
+					/>
+				</div>
+				<img src={agenda.cardImage.url} alt="workshop" width="100" />
 			</div>
-			<img src={agenda.cardImage.url} alt="workshop" width="100" />
-		</div>
-	{/each}
+		{/each}
+	</div>
 </article>
 
 <!-- AGENDA-CAROUSEL STYLING  -->
 <style>
 	article {
-		width: 85vw;
+		overflow: hidden;
+		max-width: 100%;
+	}
+	
+	.scroll-container {
 		display: flex;
 		overflow: auto;
 		scrollbar-width: none;
@@ -121,6 +127,7 @@
 		/* PREV-NEXT BUTTON STYLING */
 		.caroussel-buttons {
 			z-index: 3;
+			position: relative;
 			width: 6em;
 			display: flex;
 			margin-bottom: 1em;

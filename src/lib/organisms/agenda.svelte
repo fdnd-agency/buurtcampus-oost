@@ -5,28 +5,19 @@
 </script>
 
 <section>
-	<div>
+	<!-- <div> -->
 		<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
-		<h2>Agenda</h2>
-		<AgendaInfoButton />
+			<h2>Agenda</h2>
+			<AgendaInfoButton />
 		<AgendaCarousel {data}/>
-	</div>
 </section>
 
 <style>
 	section {
-		display: flex;
-		justify-content: flex-start;
-		padding: 3rem;
 		background: var(--main-color-beige);
 		z-index: 2;
-	}
-
-	div {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: baseline;
+		max-width: 100%;
+		overflow: hidden;
 	}
 
 	img {
@@ -50,7 +41,7 @@
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section {
-			padding: 4rem 7.5rem;
+			padding: 4rem 0 4rem 7.5rem;
 		}
 
 		h2 {
@@ -64,7 +55,7 @@
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
 		section {
-			padding: 4rem 15em;
+			/* padding: 4rem 15em; */
 		}
 	}
 </style>
