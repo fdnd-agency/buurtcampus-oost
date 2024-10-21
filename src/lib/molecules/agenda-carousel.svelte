@@ -101,7 +101,6 @@
 		background-color: var(--main-color-brown);
 		padding: 1em;
 		display: flex;
-
 		flex-direction: column;
 		justify-content: center;
 		color: var(--main-color-beige);
@@ -192,8 +191,12 @@
 
 	/* BIG SCREENS (DESKTOP) */
 	@media (min-width: 100rem) {
-		article {
+		/* article {
 			max-width: 50vw;
+		} */
+
+		.card {
+			min-width: 25rem;
 		}
 	}
 
@@ -203,7 +206,7 @@
 			max-width: 75vw;
 		} */
 
-		.card{
+		.card {
 			min-width: 25rem;
 		}
 	}
