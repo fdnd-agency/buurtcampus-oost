@@ -27,17 +27,17 @@
 
 <!-- AGENDA-CAROUSEL - PREV-NEXT BUTTON CODE -->
 <article class="caroussel-buttons hidden">
-	<button type="button" aria-label="previous-button" on:click={scrollPrev}
+	<button type="button" aria-label="previousbutton" on:click={scrollPrev}
 		><img class="arrow" src="./assets/arrow-prev.svg" alt="arrow-prev" width="100" /></button
 	>
 
-	<button type="button" aria-label="next-button" on:click={scrollNext}
+	<button type="button" aria-label="nextbutton" on:click={scrollNext}
 		><img class="arrow" src="./assets/arrow-next.svg" alt="arrow-next" width="100" /></button
 	>
 </article>
 
 <!-- AGENDA-CAROUSEL - CARD CODE -->
-<article >
+<article>
 	<div class="scroll-container" bind:this={agendaContainer}>
 		{#each data.agendas as agenda}
 			<div class="card">
@@ -47,7 +47,7 @@
 					<time>{agenda.time}</time>
 					<address>{agenda.address}</address>
 					<p>{agenda.price}</p>
-	
+
 					<AgendaButton
 						href="/agenda"
 						buttonText="Aanmelden"
@@ -67,36 +67,41 @@
 		overflow: hidden;
 		max-width: 100%;
 	}
-	
+
 	.scroll-container {
 		display: flex;
+		padding: 2rem;
+		gap: 1rem;
 		overflow: auto;
 		scrollbar-width: none;
 		scroll-snap-type: x mandatory;
 	}
 
 	.card {
-		width: auto;
+		display: flex;
+		align-items: stretch;
+
+		/* min-width: 25rem; */
+		min-width: calc(100vw - 4rem);
+
+		min-height: 15em;
 		position: relative;
-		padding-right: 1rem;
+		/* padding-right: 1rem; */
 		scroll-snap-align: start;
 	}
 
-	.card::before {
-		content: '';
+	.content {
+		position: relative;
+		z-index: 1;
 		width: 13em;
-		height: 14em;
+		height: 100%;
 		padding: 0.5em;
-		position: absolute;
 		border-top-left-radius: 0.8em;
 		border-bottom-left-radius: 0.8em;
 		background-color: var(--main-color-brown);
-	}
-
-	.content {
-		margin: 1em;
+		padding: 1em;
 		display: flex;
-		position: absolute;
+
 		flex-direction: column;
 		justify-content: center;
 		color: var(--main-color-beige);
@@ -107,8 +112,10 @@
 	}
 
 	img {
-		width: 25em;
-		height: 15em;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
 		border-radius: 0.8em;
 	}
@@ -121,7 +128,6 @@
 		display: none !important;
 	}
 
-	/* MEDIA QUERY STYLING */
 	/* DESKTOP */
 	@media (min-width: 64rem) {
 		/* PREV-NEXT BUTTON STYLING */
@@ -185,16 +191,20 @@
 	}
 
 	/* BIG SCREENS (DESKTOP) */
-	@media (min-width: 100rem) {
+	/* @media (min-width: 100rem) {
 		article {
 			max-width: 70vw;
 		}
-	}
+	} */
 
 	/* TABLET */
-	@media (min-width: 48rem) and (max-width: 64rem) {
-		article {
+	@media (min-width: 48rem) {
+		/* article {
 			max-width: 75vw;
+		} */
+
+		.card{
+			min-width: 25rem;
 		}
 	}
 </style>

@@ -5,11 +5,10 @@
 </script>
 
 <section>
-	<!-- <div> -->
-		<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
-			<h2>Agenda</h2>
-			<AgendaInfoButton />
-		<AgendaCarousel {data}/>
+	<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
+	<h2>Agenda</h2>
+	<AgendaInfoButton />
+	<AgendaCarousel {data} />
 </section>
 
 <style>
@@ -18,6 +17,7 @@
 		z-index: 2;
 		max-width: 100%;
 		overflow: hidden;
+		padding: 4rem 0 4rem 1rem;
 	}
 
 	img {
@@ -26,7 +26,6 @@
 		rotate: 120deg;
 		left: 0;
 		transform: translateY(200px) translateX(150px);
-		/* z-index: 1; */
 	}
 
 	h2 {

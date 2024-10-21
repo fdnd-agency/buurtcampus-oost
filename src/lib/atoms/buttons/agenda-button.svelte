@@ -29,7 +29,7 @@
 		text-decoration: none;
 		font-size: 1em;
 		transition: ease-in 0.1s;
-        margin-top: 2.5em;
+        margin-top: 2em;
 	}
 
     .btn-beige {
