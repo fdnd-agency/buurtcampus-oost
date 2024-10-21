@@ -149,7 +149,7 @@
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
-		@supports (animation-timeline: view()) {
+		/* @supports (animation-timeline: view()) {
 			.card {
 				animation-timeline: view(inline);
 				animation-name: animate-in-and-out;
@@ -174,7 +174,7 @@
 					transform: translate(-10%);
 				}
 			}
-		}
+		} */
 	}
 
 	/* BIG SCREENS (DESKTOP) */
