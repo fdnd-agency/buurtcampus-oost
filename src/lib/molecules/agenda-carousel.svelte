@@ -193,7 +193,7 @@
 	/* BIG SCREENS (DESKTOP) */
 	@media (min-width: 100rem) {
 		article {
-			max-width: 55vw;
+			max-width: 50vw;
 		}
 	}
 
