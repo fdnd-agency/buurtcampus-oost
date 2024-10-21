@@ -21,7 +21,7 @@
 </button>
 
 <dialog id="mypopover" popover="manual" bind:this={popoverElement}>
-	<button type="button" class="close-button" popovertarget="mypopover" popovertargetaction="hide"
+	<button type="button" aria-label="closebutton" class="close-button" popovertarget="mypopover" popovertargetaction="hide"
 		><CloseMenu /></button
 	>
 
