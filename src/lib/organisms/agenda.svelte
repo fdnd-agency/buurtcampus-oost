@@ -53,8 +53,8 @@
 
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
-		section {
-			/* padding: 4rem 15em; */
-		}
+		/* section {
+			padding: 4rem 15em;
+		} */
 	}
 </style>

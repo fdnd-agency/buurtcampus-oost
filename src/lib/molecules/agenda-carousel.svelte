@@ -70,8 +70,7 @@
 
 	.scroll-container {
 		display: flex;
-		padding: 2rem;
-		gap: 1rem;
+		gap: 2rem;
 		overflow: auto;
 		scrollbar-width: none;
 		scroll-snap-type: x mandatory;
@@ -80,13 +79,9 @@
 	.card {
 		display: flex;
 		align-items: stretch;
-
-		/* min-width: 25rem; */
 		min-width: calc(100vw - 4rem);
-
 		min-height: 15em;
 		position: relative;
-		/* padding-right: 1rem; */
 		scroll-snap-align: start;
 	}
 
@@ -156,8 +151,7 @@
 
 		.arrow {
 			width: 2em;
-			height: 2em;
-			margin-top: 0.2em;
+			margin-left: -1em;
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
@@ -191,10 +185,6 @@
 
 	/* BIG SCREENS (DESKTOP) */
 	@media (min-width: 100rem) {
-		/* article {
-			max-width: 50vw;
-		} */
-
 		.card {
 			min-width: 25rem;
 		}
@@ -202,10 +192,6 @@
 
 	/* TABLET */
 	@media (min-width: 48rem) {
-		/* article {
-			max-width: 75vw;
-		} */
-
 		.card {
 			min-width: 25rem;
 		}
