@@ -178,16 +178,16 @@
 	}
 
 	/* BIG SCREENS (DESKTOP) */
-	@media (min-width: 100rem) {
+	/* @media (min-width: 100rem) {
 		article {
 			max-width: 70vw;
 		}
-	}
+	} */
 
 	/* TABLET */
-	@media (min-width: 48rem) and (max-width: 64rem) {
+	/* @media (min-width: 48rem) and (max-width: 64rem) {
 		article {
 			max-width: 75vw;
 		}
-	}
+	} */
 </style>

@@ -61,6 +61,12 @@
 		background-color: var(--main-color-beige);
 	}
 
+	article > div {
+		display: flex;
+		gap: 0.5em;
+		width: 100%;
+	}
+
 	p,
 	ul {
 		margin-top: 3em;
@@ -69,8 +75,9 @@
 	}
 
 	ul {
-		list-style-type: disc;
-		padding-left: 20px;
+		/* list-style-type: disc; */
+		/* padding-left: 20px; */
+		list-style-image: url('/assets/Circle-Orange.svg');
 	}
 
 	li {
@@ -79,13 +86,17 @@
 
 	h2 {
 		font-family: var(--header-font);
-		font-size: 3em;
+		font-size: 2em;
 		line-height: 1.1em;
 		color: var(--main-color-green);
 	}
 
 	.action-title {
 		color: var(--main-color-green);
+	}
+
+	img {
+		width: 20em;
 	}
 
 	@media (min-width: 64rem) {
@@ -101,12 +112,6 @@
 			overflow-x: hidden;
 			width: 85vw;
 			border-radius: var(--border-bigCard);
-		}
-
-		article > div {
-			display: flex;
-			gap: 0.5em;
-			width: 100%;
 		}
 
 		.beige {
@@ -127,18 +132,29 @@
 
 		img {
 			margin-top: 12em;
-			z-index: 3;
 			width: 25vw;
 		}
 
 		ul {
 			margin-right: 4em;
 			padding-left: 6em;
-			list-style-image: url('/assets/Ellipse.png');
 		}
 
 		.action-ul {
 			padding: 1em;
+		}
+	}
+
+	@media (min-width: 100rem) {
+		h2 {
+			font-size: 5em;
+			margin-top: 1em;
+		}
+
+		ul,
+		p {
+			font-size: 20px;
+			margin-left: 0.5em;
 		}
 	}
 </style>

@@ -23,6 +23,8 @@
         }
     }
 
+
+
     /* MEDIA QUERY TABLET = 1100px */
     @media (min-width: 68.75rem) {
         svg{
@@ -36,4 +38,13 @@
             top: 1.2em;
         }
     }
+
+    @media (min-width: 100rem) {
+        svg{
+            margin-top: 6.5em;
+            width: 2em;
+            height: 2em;
+        }
+    }
+
     </style>

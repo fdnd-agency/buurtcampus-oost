@@ -57,6 +57,22 @@ export async function load() {
 				description
 				createdAt
 			}
+
+			partnersIntros {
+				createdAt
+				id
+				description
+			}
+			partners {
+				createdAt
+				id
+				title
+				subhead
+				description
+				image {
+					url
+				}
+			}
 		}
 	`;
 
