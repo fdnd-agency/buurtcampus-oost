@@ -149,7 +149,7 @@
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
-		/* @supports (animation-timeline: view()) {
+		@supports (animation-timeline: view()) {
 			.card {
 				animation-timeline: view(inline);
 				animation-name: animate-in-and-out;
@@ -174,20 +174,20 @@
 					transform: translate(-10%);
 				}
 			}
-		} */
+		}
 	}
 
 	/* BIG SCREENS (DESKTOP) */
-	/* @media (min-width: 100rem) {
+	@media (min-width: 100rem) {
 		article {
 			max-width: 70vw;
 		}
-	} */
+	}
 
 	/* TABLET */
-	/* @media (min-width: 48rem) and (max-width: 64rem) {
+	@media (min-width: 48rem) and (max-width: 64rem) {
 		article {
 			max-width: 75vw;
 		}
-	} */
+	}
 </style>
