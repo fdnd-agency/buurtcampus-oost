@@ -101,10 +101,6 @@
 		color: var(--main-color-beige);
 	}
 
-	h3 {
-		font-size: 20px;
-	}
-
 	img {
 		position: absolute;
 		top: 0;
