@@ -215,6 +215,7 @@
 		}
 	}
 
+	/* TABLET */
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		.scroll-container {
 			width: 75vw;
