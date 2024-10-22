@@ -65,6 +65,7 @@
 		display: flex;
 		gap: 0.5em;
 		width: 100%;
+		margin-left: -2em;
 	}
 
 	p,
@@ -75,13 +76,13 @@
 	}
 
 	ul {
-		/* list-style-type: disc; */
-		/* padding-left: 20px; */
 		list-style-image: url('/assets/Circle-Orange.svg');
+		padding-left: 0;
 	}
 
 	li {
 		margin-bottom: 1em;
+		padding-left: 0.5em;
 	}
 
 	h2 {
@@ -143,18 +144,33 @@
 		.action-ul {
 			padding: 1em;
 		}
+
+		article > div{
+			margin-left: 3em;
+		}
+	}
+
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		article > div {
+			margin-left: -3em;
+		}
 	}
 
 	@media (min-width: 100rem) {
 		h2 {
-			font-size: 5em;
+			font-size: 6em;
 			margin-top: 1em;
+			width: min-content;
 		}
 
 		ul,
 		p {
 			font-size: 20px;
 			margin-left: 0.5em;
+		}
+
+		article > div {
+			margin-left: 6em;
 		}
 	}
 </style>
