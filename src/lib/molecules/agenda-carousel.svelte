@@ -3,18 +3,27 @@
 	import { onMount } from 'svelte';
 	export let data;
 
-	// @ts-ignore
+	/**
+	 * @type {HTMLDivElement}
+	 */
 	let agendaContainer;
 
-	// Scroll left by the container's width
 	function scrollPrev() {
-		// @ts-ignore
-		agendaContainer.scrollBy({ left: -agendaContainer.offsetWidth });
+		// Check if smooth scroll is supported
+		if ('scrollBehavior' in document.documentElement.style) {
+			agendaContainer.scrollBy({ left: -agendaContainer.offsetWidth, behavior: 'smooth' });
+		} else {
+			agendaContainer.scrollBy({ left: -agendaContainer.offsetWidth });
+		}
 	}
-	// Scroll right by the container's width
+
 	function scrollNext() {
-		// @ts-ignore
-		agendaContainer.scrollBy({ left: agendaContainer.offsetWidth });
+		// Check if smooth scroll is supported
+		if ('scrollBehavior' in document.documentElement.style) {
+			agendaContainer.scrollBy({ left: agendaContainer.offsetWidth, behavior: 'smooth' });
+		} else {
+			agendaContainer.scrollBy({ left: agendaContainer.offsetWidth });
+		}
 	}
 
 	onMount(() => {
@@ -88,6 +97,10 @@
 		scroll-snap-type: x mandatory;
 	}
 
+	.scroll-container::-webkit-scrollbar {
+		display: none;
+	}
+
 	.card {
 		display: flex;
 		align-items: stretch;
@@ -95,6 +108,10 @@
 		min-height: 15em;
 		position: relative;
 		scroll-snap-align: start;
+	}
+
+	.card:last-child {
+		margin-right: 3rem;
 	}
 
 	.content {
@@ -195,6 +212,12 @@
 	@media (min-width: 100rem) {
 		.card {
 			min-width: 25rem;
+		}
+	}
+
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		.scroll-container {
+			width: 73vw;
 		}
 	}
 
