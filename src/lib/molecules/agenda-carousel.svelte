@@ -217,7 +217,7 @@
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		.scroll-container {
-			width: 73vw;
+			width: 75vw;
 		}
 	}
 
