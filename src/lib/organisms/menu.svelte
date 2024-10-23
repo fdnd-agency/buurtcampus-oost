@@ -139,7 +139,7 @@
 		align-items: center;
 		gap: 2em;
 		padding: 7em 0;
-		font-size: 1em;
+		font-size: 1.5em;
 		list-style: none;
 	}
 
