@@ -97,7 +97,7 @@
 	}
 
 	img {
-		width: 20em;
+		width: 19em;
 	}
 
 	@media (min-width: 64rem) {
