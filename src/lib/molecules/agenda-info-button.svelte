@@ -1,28 +1,18 @@
 <script>
 	import CloseMenu from '$lib/atoms/icons/close-menu.svelte';
-
-	// @ts-ignore
-	let popoverElement;
-
-	// Functie om de popover te sluiten
-	function hidePopover() {
-		// @ts-ignore
-		popoverElement.hidePopover();
-	}
-
-	// Scroll event listener toevoegen wanneer de popover wordt getoond
-	function handleScroll() {
-		window.addEventListener('scroll', hidePopover);
-	}
 </script>
 
-<button type="button" popovertarget="mypopover" on:click={handleScroll}>
+<button aria-label="informatiebutton" type="button" popovertarget="mypopover">
 	<img src="./assets/info-round-button-svgrepo-com.svg" alt="info-icon" />
 </button>
 
-<dialog id="mypopover" popover="manual" bind:this={popoverElement}>
-	<button type="button" aria-label="closebutton" class="close-button" popovertarget="mypopover" popovertargetaction="hide"
-		><CloseMenu /></button
+<dialog id="mypopover" popover="manual">
+	<button
+		type="button"
+		aria-label="closebutton"
+		class="close-button"
+		popovertarget="mypopover"
+		popovertargetaction="hide"><CloseMenu /></button
 	>
 
 	<h1>Ontdek de Workshops van Bieb in Bloei!</h1>
