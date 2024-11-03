@@ -12,8 +12,7 @@
 		const handleResize = () => {
 			if (window.innerWidth >= 900) {
 				navOpen = false;
-				// @ts-ignore
-				document.removeEventListener('keydown', trapFocus);
+				document.removeEventListener('keydown', handleTabFocus);
 			}
 		};
 		const handleScroll = () => {
@@ -33,6 +32,7 @@
 		navOpen = !navOpen;
 
 		if (navOpen) {
+			// Zet focus op het eerste element in het menu
 			// @ts-ignore
 			setTimeout(() => menuContainer.querySelector('a').focus(), 0);
 			document.addEventListener('keydown', handleTabFocus);
@@ -41,23 +41,29 @@
 		}
 	}
 
+	// Functie voor het beperken van focus in het menu
 	// @ts-ignore
 	function handleTabFocus(event) {
-		// @ts-ignore
-		const focusableItems = menuContainer.querySelectorAll('a, button');
-		const firstItem = focusableItems[0];
-		const lastItem = focusableItems[focusableItems.length - 1];
+	// Controleer of `menuContainer` bestaat en of er focusable items zijn
+	// @ts-ignore
+	if (!menuContainer) return;
 
-		if (event.key === 'Tab') {
-			if (event.shiftKey && document.activeElement === firstItem) {
-				event.preventDefault();
-				lastItem.focus();
-			} else if (!event.shiftKey && document.activeElement === lastItem) {
-				event.preventDefault();
-				firstItem.focus();
-			}
+	const focusableItems = menuContainer.querySelectorAll('a, button');
+	if (focusableItems.length === 0) return;
+
+	const firstItem = focusableItems[0];
+	const lastItem = focusableItems[focusableItems.length - 1];
+
+	if (event.key === 'Tab') {
+		if (event.shiftKey && document.activeElement === firstItem) {
+			event.preventDefault();
+			lastItem.focus();
+		} else if (!event.shiftKey && document.activeElement === lastItem) {
+			event.preventDefault();
+			firstItem.focus();
 		}
 	}
+}
 
 	const getTabIndex = () => {
 		if (navOpen) {
