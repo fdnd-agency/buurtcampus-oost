@@ -5,11 +5,15 @@
 	let navOpen = false;
 	let lastScrollY = 0;
 	let headerHidden = false;
+	// @ts-ignore
+	let menuContainer;
 
 	onMount(() => {
 		const handleResize = () => {
 			if (window.innerWidth >= 900) {
 				navOpen = false;
+				// @ts-ignore
+				document.removeEventListener('keydown', trapFocus);
 			}
 		};
 		const handleScroll = () => {
@@ -25,11 +29,35 @@
 		};
 	});
 
-	const handleNav = () => {
-		if (window.innerWidth < 900) {
-			navOpen = !navOpen;
+	function handleNav() {
+		navOpen = !navOpen;
+
+		if (navOpen) {
+			// @ts-ignore
+			setTimeout(() => menuContainer.querySelector('a').focus(), 0);
+			document.addEventListener('keydown', handleTabFocus);
+		} else {
+			document.removeEventListener('keydown', handleTabFocus);
 		}
-	};
+	}
+
+	// @ts-ignore
+	function handleTabFocus(event) {
+		// @ts-ignore
+		const focusableItems = menuContainer.querySelectorAll('a, button');
+		const firstItem = focusableItems[0];
+		const lastItem = focusableItems[focusableItems.length - 1];
+
+		if (event.key === 'Tab') {
+			if (event.shiftKey && document.activeElement === firstItem) {
+				event.preventDefault();
+				lastItem.focus();
+			} else if (!event.shiftKey && document.activeElement === lastItem) {
+				event.preventDefault();
+				firstItem.focus();
+			}
+		}
+	}
 
 	const getTabIndex = () => {
 		if (navOpen) {
@@ -40,7 +68,12 @@
 	};
 </script>
 
-<header class:hidden={headerHidden} class:mobile-header={navOpen}>
+<header
+	bind:this={menuContainer}
+	class:hidden={headerHidden}
+	class:mobile-header={navOpen}
+	tabindex="-1"
+>
 	<div class:container-active={navOpen} class:container-unactive={!navOpen} class="container">
 		<a href="/" aria-label="home button" class="logo" class:logo2={navOpen}> </a>
 		<button aria-label="Open menu" class:change={navOpen} on:click={handleNav}></button>
@@ -75,6 +108,7 @@
 		box-shadow: inset 0px 216px 51px -157px rgba(0, 0, 0, 0.41);
 		width: 100%;
 		transition: transform 0.3s ease-in-out;
+		background: none;
 	}
 
 	header.hidden {
@@ -138,7 +172,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 2em;
-		padding: 7em 0;
+		padding: 4em 0;
 		font-size: 1.5em;
 		list-style: none;
 	}
@@ -213,7 +247,9 @@
 		}
 		.container {
 			padding: 1em 2.5em;
+			background: none;
 		}
+
 		button {
 			width: 3em;
 			height: 2.5em;
@@ -235,11 +271,13 @@
 			position: relative;
 			width: auto;
 			padding: 0;
+			/* background: none; */
 		}
 
 		.container-unactive {
 			box-shadow: none;
 		}
+
 		nav {
 			position: relative;
 			display: flex;
@@ -256,13 +294,20 @@
 			padding: 0;
 			font-size: 1.2em;
 		}
+
+		.logo2:focus {
+			background-color: transparent; /* Geen achtergrondkleur op desktop */
+		}
+
 		nav li {
 			width: unset;
 			border-bottom: none;
 		}
+
 		button {
 			display: none;
 		}
+
 		a:hover {
 			color: var(--main-color-orange);
 		}
