@@ -254,6 +254,10 @@
 			width: 3em;
 			height: 2.5em;
 		}
+
+		ul{
+			padding: 6em 0;
+		}
 	}
 
 	/* 900px */
@@ -271,7 +275,6 @@
 			position: relative;
 			width: auto;
 			padding: 0;
-			/* background: none; */
 		}
 
 		.container-unactive {
