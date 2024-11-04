@@ -305,7 +305,7 @@
 		}
 
 		.logo2:focus {
-			background-color: transparent; /* Geen achtergrondkleur op desktop */
+			background-color: transparent; 
 		}
 
 		nav li {
