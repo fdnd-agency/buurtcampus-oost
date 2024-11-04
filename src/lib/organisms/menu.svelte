@@ -44,26 +44,26 @@
 	// Functie voor het beperken van focus in het menu
 	// @ts-ignore
 	function handleTabFocus(event) {
-	// Controleer of `menuContainer` bestaat en of er focusable items zijn
-	// @ts-ignore
-	if (!menuContainer) return;
+		// Controleer of `menuContainer` bestaat en of er focusable items zijn
+		// @ts-ignore
+		if (!menuContainer) return;
 
-	const focusableItems = menuContainer.querySelectorAll('a, button');
-	if (focusableItems.length === 0) return;
+		const focusableItems = menuContainer.querySelectorAll('a, button');
+		if (focusableItems.length === 0) return;
 
-	const firstItem = focusableItems[0];
-	const lastItem = focusableItems[focusableItems.length - 1];
+		const firstItem = focusableItems[0];
+		const lastItem = focusableItems[focusableItems.length - 1];
 
-	if (event.key === 'Tab') {
-		if (event.shiftKey && document.activeElement === firstItem) {
-			event.preventDefault();
-			lastItem.focus();
-		} else if (!event.shiftKey && document.activeElement === lastItem) {
-			event.preventDefault();
-			firstItem.focus();
+		if (event.key === 'Tab') {
+			if (event.shiftKey && document.activeElement === firstItem) {
+				event.preventDefault();
+				lastItem.focus();
+			} else if (!event.shiftKey && document.activeElement === lastItem) {
+				event.preventDefault();
+				firstItem.focus();
+			}
 		}
 	}
-}
 
 	const getTabIndex = () => {
 		if (navOpen) {
@@ -173,6 +173,15 @@
 		display: block;
 	}
 
+	nav li {
+		width: 80%;
+		border-bottom: 2px solid var(--main-color-green);
+	}
+
+	nav li:hover {
+		border-color: var(--main-color-orange);
+	}
+
 	ul {
 		display: flex;
 		flex-direction: column;
@@ -181,15 +190,6 @@
 		padding: 4em 0;
 		font-size: 1.5em;
 		list-style: none;
-	}
-
-	nav li {
-		width: 80%;
-		border-bottom: 2px solid var(--main-color-green);
-	}
-
-	nav li:hover {
-		border-color: var(--main-color-orange);
 	}
 
 	.logo {
@@ -261,7 +261,7 @@
 			height: 2.5em;
 		}
 
-		ul{
+		ul {
 			padding: 6em 0;
 		}
 	}
@@ -305,7 +305,7 @@
 		}
 
 		.logo2:focus {
-			background-color: transparent; 
+			background-color: transparent;
 		}
 
 		nav li {

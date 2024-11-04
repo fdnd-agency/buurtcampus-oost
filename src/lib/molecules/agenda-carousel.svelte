@@ -222,7 +222,6 @@
 		}
 	}
 
-	/* TABLET */
 	@media (min-width: 48rem) {
 		.card {
 			min-width: 25rem;
