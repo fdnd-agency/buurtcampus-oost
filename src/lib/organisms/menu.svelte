@@ -81,7 +81,7 @@
 	tabindex="-1"
 >
 	<div class:container-active={navOpen} class:container-unactive={!navOpen} class="container">
-		<a href="/" aria-label="home button" class="logo" class:logo2={navOpen}> </a>
+		<a href="/" aria-label="home button" class="logo"> </a>
 		<button aria-label="Open menu" class:change={navOpen} on:click={handleNav}></button>
 	</div>
 
@@ -203,11 +203,11 @@
 		transition: transform 0.2s ease-in-out;
 	}
 
-	.logo2 {
+	/* .logo2 {
 		background-image: url(/assets/Logo-green.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
-	}
+	} */
 
 	.logo:hover {
 		cursor: pointer;
@@ -304,9 +304,9 @@
 			font-size: 1.2em;
 		}
 
-		.logo2:focus {
+		/* .logo2:focus {
 			background-color: transparent;
-		}
+		} */
 
 		nav li {
 			width: unset;
