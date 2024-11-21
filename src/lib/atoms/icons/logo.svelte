@@ -19,16 +19,22 @@
 
 <style>
 	svg {
-		width: 10rem;
+		width: 6rem;
 		margin-top: 2rem;
-		margin-left: 2rem;
+		margin-left: -1rem;
 	}
+
+	/* @media (min-width: 48rem) and (max-width: 64rem) {
+		svg {
+			width: 7rem;
+		}
+	} */
 
 	@media (min-width: 56.25em) {
 		svg {
 			width: 6.5rem;
 			margin-bottom: 2rem;
-            margin-left: -1rem;
+			margin-left: -3rem;
 		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <script>
-	import Logo from '$lib/atoms/icons/logo.svelte';
+	import { Logo, CloseIcon, OpenIcon } from '$lib/index.js';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -22,16 +22,16 @@
 </script>
 
 <header>
-	<div>
+	<div class="menu-container">
 		<a href="/" aria-label="bieb in bloei logo">
 			<Logo />
 		</a>
 
-		<button id="open-modal" aria-label="Open menu">open</button>
+		<button id="open-modal" aria-label="Open menu"><OpenIcon /></button>
 	</div>
 
 	<dialog>
-		<button id="close-modal" aria-label="Close menu">close</button>
+		<button id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
 			<ul role="menubar">
 				<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
@@ -50,6 +50,20 @@
 		z-index: 1;
 		width: 100%;
 		position: absolute;
+	}
+
+	.menu-container {
+		height: 8em;
+		display: flex;
+		padding: 1em 2.5em;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	button {
+		border: none;
+		background: none;
+		background-position: center;
 	}
 
 	ul {

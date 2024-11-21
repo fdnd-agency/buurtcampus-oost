@@ -14,17 +14,9 @@
 </svg>
 
 <style>
-	svg {
-		/* top: 2em;
-                left: -2em;
-                z-index: 1; */
-	}
-
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		svg {
-			/* position: relative;
-            top: .5em; */
 			margin: 1em;
 			width: 3em;
 		}
