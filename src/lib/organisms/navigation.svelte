@@ -133,7 +133,7 @@
 		}
 
 		a {
-			font-size: 1.2em;
+			font-size: 1.1em;
 			text-decoration: none;
 			color: var(--text-color-white);
 		}
