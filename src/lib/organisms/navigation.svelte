@@ -30,8 +30,8 @@
 		<button id="open-modal" aria-label="Open menu"><OpenIcon /></button>
 	</div>
 
+		<!-- <button id="close-modal" aria-label="Close menu"><CloseIcon /></button> -->
 	<dialog>
-		<button id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
 			<ul role="menubar">
 				<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
@@ -69,11 +69,18 @@
 
 	ul {
 		list-style: none;
-		font-size: 1.5em;
+		font-size: 4.1em;
+	}
+
+	li{
+		border-bottom: 2px solid var(--main-color-green);
 	}
 
 	a {
+		font-size: 2.1rem;
 		text-decoration: none;
+		font-family: var(--link-font);
+		color: var(--main-color-green);
 	}
 
 	a:hover {
@@ -85,10 +92,14 @@
 	}
 
 	dialog {
+		width: 100%;
+		height: auto;
+		margin: 1rem;
+		top: -1rem;
 		display: none;
 		border: none;
 		box-shadow: none;
-		background: transparent;
+		background: var(--main-color-beige);
 	}
 
 	dialog[open] {
@@ -117,7 +128,13 @@
 			align-items: center;
 		}
 
+		li{
+			border-bottom: none;
+		}
+
 		a {
+			font-size: 1.2em;
+			text-decoration: none;
 			color: var(--text-color-white);
 		}
 

@@ -33,7 +33,7 @@
 	@media (min-width: 56.25em) {
 		svg {
 			width: 6.5rem;
-			margin-bottom: 2rem;
+			margin-bottom: 0rem;
 			margin-left: -3rem;
 		}
 	}
