@@ -30,7 +30,7 @@
 		<button id="open-modal" aria-label="Open menu"><OpenIcon /></button>
 	</div>
 
-		<!-- <button id="close-modal" aria-label="Close menu"><CloseIcon /></button> -->
+	<!-- <button id="close-modal" aria-label="Close menu"><CloseIcon /></button> -->
 	<dialog>
 		<nav>
 			<ul role="menubar">
@@ -72,7 +72,7 @@
 		font-size: 3.7em;
 	}
 
-	li{
+	li {
 		border-bottom: 2px solid var(--main-color-green);
 	}
 
@@ -128,7 +128,7 @@
 			align-items: center;
 		}
 
-		li{
+		li {
 			border-bottom: none;
 		}
 
