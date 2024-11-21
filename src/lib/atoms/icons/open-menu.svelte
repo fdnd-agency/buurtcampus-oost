@@ -7,7 +7,8 @@
 
 <style>
 	svg {
-		width: 3rem;
-        margin-top: 2em;
+		width: 2.8rem;
+		margin-top: 2em;
+        margin-right: -1.5rem;
 	}
 </style>

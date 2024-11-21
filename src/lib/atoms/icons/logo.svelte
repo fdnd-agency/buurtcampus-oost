@@ -19,9 +19,9 @@
 
 <style>
 	svg {
-		width: 6rem;
+		width: 5rem;
 		margin-top: 2rem;
-		margin-left: -1rem;
+		margin-left: -1.1rem;
 	}
 
 	/* @media (min-width: 48rem) and (max-width: 64rem) {

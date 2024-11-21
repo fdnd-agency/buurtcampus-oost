@@ -55,6 +55,7 @@
 	.menu-container {
 		height: 8em;
 		display: flex;
+		margin-top: -2rem;
 		padding: 1em 2.5em;
 		align-items: center;
 		justify-content: space-between;
