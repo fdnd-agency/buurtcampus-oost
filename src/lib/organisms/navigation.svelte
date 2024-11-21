@@ -69,7 +69,7 @@
 
 	ul {
 		list-style: none;
-		font-size: 4.1em;
+		font-size: 3.7em;
 	}
 
 	li{
