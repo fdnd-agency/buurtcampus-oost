@@ -53,9 +53,7 @@
         top: -3em;
         transform: rotate(-45deg);
     }
-    header{
-        width: 60%;
-    }
+
     header::after{
         content: url(/assets/Circle-Orange.svg);
         position: absolute;
@@ -68,7 +66,6 @@
         font-family: var(--header-font);
         font-size: 3em;
         max-width: 80%;
-        min-width: 5em;
         line-height: 95%;
     }
     h2, p{
@@ -80,7 +77,6 @@
     p{
         font-family: var(--paragraph-font);
         font-size: 1.2em;
-        min-width: 14em;
     }
 
     iframe{
@@ -93,6 +89,9 @@
 
     /* MEDIA QUERY TABLET = 500px */
     @media (min-width: 31rem) {
+        header {
+            width: 60%;
+        }
         p{
             min-width: 21em;
         }
@@ -126,6 +125,7 @@
         }
         h2{
             font-size: 4em;
+            min-width: 5em;
         }
         iframe{
             height: 95%;
