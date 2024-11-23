@@ -48,6 +48,12 @@
 						<address>{agenda.address}</address>
 						<span>{agenda.price}</span>
 						<time>{agenda.date}</time>
+						<Button
+							href="/agenda"
+							buttonText="Meld je aan"
+							btnClass="btn-green"
+							svgFill="svg-beige"
+						/>
 					</div>
 				</li>
 			{/each}
@@ -132,7 +138,7 @@
 		flex-direction: column;
 		padding: 1rem;
 	}
-
+	
 	div {
 		font-weight: 600;
 	}
@@ -166,11 +172,16 @@
 	.rest-cards > li div {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start; 
 	}
 
 	.rest-cards > li h2 {
-		padding: 0 0 2rem 0;
+		padding: 0 0 1rem 0;
 		font-size: 1.1rem;
+	}
+
+	.rest-cards > li div time {
+		margin-bottom: 1rem;
 	}
 
 	.no-styling {
