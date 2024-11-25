@@ -30,8 +30,8 @@
 		<button id="open-modal" aria-label="Open menu"><OpenIcon /></button>
 	</div>
 
-	<!-- <button id="close-modal" aria-label="Close menu"><CloseIcon /></button> -->
 	<dialog>
+		<button id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
 			<ul role="menubar">
 				<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
@@ -94,7 +94,7 @@
 	dialog {
 		width: 100%;
 		height: auto;
-		margin: 1rem;
+		inset: 0;
 		top: -1rem;
 		display: none;
 		border: none;
@@ -107,6 +107,15 @@
 		position: fixed;
 		justify-content: center;
 		align-items: center;
+	}
+
+	dialog button#close-modal {
+		position: absolute;
+		top: 2rem;
+		right: 1rem;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
 	/* DESKTOP */
