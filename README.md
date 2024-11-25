@@ -12,6 +12,14 @@ Wij hebben de opdracht gekregen om de huidige live bieb-in-bloei website te opti
 * mascotte Harry: geeft op een speelse manier tips over de verzorging van de stekjes en zaadjes. 
 * accessibility menu: een menu waar je als gebruiker de mogelijkheid hebt om darkmode, grotere letters of vertaling toe te passen.
 
+### Verbeteringen
+
+Om de website publicatiegereed te maken hebben wij een [projectplan](https://github.com/fdnd-agency/buurtcampus-oost/issues/198) opgesteld, opgedeeld in _must haves, should haves & could haves_.
+Voorbeelden van verbeteringen die we hebben doorgevoerd:
+* Responsiveness verbeteren, optimaliseren en bugs oplossen
+* Contrastchecks doen, en deze verbeteren waar nodig
+* Verbeteringen en optimalisatie op componentbasis, zoals container queries
+
 ## Visual
 
 ![Untitled (1)](https://github.com/user-attachments/assets/d9166e67-513a-409d-85a2-3e7fbb2805d0)
