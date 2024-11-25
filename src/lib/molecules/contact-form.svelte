@@ -109,6 +109,7 @@ fieldset textarea {
     border: none;
     padding: 0.5rem;
     border-radius: var(--border-card);
+    width: 100%;
 }
 
 /* form focus styling  */
