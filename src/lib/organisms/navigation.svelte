@@ -95,24 +95,30 @@
 		width: 100%;
 		height: auto;
 		inset: 0;
-		top: -1rem;
+		top: 0rem;
 		display: none;
 		border: none;
 		box-shadow: none;
 		background: var(--main-color-beige);
 	}
 
+	dialog::backdrop {
+		background-color: var(--main-color-beige);
+	}
+
 	dialog[open] {
 		display: flex;
 		position: fixed;
-		justify-content: center;
+		margin-left: 1rem;
 		align-items: center;
+		justify-content: center;
+		
 	}
 
 	dialog button#close-modal {
 		position: absolute;
 		top: 2rem;
-		right: 1rem;
+		right: 0rem;
 		background: none;
 		border: none;
 		cursor: pointer;
