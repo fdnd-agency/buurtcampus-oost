@@ -64,13 +64,18 @@
 	</div>
 
 	<dialog>
-		<button id="close-modal" aria-label="Close menu"><CloseIcon /></button>
+		<button class="close-btn" id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
 			<ul role="menubar">
-				<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
-				<li role="menuitem"><a href="/zaden">Zaden</a></li>
-				<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
-				<li role="menuitem"><a href="/agenda">Agenda</a></li>
+				<li class="dropdown">
+					<button class="projecten-btn">Projecten</button>
+					<ul class="dropdown-content">
+						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
+						<li role="menuitem"><a href="/zaden">Zaden</a></li>
+						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
+						<li role="menuitem"><a href="/agenda">Agenda</a></li>
+					</ul>
+				</li>
 				<li role="menuitem"><a href="/partners">Partners</a></li>
 				<li role="menuitem"><a href="/contact">Contact</a></li>
 			</ul>
@@ -100,8 +105,15 @@
 		background-position: center;
 	}
 
+	.projecten-btn{
+		display: none;
+	}
+
 	ul {
 		list-style: none;
+	}
+
+	ul:first-child {
 		font-size: 3.7em;
 	}
 
@@ -166,8 +178,27 @@
 			justify-content: space-between;
 		}
 
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			padding: 12px 16px;
+			z-index: 1;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
 		ul {
-			gap: 2em;
+			gap: 0.5em;
 			display: flex;
 			padding: 4em 0;
 			font-size: 1.4em;
@@ -180,7 +211,7 @@
 		}
 
 		a {
-			font-size: 1.1em;
+			font-size: 1.8rem;
 			text-decoration: none;
 			color: var(--text-color-white);
 		}
@@ -200,8 +231,12 @@
 			padding: 0;
 		}
 
-		dialog button {
+		dialog .close-btn {
 			display: none;
+		}
+
+		.projecten-btn{
+			display: block;
 		}
 	}
 </style>

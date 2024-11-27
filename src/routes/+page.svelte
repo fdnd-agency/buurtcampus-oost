@@ -4,8 +4,8 @@
 </script>
 
 	<HeroSlider {data} />
-	<!-- <SlideCards {data} /> -->
-	<!-- <HomeCampus {data} /> -->
-	<!-- <Agenda {data} /> -->
-	<!-- <HomePartners {data} /> -->
+	<SlideCards {data} />
+	<HomeCampus {data} />
+	<Agenda {data} />
+	<HomePartners {data} />
 
