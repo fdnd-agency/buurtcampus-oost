@@ -5,7 +5,10 @@
 	onMount(() => {
 		const openButton = document.querySelector('#open-modal');
 		const closeButton = document.querySelector('#close-modal');
+		const navLinks = document.querySelectorAll('nav a');
 		const modal = document.querySelector('dialog');
+
+		const isMobileView = () => window.matchMedia('(max-width: 56.25em)').matches;
 
 		if (openButton && modal) {
 			openButton.addEventListener('click', () => {
@@ -16,6 +19,36 @@
 		if (closeButton && modal) {
 			closeButton.addEventListener('click', () => {
 				modal?.close();
+			});
+		}
+
+		if (modal && navLinks) {
+			navLinks.forEach((link) => {
+				link.addEventListener('click', () => {
+					modal?.close();
+				});
+			});
+
+			modal.addEventListener('keydown', (event) => {
+				if (!isMobileView()) return;
+
+				// @ts-ignore
+				const firstLink = navLinks[0];
+				const lastLink = navLinks[navLinks.length - 1];
+
+				if (event.key === 'Tab') {
+					if (document.activeElement === lastLink && !event.shiftKey) {
+						event.preventDefault();
+						// @ts-ignore
+						closeButton.focus();
+					}
+
+					if (document.activeElement === closeButton && event.shiftKey) {
+						event.preventDefault();
+						// @ts-ignore
+						lastLink.focus();
+					}
+				}
 			});
 		}
 	});
@@ -112,7 +145,6 @@
 		margin-left: 1rem;
 		align-items: center;
 		justify-content: center;
-		
 	}
 
 	dialog button#close-modal {
