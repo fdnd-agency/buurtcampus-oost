@@ -109,6 +109,7 @@ fieldset textarea {
     border: none;
     padding: 0.5rem;
     border-radius: var(--border-card);
+    width: 100%;
 }
 
 /* form focus styling  */
@@ -149,6 +150,9 @@ input[type='submit'] {
 input[type='submit']:hover {
     background-color: var(--main-color-orange);
 }
-
+input,
+textarea {
+    font-family: var(--paragraph-font);
+}
 
 </style>

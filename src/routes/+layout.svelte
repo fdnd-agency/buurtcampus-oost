@@ -1,12 +1,11 @@
 <script>
-  export let data;
-  import { Menu, Footer } from '$lib/index.js';
-  import Viewtransition from '$lib/viewtransition.svelte';
+	export let data;
+	import { Navigation, AccessibilityMenu, Menu, Footer } from '$lib/index.js';
 </script>
 
-<Viewtransition />
+<Navigation />
 
-<Menu />
-<slot/>
-<Footer {data}/>
-
+<AccessibilityMenu />
+<!-- <Menu/> -->
+<slot />
+<Footer {data} />

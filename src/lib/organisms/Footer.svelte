@@ -17,13 +17,13 @@
 			<ul>
 				<li class="title">{data.footers[0].titleAdres}</li>
 				<li>{data.footers[0].location}</li>
-				<li>{data.footers[0].adres}</li>
+				<li><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={data.footers[0].adres}">{data.footers[0].adres}</a></li>
 				<li>{data.footers[0].postalCode}</li>
 			</ul>
 			<ul>
 				<li class="title">{data.footers[0].titleContact}</li>
-				<li>{data.footers[0].email}</li>
-				<li>{data.footers[0].number}</li>
+				<li><a href="mailto:data.footers[0].email">{data.footers[0].email}</a></li>
+				<li><a href="tel:{data.footers[0].number}">{data.footers[0].number}</a></li>
 				<li>{data.footers[0].btwCode}</li>
 			</ul>
 			<ul>
@@ -44,6 +44,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+	}
+	footer a {
+		text-decoration: none;
+		color: inherit;
 	}
 	.background {
 		position: absolute;
@@ -73,6 +77,7 @@
 		width: 90%;
 		justify-content: space-evenly;
 		color: var(--main-color-green);
+		z-index: 1;
 	}
     ul { 
         width: 30%;

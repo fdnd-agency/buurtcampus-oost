@@ -1,6 +1,7 @@
 <script>
 	export let data;
 	import { onDestroy, onMount } from 'svelte';
+	import { HarryWeather } from '$lib/index.js';
 
 	/**
 	 * @type {number | undefined}
@@ -47,6 +48,7 @@
 		<header>
 			<h1>Samen <span>Groener</span> Leven</h1>
 			<h2>Inspireer & Deel je Groene Passie!</h2>
+			<HarryWeather />
 		</header>
 
 		<ul class="hero-img-list">
