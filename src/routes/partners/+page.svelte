@@ -1,63 +1,53 @@
 <script>
-    export let data;
-    import { HeroHeaders, IntroHeaders } from '$lib/index.js';
+	export let data;
+	import { HeroHeaders, IntroHeaders } from '$lib/index.js';
 </script>
 
-<HeroHeaders 
-    heroInfo="{data.heroHeaders[4]}"
-/>
-<IntroHeaders heroInfo="{data.heroHeaders[4]}" />
+<HeroHeaders heroInfo={data.heroHeaders[4]} />
+<IntroHeaders heroInfo={data.heroHeaders[4]} />
 
 <main>
-    <article>
-        <h2>Oba</h2>
-        <p>
-            <span>Samenwerking OBA</span>
-            Bieb & Bloei is een initiatief van de Openbare Bibliotheek Amsterdam (OBA). 
-            In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van de studenten en de locaties en publieksprogramma’s van de bibliotheek.
-        </p>
-    </article>
-    <article>
-        <h2>Hva</h2>
-        <p>
-            <span>Samenwerking HvA</span>
-            Bieb & Bloei is een initiatief van de Hogeschool van Amsterdam (HvA). 
-            In de projecten van Hva benutten we de kennis en creativiteit van de studenten en de locaties en publieksprogramma’s van de bibliotheek.
-        </p>
-    </article>
-    <article>
-        <h2>Tugla85</h2>
-        <p>
-            <span>Samenwerking Tugla85</span>
-            Bieb & Bloei werkt samen met Tugla85. In de projecten van Tugla85 benutten we de kennis en creativiteit. Zij helpen ons met het organiseren an workshops voor studenten.
-        </p>
-    </article>
+	{#each data.partners as partner}
+		<article>
+			<h2>{partner.title}</h2>
+			<h3>{partner.subhead}</h3>
+			<p>{partner.description}</p>
+		</article>
+	{/each}
 </main>
 
 <style>
-    main{
-        margin-top: 4em;
-        height: 60vh;
-        padding: 2em;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2em;
-    }
+	main {
+		padding: 2em;
+		margin-bottom: 3em;
+	}
 
-    article{
-        background-color: var(--main-color-beige);
-        color: var(--card-color-green);
-        padding: 2em;
-        border-radius: var(--border-card);
-        width: 30vw;
-        height: 40vh;
-    }
+	article {
+		padding: 3em;
+		margin-top: 2em;
+		color: var(--card-color-green);
+		border-radius: var(--border-card);
+		background-color: var(--main-color-beige);
+	}
 
-    h2{
-        font-size: 3em;
-    }
-    p span{
-        display: block;
-        font-family: var(--sub-header-font);
-    }
+	h2 {
+		font-size: 3em;
+	}
+
+	p {
+		line-height: 1.6em;
+	}
+
+	@media (min-width: 64rem) {
+		main {
+			gap: 1em;
+			display: flex;
+			margin-top: 2em;
+			justify-content: center;
+		}
+
+		article {
+			width: 25em;
+		}
+	}
 </style>

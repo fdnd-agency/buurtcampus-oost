@@ -1,4 +1,4 @@
-# Bieb in Bloei
+# Bieb in Bloei 🌱
 
 Bieb in Bloei is een digitaal platform met daarop een overzicht van de duurzame projecten van de Buurtcampus Oost. 
 
@@ -43,4 +43,3 @@ Dit project is opgezet met Sveltekit en met de headless CMS Hygraph. In dit proj
 [Hygraph](https://hygraph.com)
 [Sveltekit](https://kit.svelte.dev/docs/introduction)
 [Project board](https://github.com/orgs/fdnd-agency/projects/3/views/1)
-

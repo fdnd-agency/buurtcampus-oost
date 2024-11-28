@@ -25,6 +25,7 @@ export async function load() {
 				}
 				date
 				event
+				time
 				price
 				address
 				buttonText
@@ -39,6 +40,38 @@ export async function load() {
 				title
 				paragraph
 				paragraph2
+			}
+			geveltuins {
+				id
+				title
+				bulletText1
+				createdAt
+				image {
+					url
+				}
+			}
+
+			facadeGardenActions {
+				id
+				title
+				description
+				createdAt
+			}
+
+			partnersIntros {
+				createdAt
+				id
+				description
+			}
+			partners {
+				createdAt
+				id
+				title
+				subhead
+				description
+				image {
+					url
+				}
 			}
 		}
 	`;

@@ -1,161 +1,177 @@
 <script>
-    export let data;
+	export let data;
+	import { GeveltuinButton } from '$lib/index.js';
 	import { HeroHeaders, Dot } from '$lib/index.js';
 
+	const bulletPoints1 = data.geveltuins[0].bulletText1.split('.');
 </script>
 
-<HeroHeaders 
-    heroInfo="{data.heroHeaders[2]}"
-/>
+<HeroHeaders heroInfo={data.heroHeaders[2]} />
+
+<section class="beige">
+	<article>
+		<div>
+			<Dot svgFill="var(--main-color-orange)" />
+			<h2>{data.geveltuins[0].title}</h2>
+		</div>
+
+		<ul>
+			{#each bulletPoints1 as point}
+				{#if point.trim() !== ''}
+					<li>{point}</li>
+				{/if}
+			{/each}
+		</ul>
+	</article>
+
+	<picture>
+		<img src={data.geveltuins[0].image.url} alt="geveltuin-roses" />
+	</picture>
+</section>
 
 <section>
-    <article>
-        <div>
-            <Dot svgFill="var(--main-color-green)"/>
-            <h2>
-                Maak Amsterdam <span>Groener</span> 
-            </h2>
-        </div>
-        <ul>
-            <li><b>Verfraait de straat:</b> Geveltuinen zorgen voor kleur en leven in de brouwerij.</li>
-            <li><b>Goed voor het milieu:</b> Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater.</li>
-            <li><b>Koeler in de zomer:</b> Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad.</li>
-            <li><b>Goed voor de biodiversiteit:</b> Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</li>
-            <li><b>Gezellig:</b> Geveltuinen zorgen voor een meer sociale en betrokken buurt.</li>
-        </ul>
-    </article>
-    <picture>
-        <img  width="583" height="682" loading="lazy" src="/assets/geveltuin-card.webp" alt="Geveltuin" />
-    </picture>
+	<article>
+		<h2 class="action-title">{data.facadeGardenActions[0].title}</h2>
+
+		<p>{data.facadeGardenActions[0].description}</p>
+
+		<ul class="action-ul">
+			{#each bulletPoints1 as point}
+				{#if point.trim() !== ''}
+					<li>{point}</li>
+				{/if}
+			{/each}
+		</ul>
+
+		<GeveltuinButton
+			btnClass="btn-green"
+			href="/contact"
+			buttonText="Meld je aan"
+			svgFill="svg-beige"
+		/>
+	</article>
 </section>
 
 <style>
-    section{
-        display: grid;
-        flex-direction: column;
-        background-color: var(--main-color-beige);
-        border-radius: var(--border-card);
-        height: 100%;
-        width: 100%;
-        top: -1em;
-        position: relative;
-        padding: 1em 1.5em;
-        overflow: hidden;
-        font-family: var(--sub-header-font);
-    }
 
-    section::after{
-        content: url(/assets/leaf-orange.svg);
-        width: 17em;
-        height: 17em;
-        opacity: 0.5;
-        position: absolute;
-        right: -3em;
-        top: -3em;
-        transform: rotate(-45deg);
-    }
-    article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        background-color: var(--main-color-beige);
-        border-radius: var(--border-bigCard);
-        width: 100%;
-    }
+	section {
+		padding: 3em;
+	}
 
-    article > div{
-        display: flex;
-        gap: .5em;
-        width: 100%;
-    }
-    h2{
-        font-family: var(--header-font);
-        font-size: 2.5em;
-        line-height: 95%;
-        max-width: 7em;
-        color: var(--main-color-brown);
-        z-index: 1;
-    }
-    h2 span{
-        color: var(--main-color-green);
-    }
-    picture{
-        display: flex;
-        justify-content: start;
-        max-width: 35em;
-        min-width: 13em;
-        margin: 2em 5.5em;
-        overflow: hidden;
-        min-height: 16em;
-        border-radius: var(--border-bigCard);
-    }
-    img{
-        display: flex;
-        justify-content: center;
-        border-radius: var(--border-bigCard);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
+	.beige {
+		background-color: var(--main-color-beige);
+	}
 
-    article ul {
-        font-family: 'Poppins-Regular';
-        color: var(--main-color-brown);
-        margin: 2em 3.5em;
-        list-style-image: url("/assets/circle-green.svg");
-        font-size: 1em;
-    }
+	article > div {
+		display: flex;
+		gap: 0.5em;
+		width: 100%;
+		margin-left: -2em;
+	}
 
-    article ul li{
-        padding-left: .5em;
-    }
-    ul b{
-        font-family: 'Poppins-Bold';
-    }
+	p,
+	ul {
+		margin-top: 3em;
+		margin-bottom: 2em;
+		font-family: 'Poppins-Regular';
+	}
 
-    /* MEDIA QUERY Small Tablet = 500px */
-    @media (min-width: 31rem) {
-        section{
-            width: 90%;
-            margin: 0 auto;
-        }
+	ul {
+		list-style-image: url('/assets/Circle-Orange.svg');
+		padding-left: 0;
+	}
 
-    }
+	li {
+		margin-bottom: 1em;
+		padding-left: 0.5em;
+	}
 
-    /* MEDIA QUERY TABLET = 768px */
-    @media (min-width: 48rem) {
-        section{
-            width: 97%;
-            padding: 3.5em 2em 1em 5em;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-                'blok1 blok2'
-                'blok1 blok2';
-            grid-area: blok1;
-            gap: 0 5em;
-        }
-        section::after{
-            width: 23em;
-            left: -3em;
-            top: -2em;
-            transform: rotate(70deg);
-        }
-        picture{
-            height: 95%;
-            grid-area: blok2;
-            width: 96%;
-            margin: 0;
-        }
-        h2{
-            font-size: 4em;
-            margin-bottom: .2em;
-        }
+	h2 {
+		font-family: var(--header-font);
+		font-size: 2em;
+		line-height: 1.1em;
+		color: var(--main-color-green);
+	}
 
-        ul{
-            margin: 2em 0;
-            width: 64%;
-        }
-    }
+	.action-title {
+		color: var(--main-color-green);
+	}
+
+	img {
+		width: 19em;
+	}
+
+	@media (min-width: 64rem) {
+		h2 {
+			font-size: 4em;
+		}
+
+		section {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0 auto;
+			overflow-x: hidden;
+			width: 85vw;
+			border-radius: var(--border-bigCard);
+		}
+
+		.beige {
+			top: -1em;
+			position: relative;
+		}
+
+		.beige::after {
+			content: url(/assets/leaf-orange.svg);
+			width: 25em;
+			height: 25em;
+			opacity: 0.5;
+			position: absolute;
+			right: -3em;
+			top: -3em;
+			transform: rotate(-45deg);
+		}
+
+		img {
+			margin-top: 12em;
+			width: 25vw;
+		}
+
+		ul {
+			margin-right: 4em;
+			padding-left: 6em;
+		}
+
+		.action-ul {
+			padding: 1em;
+		}
+
+		article > div{
+			margin-left: 3em;
+		}
+	}
+
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		article > div {
+			margin-left: -3em;
+		}
+	}
+
+	@media (min-width: 100rem) {
+		h2 {
+			font-size: 6em;
+			margin-top: 1em;
+			width: min-content;
+		}
+
+		ul,
+		p {
+			font-size: 20px;
+			margin-left: 0.5em;
+		}
+
+		article > div {
+			margin-left: 6em;
+		}
+	}
 </style>
-
