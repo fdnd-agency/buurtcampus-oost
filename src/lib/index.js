@@ -3,6 +3,8 @@
 // === Buttons ===
 export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
 export { default as Button } from '$lib/atoms/buttons/button.svelte';
+export { default as HarryWeather } from '$lib/atoms/buttons/harryWeather.svelte';
+export { default as Switch } from '$lib/atoms/buttons/switch.svelte'
 export { default as AgendaButton } from '$lib/atoms/buttons/agenda-button.svelte';
 export { default as GeveltuinButton } from '$lib/atoms/buttons/geveltuin-button.svelte';
 
@@ -14,7 +16,11 @@ export { default as Arrow } from '$lib/atoms/icons/arrow.svelte';
 export { default as Dot } from '$lib/atoms/icons/round-dot.svelte';
 export { default as LeafRight } from '$lib/atoms/icons/leaf-right.svelte';
 export { default as LeafLeft } from '$lib/atoms/icons/leaf-left.svelte';
-export {default as IntroHeaders } from '$lib/atoms/intro-headers.svelte';
+export {default as IntroHeaders } from '$lib/atoms/intro-headers.svelte'
+export { default as Accessibility } from '$lib/atoms/icons/accessibility.svelte'
+export { default as Moon } from '$lib/atoms/icons/moon.svelte'
+export { default as FontIncrease } from '$lib/atoms/icons/font-increase.svelte'
+export { default as Translate } from '$lib/atoms/icons/translate.svelte'
 export {default as Logo} from '$lib/atoms/icons/logo.svelte';
 
 // =========== MOLECULES ===========
@@ -34,3 +40,4 @@ export { default as Navigation } from '$lib/organisms/navigation.svelte';
 export { default as SlideCards } from '$lib/organisms/slide-cards.svelte';
 export { default as Footer } from '$lib/organisms/footer.svelte';
 export { default as Agenda } from '$lib/organisms/agenda.svelte';
+export { default as AccessibilityMenu } from '$lib/organisms/accessibility-menu.svelte';

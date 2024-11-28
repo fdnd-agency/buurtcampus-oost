@@ -53,6 +53,7 @@
 </section>
 
 <style>
+
 	section {
 		padding: 3em;
 	}
