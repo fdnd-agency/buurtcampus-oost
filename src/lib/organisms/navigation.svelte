@@ -1,4 +1,5 @@
 <script>
+	import ArrowDown from '$lib/atoms/icons/arrow-down.svelte';
 	import { Logo, CloseIcon, OpenIcon } from '$lib/index.js';
 	import { onMount } from 'svelte';
 
@@ -32,20 +33,19 @@
 			modal.addEventListener('keydown', (event) => {
 				if (!isMobileView()) return;
 
-				// @ts-ignore
 				const firstLink = navLinks[0];
 				const lastLink = navLinks[navLinks.length - 1];
 
 				if (event.key === 'Tab') {
 					if (document.activeElement === lastLink && !event.shiftKey) {
 						event.preventDefault();
-						// @ts-ignore
+
 						closeButton.focus();
 					}
 
 					if (document.activeElement === closeButton && event.shiftKey) {
 						event.preventDefault();
-						// @ts-ignore
+
 						lastLink.focus();
 					}
 				}
@@ -68,7 +68,7 @@
 		<nav>
 			<ul role="menubar">
 				<li class="dropdown">
-					<button class="projecten-btn">Projecten</button>
+					<button class="projecten-btn">Projecten <ArrowDown /></button>
 					<ul class="dropdown-content">
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
@@ -105,7 +105,7 @@
 		background-position: center;
 	}
 
-	.projecten-btn{
+	.projecten-btn {
 		display: none;
 	}
 
@@ -186,11 +186,14 @@
 		.dropdown-content {
 			display: none;
 			position: absolute;
-			background-color: #f9f9f9;
-			min-width: 160px;
-			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-			padding: 12px 16px;
+			font-size: small;
+			line-height: 4em;
+			background-color: var(--main-color-brown);
+			border-radius: 0.5rem;
+			padding: 2rem;
 			z-index: 1;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 
 		.dropdown:hover .dropdown-content {
@@ -235,8 +238,14 @@
 			display: none;
 		}
 
-		.projecten-btn{
-			display: block;
+		.projecten-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.2rem;
+			color: var(--text-color-white);
+			cursor: pointer;
+			font-size: 1.8rem;
+			margin-top: 1.2rem;
 		}
 	}
 </style>

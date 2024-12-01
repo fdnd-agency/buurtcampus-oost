@@ -3,9 +3,6 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { HarryWeather } from '$lib/index.js';
 
-	/**
-	 * @type {number | undefined}
-	 */
 	let intervalId;
 
 	onMount(() => {
@@ -38,7 +35,6 @@
 			clearInterval(intervalId);
 		}
 	});
-
 </script>
 
 <section>
@@ -55,7 +51,12 @@
 			{#each data.herosSlider as hero}
 				<li>
 					<picture>
-						<img width="1280" height="840" src={hero.sliderPicture.url} alt={hero.sliderPictureAltText} />
+						<img
+							width="1280"
+							height="840"
+							src={hero.sliderPicture.url}
+							alt={hero.sliderPictureAltText}
+						/>
 					</picture>
 				</li>
 			{/each}
