@@ -46,7 +46,7 @@
 		<GeveltuinButton
 			btnClass="btn-green"
 			href="/contact"
-			buttonText="Meld je aan"
+			buttonText="Aanmelden"
 			svgFill="svg-beige"
 		/>
 	</article>

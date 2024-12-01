@@ -3,9 +3,6 @@
 	import { onMount } from 'svelte';
 	export let data;
 
-	/**
-	 * @type {HTMLDivElement}
-	 */
 	let agendaContainer;
 
 	function scrollPrev() {
