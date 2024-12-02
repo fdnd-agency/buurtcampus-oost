@@ -3,4 +3,4 @@
 	import { HeroHeaders, IntroHeaders } from '$lib/index.js';
 </script>
 
-<HeroHeaders heroInfo={data.heroHeaders[5]} />
+<HeroHeaders heroInfo={data.heroHeaders[6]} />
