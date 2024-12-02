@@ -77,6 +77,7 @@
 					</ul>
 				</li>
 				<li role="menuitem"><a href="/partners">Partners</a></li>
+				<li role="menuitem"><a href="/over">Over</a></li>
 				<li role="menuitem"><a href="/contact">Contact</a></li>
 			</ul>
 		</nav>
