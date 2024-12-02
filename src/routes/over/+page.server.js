@@ -11,6 +11,13 @@ export async function load() {
 					url
 				}
 			}
+
+			abouts {
+				createdAt
+				description
+				id
+				title
+			}
 		}
 	`;
 
