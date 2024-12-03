@@ -21,8 +21,40 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: start;
+		position: relative;
 		color: var(--card-color-green);
 	}
+
+	section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            url('/assets/crack1.png'),
+            url('/assets/crack2.png'),
+			url('/assets/crack2.png'),
+            url('/assets/crack1.png');
+        background-position: 
+            top right,
+            bottom right,
+			top center,
+            bottom left; 
+        background-size: 
+            40%, 
+			40%,
+            20%,
+            50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+
+        @supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
+    }
 
 	h2 {
 		font-family: var(--sub-header-font);

@@ -120,6 +120,11 @@
         line-height: 95%;
         max-width: 4em;
     }
+
+    article {
+        position: relative;
+    }
+
     .card-stekjes{
         background-color: var(--main-color-beige);
         color: var(--main-color-green);
@@ -128,6 +133,60 @@
         background-color: var(--card-color-orange);
         color: var(--main-color-brown);
     }
+
+    .card-gevel::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            url('/assets/crack1.png'),
+            url('/assets/crack2.png');
+        background-position: 
+            top left,
+            bottom right; 
+        background-size: 
+            40%, 
+            50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+
+        @supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
+    }
+
+    .card-zaden::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            url('/assets/crack1.png'),
+            url('/assets/crack2.png'),
+            url('/assets/crack1.png');
+        background-position: 
+            top left,
+            top right,
+            bottom left; 
+        background-size: 
+            40%, 
+            60%,
+            50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+
+        @supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
+    }
+
     .card-gevel{
         background-color: var(--card-color-green);
         color: var(--main-color-beige);

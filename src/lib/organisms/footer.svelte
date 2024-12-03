@@ -45,6 +45,37 @@
         align-items: center;
         justify-content: center;
 	}
+
+	footer::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            url('/assets/crack1.png'),
+            url('/assets/crack2.png'),
+            url('/assets/crack1.png'),
+            url('/assets/crack4.png');
+        background-position: 
+            top right,
+            bottom right,
+            bottom left,
+            center; 
+        background-size: 
+            40%, 
+            30%,
+            50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+
+        @supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
+    }
+
 	footer a {
 		text-decoration: none;
 		color: inherit;
@@ -136,7 +167,5 @@
 			display: none;
 		}
 	}
-
-
 
 </style>

@@ -64,8 +64,17 @@ html {
         filter: saturate(1);
     }
     100% {
-        filter: saturate(15%);
+        filter: saturate(10%);
     }
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 100%;
+	}
 }
 
 .btn-gevel {

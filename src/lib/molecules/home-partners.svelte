@@ -41,6 +41,36 @@
         overflow: hidden;
     }
 
+    section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            url('/assets/crack1.png'),
+            url('/assets/crack2.png'),
+            url('/assets/crack1.png'),
+            url('/assets/crack4.png');
+        background-position: 
+            bottom right,
+            top right,
+            bottom left,
+            center; 
+        background-size: 
+            40%, 
+            30%,
+            50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+
+        @supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
+    }
+
     h2{
         font-family: var(--sub-header-font);
         font-size: 3.5em;

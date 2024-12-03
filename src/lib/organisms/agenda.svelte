@@ -18,7 +18,39 @@
 		max-width: 100%;
 		overflow: hidden;
 		padding: 4rem 0 4rem 1rem;
+		position: relative;
 	}
+
+	section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            url('/assets/crack1.png'),
+            url('/assets/crack2.png'),
+			url('/assets/crack2.png'),
+            url('/assets/crack1.png');
+        background-position: 
+            top left,
+            bottom left,
+			top right,
+            bottom right; 
+        background-size: 
+            40%, 
+			40%,
+            20%,
+            50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+
+        @supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
+    }
 
 	img {
 		display: none;
