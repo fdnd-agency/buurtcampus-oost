@@ -50,10 +50,23 @@ html {
 	--image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* overflow?
 html {
 	overflow-x: hidden;
-} */
+
+	@supports (animation-timeline: scroll()) {
+		animation: desaturate linear;
+		animation-timeline: scroll(root y);
+	}
+}
+
+@keyframes desaturate {
+    0% {
+        filter: saturate(1);
+    }
+    100% {
+        filter: saturate(15%);
+    }
+}
 
 .btn-gevel {
 	outline: 1px solid red;
