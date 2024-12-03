@@ -52,7 +52,9 @@ html {
 
 html {
 	overflow-x: hidden;
+}
 
+.content {
 	@supports (animation-timeline: scroll()) {
 		animation: desaturate linear;
 		animation-timeline: scroll(root y);
