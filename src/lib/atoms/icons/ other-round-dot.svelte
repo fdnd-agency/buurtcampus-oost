@@ -1,0 +1,22 @@
+<script>
+	export let svgFill;
+</script>
+
+<svg
+	class="my-custom-svg"
+	width="22"
+	height="22"
+	viewBox="0 0 42 42"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<circle cx="21" cy="21" r="21" fill={svgFill} />
+</svg>
+
+<style>
+	svg {
+		width: 1rem;
+		margin: 0.7em;
+		/* z-index: 1; */
+	}
+</style>

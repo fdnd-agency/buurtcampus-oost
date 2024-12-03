@@ -77,6 +77,8 @@ export async function load() {
 			abouts {
 				createdAt
 				description
+				description2
+				description3
 				id
 				title
 			}
