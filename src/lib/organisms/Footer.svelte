@@ -107,6 +107,16 @@
 		color: var(--main-color-green);
 		z-index: 1;
 	}
+
+	/* .information ul:nth-of-type(2) {
+		@supports (animation-timeline: scroll()) {
+			animation: tilt ease-in forwards;
+			animation-timeline: view();
+			animation-range: entry 0% cover 50%;
+			animation-delay: 500ms;
+		}
+	} */
+
     ul { 
         width: 30%;
     }
