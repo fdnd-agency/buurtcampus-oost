@@ -17,6 +17,5 @@
 	svg {
 		width: 1rem;
 		margin: 0.7em;
-		/* z-index: 1; */
 	}
 </style>

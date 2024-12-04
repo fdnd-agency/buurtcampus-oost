@@ -75,17 +75,16 @@
 
 		h2,
 		p {
+			width: 47vw;
 			display: flex;
 			margin: 0 auto;
 		}
 
 		h2 {
-			width: 47vw;
 			font-size: 4em;
 		}
 
 		p {
-			width: 47vw;
 			margin-top: 1.5em;
 		}
 	}
