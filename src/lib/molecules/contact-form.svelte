@@ -125,6 +125,7 @@ fieldset {
 .fields-container textarea { 
     border: none;
     padding: 0.5rem;
+    box-shadow: var(--input-border-shadow);
     border-radius: var(--border-card);
     width: 100%;
 }
@@ -133,6 +134,7 @@ fieldset {
 .fields-container input[type='text']:focus,
 .fields-container input[type='email']:focus,
 .fields-container textarea:focus { 
+    outline: 2px solid var(--input-border-color);
     background-color: lightgoldenrodyellow;
 }
 
@@ -140,7 +142,7 @@ fieldset {
 .fields-container input[type='text']:valid,
 .fields-container input[type='email']:valid,
 .fields-container textarea:valid { 
-    border: 2px solid var(--main-color-green);
+    outline: 2px solid var(--main-color-green);
     background-color: rgb(237 255 237);
 }
 
@@ -148,7 +150,7 @@ fieldset {
 .fields-container input[type='text']:user-invalid,
 .fields-container input[type='email']:user-invalid,
 .fields-container textarea:user-invalid { 
-    border: 2px solid var(--invalid-color-red);
+    outline: 2px solid var(--invalid-color-red);
     background-color: #fffcfc;
 }
 input[type='submit'] {
@@ -170,6 +172,10 @@ input[type='submit']:hover {
 input,
 textarea {
     font-family: var(--paragraph-font);
+}
+
+::placeholder {
+    color: #545454;
 }
 
 </style>
