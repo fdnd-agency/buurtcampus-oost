@@ -13,9 +13,13 @@
         btnClass="btn-beige"
         svgFill="svg-green"
     />
+   
 </section>
 
+
+
 <style>
+
     section{
         padding: 3em;
         display: flex;
@@ -25,7 +29,6 @@
         align-items: start;
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
-        overflow: hidden;
         position: relative;
     }
 
@@ -61,6 +64,7 @@
             50%;
         background-repeat: no-repeat;
         z-index: 1000;
+        pointer-events: none;
 
         @supports (animation-timeline: scroll()) {
             animation: opacity linear;
@@ -73,7 +77,16 @@
         font-size: 3.5em;
         line-height: 1;
         padding-bottom: .7em;
-    }
+
+        @supports(animation-timeline: view()){
+            animation-timeline: view(block);
+            animation-name: tiltLeft;
+            animation-fill-mode: both;
+            animation-duration: 5ms;
+            animation-range-start: cover 25%;
+            /* animation-range-end: 50%; */
+        }
+    }       
 
     p{
         max-width: 50em;

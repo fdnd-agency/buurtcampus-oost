@@ -16,7 +16,7 @@
 		background: var(--main-color-beige);
 		z-index: 2;
 		max-width: 100%;
-		overflow: hidden;
+		overflow: clip;
 		padding: 4rem 0 4rem 1rem;
 		position: relative;
 	}
@@ -42,11 +42,7 @@
             50%;
         background-repeat: no-repeat;
         z-index: 1000;
-
-        @supports (animation-timeline: scroll()) {
-            animation: opacity linear;
-            animation-timeline: scroll(root y);
-	    }
+		pointer-events: none;
     }
 
 	img {

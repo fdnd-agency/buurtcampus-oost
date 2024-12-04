@@ -39,8 +39,8 @@
 		width: 100%;
 		height: 70vh;
 		background-color: var(--main-color-beige);
-		overflow: hidden;
 		padding: 1em;
+		overflow: clip;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,6 +66,7 @@
             50%;
         background-repeat: no-repeat;
         z-index: 1000;
+		pointer-events: none;
 
         @supports (animation-timeline: scroll()) {
             animation: opacity linear;
@@ -108,14 +109,14 @@
 		z-index: 1;
 	}
 
-	/* .information ul:nth-of-type(2) {
-		@supports (animation-timeline: scroll()) {
-			animation: tilt ease-in forwards;
-			animation-timeline: view();
-			animation-range: entry 0% cover 50%;
-			animation-delay: 500ms;
-		}
-	} */
+	.information ul:nth-of-type(2) {
+		@supports(animation-timeline: view()){
+            animation-timeline: view(block);
+            animation-name: tiltRight;
+            animation-fill-mode: both;
+            animation-duration: 5ms;
+        }
+	}
 
     ul { 
         width: 30%;

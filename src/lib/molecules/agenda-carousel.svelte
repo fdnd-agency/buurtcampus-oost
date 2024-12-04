@@ -85,7 +85,7 @@
 <!-- AGENDA-CAROUSEL STYLING  -->
 <style>
 	article {
-		overflow: hidden;
+		overflow: clip;
 		max-width: 100%;
 	}
 
@@ -108,6 +108,13 @@
 		min-height: 15em;
 		position: relative;
 		scroll-snap-align: start;
+
+		@supports(animation-timeline: view()){
+            animation-timeline: view(block);
+            animation-name: tiltRight;
+            animation-fill-mode: both;
+            animation-duration: 5ms;
+        }
 	}
 
 	.card:last-child {
