@@ -53,7 +53,6 @@
 </section>
 
 <style>
-
 	section {
 		padding: 3em;
 	}
@@ -146,7 +145,7 @@
 			padding: 1em;
 		}
 
-		article > div{
+		article > div {
 			margin-left: 3em;
 		}
 	}

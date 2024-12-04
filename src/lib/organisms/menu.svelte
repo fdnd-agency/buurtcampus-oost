@@ -73,9 +73,9 @@
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
 						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
-						<li role="menuitem"><a href="/agenda">Agenda</a></li>
 					</ul>
 				</li>
+				<li role="menuitem"><a href="/agenda">Agenda</a></li>
 				<li role="menuitem"><a href="/partners">Partners</a></li>
 				<li role="menuitem"><a href="/over">Over</a></li>
 				<li role="menuitem"><a href="/contact">Contact</a></li>
