@@ -11,7 +11,6 @@
 <section class="beige">
 	<article>
 		<div>
-			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.geveltuins[0].title}</h2>
 		</div>
 
@@ -76,7 +75,7 @@
 	}
 
 	ul {
-		list-style-image: url('/assets/Circle-Orange.svg');
+		list-style-image: url('/assets/circle-green.svg');
 		padding-left: 0;
 	}
 
@@ -89,11 +88,11 @@
 		font-family: var(--header-font);
 		font-size: 2em;
 		line-height: 1.1em;
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 	}
 
 	.action-title {
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 	}
 
 	img {

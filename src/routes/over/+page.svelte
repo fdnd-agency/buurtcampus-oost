@@ -10,7 +10,10 @@
 	<section>
 		<div>
 			<OtherRoundDot svgFill="var(--main-color-orange)" />
-			<h2>{data.abouts[0].title}</h2>
+			<h2>
+				<strong class="first-four">{data.abouts[0].title.slice(0, 4)}</strong>
+				<strong>{data.abouts[0].title.slice(4)}</strong>
+			</h2>
 		</div>
 
 		<Logoround />
@@ -41,8 +44,13 @@
 		font-size: 1.7em;
 		margin-top: 0.3em;
 		line-height: 1.1em;
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 		font-family: var(--header-font);
+	}
+
+	.first-four {
+		color: var(--main-color-brown);
+		margin-right: 0.3em;
 	}
 
 	p {
@@ -51,7 +59,7 @@
 		font-family: 'Poppins-Regular';
 	}
 
-	@media (min-width: 65em) {
+	@media (min-width: 75em) {
 		main {
 			top: -1em;
 			width: 80vw;
@@ -59,7 +67,6 @@
 			margin: 0 auto;
 			position: relative;
 			overflow-x: hidden;
-			margin-bottom: 5rem;
 			border-radius: var(--border-bigCard);
 		}
 
@@ -80,12 +87,29 @@
 			margin: 0 auto;
 		}
 
-		h2 {
-			font-size: 4em;
-		}
-
 		p {
 			margin-top: 1.5em;
+		}
+	}
+
+	@media (min-width: 48em) {
+		h2 {
+			font-size: 3.5em;
+		}
+
+		main {
+			top: -1em;
+			width: 85vw;
+			padding: 2em;
+			margin: 0 auto;
+			position: relative;
+			border-radius: var(--border-bigCard);
+		}
+	}
+
+	@media (min-width: 100rem) {
+		h2 {
+			font-size: 5em;
 		}
 	}
 </style>

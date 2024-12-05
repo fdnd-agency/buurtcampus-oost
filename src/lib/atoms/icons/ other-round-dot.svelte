@@ -18,4 +18,22 @@
 		width: 1rem;
 		margin: 0.7em;
 	}
+
+	@media (min-width: 48rem){
+		svg {
+			display: none;
+		}
+	}
+
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		svg {
+			display: none;
+		}
+	}
+
+	@media (min-width: 65em) {
+		svg {
+			display: none;
+		}
+	}
 </style>
