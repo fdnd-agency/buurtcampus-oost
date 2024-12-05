@@ -37,6 +37,7 @@
 	section > div {
 		width: 100%;
 		display: flex;
+		margin-left: -0.5em;
 	}
 
 	h2 {
@@ -103,6 +104,10 @@
 			margin: 0 auto;
 			position: relative;
 			border-radius: var(--border-bigCard);
+		}
+
+		section > div {
+			margin-left: -0.1em;
 		}
 	}
 
