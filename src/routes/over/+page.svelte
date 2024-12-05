@@ -37,7 +37,6 @@
 	section > div {
 		width: 100%;
 		display: flex;
-		margin-left: -0.7em;
 	}
 
 	h2 {
