@@ -110,11 +110,12 @@
 	}
 
 	.information ul:nth-of-type(2) {
+		transform-origin: left;
+
 		@supports(animation-timeline: view()){
             animation-timeline: view(block);
             animation-name: tiltRight;
             animation-fill-mode: both;
-            animation-duration: 5ms;
         }
 	}
 

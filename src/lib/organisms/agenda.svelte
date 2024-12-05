@@ -43,6 +43,11 @@
         background-repeat: no-repeat;
         z-index: 1000;
 		pointer-events: none;
+
+		@supports (animation-timeline: scroll()) {
+            animation: opacity linear;
+            animation-timeline: scroll(root y);
+	    }
     }
 
 	img {
@@ -60,6 +65,14 @@
 		color: var(--main-color-brown);
 		align-self: baseline;
 		z-index: 3;
+		transform-origin: left;
+
+		@supports(animation-timeline: view()){
+            animation-timeline: view(block);
+            animation-name: tiltRight;
+            animation-fill-mode: both;
+            animation-range-start: cover 25%;
+        }
 	}
 
 	/* MEDIA QUERY TABLET = 768px */

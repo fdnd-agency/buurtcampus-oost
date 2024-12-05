@@ -75,15 +75,18 @@ body::before {
 	position: fixed;
 	inset: 0;
 	background-image: 
-        url('/assets/ivy.png'),
-        url('/assets/ivy2.png');
+        url('/assets/ivy2.png'),
+        url('/assets/ivy2-mirror.png'),
+		url('/assets/ivy2-mirror.png');
 
 	background-position: 
 		bottom left,
-		bottom right; 
+		bottom right,
+		bottom -10rem center; 
 	background-size:
-		20%, 
-		25%;
+		15%, 
+		20%,
+		10%;
 	background-repeat: no-repeat;
 	z-index: 100;
 	pointer-events: none;

@@ -149,6 +149,7 @@
             50%;
         background-repeat: no-repeat;
         z-index: 1000;
+        pointer-events: none;
 
         @supports (animation-timeline: scroll()) {
             animation: opacity linear;
@@ -174,6 +175,7 @@
             50%;
         background-repeat: no-repeat;
         z-index: 1000;
+        pointer-events: none;
 
         @supports (animation-timeline: scroll()) {
             animation: opacity linear;

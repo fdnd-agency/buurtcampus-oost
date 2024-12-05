@@ -97,6 +97,26 @@
 		scroll-snap-type: x mandatory;
 	}
 
+	.scroll-container::before {
+		content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/vine2.png');
+        background-position: top 15rem right -5rem;
+        background-size: 55%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+		pointer-events: none;
+
+		@supports (animation-timeline: view()) {
+            animation-timeline: view(block);
+            animation-name: opacity;
+            animation-fill-mode: both;
+			animation-range-start: cover 40%;
+			animation-range-end: 60%;
+	    }
+	}
+
 	.scroll-container::-webkit-scrollbar {
 		display: none;
 	}
@@ -108,13 +128,6 @@
 		min-height: 15em;
 		position: relative;
 		scroll-snap-align: start;
-
-		@supports(animation-timeline: view()){
-            animation-timeline: view(block);
-            animation-name: tiltRight;
-            animation-fill-mode: both;
-            animation-duration: 5ms;
-        }
 	}
 
 	.card:last-child {

@@ -27,6 +27,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: start;
+        overflow: clip;
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
         position: relative;
@@ -77,14 +78,13 @@
         font-size: 3.5em;
         line-height: 1;
         padding-bottom: .7em;
+        transform-origin: right;
 
         @supports(animation-timeline: view()){
             animation-timeline: view(block);
             animation-name: tiltLeft;
             animation-fill-mode: both;
-            animation-duration: 5ms;
             animation-range-start: cover 25%;
-            /* animation-range-end: 50%; */
         }
     }       
 

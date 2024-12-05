@@ -8,5 +8,3 @@
 	<HomeCampus {data} />
 	<Agenda {data} />
 	<HomePartners {data} />
-
-	

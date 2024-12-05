@@ -25,7 +25,7 @@
 		color: var(--card-color-green);
 	}
 
-	section::after {
+	section::before {
         content: "";
         position: absolute;
         inset: 0;
@@ -51,6 +51,27 @@
         @supports (animation-timeline: scroll()) {
             animation: opacity linear;
             animation-timeline: scroll(root y);
+	    }
+    }
+
+	
+    section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('/assets/vine2.png');
+        background-position: top 2.75rem left 2.75rem;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        z-index: 1000;
+		pointer-events: none;
+
+		@supports (animation-timeline: view()) {
+            animation-timeline: view(block);
+            animation-name: opacity;
+            animation-fill-mode: both;
+			animation-range-start: cover 20%;
+			animation-range-end: 60%;
 	    }
     }
 
