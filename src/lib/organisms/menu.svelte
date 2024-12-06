@@ -169,6 +169,7 @@
 		cursor: pointer;
 	}
 
+	/* MEDIA QUERY */
 	/* DESKTOP */
 	@media (min-width: 56.25em) {
 		header {
