@@ -60,7 +60,7 @@
         position: absolute;
         inset: 0;
         background-image: url('/assets/vine2.png');
-        background-position: top 2.75rem left 2.75rem;
+        background-position: top -1.75rem left 2.75rem;
         background-size: 50%;
         background-repeat: no-repeat;
         z-index: 1000;
