@@ -50,7 +50,7 @@
 
 	.first-four {
 		color: var(--main-color-brown);
-		margin-right: 0.3em;
+		margin-right: 0.1em;
 	}
 
 	p {
@@ -90,6 +90,10 @@
 		p {
 			margin-top: 1.5em;
 		}
+
+		.first-four {
+			margin-right: 0.3em;
+		}
 	}
 
 	@media (min-width: 48em) {
@@ -108,6 +112,12 @@
 
 		section > div {
 			margin-left: -0.1em;
+		}
+	}
+
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		.first-four {
+			margin-right: 0.1em;
 		}
 	}
 
