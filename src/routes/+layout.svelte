@@ -50,6 +50,7 @@
 	height: 10lvh;
 	pointer-events: none;
 	z-index: 1000;
+	/* mix-blend-mode: difference; */
 }
 
 .page-transition.right {
