@@ -210,7 +210,7 @@
 	transform: translateX(-10%);
 	width: 110%;
 	}
-	80% {
+	70% {
 	transform: translateX(-10%);
 	width: 110%;
 	}
