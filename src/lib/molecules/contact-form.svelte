@@ -1,27 +1,66 @@
-<form action="https://api.web3forms.com/submit" method="POST">
+<script>
+
+import { onMount } from 'svelte';
+
+let name = '';
+let lastname = '';
+let email = '';
+let message = '';
+let contactReason = 'question';
+
+onMount(() => {
+    const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
+    name = savedData.name || '';
+    lastname = savedData.lastname || '';
+    email = savedData.email || '';
+    message = savedData.message || '';
+    contactReason = savedData['contact-reason'] || 'question';
+});
+
+// Save to localStorage on input
+function saveToLocalStorage() {
+    const formData = { name, lastname, email, message, 'contact-reason': contactReason };
+    localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+function handleSubmit(event) {
+    localStorage.removeItem('formData');
+    event.preventDefault();
+}
+
+</script>
+
+<form action="https://api.web3forms.com/submit" method="POST" on:submit={handleSubmit}>
     
     <input type="hidden" name="access_key" value="25decdef-5f8c-436d-bbf1-9c2af8bda1e4">
 
     <fieldset class="question">
         <legend>Reden voor contact:</legend>
         <label for="question">Ik heb een vraag</label>
-        <input class="radio-question" type="radio" id="question" name="contact-reason" value="question" checked />
+        <input class="radio-question" type="radio" id="question" name="contact-reason" value="question" bind:group={contactReason} 
+        on:change={saveToLocalStorage} checked />
+
         <label for="workshop">Ik wil mij aanmelden voor een workshop</label>
-        <input class="radio-question" type="radio" id="workshop" name="contact-reason" value="workshop" />
+        <input class="radio-question" type="radio" id="workshop" name="contact-reason" value="workshop" bind:group={contactReason} 
+        on:change={saveToLocalStorage} />
     </fieldset>
 
     <div class="fields-container">
         <label for="name">Voornaam:<span>*</span></label>
-        <input type="text" id="name" name="name" placeholder="Voer je voornaam in" required />
+        <input type="text" id="name" name="name" placeholder="Voer je voornaam in" required bind:value={name} 
+            on:input={saveToLocalStorage} />
         
         <label for="lastname">Achternaam:<span>*</span></label>
-        <input type="text" id="lastname" name="lastname" placeholder="Voer je achternaam in" required />
+        <input type="text" id="lastname" name="lastname" placeholder="Voer je achternaam in" required bind:value={lastname} 
+        on:input={saveToLocalStorage} />
         
         <label for="email">E-mail:<span>*</span></label>
-        <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required />
+        <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required bind:value={email} 
+        on:input={saveToLocalStorage} />
         
         <label for="message">Stel je vraag of vertel voor welke workshop je je wilt aanmelden!<span>*</span></label>
-        <textarea id="message" name="message" cols="30" rows="10" placeholder="Typ hier je bericht" required></textarea>
+        <textarea id="message" name="message" cols="30" rows="10" placeholder="Typ hier je bericht" required bind:value={message} 
+        on:input={saveToLocalStorage}></textarea>
     </div>
 
     <input type="submit" value="Verzenden" />
