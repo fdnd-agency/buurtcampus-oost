@@ -49,7 +49,7 @@
 	width: 100%;
 	height: 10lvh;
 	pointer-events: none;
-	z-index: 1000;
+	z-index: 10000;
 	/* mix-blend-mode: difference; */
 }
 
