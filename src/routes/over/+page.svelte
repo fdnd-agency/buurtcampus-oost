@@ -99,6 +99,7 @@
 	@media (min-width: 48em) {
 		h2 {
 			font-size: 3.5em;
+			width: 85vw;
 		}
 
 		main {
