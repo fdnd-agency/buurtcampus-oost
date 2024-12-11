@@ -80,6 +80,10 @@
 			content: url(/assets/leaf-orange.svg);
 		}
 
+		section > div {
+			margin-left: -0.1em;
+		}
+
 		h2,
 		p {
 			width: 47vw;
@@ -100,10 +104,9 @@
 		}
 	}
 
-	@media (min-width: 48em) {
+	@media (min-width: 48rem) and (max-width: 64rem) {
 		main {
 			top: -1em;
-			width: 85vw;
 			padding: 2em;
 			margin: 0 auto;
 			position: relative;
@@ -113,15 +116,17 @@
 		section > div {
 			margin-left: -0.1em;
 		}
-	}
 
-	@media (min-width: 48rem) and (max-width: 64rem) {
 		.first-four {
 			margin-right: 0.1em;
 		}
 
 		h2 {
 			font-size: 3em;
+		}
+
+		main {
+			width: 85vw;
 		}
 	}
 
