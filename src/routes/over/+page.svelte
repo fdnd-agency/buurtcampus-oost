@@ -87,6 +87,10 @@
 			margin: 0 auto;
 		}
 
+		h2 {
+			font-size: 4em;
+		}
+
 		p {
 			margin-top: 1.5em;
 		}
@@ -97,10 +101,6 @@
 	}
 
 	@media (min-width: 48em) {
-		h2 {
-			font-size: 4em;
-		}
-
 		main {
 			top: -1em;
 			width: 85vw;
