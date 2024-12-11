@@ -88,7 +88,7 @@
 		}
 
 		h2 {
-			font-size: 4em;
+			font-size: 3.5em;
 		}
 
 		p {
