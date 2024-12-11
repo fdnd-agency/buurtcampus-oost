@@ -59,7 +59,7 @@
 		font-family: 'Poppins-Regular';
 	}
 
-	@media (min-width: 75em) {
+	@media (min-width: 64em) {
 		main {
 			top: -1em;
 			width: 80vw;
