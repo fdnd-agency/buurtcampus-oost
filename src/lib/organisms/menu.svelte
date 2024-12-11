@@ -1,6 +1,5 @@
 <script>
-	import ArrowDown from '$lib/atoms/icons/arrow-down.svelte';
-	import { Logo, CloseIcon, OpenIcon } from '$lib/index.js';
+	import { Logo, CloseIcon, OpenIcon, ArrowDown } from '$lib/index.js';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -107,44 +106,17 @@
 		background-position: center;
 	}
 
-	.projecten-btn {
-		display: none;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	ul:first-child {
-		font-size: 3.7em;
-	}
-
-	li {
-		border-bottom: 2px solid var(--main-color-green);
-	}
-
-	a {
-		font-size: 2rem;
-		text-decoration: none;
-		font-family: var(--link-font);
-		color: var(--main-color-green);
-	}
-
-	a:hover {
-		color: var(--main-color-orange);
-	}
-
 	#open-modal {
 		display: block;
 	}
 
 	dialog {
-		width: 100%;
-		height: auto;
 		inset: 0;
 		top: 0rem;
-		display: none;
+		width: 100%;
+		height: auto;
 		border: none;
+		display: none;
 		box-shadow: none;
 		background: var(--main-color-beige);
 	}
@@ -162,16 +134,43 @@
 	}
 
 	dialog button#close-modal {
-		position: absolute;
 		top: 2rem;
 		right: 0rem;
-		background: none;
 		border: none;
 		cursor: pointer;
+		background: none;
+		position: absolute;
+	}
+
+	.projecten-btn {
+		display: none;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	ul:first-child {
+		font-size: 3.7em;
+	}
+
+	li {
+		border-bottom: 2px solid var(--main-color-green);
 	}
 
 	.dropdown-content li:last-child {
 		border-bottom: none;
+	}
+
+	a {
+		font-size: 2rem;
+		text-decoration: none;
+		font-family: var(--link-font);
+		color: var(--main-color-green);
+	}
+
+	a:hover {
+		color: var(--main-color-orange);
 	}
 
 	/* MEDIA QUERY */
@@ -185,26 +184,55 @@
 			justify-content: space-between;
 		}
 
+		#open-modal {
+			display: none;
+		}
+
+		dialog {
+			padding: 0;
+			width: auto;
+			height: auto;
+			display: flex;
+			position: static;
+			background: none;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		dialog .close-btn {
+			display: none;
+		}
+
 		.dropdown {
 			position: relative;
 			display: inline-block;
 		}
 
 		.dropdown-content {
+			left: 50%;
+			z-index: 1;
 			display: none;
-			position: absolute;
+			padding: 2rem;
 			font-size: small;
 			line-height: 4em;
-			background-color: var(--main-color-brown);
+			position: absolute;
 			border-radius: 0.5rem;
-			padding: 2rem;
-			z-index: 1;
-			left: 50%;
 			transform: translateX(-50%);
+			background-color: var(--main-color-brown);
 		}
 
 		.dropdown:hover .dropdown-content {
 			display: block;
+		}
+
+		.projecten-btn {
+			gap: 0.2rem;
+			cursor: pointer;
+			font-size: 1.6rem;
+			margin-top: 1.2rem;
+			align-items: center;
+			display: inline-flex;
+			color: var(--text-color-white);
 		}
 
 		ul {
@@ -224,35 +252,6 @@
 			font-size: 1.6rem;
 			text-decoration: none;
 			color: var(--text-color-white);
-		}
-
-		#open-modal {
-			display: none;
-		}
-
-		dialog {
-			display: flex;
-			position: static;
-			background: none;
-			justify-content: flex-end;
-			align-items: center;
-			width: auto;
-			height: auto;
-			padding: 0;
-		}
-
-		dialog .close-btn {
-			display: none;
-		}
-
-		.projecten-btn {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.2rem;
-			color: var(--text-color-white);
-			cursor: pointer;
-			font-size: 1.6rem;
-			margin-top: 1.2rem;
 		}
 	}
 </style>
