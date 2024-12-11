@@ -98,8 +98,7 @@
 
 	@media (min-width: 48em) {
 		h2 {
-			font-size: 3.5em;
-			width: 85vw;
+			font-size: 4em;
 		}
 
 		main {
@@ -119,6 +118,10 @@
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		.first-four {
 			margin-right: 0.1em;
+		}
+
+		h2 {
+			font-size: 3em;
 		}
 	}
 
