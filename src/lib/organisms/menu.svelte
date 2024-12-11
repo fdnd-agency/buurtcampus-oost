@@ -73,6 +73,7 @@
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
 						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
+						<li role="menuitem"><a href="/">Groenebieb</a></li>
 					</ul>
 				</li>
 				<li role="menuitem"><a href="/agenda">Agenda</a></li>
@@ -123,7 +124,7 @@
 	}
 
 	a {
-		font-size: 2.1rem;
+		font-size: 2rem;
 		text-decoration: none;
 		font-family: var(--link-font);
 		color: var(--main-color-green);
@@ -216,7 +217,7 @@
 		}
 
 		a {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			text-decoration: none;
 			color: var(--text-color-white);
 		}
@@ -246,7 +247,7 @@
 			gap: 0.2rem;
 			color: var(--text-color-white);
 			cursor: pointer;
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			margin-top: 1.2rem;
 		}
 	}
