@@ -63,12 +63,13 @@ function handleSubmit(event) {
         on:input={saveToLocalStorage}></textarea>
     </div>
 
-    <input type="submit" value="Verzenden" />
+    <button type="submit" value="Verzenden">Verzenden</button>
 </form>
 
 
 <style>
 
+/* algemene form styling */
 form {
     display: flex;
     flex-direction: column;
@@ -85,6 +86,16 @@ fieldset {
     border: none;
     gap: .5em;
     transition: all .2s;
+}
+
+input,
+textarea,
+button {
+    font-family: var(--paragraph-font);
+}
+
+::placeholder {
+    color: #545454;
 }
 
 .question{
@@ -135,6 +146,7 @@ fieldset {
     margin-bottom: 1.5em;
 }
 
+/* input fields styling */
 .fields-container input[type='text'],
 .fields-container input[type='email'],
 .fields-container textarea { 
@@ -153,7 +165,7 @@ fieldset {
     background-color: lightgoldenrodyellow;
 }
 
-/* form focus valid  */
+/* form focus valid styling */
 .fields-container input[type='text']:valid,
 .fields-container input[type='email']:valid,
 .fields-container textarea:valid { 
@@ -161,14 +173,16 @@ fieldset {
     background-color: rgb(237 255 237);
 }
 
-/* form focus invalid  */
+/* form focus invalid styling*/
 .fields-container input[type='text']:user-invalid,
 .fields-container input[type='email']:user-invalid,
 .fields-container textarea:user-invalid { 
     outline: 2px solid var(--invalid-color-red);
     background-color: #fffcfc;
 }
-input[type='submit'] {
+
+/* submit button styling */
+button[type='submit'] {
     border-radius: 2em;
     padding: 0.4em 1em;
     text-decoration: none;
@@ -181,16 +195,9 @@ input[type='submit'] {
     width: 8rem;    
     margin: .5em 0;
 }
-input[type='submit']:hover {
-    background-color: var(--main-color-orange);
-}
-input,
-textarea {
-    font-family: var(--paragraph-font);
-}
 
-::placeholder {
-    color: #545454;
+button[type='submit']:hover {
+    background-color: var(--main-color-orange);
 }
 
 </style>
