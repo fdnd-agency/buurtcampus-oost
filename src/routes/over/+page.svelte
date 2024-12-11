@@ -117,7 +117,7 @@
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		.first-four {
-			margin-right: 0.1em;
+			margin-right: 0em;
 		}
 	}
 
