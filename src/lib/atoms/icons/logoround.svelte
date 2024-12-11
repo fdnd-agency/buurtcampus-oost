@@ -118,4 +118,10 @@ l-38 23 -40 -37 c-66 -59 -139 -87 -228 -88 -90 0 -140 13 -203 55 -66 44 -98
 			display: none;
 		}
 	}
+
+	@media (min-width: 30em) {
+		svg {
+            display: none;
+		}
+	}
 </style>
