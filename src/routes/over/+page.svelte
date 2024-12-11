@@ -1,7 +1,6 @@
 <script>
 	export let data;
-	import OtherRoundDot from '$lib/atoms/icons/ other-round-dot.svelte';
-	import { HeroHeaders, IntroHeaders, Logoround } from '$lib/index.js';
+	import { HeroHeaders, IntroHeaders, Logoround, OtherRoundDot } from '$lib/index.js';
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[6]} />
@@ -24,6 +23,7 @@
 </main>
 
 <style>
+	/* MOBILE */
 	main {
 		width: 100%;
 		margin-bottom: 2rem;
@@ -97,12 +97,12 @@
 			font-size: 3.5em;
 		}
 
-		p {
-			margin-top: 1.5em;
-		}
-
 		.first-four {
 			margin-right: 0.3em;
+		}
+
+		p {
+			margin-top: 1.5em;
 		}
 	}
 
@@ -121,12 +121,12 @@
 			margin-left: -0.1em;
 		}
 
-		.first-four {
-			margin-right: 0.1em;
-		}
-
 		h2 {
 			font-size: 3em;
+		}
+
+		.first-four {
+			margin-right: 0.1em;
 		}
 	}
 
