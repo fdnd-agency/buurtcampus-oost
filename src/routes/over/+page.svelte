@@ -10,12 +10,10 @@
 	<section>
 		<div>
 			<OtherRoundDot svgFill="var(--main-color-orange)" />
-			<!-- <h2>
+			<h2>
 				<strong class="first-four">{data.abouts[0].title.slice(0, 4)}</strong>
 				<strong>{data.abouts[0].title.slice(4)}</strong>
-			</h2> -->
-
-			<h2>{data.abouts[0].title}</h2>
+			</h2>
 		</div>
 
 		<Logoround />
@@ -50,10 +48,10 @@
 		font-family: var(--header-font);
 	}
 
-	/* .first-four {
+	.first-four {
 		color: var(--main-color-brown);
 		margin-right: 0.1em;
-	} */
+	}
 
 	p {
 		margin-top: 1em;
@@ -93,9 +91,9 @@
 			margin-top: 1.5em;
 		}
 
-		/* .first-four {
+		.first-four {
 			margin-right: 0.3em;
-		} */
+		}
 	}
 
 	@media (min-width: 48em) {
@@ -118,9 +116,9 @@
 	}
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
-		/* .first-four {
-			margin-right: 0em;
-		} */
+		.first-four {
+			margin-right: 0.1em;
+		}
 	}
 
 	@media (min-width: 100rem) {
