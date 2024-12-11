@@ -170,6 +170,10 @@
 		cursor: pointer;
 	}
 
+	.dropdown-content li:last-child {
+		border-bottom: none;
+	}
+
 	/* MEDIA QUERY */
 	/* DESKTOP */
 	@media (min-width: 56.25em) {
