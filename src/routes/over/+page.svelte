@@ -59,6 +59,8 @@
 		font-family: 'Poppins-Regular';
 	}
 
+	/* MEDIA QUERY STYLING */
+	/* DESKTOP */
 	@media (min-width: 64em) {
 		main {
 			top: -1em;
@@ -104,9 +106,11 @@
 		}
 	}
 
+	/* TABLET */
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		main {
 			top: -1em;
+			width: 85vw;
 			padding: 2em;
 			margin: 0 auto;
 			position: relative;
@@ -124,12 +128,9 @@
 		h2 {
 			font-size: 3em;
 		}
-
-		main {
-			width: 85vw;
-		}
 	}
 
+	/* BIG DESKTOP SCREEN */
 	@media (min-width: 100rem) {
 		h2 {
 			font-size: 5em;
