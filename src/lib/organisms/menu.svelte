@@ -106,6 +106,7 @@
 		background-position: center;
 	}
 
+	/* DROPDOWN MENU STYLING */
 	#open-modal {
 		display: block;
 	}
