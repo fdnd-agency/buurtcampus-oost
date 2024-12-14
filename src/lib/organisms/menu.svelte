@@ -142,6 +142,7 @@
 </header>
 
 <style>
+	/* MENU STYLING */
 	header {
 		z-index: 1;
 		width: 100%;
