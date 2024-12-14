@@ -6,9 +6,12 @@
 		const openButton = document.querySelector('#open-modal');
 		const closeButton = document.querySelector('#close-modal');
 		const navLinks = document.querySelectorAll('nav a');
+		const dropdownButton = document.querySelector('.projecten-btn');
+		const dropdownContent = document.querySelector('.dropdown-content');
 		const modal = document.querySelector('dialog');
 
 		const isMobileView = () => window.matchMedia('(max-width: 56.25em)').matches;
+		const isDesktopView = () => window.matchMedia('(min-width: 56.25em)').matches;
 
 		if (openButton && modal) {
 			openButton.addEventListener('click', () => {
@@ -49,6 +52,60 @@
 					}
 				}
 			});
+		}
+
+		if (dropdownButton && dropdownContent) {
+			// Open/Sluit dropdown bij Enter (toetsenbord)
+			dropdownButton.addEventListener('keydown', (event) => {
+				if (isDesktopView() && event.key === 'Enter') {
+					event.preventDefault();
+					toggleDropdown();
+				}
+			});
+
+			// Open/Sluit dropdown bij klik (muisklik)
+			dropdownButton.addEventListener('click', (event) => {
+				if (isDesktopView()) {
+					event.preventDefault();
+					toggleDropdown();
+				}
+			});
+
+			// Sluit het dropdown menu als je buiten het menu klikt
+			document.addEventListener('click', (event) => {
+				if (
+					isDesktopView() &&
+					!dropdownButton.contains(event.target) &&
+					!dropdownContent.contains(event.target)
+				) {
+					closeDropdown();
+				}
+			});
+
+			// Sluit het dropdown menu als focus het verlaat
+			dropdownContent.addEventListener('focusout', (event) => {
+				if (isDesktopView() && !dropdownContent.contains(event.relatedTarget)) {
+					closeDropdown();
+				}
+			});
+
+			// Hulpfuncties om de dropdown te openen/sluiten
+			function toggleDropdown() {
+				const isOpen = dropdownContent.style.display === 'block';
+				if (isOpen) {
+					closeDropdown();
+				} else {
+					openDropdown();
+				}
+			}
+
+			function openDropdown() {
+				dropdownContent.style.display = 'block';
+			}
+
+			function closeDropdown() {
+				dropdownContent.style.display = 'none';
+			}
 		}
 	});
 </script>
