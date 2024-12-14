@@ -71,17 +71,6 @@
 				}
 			});
 
-			// Sluit het dropdown menu als je buiten het menu klikt
-			document.addEventListener('click', (event) => {
-				if (
-					isDesktopView() &&
-					!dropdownButton.contains(event.target) &&
-					!dropdownContent.contains(event.target)
-				) {
-					closeDropdown();
-				}
-			});
-
 			// Sluit het dropdown menu als focus het verlaat
 			dropdownContent.addEventListener('focusout', (event) => {
 				if (isDesktopView() && !dropdownContent.contains(event.relatedTarget)) {
