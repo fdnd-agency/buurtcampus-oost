@@ -19,6 +19,7 @@
 		<p>{data.abouts[0].description}</p>
 		<p>{data.abouts[0].description2}</p>
 		<p>{data.abouts[0].description3}</p>
+		<p>{data.abouts[0].description4}</p>
 	</section>
 </main>
 
@@ -37,7 +38,7 @@
 	section > div {
 		width: 100%;
 		display: flex;
-		margin-left: -0.5em;
+		margin-left: -0.6em;
 	}
 
 	h2 {
@@ -57,6 +58,12 @@
 		margin-top: 1em;
 		line-height: 1.6em;
 		font-family: 'Poppins-Regular';
+	}
+
+	p:nth-child(6) {
+		font-style: oblique;
+		font-weight: bolder;
+		
 	}
 
 	/* MEDIA QUERY STYLING */
