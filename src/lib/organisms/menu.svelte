@@ -194,7 +194,7 @@
 	}
 
 	a {
-		font-size: 2rem;
+		font-size: 0.4em;
 		text-decoration: none;
 		font-family: var(--link-font);
 		color: var(--main-color-green);
