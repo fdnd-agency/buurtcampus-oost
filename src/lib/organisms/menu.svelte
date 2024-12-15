@@ -55,46 +55,29 @@
 		}
 
 		if (dropdownButton && dropdownContent) {
-			// Open/Sluit dropdown bij Enter (toetsenbord)
-			dropdownButton.addEventListener('keydown', (event) => {
-				if (isDesktopView() && event.key === 'Enter') {
-					event.preventDefault();
-					toggleDropdown();
-				}
-			});
-
-			// Open/Sluit dropdown bij klik (muisklik)
-			dropdownButton.addEventListener('click', (event) => {
+			// Event handler om de dropdown te toggelen
+			const handleDropdownToggle = (event) => {
 				if (isDesktopView()) {
 					event.preventDefault();
-					toggleDropdown();
+					dropdownContent.style.display =
+						dropdownContent.style.display === 'block' ? 'none' : 'block';
 				}
-			});
+			};
 
-			// Sluit het dropdown menu als focus het verlaat
-			dropdownContent.addEventListener('focusout', (event) => {
+			// Event handler voor focus verlies
+			const handleFocusOut = (event) => {
 				if (isDesktopView() && !dropdownContent.contains(event.relatedTarget)) {
-					closeDropdown();
+					dropdownContent.style.display = 'none';
 				}
+			};
+
+			// Event listeners voor dropdown acties
+			dropdownButton.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter') handleDropdownToggle(event);
 			});
 
-			// Hulpfuncties om de dropdown te openen/sluiten
-			function toggleDropdown() {
-				const isOpen = dropdownContent.style.display === 'block';
-				if (isOpen) {
-					closeDropdown();
-				} else {
-					openDropdown();
-				}
-			}
-
-			function openDropdown() {
-				dropdownContent.style.display = 'block';
-			}
-
-			function closeDropdown() {
-				dropdownContent.style.display = 'none';
-			}
+			dropdownButton.addEventListener('click', handleDropdownToggle);
+			dropdownContent.addEventListener('focusout', handleFocusOut);
 		}
 	});
 </script>
