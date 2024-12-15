@@ -1,9 +1,9 @@
 <script>
-    export let mood = "neutraal"; // default mood
-    export let environment = "zonnig"
+    // export let mood = "neutraal"; // default mood
+    // export let environment = "zonnig"
 </script>
 
-<div class="harry">
+<!-- <div class="harry">
     <svg class="cartoon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 355.25 410.05">
     <defs>
@@ -323,4 +323,4 @@
         </g>
     </g>
     </svg>
-</div>
+</div> -->
