@@ -1,6 +1,6 @@
 <script>
-    // export let mood = "neutraal"; // default mood
-    // export let environment = "zonnig"
+    export let mood = "neutraal"; // default mood
+    export let environment = "zonnig"
 </script>
 
  <div class="harry">
