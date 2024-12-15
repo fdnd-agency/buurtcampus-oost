@@ -182,7 +182,7 @@
 	}
 
 	ul:first-child {
-		font-size: 2.8em;
+		font-size: 3em;
 	}
 
 	li {
