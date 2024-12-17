@@ -58,11 +58,6 @@ export async function load() {
 				createdAt
 			}
 
-			partnersIntros {
-				createdAt
-				id
-				description
-			}
 			partners {
 				createdAt
 				id
