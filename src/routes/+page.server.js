@@ -36,11 +36,13 @@ export async function load() {
 				paragraph
 				paragraph2
 			}
+				
 			partnersInfos {
 				title
 				paragraph
 				paragraph2
 			}
+
 			geveltuins {
 				id
 				title
