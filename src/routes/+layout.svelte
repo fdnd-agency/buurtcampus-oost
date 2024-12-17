@@ -5,7 +5,7 @@
 
 <Menu/>
 
-<AccessibilityMenu />
+<!-- <AccessibilityMenu /> -->
 
 <slot />
 <Footer {data} />
