@@ -25,7 +25,7 @@ function saveToLocalStorage() {
 
 function handleSubmit(event) {
     localStorage.removeItem('formData');
-    event.preventDefault();
+    // event.preventDefault();
 }
 
 </script>
