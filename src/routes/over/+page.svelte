@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import { HeroHeaders, IntroHeaders, Logoround, OtherRoundDot } from '$lib/index.js';
+	import { HeroHeaders, Logoround, OtherRoundDot } from '$lib/index.js';
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[6]} />
@@ -63,7 +63,6 @@
 	p:nth-child(6) {
 		font-style: oblique;
 		font-weight: bolder;
-		
 	}
 
 	/* MEDIA QUERY STYLING */
@@ -81,9 +80,9 @@
 
 		main::after {
 			top: -4rem;
-			width: 27rem;
+			width: 25rem;
 			opacity: 0.5;
-			right: -9rem;
+			right: -8rem;
 			position: absolute;
 			transform: rotate(-45deg);
 			content: url(/assets/leaf-orange.svg);
@@ -124,6 +123,10 @@
 			border-radius: var(--border-bigCard);
 		}
 
+		main::after {
+			width: 22rem;
+		}
+
 		section > div {
 			margin-left: -0.1em;
 		}
@@ -131,16 +134,31 @@
 		h2 {
 			font-size: 3em;
 		}
-
-		.first-four {
-			margin-right: 0.1em;
-		}
 	}
 
 	/* BIG DESKTOP SCREEN */
 	@media (min-width: 100rem) {
+		main {
+			width: 78vw;
+		}
+
+		main::after {
+			width: 30rem;
+		}
+
 		h2 {
 			font-size: 5em;
+		}
+
+		h2,
+		p {
+			max-width: 40vw;
+		}
+
+		p {
+			font-size: 1.5em;
+			line-height: 1.5em;
+			margin-top: 1.5em;
 		}
 	}
 </style>
