@@ -11,7 +11,6 @@
 <section class="beige">
 	<article>
 		<div>
-			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.geveltuins[0].title}</h2>
 		</div>
 
@@ -46,14 +45,13 @@
 		<GeveltuinButton
 			btnClass="btn-green"
 			href="/contact"
-			buttonText="Meld je aan"
+			buttonText="Aanmelden"
 			svgFill="svg-beige"
 		/>
 	</article>
 </section>
 
 <style>
-
 	section {
 		padding: 3em;
 	}
@@ -77,7 +75,7 @@
 	}
 
 	ul {
-		list-style-image: url('/assets/Circle-Orange.svg');
+		list-style-image: url('/assets/circle-green.svg');
 		padding-left: 0;
 	}
 
@@ -90,11 +88,11 @@
 		font-family: var(--header-font);
 		font-size: 2em;
 		line-height: 1.1em;
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 	}
 
 	.action-title {
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 	}
 
 	img {
@@ -146,7 +144,7 @@
 			padding: 1em;
 		}
 
-		article > div{
+		article > div {
 			margin-left: 3em;
 		}
 	}
