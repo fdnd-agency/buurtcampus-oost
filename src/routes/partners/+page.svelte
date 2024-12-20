@@ -11,10 +11,9 @@
 		<article>
 			<h2>{partner.title}</h2>
 			<h3>{partner.subhead}</h3>
+
 			<details class="mobile-only">
-				<summary
-					><span class="closed">Lees over de samenwerking</span><span class="open"></span></summary
-				>
+				<summary><span>Lees over de samenwerking</span></summary>
 				<p>{partner.description}</p>
 			</details>
 
@@ -28,15 +27,23 @@
 	main {
 		padding: 2em;
 		margin-bottom: 3em;
-		place-items: center;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2em;
+		margin: 0 auto;
 	}
 
 	article {
 		padding: 3em;
-		width: 22em;
-		margin-top: 2em;
+		width: 100%;
+		padding: 3em;
+		margin: 0 auto;
 		border-radius: var(--border-card);
 		background-color: var(--main-color-beige);
+	}
+
+	article:first-child {
+		margin-top: 2em;
 	}
 
 	h2 {
@@ -70,13 +77,24 @@
 
 	@media (min-width: 64rem) {
 		main {
-			gap: 1em;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+			justify-content: center;
+			align-items: top;
+			gap: 2em;
 		}
 
 		article {
-			width: 42vw;
+			margin-top: 2em;
+			width: 42em;
+			padding: 3em;
+			height: auto;
+			border-radius: var(--border-card);
+			background-color: var(--main-color-beige);
+		}
+
+		article:first-child {
+			margin-top: 2em;
 		}
 
 		h2 {
@@ -99,6 +117,7 @@
 	@media (min-width: 48rem) and (max-width: 63.9rem) {
 		article {
 			width: 42em;
+			height: auto;
 		}
 
 		.mobile-only {
