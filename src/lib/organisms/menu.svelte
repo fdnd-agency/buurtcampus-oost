@@ -101,7 +101,7 @@
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
 						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
-						<li role="menuitem"><a href="/">Groenebieb</a></li>
+						<li role="menuitem"><a href="/groenebieb">Groenebieb</a></li>
 					</ul>
 				</li>
 				<li role="menuitem"><a href="/agenda">Agenda</a></li>
@@ -221,6 +221,7 @@
 
 		dialog {
 			padding: 0;
+			z-index: 1;
 			width: auto;
 			height: auto;
 			display: flex;
