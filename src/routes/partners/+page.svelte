@@ -11,14 +11,12 @@
 		<article>
 			<h2>{partner.title}</h2>
 			<h3>{partner.subhead}</h3>
+			<p class="desktop-only">{partner.description}</p>
 
 			<details class="mobile-only">
 				<summary><span>Lees over de samenwerking</span></summary>
 				<p>{partner.description}</p>
 			</details>
-
-			<!-- Alleen zichtbaar op desktop apparaten -->
-			<p class="desktop-only">{partner.description}</p>
 		</article>
 	{/each}
 </main>
@@ -75,7 +73,7 @@
 		display: none;
 	}
 
-	@media (min-width: 64rem) {
+	@media (min-width: 74rem) {
 		main {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
@@ -86,7 +84,6 @@
 
 		article {
 			margin-top: 2em;
-			width: 42em;
 			padding: 3em;
 			height: auto;
 			border-radius: var(--border-card);
@@ -103,21 +100,6 @@
 
 		h3 {
 			font-size: 1.5em;
-		}
-
-		.mobile-only {
-			display: none;
-		}
-
-		.desktop-only {
-			display: block;
-		}
-	}
-
-	@media (min-width: 48rem) and (max-width: 63.9rem) {
-		article {
-			width: 42em;
-			height: auto;
 		}
 
 		.mobile-only {
