@@ -11,32 +11,25 @@
 		<article>
 			<h2>{partner.title}</h2>
 			<h3>{partner.subhead}</h3>
-			<p class="desktop-only">{partner.description}</p>
-
-			<details class="mobile-only">
-				<summary><span>Lees over de samenwerking</span></summary>
-				<p>{partner.description}</p>
-			</details>
+			<p>{partner.description}</p>
+			<p>{partner.description2}</p>
 		</article>
 	{/each}
 </main>
 
 <style>
+	/* MOBILE STYLING */
 	main {
-		padding: 2em;
-		margin-bottom: 3em;
-		display: grid;
-		grid-template-columns: 1fr;
 		gap: 2em;
-		margin: 0 auto;
+		display: grid;
+		margin-top: 1em;
+		margin-bottom: 3em;
+		grid-template-columns: 1fr;
 	}
 
 	article {
-		padding: 3em;
 		width: 100%;
-		padding: 3em;
-		margin: 0 auto;
-		border-radius: var(--border-card);
+		padding: 2em;
 		background-color: var(--main-color-beige);
 	}
 
@@ -58,34 +51,43 @@
 	}
 
 	p {
+		margin-top: 1em;
 		line-height: 1.6em;
 	}
 
-	span {
-		font-size: medium;
-	}
-
-	.mobile-only {
-		display: block;
-	}
-
-	.desktop-only {
-		display: none;
-	}
-
-	@media (min-width: 74rem) {
+	/* TABLET STYLING */
+	/* NORMAL FORMAT TABLET STYLING */
+	@media (min-width: 48rem) {
 		main {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			justify-content: center;
-			align-items: top;
 			gap: 2em;
+			padding: 2em;
+			display: grid;
+			align-items: top;
+			justify-content: center;
+			grid-template-columns: 1fr;
 		}
 
 		article {
-			margin-top: 2em;
+			border-radius: var(--border-card);
+		}
+	}
+
+	/* DESKTOP STYLING */
+	@media (min-width: 74rem) {
+		main {
+			gap: 2em;
+			padding: 2em;
+			display: grid;
+			margin: 0 auto;
+			align-items: top;
+			justify-content: center;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		article {
 			padding: 3em;
 			height: auto;
+			margin-top: 2em;
 			border-radius: var(--border-card);
 			background-color: var(--main-color-beige);
 		}
@@ -100,14 +102,6 @@
 
 		h3 {
 			font-size: 1.5em;
-		}
-
-		.mobile-only {
-			display: none;
-		}
-
-		.desktop-only {
-			display: block;
 		}
 	}
 </style>

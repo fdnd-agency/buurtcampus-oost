@@ -36,7 +36,7 @@ export async function load() {
 				paragraph
 				paragraph2
 			}
-				
+
 			partnersInfos {
 				title
 				paragraph
@@ -66,6 +66,7 @@ export async function load() {
 				title
 				subhead
 				description
+				description2
 				image {
 					url
 				}
