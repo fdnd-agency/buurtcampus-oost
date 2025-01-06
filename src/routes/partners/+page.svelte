@@ -104,4 +104,20 @@
 			font-size: 1.5em;
 		}
 	}
+
+	/* BIG DESKTOP SCREEN STYLING */
+	@media (min-width: 100rem) {
+		h2 {
+			font-size: 5em;
+		}
+
+		h3 {
+			font-size: 3em;
+		}
+
+		p {
+			width: 40vw;
+			font-size: 1.5em;
+		}
+	}
 </style>
