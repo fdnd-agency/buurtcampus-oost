@@ -37,9 +37,9 @@ Dit project is opgezet met Sveltekit en met de headless CMS Hygraph. In dit proj
 
 ## Resources
 
-[Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
-[Live site](https://bieb-in-bloei.vercel.app/)   
-[Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
-[Hygraph](https://hygraph.com)
-[Sveltekit](https://kit.svelte.dev/docs/introduction)
-[Project board](https://github.com/orgs/fdnd-agency/projects/3/views/1)
+- [Live site](https://biebinbloei.netlify.app/)
+- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
+- [Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
+- [Hygraph](https://hygraph.com)
+- [Sveltekit](https://kit.svelte.dev/docs/introduction)
+- [Project board](https://github.com/orgs/fdnd-agency/projects/3/views/1)
