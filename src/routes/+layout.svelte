@@ -3,6 +3,7 @@
 	import { Menu, Footer } from '$lib/index.js';
 </script>
 
-<Menu />
+
+<Menu/>
 <slot />
 <Footer {data} />

@@ -1,15 +1,17 @@
 <script>
-	import ArrowDown from '$lib/atoms/icons/arrow-down.svelte';
-	import { Logo, CloseIcon, OpenIcon } from '$lib/index.js';
+	import { Logo, CloseIcon, OpenIcon, ArrowDown } from '$lib/index.js';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		const openButton = document.querySelector('#open-modal');
 		const closeButton = document.querySelector('#close-modal');
 		const navLinks = document.querySelectorAll('nav a');
+		const dropdownButton = document.querySelector('.projecten-btn');
+		const dropdownContent = document.querySelector('.dropdown-content');
 		const modal = document.querySelector('dialog');
 
 		const isMobileView = () => window.matchMedia('(max-width: 56.25em)').matches;
+		const isDesktopView = () => window.matchMedia('(min-width: 56.25em)').matches;
 
 		if (openButton && modal) {
 			openButton.addEventListener('click', () => {
@@ -51,6 +53,32 @@
 				}
 			});
 		}
+
+		if (dropdownButton && dropdownContent) {
+			// Event handler om de dropdown te toggelen
+			const handleDropdownToggle = (event) => {
+				if (isDesktopView()) {
+					event.preventDefault();
+					dropdownContent.style.display =
+						dropdownContent.style.display === 'block' ? 'none' : 'block';
+				}
+			};
+
+			// Event handler voor focus verlies
+			const handleFocusOut = (event) => {
+				if (isDesktopView() && !dropdownContent.contains(event.relatedTarget)) {
+					dropdownContent.style.display = 'none';
+				}
+			};
+
+			// Event listeners voor dropdown acties
+			dropdownButton.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter') handleDropdownToggle(event);
+			});
+
+			dropdownButton.addEventListener('click', handleDropdownToggle);
+			dropdownContent.addEventListener('focusout', handleFocusOut);
+		}
 	});
 </script>
 
@@ -73,6 +101,7 @@
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
 						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
+						<li role="menuitem"><a href="/">Groenebieb</a></li>
 					</ul>
 				</li>
 				<li role="menuitem"><a href="/agenda">Agenda</a></li>
@@ -85,6 +114,7 @@
 </header>
 
 <style>
+	/* MENU STYLING */
 	header {
 		z-index: 1;
 		width: 100%;
@@ -106,44 +136,18 @@
 		background-position: center;
 	}
 
-	.projecten-btn {
-		display: none;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	ul:first-child {
-		font-size: 3.7em;
-	}
-
-	li {
-		border-bottom: 2px solid var(--main-color-green);
-	}
-
-	a {
-		font-size: 2.1rem;
-		text-decoration: none;
-		font-family: var(--link-font);
-		color: var(--main-color-green);
-	}
-
-	a:hover {
-		color: var(--main-color-orange);
-	}
-
+	/* DROPDOWN MENU STYLING */
 	#open-modal {
 		display: block;
 	}
 
 	dialog {
-		width: 100%;
-		height: auto;
 		inset: 0;
 		top: 0rem;
-		display: none;
+		width: 100%;
+		height: auto;
 		border: none;
+		display: none;
 		box-shadow: none;
 		background: var(--main-color-beige);
 	}
@@ -161,14 +165,46 @@
 	}
 
 	dialog button#close-modal {
-		position: absolute;
 		top: 2rem;
 		right: 0rem;
-		background: none;
 		border: none;
 		cursor: pointer;
+		background: none;
+		position: absolute;
 	}
 
+	.projecten-btn {
+		display: none;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	ul:first-child {
+		font-size: 3.5em;
+	}
+
+	li {
+		border-bottom: 2px solid var(--main-color-green);
+	}
+
+	.dropdown-content li:last-child {
+		border-bottom: none;
+	}
+
+	a {
+		font-size: 0.4em;
+		text-decoration: none;
+		font-family: var(--link-font);
+		color: var(--main-color-green);
+	}
+
+	a:hover {
+		color: var(--main-color-orange);
+	}
+
+	/* MEDIA QUERY */
 	/* DESKTOP */
 	@media (min-width: 56.25em) {
 		header {
@@ -179,26 +215,55 @@
 			justify-content: space-between;
 		}
 
+		#open-modal {
+			display: none;
+		}
+
+		dialog {
+			padding: 0;
+			width: auto;
+			height: auto;
+			display: flex;
+			position: static;
+			background: none;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		dialog .close-btn {
+			display: none;
+		}
+
 		.dropdown {
 			position: relative;
 			display: inline-block;
 		}
 
 		.dropdown-content {
+			left: 50%;
+			z-index: 1;
 			display: none;
-			position: absolute;
+			padding: 2rem;
 			font-size: small;
 			line-height: 4em;
-			background-color: var(--main-color-brown);
+			position: absolute;
 			border-radius: 0.5rem;
-			padding: 2rem;
-			z-index: 1;
-			left: 50%;
 			transform: translateX(-50%);
+			background-color: var(--main-color-brown);
 		}
 
 		.dropdown:hover .dropdown-content {
 			display: block;
+		}
+
+		.projecten-btn {
+			gap: 0.2rem;
+			cursor: pointer;
+			font-size: 1.6rem;
+			margin-top: 1.2rem;
+			align-items: center;
+			display: inline-flex;
+			color: var(--text-color-white);
 		}
 
 		ul {
@@ -215,38 +280,9 @@
 		}
 
 		a {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			text-decoration: none;
 			color: var(--text-color-white);
-		}
-
-		#open-modal {
-			display: none;
-		}
-
-		dialog {
-			display: flex;
-			position: static;
-			background: none;
-			justify-content: flex-end;
-			align-items: center;
-			width: auto;
-			height: auto;
-			padding: 0;
-		}
-
-		dialog .close-btn {
-			display: none;
-		}
-
-		.projecten-btn {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.2rem;
-			color: var(--text-color-white);
-			cursor: pointer;
-			font-size: 1.8rem;
-			margin-top: 1.2rem;
 		}
 	}
 </style>

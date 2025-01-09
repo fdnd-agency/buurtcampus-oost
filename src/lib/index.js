@@ -24,6 +24,8 @@ export { default as Translate } from '$lib/atoms/icons/translate.svelte';
 export { default as Logo } from '$lib/atoms/icons/logo.svelte';
 export { default as Logoround } from '$lib/atoms/icons/logoround.svelte';
 export { default as Projectenrounddot } from '$lib/atoms/icons/Projecten-round-dot.svelte';
+export { default as ArrowDown } from '$lib/atoms/icons/arrow-down.svelte';
+
 
 // =========== MOLECULES ===========
 
