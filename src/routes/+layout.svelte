@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import { Menu, AccessibilityMenu, Footer } from '$lib/index.js';
+	import { Menu, Footer } from '$lib/index.js';
 </script>
 
 <Menu />
