@@ -41,15 +41,6 @@ export async function load() {
 				paragraph
 				paragraph2
 			}
-			geveltuins {
-				id
-				title
-				bulletText1
-				createdAt
-				image {
-					url
-				}
-			}
 
 			facadeGardenActions {
 				id

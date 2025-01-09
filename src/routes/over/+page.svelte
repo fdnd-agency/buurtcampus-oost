@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import { HeroHeaders, Logoround, OtherRoundDot } from '$lib/index.js';
+	import { HeroHeaders, Logoround, Projectenrounddot } from '$lib/index.js';
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[6]} />
@@ -8,7 +8,7 @@
 <main>
 	<section>
 		<div>
-			<OtherRoundDot svgFill="var(--main-color-orange)" />
+			<Projectenrounddot svgFill="var(--main-color-orange)" />
 			<h2>
 				<strong class="first-four">{data.abouts[0].title.slice(0, 4)}</strong>
 				<strong>{data.abouts[0].title.slice(4)}</strong>
