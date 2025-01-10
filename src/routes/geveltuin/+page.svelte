@@ -37,6 +37,7 @@
 </section>
 
 <style>
+	/* mobile styling */
 	section {
 		padding: 3em;
 	}
