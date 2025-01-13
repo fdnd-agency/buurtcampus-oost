@@ -71,6 +71,7 @@
 		background: var(--main-color-brown);
 		display: flex;
 		transition: opacity 0.4s ease;
+		align-items: center;
 	}
 	article a:hover h3 {
 		opacity: 0;

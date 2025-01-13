@@ -279,6 +279,7 @@
       width: 100%;
       background-color: var(--main-color-green);
       margin: 0;
+      overflow-x: hidden;
     }
   
     /*  Stijl voor grote koppen  */
