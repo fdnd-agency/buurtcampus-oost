@@ -400,7 +400,7 @@
   
     @media screen and (max-width: 48em) {
       .header{
-        height: 30vh;
+        height: 40vh;
       }
       .stekje-container {
         display: grid;
