@@ -13,7 +13,7 @@
 	<article>
 		<h2 class="action-title">{data.facadeGardenActions[0].title}</h2>
 
-		<p>{data.facadeGardenActions[0].description}</p>
+		<p class="intro-p">{data.facadeGardenActions[0].description}</p>
 
 		<ul class="action-ul">
 			{#each bulletPoints1 as point}
@@ -32,7 +32,7 @@
 	</article>
 
 	<picture>
-		<img src={data.facadeGardenActions[0].image.url} alt="geveltuin-roses" />
+		<img src={data.facadeGardenActions[0].image.url} alt="bewoner-buurtcampusoost" />
 	</picture>
 </section>
 
@@ -78,17 +78,23 @@
 
 	img {
 		border-radius: 1rem;
-		width: 19em;
+		width: 16em;
+		margin-top: 2rem;
 	}
 
 	@media (min-width: 64rem) {
 		h2 {
 			font-size: 4em;
+			margin-left: 1.4rem;
+		}
+
+		.intro-p{
+			width: 38vw;
+			margin-left: 1.4rem;
 		}
 
 		section {
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
 			margin: 0 auto;
 			overflow-x: hidden;
@@ -113,7 +119,7 @@
 
 		img {
 			margin-top: 12em;
-			width: 25vw;
+			width: 30vw;
 		}
 
 		ul {
@@ -131,15 +137,23 @@
 
 	@media (min-width: 100rem) {
 		h2 {
-			font-size: 6em;
+			font-size: 5em;
 			margin-top: 1em;
-			width: min-content;
+		}
+
+		h2, .intro-p{
+			margin-left: 2.8rem;
 		}
 
 		ul,
 		p {
-			font-size: 20px;
+			font-size: 1.5em;
 			margin-left: 0.5em;
+			width: 40vw;
+		}
+
+		img {
+			width: 30vw;
 		}
 	}
 </style>
