@@ -63,6 +63,13 @@
       padding: 2em;
     }
     /*  Styling voor het hoofdcontainer van het stekje  */
+    .stekjes_detail {
+      position: relative;
+      width: 100%;
+      background-color: var(--main-color-green);
+      margin: 0;
+      overflow-x: hidden;
+    }
     .stekje-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
