@@ -18,6 +18,7 @@ export async function load() {
 				title
 				subhead
 				description
+				description2
 				image {
 					url
 				}

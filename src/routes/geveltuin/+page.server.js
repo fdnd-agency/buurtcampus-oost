@@ -12,21 +12,16 @@ export async function load() {
 					url
 				}
 			}
-			geveltuins {
-				id
-				title
-				bulletText1
-				createdAt
-				image {
-					url
-				}
-			}
 
 			facadeGardenActions {
 				id
+				createdAt
 				title
 				description
-				createdAt
+				image {
+					url
+				}
+				bulletText1
 			}
 		}
 	`;
