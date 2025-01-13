@@ -16,25 +16,25 @@
 	{/each}
 </section>
 
-<style>
+<style>	
 	h2 {
 		font-family: var(--header-font);
-		font-size: 3em;
-		line-height: 95%;
+		font-size: clamp(2em, 10vw, 3em);
+		line-height: 1.25;
 		margin-top: 1em;
-		padding: 2em 0 0 1em;
+		padding: 2em 1em 0 1em;
 	}
 	section {
 		padding: 2em;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns :repeat(auto-fit, minmax(16em, 1fr));
 		gap: 1rem;
 	}
 	article {
 		position: relative;
 		min-height: 50vh;
-		width: 20%;
+		width: 100%;
+		max-width: 30rem;
 		border-radius: var(--border-card);
 		overflow: hidden;
 		margin-top: 1rem;
@@ -59,65 +59,27 @@
 		transition: ease-out .35s;
 	}
 	h3 {
-		position: relative;
+		position: absolute;
+		bottom: 0;
 		color: white;
-		font-size: 2rem;
+		font-size: clamp(1em, 3.5vh, 2em); 
 		line-height: 1.5em;
 		z-index: 5;
 		padding: 1rem;
 		width: 100%;
-		height: min-content;
+		height: 25%; 
+		background: var(--main-color-brown);
+		display: flex;
+		transition: opacity 0.2s ease;
 	}
-	article h3:before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(to bottom, rgb(0 0 0 / 90%), rgba(0, 0, 0, 0) 80%);
-		z-index: -1;
+	article a:hover h3 {
+		opacity: 0;
 	}
 
-	/* article::after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(to bottom, rgb(0 0 0 / 70%), rgba(0, 0, 0, 0) 40%);
-		z-index: 1;
-	} */
-	@media (max-width: 26.5625em) {
-		/* 425px / 16 = 26.5625em */
-		article {
-			width: 100%;
-		}
-	}
-
-	@media (min-width: 26.5625em) {
-		/* 425px / 16 = 26.5625em */
-		article {
-			width: 100%;
-		}
-	}
-
-	@media (min-width: 48em) {
-		/* 768px / 16 = 48em */
-		article {
-			width: 47%;
-		}
-	}
-
+	
 	@media (min-width: 64em) {
 		/* 1024px / 16 = 64em */
 		article {
-			width: 24%;
 			min-height: 60vh;
 		}
 	}
