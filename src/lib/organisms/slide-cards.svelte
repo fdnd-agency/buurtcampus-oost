@@ -92,6 +92,7 @@
     .card-container article{
         border-radius: var(--border-bigCard);
         padding: 1em 0 2em;
+        z-index: 2;
     }   
     .card-stekjes::before, .card-zaden::before, .card-gevel::before{
         width: 20em;
