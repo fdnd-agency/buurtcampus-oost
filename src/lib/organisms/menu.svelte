@@ -6,9 +6,12 @@
 		const openButton = document.querySelector('#open-modal');
 		const closeButton = document.querySelector('#close-modal');
 		const navLinks = document.querySelectorAll('nav a');
+		const dropdownButton = document.querySelector('.projecten-btn');
+		const dropdownContent = document.querySelector('.dropdown-content');
 		const modal = document.querySelector('dialog');
 
 		const isMobileView = () => window.matchMedia('(max-width: 56.25em)').matches;
+		const isDesktopView = () => window.matchMedia('(min-width: 56.25em)').matches;
 
 		if (openButton && modal) {
 			openButton.addEventListener('click', () => {
@@ -50,6 +53,32 @@
 				}
 			});
 		}
+
+		if (dropdownButton && dropdownContent) {
+			// Event handler om de dropdown te toggelen
+			const handleDropdownToggle = (event) => {
+				if (isDesktopView()) {
+					event.preventDefault();
+					dropdownContent.style.display =
+						dropdownContent.style.display === 'block' ? 'none' : 'block';
+				}
+			};
+
+			// Event handler voor focus verlies
+			const handleFocusOut = (event) => {
+				if (isDesktopView() && !dropdownContent.contains(event.relatedTarget)) {
+					dropdownContent.style.display = 'none';
+				}
+			};
+
+			// Event listeners voor dropdown acties
+			dropdownButton.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter') handleDropdownToggle(event);
+			});
+
+			dropdownButton.addEventListener('click', handleDropdownToggle);
+			dropdownContent.addEventListener('focusout', handleFocusOut);
+		}
 	});
 </script>
 
@@ -85,6 +114,7 @@
 </header>
 
 <style>
+	/* MENU STYLING */
 	header {
 		z-index: 1;
 		width: 100%;
@@ -152,7 +182,7 @@
 	}
 
 	ul:first-child {
-		font-size: 3.7em;
+		font-size: 3.5em;
 	}
 
 	li {
@@ -164,7 +194,7 @@
 	}
 
 	a {
-		font-size: 2rem;
+		font-size: 0.4em;
 		text-decoration: none;
 		font-family: var(--link-font);
 		color: var(--main-color-green);

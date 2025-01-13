@@ -15,9 +15,13 @@ export async function load() {
 
 			facadeGardenActions {
 				id
+				createdAt
 				title
 				description
-				createdAt
+				image {
+					url
+				}
+				bulletText1
 			}
 		}
 	`;
