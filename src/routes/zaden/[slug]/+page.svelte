@@ -1,6 +1,5 @@
 <script>
     export let data;
-    // console.log(data.naam);
   </script>
  <div class="overlay"></div>
   <img src="{data.zaden.fotos[0].url}" alt="{data.zaden.naam}" width="100%" height="20%" class="header" loading="lazy">
