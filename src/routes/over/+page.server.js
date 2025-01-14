@@ -12,16 +12,14 @@ export async function load() {
 				}
 			}
 
-			partners {
+			abouts {
 				createdAt
-				id
-				title
-				subhead
 				description
 				description2
-				image {
-					url
-				}
+				description3
+				description4
+				id
+				title
 			}
 		}
 	`;

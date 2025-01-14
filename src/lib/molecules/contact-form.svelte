@@ -25,14 +25,14 @@ function saveToLocalStorage() {
 
 function handleSubmit(event) {
     localStorage.removeItem('formData');
-    event.preventDefault();
 }
 
 </script>
 
 <form action="https://api.web3forms.com/submit" method="POST" on:submit={handleSubmit}>
     
-    <input type="hidden" name="access_key" value="25decdef-5f8c-436d-bbf1-9c2af8bda1e4">
+    <input type="hidden" name="access_key" value="8b3a20d3-a650-44f4-80df-a5b93d5b251b">
+    <input type="checkbox" name="botcheck" id="" style="display: none;">
 
     <fieldset class="question">
         <legend>Reden voor contact:</legend>

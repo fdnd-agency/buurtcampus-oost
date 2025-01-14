@@ -1,35 +1,15 @@
 <script>
 	export let data;
 	import { GeveltuinButton } from '$lib/index.js';
-	import { HeroHeaders, Dot } from '$lib/index.js';
+	import { HeroHeaders, IntroHeaders } from '$lib/index.js';
 
-	const bulletPoints1 = data.geveltuins[0].bulletText1.split('.');
+	const bulletPoints1 = data.facadeGardenActions[0].bulletText1.split('.');
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[2]} />
+<IntroHeaders heroInfo={data.heroHeaders[2]} />
 
 <section class="beige">
-	<article>
-		<div>
-			<Dot svgFill="var(--main-color-orange)" />
-			<h2>{data.geveltuins[0].title}</h2>
-		</div>
-
-		<ul>
-			{#each bulletPoints1 as point}
-				{#if point.trim() !== ''}
-					<li>{point}</li>
-				{/if}
-			{/each}
-		</ul>
-	</article>
-
-	<picture>
-		<img src={data.geveltuins[0].image.url} alt="geveltuin-roses" />
-	</picture>
-</section>
-
-<section>
 	<article>
 		<h2 class="action-title">{data.facadeGardenActions[0].title}</h2>
 
@@ -46,27 +26,26 @@
 		<GeveltuinButton
 			btnClass="btn-green"
 			href="/contact"
-			buttonText="Meld je aan"
+			buttonText="Aanmelden"
 			svgFill="svg-beige"
 		/>
 	</article>
+
+	<picture>
+		<img src={data.facadeGardenActions[0].image.url} alt="geveltuin-roses" />
+	</picture>
 </section>
 
 <style>
-
+	/* mobile styling */
 	section {
 		padding: 3em;
 	}
 
 	.beige {
 		background-color: var(--main-color-beige);
-	}
-
-	article > div {
-		display: flex;
-		gap: 0.5em;
-		width: 100%;
-		margin-left: -2em;
+		margin-top: 5rem;
+		margin-bottom: 1rem;
 	}
 
 	p,
@@ -77,7 +56,7 @@
 	}
 
 	ul {
-		list-style-image: url('/assets/Circle-Orange.svg');
+		list-style-image: url('/assets/circle-green.svg');
 		padding-left: 0;
 	}
 
@@ -90,14 +69,15 @@
 		font-family: var(--header-font);
 		font-size: 2em;
 		line-height: 1.1em;
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 	}
 
 	.action-title {
-		color: var(--main-color-green);
+		color: var(--card-color-green);
 	}
 
 	img {
+		border-radius: 1rem;
 		width: 19em;
 	}
 
@@ -117,7 +97,6 @@
 		}
 
 		.beige {
-			top: -1em;
 			position: relative;
 		}
 
@@ -127,7 +106,7 @@
 			height: 25em;
 			opacity: 0.5;
 			position: absolute;
-			right: -3em;
+			right: -6em;
 			top: -3em;
 			transform: rotate(-45deg);
 		}
@@ -145,16 +124,9 @@
 		.action-ul {
 			padding: 1em;
 		}
-
-		article > div{
-			margin-left: 3em;
-		}
 	}
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
-		article > div {
-			margin-left: -3em;
-		}
 	}
 
 	@media (min-width: 100rem) {
@@ -168,10 +140,6 @@
 		p {
 			font-size: 20px;
 			margin-left: 0.5em;
-		}
-
-		article > div {
-			margin-left: 6em;
 		}
 	}
 </style>

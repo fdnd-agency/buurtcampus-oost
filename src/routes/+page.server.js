@@ -36,42 +36,44 @@ export async function load() {
 				paragraph
 				paragraph2
 			}
+
 			partnersInfos {
 				title
 				paragraph
 				paragraph2
 			}
-			geveltuins {
-				id
-				title
-				bulletText1
-				createdAt
-				image {
-					url
-				}
-			}
 
 			facadeGardenActions {
 				id
+				createdAt
 				title
 				description
-				createdAt
+				image {
+					url
+				}
+				bulletText1
 			}
 
-			partnersIntros {
-				createdAt
-				id
-				description
-			}
 			partners {
 				createdAt
 				id
 				title
 				subhead
 				description
+				description2
 				image {
 					url
 				}
+			}
+
+			abouts {
+				createdAt
+				description
+				description2
+				description3
+				description4
+				id
+				title
 			}
 		}
 	`;
