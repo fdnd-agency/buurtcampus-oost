@@ -32,7 +32,7 @@
 	</article>
 
 	<picture>
-		<img src={data.facadeGardenActions[0].image.url} alt="bewoner-buurtcampusoost" />
+		<img src={data.facadeGardenActions[0].image.url} alt="" />
 	</picture>
 </section>
 
