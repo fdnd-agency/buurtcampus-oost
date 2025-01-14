@@ -1,7 +1,6 @@
 <script>
 	export let data;
-	import OtherRoundDot from '$lib/atoms/icons/ other-round-dot.svelte';
-	import { HeroHeaders, IntroHeaders, Logoround } from '$lib/index.js';
+	import { HeroHeaders, Logoround, Projectenrounddot } from '$lib/index.js';
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[6]} />
@@ -9,7 +8,7 @@
 <main>
 	<section>
 		<div>
-			<OtherRoundDot svgFill="var(--main-color-orange)" />
+			<Projectenrounddot svgFill="var(--main-color-orange)" />
 			<h2>
 				<strong class="first-four">{data.abouts[0].title.slice(0, 4)}</strong>
 				<strong>{data.abouts[0].title.slice(4)}</strong>
@@ -20,10 +19,12 @@
 		<p>{data.abouts[0].description}</p>
 		<p>{data.abouts[0].description2}</p>
 		<p>{data.abouts[0].description3}</p>
+		<p>{data.abouts[0].description4}</p>
 	</section>
 </main>
 
 <style>
+	/* MOBILE */
 	main {
 		width: 100%;
 		margin-bottom: 2rem;
@@ -37,7 +38,7 @@
 	section > div {
 		width: 100%;
 		display: flex;
-		margin-left: -0.5em;
+		margin-left: -0.6em;
 	}
 
 	h2 {
@@ -50,7 +51,7 @@
 
 	.first-four {
 		color: var(--main-color-brown);
-		margin-right: 0.3em;
+		margin-right: 0.1em;
 	}
 
 	p {
@@ -59,7 +60,14 @@
 		font-family: 'Poppins-Regular';
 	}
 
-	@media (min-width: 75em) {
+	p:nth-child(6) {
+		font-style: oblique;
+		font-weight: bolder;
+	}
+
+	/* MEDIA QUERY STYLING */
+	/* DESKTOP */
+	@media (min-width: 64em) {
 		main {
 			top: -1em;
 			width: 80vw;
@@ -72,12 +80,16 @@
 
 		main::after {
 			top: -4rem;
-			width: 27rem;
+			width: 25rem;
 			opacity: 0.5;
-			right: -9rem;
+			right: -8rem;
 			position: absolute;
 			transform: rotate(-45deg);
 			content: url(/assets/leaf-orange.svg);
+		}
+
+		section > div {
+			margin-left: -0.1em;
 		}
 
 		h2,
@@ -87,16 +99,21 @@
 			margin: 0 auto;
 		}
 
+		h2 {
+			font-size: 3.5em;
+		}
+
+		.first-four {
+			margin-right: 0.3em;
+		}
+
 		p {
 			margin-top: 1.5em;
 		}
 	}
 
-	@media (min-width: 48em) {
-		h2 {
-			font-size: 3.5em;
-		}
-
+	/* TABLET */
+	@media (min-width: 48rem) and (max-width: 64rem) {
 		main {
 			top: -1em;
 			width: 85vw;
@@ -106,14 +123,42 @@
 			border-radius: var(--border-bigCard);
 		}
 
+		main::after {
+			width: 22rem;
+		}
+
 		section > div {
 			margin-left: -0.1em;
 		}
+
+		h2 {
+			font-size: 3em;
+		}
 	}
 
+	/* BIG DESKTOP SCREEN */
 	@media (min-width: 100rem) {
+		main {
+			width: 78vw;
+		}
+
+		main::after {
+			width: 30rem;
+		}
+
 		h2 {
 			font-size: 5em;
+		}
+
+		h2,
+		p {
+			max-width: 40vw;
+		}
+
+		p {
+			font-size: 1.5em;
+			line-height: 1.5em;
+			margin-top: 1.5em;
 		}
 	}
 </style>
