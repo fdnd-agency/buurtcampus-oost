@@ -157,6 +157,7 @@
 	}
 
 	dialog[open] {
+		font-size: 0.8em;
 		display: flex;
 		position: fixed;
 		margin-left: 1rem;
@@ -182,7 +183,7 @@
 	}
 
 	ul:first-child {
-		font-size: 3.5em;
+		font-size: 4em;
 	}
 
 	li {
