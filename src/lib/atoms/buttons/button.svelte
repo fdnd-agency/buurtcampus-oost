@@ -1,9 +1,9 @@
 <script>
-	export let href, buttonText, btnClass, svgFill;
+	export let href, btnText, btnClass, svgFill;
 </script>
 
 <a {href} class={btnClass}>
-	{buttonText}
+	{btnText}
 	<span>
 		<svg class={svgFill} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 47">
 			<path
