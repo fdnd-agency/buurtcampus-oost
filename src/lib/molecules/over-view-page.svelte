@@ -10,7 +10,7 @@
 		<article>
 			<a href=/{item.projectnaam}/{item.slug}>
 				<h3>{item.naam}</h3>
-				<img src={item.fotos[0].url} alt="" loading="lazy" height="586" width="379" />
+				<img src={item.fotos[0].url} alt="" loading="lazy" width={item.fotos[0]?.width || 'auto'} height={item.fotos[0]?.height || 'auto'}/>
 			</a>
 		</article>
 	{/each}
