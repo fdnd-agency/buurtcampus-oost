@@ -97,7 +97,7 @@
       background-color: #f5c275;
     }
     details[open] {
-        min-height: 3.5rem;
+        min-height: 3.75rem;
     }
     details[open] summary {
         border-radius: 1em 1em 0 0 ;
