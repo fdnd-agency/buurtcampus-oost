@@ -246,6 +246,7 @@
   </section>
   
   <style>
+
     .overlay {
       position: absolute;
       top: 0;
@@ -254,14 +255,12 @@
       height: 40vh;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
+
    .header{
     height: 40vh ;
     object-fit: cover;
     margin: -1em 0;
    } 
-   
-
-    /*  Algemene stijl voor de section  */
   
     section {
       position: relative;
@@ -278,25 +277,20 @@
 		  font-size: 2em;
     }
   
-    /*  Stijl voor tekst in de linker kolom  */
-  
     .left p {
       font-size: 1em;
       margin-top: 0.9375em;
     }
   
     /* SVG'S Styling */
+
     span {
       padding: 0.3125em 0.25em 0 0;
     }
   
-    /*  Container styling  */
-  
     .container {
       padding: 2em;
     }
-  
-    /*  Styling voor het hoofdcontainer van het stekje  */
   
     .stekje-container {
       position: relative;
@@ -308,8 +302,6 @@
       justify-content: space-between;
     }
   
-    /* Stijl voor de tag bij de beschrijving */
-  
     .beschrijving-tag {
       display: flex;
       align-items: center;
@@ -320,15 +312,11 @@
 
     }
   
-    /*Stijl voor de rechter kolom */
-  
     .right {
       width: 50%;
       padding: 0;
     }
-  
-    /*  Stijl voor de linker kolom  */
-  
+
     .left {
       position: sticky;
       top: 1em;
@@ -337,16 +325,12 @@
       padding-right: 5%;
       overflow: hidden;
     }
-  
-    /* Algemene stijl voor details en summary */
-  
+
     details {
       width: 100%;
       border-radius: var(--border-card);
       margin-bottom:  0.625em;
     }
-  
-    /*Stijl voor de summary */
   
     summary {
       display: flex;
@@ -363,19 +347,13 @@
 
     }
   
-    /* Styling voor geopende accordion "border radius" */
-  
     details[open] summary {
       border-radius: 1em 1em 0 0 ;
     }
   
-    /*Accordion hover effect */
-  
     summary:hover {
       background-color: #f5c275;
     }
-  
-    /* Stijl voor geopende details */
   
     details[open] .content {
       max-height: 500px;
@@ -383,9 +361,7 @@
       padding: 1em;
       background-color: #fbc980;
     }
-  
-    /* Media Query voor schermen kleiner dan 48em(768px) */
-  
+    
     @media screen and (max-width: 48em) {
       .header{
         height: 30vh;
