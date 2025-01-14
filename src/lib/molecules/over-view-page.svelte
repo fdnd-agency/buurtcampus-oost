@@ -22,7 +22,7 @@
 		font-size: 3em;
 		line-height: 95%;
 		margin-top: 1em;
-		padding: 2em 0 0 1em;
+		padding: 2em 1em 0 1em;
 	}
 	section {
 		padding: 2em;
