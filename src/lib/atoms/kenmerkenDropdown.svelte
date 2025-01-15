@@ -72,6 +72,7 @@
         position: relative;
         width: 100%;
     }
+
     summary {
         display: flex;
         align-items: center;
@@ -88,17 +89,21 @@
         transition: background-color 0.3s;
         cursor: pointer;
     }
+    
     summary img {
         padding-right: 0.9375em;
     }
+
     summary:hover,
     details[open] summary,
     details[open] p {
       background-color: #f5c275;
     }
+
     details[open] {
         min-height: 3.75rem;
     }
+
     details[open] summary {
         border-radius: 1em 1em 0 0 ;
     }
@@ -109,6 +114,7 @@
         padding: 0.9375em;
         color: #000;
     }
+
     details[open] p {
         border-radius: 0em 0em 1em 1em ;
     }
@@ -118,6 +124,7 @@
         position: absolute;
         right: 0.9375em;
     }
+    
     details[open] summary::after{
         content: "-";
     }
