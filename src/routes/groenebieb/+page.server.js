@@ -11,6 +11,12 @@ export async function load() {
 					url
 				}
 			}
+
+			groenebiebs {
+				createdAt
+				description
+				id
+			}
 		}
 	`;
 

@@ -41,7 +41,7 @@ export async function load() {
 				paragraph
 				paragraph2
 			}
-				
+
 			facadeGardenActions {
 				id
 				createdAt
@@ -71,6 +71,12 @@ export async function load() {
 				description3
 				id
 				title
+			}
+
+			groenebiebs {
+				createdAt
+				description
+				id
 			}
 		}
 	`;
