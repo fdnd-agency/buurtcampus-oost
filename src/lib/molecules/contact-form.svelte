@@ -46,17 +46,23 @@ function handleSubmit(event) {
     </fieldset>
 
     <div class="fields-container">
-        <label for="name">Voornaam:<span>*</span></label>
-        <input type="text" id="name" name="name" placeholder="Voer je voornaam in" required bind:value={name} 
+        <div>
+            <label for="name">Voornaam:<span>*</span></label>
+            <input type="text" id="name" name="name" placeholder="Voer je voornaam in" required bind:value={name} 
             on:input={saveToLocalStorage} />
+        </div>
         
-        <label for="lastname">Achternaam:<span>*</span></label>
-        <input type="text" id="lastname" name="lastname" placeholder="Voer je achternaam in" required bind:value={lastname} 
-        on:input={saveToLocalStorage} />
+        <div>
+            <label for="lastname">Achternaam:<span>*</span></label>
+            <input type="text" id="lastname" name="lastname" placeholder="Voer je achternaam in" required bind:value={lastname} 
+            on:input={saveToLocalStorage} />
+        </div>
         
-        <label for="email">E-mail:<span>*</span></label>
-        <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required bind:value={email} 
-        on:input={saveToLocalStorage} />
+        <div>
+            <label for="email">E-mail:<span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required bind:value={email} 
+            on:input={saveToLocalStorage} />
+        </div>
         
         <label for="message">Stel je vraag of vertel voor welke workshop je je wilt aanmelden!<span>*</span></label>
         <textarea id="message" name="message" cols="30" rows="10" placeholder="Typ hier je bericht" required bind:value={message} 
@@ -92,6 +98,7 @@ input,
 textarea,
 button {
     font-family: var(--paragraph-font);
+    z-index: 10;
 }
 
 ::placeholder {
@@ -198,6 +205,50 @@ button[type='submit'] {
 
 button[type='submit']:hover {
     background-color: var(--main-color-orange);
+}
+
+/* animated form valid styling */
+
+.fields-container div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fields-container div::after {
+    content: "";
+    position: absolute;
+    top: -0.15rem;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    scale: 0.5;
+    background-image: url('/assets/plant.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: all 0.5s cubic-bezier(.75,-0.5,0,1.75);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+/* Plant valid animation */
+
+.fields-container div:has(input:valid)::after {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+}
+
+.fields-container div:has(input:focus)::after,
+.fields-container div:has(input:focus:valid)::after {
+    transform: translateY(20%);
+    opacity:1;
+    scale: 1;
+    transition-delay: .3s;
+}
 }
 
 </style>
