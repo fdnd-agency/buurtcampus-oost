@@ -157,9 +157,9 @@
 	}
 
 	dialog[open] {
-		font-size: 0.8em;
 		display: flex;
 		position: fixed;
+		font-size: 0.8em;
 		margin-left: 1rem;
 		align-items: center;
 		justify-content: center;
