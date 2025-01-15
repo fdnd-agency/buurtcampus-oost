@@ -169,7 +169,7 @@ button {
 .fields-container input[type='email']:focus,
 .fields-container textarea:focus { 
     outline: 2px solid var(--input-border-color);
-    background-color: lightgoldenrodyellow;
+    background-color: var(--input-focus-color);
 }
 
 /* form focus valid styling */
@@ -177,7 +177,7 @@ button {
 .fields-container input[type='email']:valid,
 .fields-container textarea:valid { 
     outline: 2px solid var(--main-color-green);
-    background-color: rgb(237 255 237);
+    background-color: var(--valid-input-background);
 }
 
 /* form focus invalid styling*/
@@ -185,7 +185,7 @@ button {
 .fields-container input[type='email']:user-invalid,
 .fields-container textarea:user-invalid { 
     outline: 2px solid var(--invalid-color-red);
-    background-color: #fffcfc;
+    background-color: var(--invalid-input-background);
 }
 
 /* submit button styling */
