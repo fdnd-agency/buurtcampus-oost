@@ -1,7 +1,7 @@
 <script>
     export let data;
     
-    import { HarryWeather, Kenmerken } from '$lib/index.js';
+    import { HarryWeather, KenmerkenStekjes } from '$lib/index.js';
     let mood; 
     let environment; 
 
@@ -13,18 +13,17 @@
   <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
 </header>
   
-  
 <section class="container">
   <div class="stekje-container">
     <article>
         <h1>{data.stekje.naam}</h1>
         <p>{data.stekje.beschrijving}</p>
     </article>
-    <Kenmerken {data} />
+    <KenmerkenStekjes {data} />
   </div>
 </section>
   
-  <style>
+<style>
     .overlay {
       position: absolute;
       top: 0;
@@ -68,7 +67,7 @@
       width: 100%;
       background-color: var(--main-color-green);
       margin: 0;
-      overflow-x: hidden;
+      overflow: hidden;
     }
     .stekje-container {
       display: grid;
@@ -82,4 +81,4 @@
     article p {
       margin-top: 1em;
     }
-  </style>
+</style>

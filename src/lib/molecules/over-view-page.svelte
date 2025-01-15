@@ -67,7 +67,7 @@
 		z-index: 5;
 		padding: 1rem;
 		width: 100%;
-		height: 25%; 
+		min-height: 25%; 
 		background: var(--main-color-brown);
 		display: flex;
 		transition: opacity 0.4s ease;
