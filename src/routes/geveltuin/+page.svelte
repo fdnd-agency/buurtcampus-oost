@@ -43,9 +43,9 @@
 	}
 
 	.beige {
-		background-color: var(--main-color-beige);
 		margin-top: 5rem;
 		margin-bottom: 1rem;
+		background-color: var(--main-color-beige);
 	}
 
 	p,
@@ -56,8 +56,8 @@
 	}
 
 	ul {
-		list-style-image: url('/assets/circle-green.svg');
 		padding-left: 0;
+		list-style-image: url('/assets/circle-green.svg');
 	}
 
 	li {
@@ -66,10 +66,10 @@
 	}
 
 	h2 {
-		font-family: var(--header-font);
 		font-size: 2em;
 		line-height: 1.1em;
 		color: var(--card-color-green);
+		font-family: var(--header-font);
 	}
 
 	.action-title {
@@ -77,9 +77,9 @@
 	}
 
 	img {
-		border-radius: 1rem;
 		width: 16em;
 		margin-top: 2rem;
+		border-radius: 1rem;
 	}
 
 	@media (min-width: 64rem) {
@@ -94,11 +94,11 @@
 		}
 
 		section {
+			width: 85vw;
 			display: flex;
-			align-items: center;
 			margin: 0 auto;
 			overflow-x: hidden;
-			width: 85vw;
+			align-items: center;
 			border-radius: var(--border-bigCard);
 		}
 
@@ -107,19 +107,19 @@
 		}
 
 		.beige::after {
-			content: url(/assets/leaf-orange.svg);
+			top: -3em;
+			right: -6em;
 			width: 25em;
 			height: 25em;
 			opacity: 0.5;
 			position: absolute;
-			right: -6em;
-			top: -3em;
 			transform: rotate(-45deg);
+			content: url(/assets/leaf-orange.svg);
 		}
 
 		img {
-			margin-top: 12em;
 			width: 30vw;
+			margin-top: 12em;
 		}
 
 		ul {
@@ -147,9 +147,9 @@
 
 		ul,
 		p {
+			width: 40vw;
 			font-size: 1.5em;
 			margin-left: 0.5em;
-			width: 40vw;
 		}
 
 		img {
