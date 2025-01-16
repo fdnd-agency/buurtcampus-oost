@@ -16,7 +16,6 @@
 		background: var(--main-color-beige);
 		z-index: 2;
 		max-width: 100%;
-		min-height: 70vh;
 		overflow: hidden;
 		padding: var(--section-padding-y) 0 var(--section-padding-y) 1rem;
 	}
@@ -54,8 +53,8 @@
 
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
-		/* section {
-			padding: 4rem 15em;
-		} */
+		section {
+			padding: var(--section-padding-y) 15em;
+		}
 	}
 </style>

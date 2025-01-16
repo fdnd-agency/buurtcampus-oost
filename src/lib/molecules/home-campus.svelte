@@ -48,21 +48,21 @@
 		margin-bottom: 1em;
 	}
 
-	/* MEDIA QUERY TABLET = 430px */
+	/* MEDIA QUERY MOBILE = 430px */
 	@media (min-width: 26.8rem) {
 		h2 {
 			flex-direction: row;
 		}
 	}
 
-	/* MEDIA QUERY TABLET = 686px */
+	/* MEDIA QUERY TABLET S = 686px */
 	@media (min-width: 42.125rem) {
 		h2 span:nth-of-type(1) {
 			margin-right: 0.2em;
 		}
 	}
 
-	/* MEDIA QUERY TABLET = 768px */
+	/* MEDIA QUERY TABLET M = 768px */
 	@media (min-width: 48rem) {
 		section {
 			padding: 0 var(--section-padding-x) var(--section-padding-y);
@@ -76,7 +76,7 @@
 		}
 	}
 
-	/* MEDIA QUERY TABLET = 1100px */
+	/* MEDIA QUERY LAPTOP = 1100px */
 	@media (min-width: 68.75rem) {
 		section {
 			padding: 0 9em var(--section-padding-y);
@@ -87,7 +87,7 @@
         }
 	}
 
-	/* MEDIA QUERY TABLET = 1250px */
+	/* MEDIA QUERY TABLET L = 1250px */
 	@media (min-width: 78.1rem) {
 		section {
 			height: 70vh;

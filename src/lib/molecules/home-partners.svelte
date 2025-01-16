@@ -72,17 +72,17 @@
 		}
 	}
 
-	/* MEDIA QUERY DESKTOP = 1500px */
-	@media (min-width: 93.75rem) {
-        section{
-            padding: var(--section-padding-y) 15em;
-        }
-    }
-
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
         p{  
             max-width: 68em;
+        }
+    }
+
+    /* MEDIA QUERY DESKTOP = 1500px */
+	@media (min-width: 93.75rem) {
+        section{
+            padding: var(--section-padding-y) 15em;
         }
     }
 
