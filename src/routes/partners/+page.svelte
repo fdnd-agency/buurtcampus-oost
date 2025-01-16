@@ -78,7 +78,6 @@
 			gap: 2em;
 			padding: 2em;
 			display: grid;
-			margin: 0 auto;
 			align-items: top;
 			justify-content: center;
 			grid-template-columns: repeat(2, 1fr);
