@@ -91,8 +91,9 @@
 		section {
 			height: 70vh;
 		}
-		p {
-			max-width: 68em;
+
+		article, p{
+			max-width: 43em
 		}
 	}
 
@@ -101,5 +102,10 @@
 		section {
 			padding: 0 15em var(--section-padding-y);
 		}
+
+		article, p{
+			max-width: 43em
+		}
+
 	}
 </style>
