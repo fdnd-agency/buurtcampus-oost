@@ -4,7 +4,7 @@
 
 <section>
 	<h2>
-		Buurt<span>campus</span>
+		<span>{data.campusInfos[0].title}</span>
 		<span>{data.campusInfos[0].title2}</span>
 	</h2>
 	<article>
