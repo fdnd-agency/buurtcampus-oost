@@ -275,7 +275,6 @@
       color: var(--main-color-brown);
       font-family: var(--header-font);
 		  font-size: 2em;
-      overflow-wrap: anywhere;
     }
   
     .left p {
