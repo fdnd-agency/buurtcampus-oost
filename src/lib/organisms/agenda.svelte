@@ -16,8 +16,9 @@
 		background: var(--main-color-beige);
 		z-index: 2;
 		max-width: 100%;
+		min-height: 70vh;
 		overflow: hidden;
-		padding: 4rem 0 4rem 1rem;
+		padding: var(--section-padding-y) 0 var(--section-padding-y) 1rem;
 	}
 
 	img {
@@ -40,7 +41,7 @@
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section {
-			padding: 4rem 0 4rem 7.5rem;
+			padding: var(--section-padding-y) 0 var(--section-padding-y) var(--section-padding-x);
 		}
 
 		h2 {

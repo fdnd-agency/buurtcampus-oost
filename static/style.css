@@ -53,6 +53,9 @@ html {
 	--border-bigCard: 2em;
 	--border-card: 1.0625em;
 
+	--section-padding-y: 4rem;
+	--section-padding-x: 7.5rem;
+
 	--image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 

@@ -17,12 +17,12 @@
 
 <style>
     section{
-        padding: 3em;
+        padding: var(--section-padding-y) 1em;
         display: flex;
-        height: 70vh;
         justify-content: center;
         flex-direction: column;
         align-items: start;
+        min-height: 70vh;
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
         overflow: hidden;
@@ -65,7 +65,7 @@
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section{
-			padding:  4rem 7.5rem;
+			padding:  var(--section-padding-y) var(--section-padding-x);
 		}
 		h2{
             font-size: 4.5rem;
@@ -75,7 +75,7 @@
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
         section{
-            padding: 4rem 15em;
+            padding: var(--section-padding-y) 15em;
         }
     }
 

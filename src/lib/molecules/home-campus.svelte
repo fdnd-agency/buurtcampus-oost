@@ -15,8 +15,8 @@
 
 <style>
 	section {
-		padding: 0 3em 3em;
-		height: 70vh;
+		padding: 0 1em var(--section-padding-y);
+		min-height: 70vh;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
@@ -33,26 +33,20 @@
 		line-height: 1;
 		padding-bottom: 0.7em;
 	}
+	
 	h2 span:nth-of-type(2) {
 		color: var(--main-color-orange);
 	}
+
 	p {
 		padding: 0.3em;
 		max-width: 32em;
-		margin-bottom: 14em;
 		font-family: var(--paragraph-font);
-		/* color: var(--text-color-black); */
 	}
 
 	p:nth-of-type(1) {
 		margin-bottom: 1em;
 	}
-
-	/* @media (min-width: 10em) {
-        p{
-            margin-bottom: 14em;
-        }
-	} */
 
 	/* MEDIA QUERY TABLET = 430px */
 	@media (min-width: 26.8rem) {
@@ -71,7 +65,7 @@
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section {
-			padding: 0 7.5em 3em;
+			padding: 0 var(--section-padding-x) var(--section-padding-y);
 		}
 		h2 {
 			font-size: 4.5rem;
@@ -85,7 +79,7 @@
 	/* MEDIA QUERY TABLET = 1100px */
 	@media (min-width: 68.75rem) {
 		section {
-			padding: 0 9em 3em;
+			padding: 0 9em var(--section-padding-y);
 		}
 
         p{
@@ -106,7 +100,7 @@
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
 		section {
-			padding: 0 15em 3em;
+			padding: 0 15em var(--section-padding-y);
 		}
 	}
 </style>
