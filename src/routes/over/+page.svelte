@@ -10,7 +10,7 @@
 		<div>
 			<Projectenrounddot svgFill="var(--main-color-orange)" />
 			<h2>
-				<strong class="first-four">{data.abouts[0].title.slice(0, 4)}</strong>
+				<strong class="first-four-words">{data.abouts[0].title.slice(0, 4)}</strong>
 				<strong>{data.abouts[0].title.slice(4)}</strong>
 			</h2>
 		</div>
@@ -49,7 +49,7 @@
 		font-family: var(--header-font);
 	}
 
-	.first-four {
+	.first-four-words {
 		color: var(--main-color-brown);
 		margin-right: 0.1em;
 	}
@@ -103,7 +103,7 @@
 			font-size: 3.5em;
 		}
 
-		.first-four {
+		.first-four-words {
 			margin-right: 0.3em;
 		}
 

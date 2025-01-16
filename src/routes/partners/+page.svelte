@@ -7,14 +7,18 @@
 <IntroHeaders heroInfo={data.heroHeaders[4]} />
 
 <main>
-	{#each data.partners as partner}
-		<article>
-			<h2>{partner.title}</h2>
-			<h3>{partner.subhead}</h3>
-			<p>{partner.description}</p>
-			<p>{partner.description2}</p>
-		</article>
-	{/each}
+	{#if data.partners && data.partners.length > 0}
+		{#each data.partners as partner}
+			<article>
+				<h2>{partner.title}</h2>
+				<h3>{partner.subhead}</h3>
+				<p>{partner.description}</p>
+				<p>{partner.description2}</p>
+			</article>
+		{/each}
+	{:else}
+		<p class="error-message">Oeps, er is momenteel geen content beschikbaar</p>
+	{/if}
 </main>
 
 <style>
@@ -53,6 +57,14 @@
 	p {
 		margin-top: 1em;
 		line-height: 1.6em;
+	}
+
+	/* Error styling */
+	.error-message {
+		color: red;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 2em;
 	}
 
 	/* TABLET STYLING */
