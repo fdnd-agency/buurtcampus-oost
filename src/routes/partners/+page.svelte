@@ -17,7 +17,7 @@
 			</article>
 		{/each}
 	{:else}
-		<p class="error-message">Oeps, er zijn momenteel geen content beschikbaar</p>
+		<p class="error-message">Oeps, er is momenteel geen content beschikbaar</p>
 	{/if}
 </main>
 
@@ -90,7 +90,7 @@
 			gap: 2em;
 			padding: 2em;
 			display: grid;
-			margin: 0 auto;
+			/* margin: 0 auto; */
 			align-items: top;
 			justify-content: center;
 			grid-template-columns: repeat(2, 1fr);
