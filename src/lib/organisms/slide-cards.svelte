@@ -20,7 +20,7 @@
             <Button 
                 btnClass="btn-green"
                 href="/stekjes"
-                buttonText="Bekijk de stekjes"
+                btnText="Bekijk de stekjes"
                 svgFill="svg-beige"
             />
         </div>
@@ -42,7 +42,7 @@
             <Button 
                 btnClass="btn-beige"
                 href="/geveltuin"
-                buttonText="Bekijk de tuin"
+                btnText="Bekijk de tuin"
                 svgFill="svg-green"
             />
         </div>
@@ -64,7 +64,7 @@
             <Button 
                 btnClass="btn-brown"
                 href="/zaden"
-                buttonText="Bekijk de zaden"
+                btnText="Bekijk de zaden"
                 svgFill="svg-beige"
             />
         </div>
