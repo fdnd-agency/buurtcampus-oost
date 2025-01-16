@@ -88,7 +88,7 @@
 			margin-left: 1.4rem;
 		}
 
-		.intro-p {
+		.intro-p{
 			width: 38vw;
 			margin-left: 1.4rem;
 		}
@@ -132,14 +132,19 @@
 		}
 	}
 
+	@media (min-width: 48rem) and (max-width: 64rem) {
+		img {
+			width: 45vw;
+		}
+	}
+
 	@media (min-width: 100rem) {
 		h2 {
 			font-size: 5em;
 			margin-top: 1em;
 		}
 
-		h2,
-		.intro-p {
+		h2, .intro-p{
 			margin-left: 2.8rem;
 		}
 
