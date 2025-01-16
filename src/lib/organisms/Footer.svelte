@@ -37,10 +37,10 @@
 	footer {
 		position: relative;
 		width: 100%;
-		height: 70vh;
+		min-height: 70vh;
 		background-color: var(--main-color-beige);
 		overflow: hidden;
-		padding: 1em;
+		padding: var(--section-padding-y) 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -116,7 +116,7 @@
 	@media (max-width: 43.75em) {
 		footer {
 			height: max-content;
-			padding: 4em 1em;
+			padding: var(--section-padding-y) 1em;
 		}
 		.information {
 			flex-direction: column;

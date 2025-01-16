@@ -17,7 +17,7 @@
 		z-index: 2;
 		max-width: 100%;
 		overflow: hidden;
-		padding: 4rem 0 4rem 1rem;
+		padding: var(--section-padding-y) 0 var(--section-padding-y) 1rem;
 	}
 
 	img {
@@ -29,7 +29,7 @@
 	}
 
 	h2 {
-		font-size: 3.5rem;
+		font-size:  clamp(2em, 5vw, 8em);
 		padding-bottom: 0.7em;
 		font-family: var(--sub-header-font);
 		color: var(--main-color-brown);
@@ -40,11 +40,7 @@
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section {
-			padding: 4rem 0 4rem 7.5rem;
-		}
-
-		h2 {
-			font-size: 4.5rem;
+			padding: var(--section-padding-y) 0 var(--section-padding-y) var(--section-padding-x);
 		}
 		img {
 			display: block;
@@ -53,8 +49,8 @@
 
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
-		/* section {
-			padding: 4rem 15em;
-		} */
+		section {
+			padding: var(--section-padding-y) 15em;
+		}
 	}
 </style>
