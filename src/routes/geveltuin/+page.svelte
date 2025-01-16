@@ -77,7 +77,7 @@
 	}
 
 	img {
-		width: 16em;
+		width: 65vw;
 		margin-top: 2rem;
 		border-radius: 1rem;
 	}
