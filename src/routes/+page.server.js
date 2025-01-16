@@ -75,6 +75,12 @@ export async function load() {
 				id
 				title
 			}
+
+			groenebiebs {
+				createdAt
+				description
+				id
+			}
 		}
 	`;
 
