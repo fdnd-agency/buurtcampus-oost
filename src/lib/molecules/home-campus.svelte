@@ -26,7 +26,7 @@
 
 	h2 {
 		font-family: var(--sub-header-font);
-		font-size: 3.5em;
+		font-size:  clamp(2em, 5vw, 8em);
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -68,7 +68,6 @@
 			padding: 0 var(--section-padding-x) var(--section-padding-y);
 		}
 		h2 {
-			font-size: 4.5rem;
 			padding-bottom: 0.7em;
 		}
 		p {

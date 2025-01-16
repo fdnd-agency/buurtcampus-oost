@@ -43,7 +43,7 @@
 
     h2{
         font-family: var(--sub-header-font);
-        font-size: 3.5em;
+        font-size:  clamp(2em, 5vw, 8em);
         line-height: 1;
         padding-bottom: .7em;
     }
@@ -66,9 +66,6 @@
 	@media (min-width: 48rem) {
 		section{
 			padding:  var(--section-padding-y) var(--section-padding-x);
-		}
-		h2{
-            font-size: 4.5rem;
 		}
 	}
 

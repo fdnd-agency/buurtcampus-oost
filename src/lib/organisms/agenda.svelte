@@ -29,7 +29,7 @@
 	}
 
 	h2 {
-		font-size: 3.5rem;
+		font-size:  clamp(2em, 5vw, 8em);
 		padding-bottom: 0.7em;
 		font-family: var(--sub-header-font);
 		color: var(--main-color-brown);
@@ -41,10 +41,6 @@
 	@media (min-width: 48rem) {
 		section {
 			padding: var(--section-padding-y) 0 var(--section-padding-y) var(--section-padding-x);
-		}
-
-		h2 {
-			font-size: 4.5rem;
 		}
 		img {
 			display: block;
