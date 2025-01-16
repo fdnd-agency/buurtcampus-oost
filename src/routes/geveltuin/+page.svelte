@@ -15,7 +15,7 @@
 
 		<p class="intro-p">{data.facadeGardenActions[0].description}</p>
 
-		<ul class="action-ul">
+		<ul class="action-ul" role="contentinfo">
 			{#each bulletPoints1 as point}
 				{#if point.trim() !== ''}
 					<li>{point}</li>
