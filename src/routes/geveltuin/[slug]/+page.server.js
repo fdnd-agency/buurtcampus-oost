@@ -2,9 +2,10 @@ import { gql } from 'graphql-request';
 import { hygraph } from '$lib/utils/hygraph.js';
 
 export const load = async ({ params }) => {
+	const slug = params.slug;
 	let query = gql`
-		query MyQuery {
-			carouselImages(where: { slug: "geveltuin" }) {
+		query MyQuery($slug: String) {
+			carouselImages(where: { slug: $slug }) {
 				id
 				createdAt
 				images {
@@ -13,7 +14,8 @@ export const load = async ({ params }) => {
 			}
 		}
 	`;
-	const slug = params.slug;
-	let result = await hygraph.request(query, { slug });
+
+	let result = hygraph.request(query, { slug });
 	return result;
+	console.log(result);
 };

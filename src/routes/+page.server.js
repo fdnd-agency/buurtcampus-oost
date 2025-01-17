@@ -74,6 +74,14 @@ export async function load() {
 				id
 				title
 			}
+			
+			carouselImages {
+				id
+				createdAt
+				images {
+					url
+				}
+			}
 		}
 	`;
 

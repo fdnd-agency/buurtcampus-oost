@@ -23,6 +23,14 @@ export async function load() {
 				}
 				bulletText1
 			}
+			
+			carouselImages {
+				id
+				createdAt
+				images {
+					url
+				}
+			}
 		}
 	`;
 

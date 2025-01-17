@@ -2,6 +2,7 @@
 	export let data;
 	import { GeveltuinButton } from '$lib/index.js';
 	import { HeroHeaders, IntroHeaders } from '$lib/index.js';
+	import Carousel from './[slug]/+page.svelte';
 
 	const bulletPoints1 = data.facadeGardenActions[0].bulletText1.split('.');
 </script>
@@ -88,7 +89,7 @@
 			margin-left: 1.4rem;
 		}
 
-		.intro-p{
+		.intro-p {
 			width: 38vw;
 			margin-left: 1.4rem;
 		}
@@ -144,7 +145,8 @@
 			margin-top: 1em;
 		}
 
-		h2, .intro-p{
+		h2,
+		.intro-p {
 			margin-left: 2.8rem;
 		}
 
