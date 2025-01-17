@@ -31,7 +31,6 @@
             return base + (isDesktop ? (currentRain !== null ? ` Ook nog ${currentRain.toFixed(1)}mm regen per uur!` : ' Gelukkig droog!') : '');
         }
 
-
         switch (true) {
             case currentTemp >= numericTextTemp + 15:
                 mood = 'boos';
@@ -91,11 +90,11 @@
             isDesktop = window.innerWidth >= 48 * 16; // 48rem to pixels
         };
 
-        checkDesktop(); // Call initially to set the state based on the current window width
-        window.addEventListener('resize', checkDesktop); // Update on resize
+        checkDesktop();
+        window.addEventListener('resize', checkDesktop);
 
         return () => {
-            window.removeEventListener('resize', checkDesktop); // Cleanup on component destruction
+            window.removeEventListener('resize', checkDesktop); 
         };
     });
 </script>

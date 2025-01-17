@@ -1,6 +1,5 @@
 <script>
-    
-    import { HarryWeather, Kenmerken, DropdownStekje } from '$lib/index.js';
+    import { HarryWeather, DropdownStekje } from '$lib/index.js';
     export let data;
 </script>
 

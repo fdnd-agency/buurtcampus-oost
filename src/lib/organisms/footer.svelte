@@ -1,6 +1,5 @@
 <script>
 	export let data;
-	// console.log(data.footers[0])
     import { LeafRight, LeafLeft } from '$lib/index.js';
 </script>
 
@@ -13,6 +12,7 @@
 			<LeafLeft />
 		</div>
 	</section>
+
 	<section class="information">
 			<ul>
 				<li class="title">{data.footers[0].titleAdres}</li>
@@ -45,10 +45,12 @@
         align-items: center;
         justify-content: center;
 	}
+
 	footer a {
 		text-decoration: none;
 		color: inherit;
 	}
+
 	.background {
 		position: absolute;
 		width: 100%;
@@ -61,16 +63,19 @@
 		opacity: .3;
 		transition: .6s;
 	}
+
 	.right-svg {
 		background-image: url(/assets/right-footer-leaf.svg);
 		top: 0;
 		right: -20%;
 	}
+
 	.left-svg {
 		background-image: url(/assets/left-footer-leaf.svg);
 		top: 20%;
 		left: -20%;
 	}
+
 	.information {
 		display: flex;
 		align-items: top;
@@ -79,26 +84,30 @@
 		color: var(--main-color-green);
 		z-index: 1;
 	}
+
     ul { 
         width: 30%;
     }
+
 	li {
 		list-style-type: none;
 	}
+
 	.title {
 		font-size: 2em;
 		margin-bottom: 1rem;
 		font-weight: 700;
 	}
+
     .background:hover .left-svg {
         transform: translateY(20%) translateX(-20%) rotate(-20deg);
     }
+
     .background:hover .right-svg {
         transform: translateY(-5%) translateX(20%) rotate(20deg);
     }
 
 	/* MEDIA QUERY MOBILE = 1400px */
-
 	@media (min-width: 87.5em) {
 		.information {
 			width: 50%;
@@ -118,25 +127,26 @@
 			height: max-content;
 			padding: 4em 1em;
 		}
+
 		.information {
 			flex-direction: column;
 			gap: 1em;
 			width: 80%;
 		}
+
 		ul { 
 			width: 100%;
 			z-index: 2;
 		}
+
 		.title {
 			font-size: 2em;
 			margin-bottom: 0rem;
 			font-weight: 700;
 		}
+
 		.right-svg {
 			display: none;
 		}
 	}
-
-
-
 </style>

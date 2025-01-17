@@ -1,10 +1,9 @@
 <script>
     export let data;
-    
     import { HarryWeather, KenmerkenStekjes } from '$lib/index.js';
+    
     let mood; 
     let environment; 
-
 </script>
 
 <header class="stekjes_detail">
@@ -32,13 +31,13 @@
       height: 40vh;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.1) 100%);
     } 
+
    .header{
       height: 40vh ;
       object-fit: cover;
       margin: -1em 0;
     } 
 
-    /*  Algemene stijl voor de section  */
     section {
       position: relative;
       width: 100%;
@@ -47,21 +46,21 @@
       overflow-x: hidden;
     }
   
-    /*  Stijl voor grote koppen  */
     h1 {
       color: var(--main-color-brown);
       font-family: var(--header-font);
 		  font-size: 2em;
     }
+
     h1::before {
       content: url('/assets/orangeArrow.svg');
       margin-right: .625em;
     }
-    /*  Container styling  */
+
     .container {
       padding: 2em;
     }
-    /*  Styling voor het hoofdcontainer van het stekje  */
+
     .stekjes_detail {
       position: relative;
       width: 100%;
@@ -69,6 +68,7 @@
       margin: 0;
       overflow: hidden;
     }
+
     .stekje-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -80,5 +80,15 @@
     }
     article p {
       margin-top: 1em;
+    }
+
+    @media screen and (max-width: 32em) {
+      .container {
+        padding: 2em 1em;
+      }
+
+      .stekje-container {
+        padding: 1.5em;
+      }
     }
 </style>

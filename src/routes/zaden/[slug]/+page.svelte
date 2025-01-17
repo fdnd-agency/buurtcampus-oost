@@ -38,7 +38,6 @@
       margin: -1em 0;
     } 
 
-    /*  Algemene stijl voor de section  */
     section {
       position: relative;
       width: 100%;
@@ -47,28 +46,21 @@
       overflow-x: hidden;
     }
   
-    /*  Stijl voor grote koppen  */
     h1 {
       color: var(--main-color-brown);
       font-family: var(--header-font);
 		  font-size: 2em;
     }
+
     h1::before {
       content: url('/assets/orangeArrow.svg');
       margin-right: .625em;
     }
-    /*  Container styling  */
+
     .container {
       padding: 2em;
     }
-    /*  Styling voor het hoofdcontainer van het stekje  */
-    .stekjes_detail {
-      position: relative;
-      width: 100%;
-      background-color: var(--main-color-green);
-      margin: 0;
-      overflow-x: hidden;
-    }
+
     .stekje-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -78,8 +70,19 @@
       border-radius: var(--border-bigCard);
       padding: 2em;
     }
+
     article p {
       margin-top: 1em;
+    }
+    
+    @media screen and (max-width: 32em) {
+      .container {
+        padding: 2em 1em;
+      }
+
+      .stekje-container {
+        padding: 1.5em;
+      }
     }
 </style>
   

@@ -24,12 +24,14 @@
 		margin-top: 1em;
 		padding: 2em 1em 0 1em;
 	}
+
 	section {
 		padding: 2em;
 		display: grid;
 		grid-template-columns :repeat(auto-fit, minmax(16em, 1fr));
 		gap: 1rem;
 	}
+
 	article {
 		position: relative;
 		min-height: 50vh;
@@ -39,6 +41,7 @@
 		overflow: hidden;
 		margin-top: 1rem;
 	}
+
 	article a {
 		text-decoration: none;
 
@@ -46,9 +49,15 @@
 		width: 100%;
 		height: 100%;
 	}
+
 	article a:hover img {
 		scale: 1.10;
 	}
+
+	article a:focus img, article a:focus h3 {
+		border: 8px solid var(--card-color-orange);
+	}
+
 	img {
 		position: absolute;
 		left: 0;
@@ -58,6 +67,7 @@
 		object-fit: cover;
 		transition: ease-out .35s;
 	}
+
 	h3 {
 		position: absolute;
 		bottom: 0;
@@ -73,6 +83,7 @@
 		transition: opacity 0.4s ease;
 		align-items: center;
 	}
+
 	article a:hover h3 {
 		opacity: 0;
 	}

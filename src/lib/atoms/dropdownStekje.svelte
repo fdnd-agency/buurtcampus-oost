@@ -2,70 +2,85 @@
     export let data;
 </script>
 
-<details name="kenmerken" open>
-    <summary>
-        <img src="/assets/land-icon.svg" alt="icoon van wereldbol">
-        Landherkomst
-    </summary>
-    <p>{data.stekje.landvanherkomst}</p>
-</details>
+{#if data.stekje.landvanherkomst}
+    <details name="kenmerken" open>
+        <summary>
+            <img src="/assets/land-icon.svg" alt="icoon van wereldbol">
+            Landherkomst
+        </summary>
+        <p>{data.stekje.landvanherkomst}</p>
+    </details>
+{/if}
 
+{#if data.stekje.voeding}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/voeding-icon.svg" alt="Voeding icoon">
+            Voeding
+        </summary>
+        <p>{data.stekje.voeding}</p>
+    </details>
+{/if}
 
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/voeding-icon.svg" alt="Voeding icoon">
-       Voeding
-    </summary>
-    <p>{data.stekje.voeding}</p>
-</details>
+{#if data.stekje.temperatuur}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/temperatuur-icon.svg" alt="Temperatuur icoon">
+            Kenmerken
+        </summary>
+        <p>{data.stekje.temperatuur}</p>
+    </details>
+{/if}
 
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/temperatuur-icon.svg" alt="Voeding icoon">
-        Kenmerken
-    </summary>
-    <p>{data.stekje.temperatuur}</p>
-</details>
+{#if data.stekje.giftig}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/giftig-icon.svg" alt="Giftig icoon">
+            Giftig
+        </summary>
+        <p>{data.stekje.giftig}</p>
+    </details>
+{/if}
 
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/giftig-icon.svg" alt="Voeding icoon">
-        Giftig
-    </summary>
-    <p>{data.stekje.giftig}</p>
-</details>
+{#if data.stekje.verpotten}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/verpotten-icon.svg" alt="Verpotten icoon">
+            Verpotten
+        </summary>
+        <p>{data.stekje.verpotten}</p>
+    </details>
+{/if}
 
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/verpotten-icon.svg" alt="Voeding icoon">
-        Verpotten
-    </summary>
-    <p>{data.stekje.verpotten}</p>
-</details>
+{#if data.stekje.watergeven}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/watergeven-icon.svg" alt="Watergeven icoon">
+            Watergeven
+        </summary>
+        <p>{data.stekje.watergeven}</p>
+    </details>
+{/if}
 
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/watergeven-icon.svg" alt="Voeding icoon">
-        Watergeven
-    </summary>
-    <p>{data.stekje.watergeven}</p>
-</details>
+{#if data.stekje.zonlicht}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/zonlicht-icon.svg" alt="Zonlicht icoon">
+            Zonlicht
+        </summary>
+        <p>{data.stekje.zonlicht}</p>
+    </details>
+{/if}
 
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/zonlicht-icon.svg" alt="Voeding icoon">
-        Zonlicht
-    </summary>
-    <p>{data.stekje.zonlicht}</p>
-</details>
-
-<details name="kenmerken">
-    <summary>
-        <img src="/assets/stekken-icon.svg" alt="Voeding icoon">
-        Stekken
-    </summary>
-    <p>{data.stekje.stekken}</p>
-</details>
+{#if data.stekje.stekken}
+    <details name="kenmerken">
+        <summary>
+            <img src="/assets/stekken-icon.svg" alt="Stekken icoon">
+            Stekken
+        </summary>
+        <p>{data.stekje.stekken}</p>
+    </details>
+{/if}
 
 <style>
     details {
