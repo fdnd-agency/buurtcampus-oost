@@ -92,6 +92,7 @@
     .card-container article{
         border-radius: var(--border-bigCard);
         padding: 1em 0 2em;
+        z-index: 2;
     }   
     .card-stekjes::before, .card-zaden::before, .card-gevel::before{
         width: 20em;
@@ -116,10 +117,11 @@
     }
     h2{
         font-family: var(--header-font);
-        font-size: 3em;
+        font-size: clamp(2em, 5vw, 8em);
         line-height: 95%;
         max-width: 4em;
     }
+
     .card-stekjes{
         background-color: var(--main-color-beige);
         color: var(--main-color-green);
@@ -197,7 +199,6 @@
             height: 48em;
         }
         h2{
-            font-size: 5em;
             width: 4em;
         }
         article picture{
@@ -228,9 +229,7 @@
     /* MEDIA QUERY TABLET = 1100px */
     @media (min-width: 68.75rem) {
 
-        h2{
-            font-size: 6em;
-        }
+    
         .card-container article{
             grid-template-columns: 28em 2fr;
         }
@@ -248,9 +247,8 @@
             width: 26em;
             height: 26em;
         }
-        h2{
-            font-size: 7em;
-        }
+
+        
         .card-container article{
             grid-template-columns: 36em 2fr;
         }
