@@ -2,13 +2,15 @@
 	export let data;
 	import { GeveltuinButton } from '$lib/index.js';
 	import { HeroHeaders, IntroHeaders } from '$lib/index.js';
-	import Carousel from './[slug]/+page.svelte';
+	import ImageCarousel from '$lib/molecules/ImageCarousel.svelte';
 
 	const bulletPoints1 = data.facadeGardenActions[0].bulletText1.split('.');
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[2]} />
 <IntroHeaders heroInfo={data.heroHeaders[2]} />
+
+<ImageCarousel {data}/>
 
 <section class="beige">
 	<article>

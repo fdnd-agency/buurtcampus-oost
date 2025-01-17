@@ -19,3 +19,4 @@ export const load = async ({ params }) => {
 	return result;
 	console.log(result);
 };
+
