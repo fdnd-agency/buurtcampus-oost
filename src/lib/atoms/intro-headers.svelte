@@ -30,7 +30,7 @@
 		section {
 			margin: -2em auto;
 			align-items: center;
-			width: 70vw;
+			width: 81vw;
 			padding: 2em 2em;
 			border-radius: var(--border-card);
 		}
