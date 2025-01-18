@@ -48,6 +48,10 @@
 		section::before {
 			display: none;
 		}
+
+		p {
+			max-width: 65ch;
+		}
 	}
 
 	@media (min-width: 74rem) {
@@ -77,17 +81,13 @@
 	}
 
 	@media (min-width: 100rem) {
-		section {
-			width: 50vw;
-		}
-
 		section::after {
 			width: 15rem;
 			top: -3em;
 		}
 
 		p {
-			width: 35vw;
+			max-width: 65ch;
 			line-height: 1.8em;
 			font-size: 1.5em;
 		}
