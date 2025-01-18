@@ -27,7 +27,7 @@
         font-family: var(--header-font);
         position: absolute;
         color: var(--text-color-white);
-        font-size: clamp(4em, 15vw, 5em);
+        font-size: clamp(3em, 15vw, 5em);
     }
     img{
         width: 100%;
@@ -39,6 +39,7 @@
             font-size: clamp(5.8em, 13vw, 6em);
         }
     }
+    
     @media (min-width: 64rem) {
         .overlay, img{
             width: 100%;
