@@ -15,6 +15,7 @@
 		overflow: hidden;
 		margin: -2em auto;
 		padding: 1.5em;
+		line-height: 1.8em;
 		background-color: var(--main-color-beige);
 		font-weight: 500;
 		font-size: 1em;
@@ -71,12 +72,12 @@
 		}
 
 		p {
-			width: 45vw;
+			max-width: 65ch;
 		}
 	}
 
 	@media (min-width: 100rem) {
-		section{
+		section {
 			width: 50vw;
 		}
 
@@ -87,6 +88,7 @@
 
 		p {
 			width: 35vw;
+			line-height: 1.8em;
 			font-size: 1.5em;
 		}
 	}
