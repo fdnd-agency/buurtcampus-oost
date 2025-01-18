@@ -15,7 +15,7 @@
 
 		<p class="intro-p">{data.facadeGardenActions[0].description}</p>
 
-		<ul class="action-ul" role="contentinfo">
+		<ul class="action-ul">
 			{#each bulletPoints1 as point}
 				{#if point.trim() !== ''}
 					<li>{point}</li>
@@ -88,7 +88,7 @@
 			margin-left: 1.4rem;
 		}
 
-		.intro-p{
+		.intro-p {
 			width: 38vw;
 			margin-left: 1.4rem;
 		}
@@ -144,7 +144,8 @@
 			margin-top: 1em;
 		}
 
-		h2, .intro-p{
+		h2,
+		.intro-p {
 			margin-left: 2.8rem;
 		}
 
