@@ -66,4 +66,10 @@
 	.svg-beige {
 		--svg-fill: var(--main-color-beige);
 	}
+
+	@media (min-width: 64rem){
+		a{
+			margin-left: 1.4rem;
+		}
+	}
 </style>

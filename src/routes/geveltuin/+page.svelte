@@ -13,7 +13,7 @@
 	<article>
 		<h2 class="action-title">{data.facadeGardenActions[0].title}</h2>
 
-		<p>{data.facadeGardenActions[0].description}</p>
+		<p class="intro-p">{data.facadeGardenActions[0].description}</p>
 
 		<ul class="action-ul">
 			{#each bulletPoints1 as point}
@@ -32,7 +32,7 @@
 	</article>
 
 	<picture>
-		<img src={data.facadeGardenActions[0].image.url} alt="geveltuin-roses" />
+		<img src={data.facadeGardenActions[0].image.url} alt="" />
 	</picture>
 </section>
 
@@ -43,9 +43,9 @@
 	}
 
 	.beige {
-		background-color: var(--main-color-beige);
 		margin-top: 5rem;
 		margin-bottom: 1rem;
+		background-color: var(--main-color-beige);
 	}
 
 	p,
@@ -56,8 +56,8 @@
 	}
 
 	ul {
-		list-style-image: url('/assets/circle-green.svg');
 		padding-left: 0;
+		list-style-image: url('/assets/circle-green.svg');
 	}
 
 	li {
@@ -66,10 +66,10 @@
 	}
 
 	h2 {
-		font-family: var(--header-font);
 		font-size: 2em;
 		line-height: 1.1em;
 		color: var(--card-color-green);
+		font-family: var(--header-font);
 	}
 
 	.action-title {
@@ -77,22 +77,28 @@
 	}
 
 	img {
+		width: 65vw;
+		margin-top: 2rem;
 		border-radius: 1rem;
-		width: 19em;
 	}
 
 	@media (min-width: 64rem) {
 		h2 {
 			font-size: 4em;
+			margin-left: 1.4rem;
+		}
+
+		.intro-p {
+			width: 38vw;
+			margin-left: 1.4rem;
 		}
 
 		section {
+			width: 85vw;
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
 			margin: 0 auto;
 			overflow-x: hidden;
-			width: 85vw;
+			align-items: center;
 			border-radius: var(--border-bigCard);
 		}
 
@@ -101,19 +107,19 @@
 		}
 
 		.beige::after {
-			content: url(/assets/leaf-orange.svg);
+			top: -3em;
+			right: -6em;
 			width: 25em;
 			height: 25em;
 			opacity: 0.5;
 			position: absolute;
-			right: -6em;
-			top: -3em;
 			transform: rotate(-45deg);
+			content: url(/assets/leaf-orange.svg);
 		}
 
 		img {
+			width: 30vw;
 			margin-top: 12em;
-			width: 25vw;
 		}
 
 		ul {
@@ -127,19 +133,31 @@
 	}
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
+		img {
+			width: 45vw;
+		}
 	}
 
 	@media (min-width: 100rem) {
 		h2 {
-			font-size: 6em;
+			font-size: 5em;
 			margin-top: 1em;
-			width: min-content;
+		}
+
+		h2,
+		.intro-p {
+			margin-left: 2.8rem;
 		}
 
 		ul,
 		p {
-			font-size: 20px;
+			width: 40vw;
+			font-size: 1.5em;
 			margin-left: 0.5em;
+		}
+
+		img {
+			width: 30vw;
 		}
 	}
 </style>
