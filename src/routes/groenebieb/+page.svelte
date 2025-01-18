@@ -24,6 +24,7 @@
 	article {
 		width: 100%;
 		padding: 2em;
+		margin-top: 5em;
 		background-color: var(--main-color-beige);
 	}
 
