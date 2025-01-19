@@ -84,6 +84,10 @@
 		left: -20%;
 	}
 
+	.left-svg, .right-svg {
+    	transition: transform 0.3s ease-in-out; 
+	}
+
 	.information {
 		display: flex;
 		align-items: top;
@@ -114,6 +118,21 @@
     .background:hover .right-svg {
         transform: translateY(-5%) translateX(20%) rotate(20deg);
     }
+
+	.background .left-svg, .background .right-svg {
+    	transition-delay: 0.1s;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.left-svg, .right-svg {
+			transition: none;
+			transform: none; 
+		}
+		.background:hover .left-svg,
+		.background:hover .right-svg {
+			transform: unset;
+		}
+	}
 
 	/* MEDIA QUERY MOBILE = 1400px */
 	@media (min-width: 87.5em) {
