@@ -1,9 +1,10 @@
 <script>
     export let data;
-    import { HarryWeather, KenmerkenStekjes } from '$lib/index.js';
+    import { HarryWeather, Kenmerken } from '$lib/index.js';
     
     let mood; 
     let environment; 
+    // console.log(type)
 </script>
 
 <header class="stekjes_detail">
@@ -18,7 +19,8 @@
         <h1>{data.stekje.naam}</h1>
         <p>{data.stekje.beschrijving}</p>
     </article>
-    <KenmerkenStekjes {data} />
+    
+    <Kenmerken {data} type="stekje" />
   </div>
 </section>
   

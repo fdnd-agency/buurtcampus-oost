@@ -7,8 +7,7 @@ export { default as HarryWeather } from '$lib/atoms/buttons/harryWeather.svelte'
 export { default as Switch } from '$lib/atoms/buttons/switch.svelte';
 export { default as AgendaButton } from '$lib/atoms/buttons/agenda-button.svelte';
 export { default as GeveltuinButton } from '$lib/atoms/buttons/geveltuin-button.svelte';
-export { default as DropdownStekje } from '$lib/atoms/dropdownStekje.svelte';
-export { default as DropdownZaden } from '$lib/atoms/dropdownZaden.svelte';
+export { default as Dropdown } from '$lib/atoms/dropdown.svelte';
 
 // === Icons ===
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
@@ -38,8 +37,7 @@ export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte
 export { default as HomeCampus } from '$lib/molecules/home-campus.svelte';
 export { default as HomePartners } from '$lib/molecules/home-partners.svelte';
 export { default as ContactForm } from '$lib/molecules/contact-form.svelte';
-export { default as KenmerkenStekjes } from '$lib/molecules/kenmerkenStekjes.svelte';
-export { default as KenmerkenZaden } from '$lib/molecules/kenmerkenZaden.svelte';
+export { default as Kenmerken } from '$lib/molecules/kenmerken.svelte';
 
 // =========== ORGANISMS ===========
 
