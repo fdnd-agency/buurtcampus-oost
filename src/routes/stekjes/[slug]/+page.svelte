@@ -18,6 +18,7 @@
     <article>
         <h1>{data.stekje.naam}</h1>
         <p>{data.stekje.beschrijving}</p>
+        <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="15em" />
     </article>
     
     <Features {data} type="stekje" />
@@ -80,17 +81,40 @@
       border-radius: var(--border-bigCard);
       padding: 2em;
     }
-    article p {
-      margin-top: 1em;
+
+    article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    @media screen and (max-width: 32em) {
+    article img {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+      border-radius: var(--border-card);
+    }
+
+    @media screen and (min-width: 32em) {
       .container {
         padding: 2em 1em;
       }
 
       .stekje-container {
         padding: 1.5em;
+      }
+
+      article img {
+        height: 20rem;
+      }
+    }
+
+    /* desktop */
+    @media screen and (min-width: 64em) {
+      article img {
+        width: 15em; 
+        height: auto; 
       }
     }
 </style>
