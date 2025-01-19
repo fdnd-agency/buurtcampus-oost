@@ -3,82 +3,82 @@
 </script>
 
 {#if data.stekje.landvanherkomst}
-    <details name="kenmerken" open>
-        <summary>
-            <img src="/assets/land-icon.svg" alt="icoon van wereldbol">
+    <details data-name="kenmerken" open>
+        <summary id="landherkomst-summary">
+            <img src="/assets/land-icon.svg" alt="icoon van wereldbol" aria-hidden="true">
             Landherkomst
         </summary>
-        <p>{data.stekje.landvanherkomst}</p>
+        <p aria-labelledby="landherkomst-summary">{data.stekje.landvanherkomst}</p>
     </details>
 {/if}
 
 {#if data.stekje.voeding}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/voeding-icon.svg" alt="Voeding icoon">
+    <details data-name="kenmerken">
+        <summary id="voeding-summary">
+            <img src="/assets/voeding-icon.svg" alt="Voeding icoon" aria-hidden="true">
             Voeding
         </summary>
-        <p>{data.stekje.voeding}</p>
+        <p aria-labelledby="voeding-summary">{data.stekje.voeding}</p>
     </details>
 {/if}
 
 {#if data.stekje.temperatuur}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/temperatuur-icon.svg" alt="Temperatuur icoon">
+    <details data-name="kenmerken">
+        <summary id="temperatuur-summary">
+            <img src="/assets/temperatuur-icon.svg" alt="Temperatuur icoon" aria-hidden="true">
             Kenmerken
         </summary>
-        <p>{data.stekje.temperatuur}</p>
+        <p aria-labelledby="temperatuur-summary">{data.stekje.temperatuur}</p>
     </details>
 {/if}
 
 {#if data.stekje.giftig}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/giftig-icon.svg" alt="Giftig icoon">
+    <details data-name="kenmerken">
+        <summary id="giftig-summary">
+            <img src="/assets/giftig-icon.svg" alt="Giftig icoon" aria-hidden="true">
             Giftig
         </summary>
-        <p>{data.stekje.giftig}</p>
+        <p aria-labelledby="giftig-summary">{data.stekje.giftig}</p>
     </details>
 {/if}
 
 {#if data.stekje.verpotten}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/verpotten-icon.svg" alt="Verpotten icoon">
+    <details data-name="kenmerken">
+        <summary id="verpotten-summary">
+            <img src="/assets/verpotten-icon.svg" alt="Verpotten icoon" aria-hidden="true">
             Verpotten
         </summary>
-        <p>{data.stekje.verpotten}</p>
+        <p aria-labelledby="verpotten-summary">{data.stekje.verpotten}</p>
     </details>
 {/if}
 
 {#if data.stekje.watergeven}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/watergeven-icon.svg" alt="Watergeven icoon">
+    <details data-name="kenmerken">
+        <summary id="watergeven-summary">
+            <img src="/assets/watergeven-icon.svg" alt="Watergeven icoon" aria-hidden="true">
             Watergeven
         </summary>
-        <p>{data.stekje.watergeven}</p>
+        <p aria-labelledby="watergeven-summary">{data.stekje.watergeven}</p>
     </details>
 {/if}
 
 {#if data.stekje.zonlicht}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/zonlicht-icon.svg" alt="Zonlicht icoon">
+    <details data-name="kenmerken">
+        <summary id="zonlicht-summary">
+            <img src="/assets/zonlicht-icon.svg" alt="Zonlicht icoon" aria-hidden="true">
             Zonlicht
         </summary>
-        <p>{data.stekje.zonlicht}</p>
+        <p aria-labelledby="zonlicht-summary">{data.stekje.zonlicht}</p>
     </details>
 {/if}
 
 {#if data.stekje.stekken}
-    <details name="kenmerken">
-        <summary>
-            <img src="/assets/stekken-icon.svg" alt="Stekken icoon">
+    <details data-name="kenmerken">
+        <summary id="stekken-summary">
+            <img src="/assets/stekken-icon.svg" alt="Stekken icoon" aria-hidden="true">
             Stekken
         </summary>
-        <p>{data.stekje.stekken}</p>
+        <p aria-labelledby="stekken-summary">{data.stekje.stekken}</p>
     </details>
 {/if}
 

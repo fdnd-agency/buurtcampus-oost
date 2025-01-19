@@ -3,7 +3,7 @@
 </script>
 
 {#if data.zaden.landvanherkomst}
-    <details name="kenmerken" open>
+    <details data-name="kenmerken" open>
         <summary>
             <img src="/assets/land-icon.svg" alt="icoon van wereldbol">
             Landherkomst
@@ -13,7 +13,7 @@
 {/if}
 
 {#if data.zaden.voeding}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/voeding-icon.svg" alt="Voeding icoon">
             Voeding
@@ -23,7 +23,7 @@
 {/if}
 
 {#if data.zaden.temperatuur}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/temperatuur-icon.svg" alt="Temperatuur icoon">
             Kenmerken
@@ -33,7 +33,7 @@
 {/if}
 
 {#if data.zaden.giftig}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/giftig-icon.svg" alt="Giftig icoon">
             Giftig
@@ -43,7 +43,7 @@
 {/if}
 
 {#if data.zaden.verpotten}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/verpotten-icon.svg" alt="Verpotten icoon">
             Verpotten
@@ -53,7 +53,7 @@
 {/if}
 
 {#if data.zaden.watergeven}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/watergeven-icon.svg" alt="Watergeven icoon">
             Watergeven
@@ -63,7 +63,7 @@
 {/if}
 
 {#if data.zaden.zonlicht}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/zonlicht-icon.svg" alt="Zonlicht icoon">
             Zonlicht
@@ -73,7 +73,7 @@
 {/if}
 
 {#if data.zaden.stekken}
-    <details name="kenmerken">
+    <details data-name="kenmerken">
         <summary>
             <img src="/assets/stekken-icon.svg" alt="Stekken icoon">
             Stekken
