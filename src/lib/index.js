@@ -37,7 +37,7 @@ export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte
 export { default as HomeCampus } from '$lib/molecules/home-campus.svelte';
 export { default as HomePartners } from '$lib/molecules/home-partners.svelte';
 export { default as ContactForm } from '$lib/molecules/contact-form.svelte';
-export { default as Kenmerken } from '$lib/molecules/kenmerken.svelte';
+export { default as Features } from '$lib/molecules/features.svelte';
 
 // =========== ORGANISMS ===========
 

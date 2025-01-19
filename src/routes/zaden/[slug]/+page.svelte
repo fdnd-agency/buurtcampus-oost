@@ -1,7 +1,7 @@
 <script>
   export let data;
   
-  import { Kenmerken } from '$lib/index.js';
+  import { Features } from '$lib/index.js';
   let mood; 
   let environment; 
 
@@ -19,7 +19,7 @@
         <p>{data.zaden.beschrijving}</p>
     </article>
 
-    <Kenmerken {data} type="zaden" />
+    <Features {data} type="zaden" />
   </div>
 </section>
   
