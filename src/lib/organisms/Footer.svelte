@@ -134,6 +134,7 @@
 		footer {
 			height: max-content;
 			padding: var(--section-padding-y) 1em;
+			justify-content: unset;
 		}
 
 		.information {
