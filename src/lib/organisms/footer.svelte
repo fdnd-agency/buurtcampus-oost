@@ -17,13 +17,21 @@
 			<ul>
 				<li class="title">{data.footers[0].titleAdres}</li>
 				<li>{data.footers[0].location}</li>
-				<li><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={data.footers[0].adres}">{data.footers[0].adres}</a></li>
+				<li>
+					<a 
+						target="_blank" 
+						href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(data.footers[0].adres)}`}
+					>
+						{data.footers[0].adres}
+					</a>
+				</li>
 				<li>{data.footers[0].postalCode}</li>
 			</ul>
 			<ul>
 				<li class="title">{data.footers[0].titleContact}</li>
-				<li><a href="mailto:data.footers[0].email">{data.footers[0].email}</a></li>
-				<li><a href="tel:{data.footers[0].number}">{data.footers[0].number}</a></li>
+				<li><a href="{`mailto:${data.footers[0].email}`}">{data.footers[0].email}</a></li>
+				<li><a href={`tel:${data.footers[0].number.replace(/\s+/g, '')}`}>{data.footers[0].number}</a></li>
+				
 				<li>{data.footers[0].btwCode}</li>
 			</ul>
 			<ul>
