@@ -41,7 +41,6 @@
 	p {
 		padding: 0.3em;
 		max-width: 32em;
-		font-family: var(--paragraph-font);
 	}
 
 	p:nth-of-type(1) {

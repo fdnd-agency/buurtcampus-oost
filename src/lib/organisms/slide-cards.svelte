@@ -166,7 +166,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5em;
-        font-family: var(--paragraph-font);
 	}
 
 	.paragraph-card p {

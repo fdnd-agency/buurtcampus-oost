@@ -41,7 +41,6 @@
 	p {
 		max-width: 21em;
 		margin-bottom: 2rem;
-		font-family: var(--paragraph-font);
 	}
 
 	/* MEDIA QUERY TABLET = 768px */
