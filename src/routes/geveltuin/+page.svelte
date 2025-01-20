@@ -24,9 +24,9 @@
 		</ul>
 
 		<GeveltuinButton
-			btnClass="btn-green"
+			buttonClass="btn-green"
 			href="/contact"
-			btnText="Aanmelden"
+			buttonText="Aanmelden"
 			svgFill="svg-beige"
 		/>
 	</article>
@@ -138,10 +138,10 @@
 			margin-left: 0.6rem;
 		}
 
-		p{
+		p {
 			width: 55vw;
 		}
-		
+
 		img {
 			width: 45vw;
 		}
