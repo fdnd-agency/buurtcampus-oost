@@ -40,6 +40,7 @@
 
 	p {
 		max-width: 21em;
+		line-height: 2em;
 		margin-bottom: 2rem;
 	}
 

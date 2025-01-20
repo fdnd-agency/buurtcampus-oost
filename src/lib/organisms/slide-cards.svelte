@@ -9,6 +9,7 @@
 			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.cardSlides[0].titleCard}</h2>
 		</header>
+
 		<picture>
 			<img
 				width="783"
@@ -18,10 +19,12 @@
 				alt="{data.cardSlides[0].imageCardAltText}}"
 			/>
 		</picture>
+
 		<div class="paragraph-card">
 			<p>{data.cardSlides[0].paragraphCard}</p>
 			<p>{data.cardSlides[0].paragraphCard2}</p>
 		</div>
+
 		<div class="btn-container">
 			<Button
 				btnClass="btn-green"
@@ -37,6 +40,7 @@
 			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.cardSlides[2].titleCard}</h2>
 		</header>
+
 		<picture>
 			<img
 				width="783"
@@ -46,10 +50,12 @@
 				alt="{data.cardSlides[2].imageCardAltText}}"
 			/>
 		</picture>
+
 		<div class="paragraph-card">
 			<p>{data.cardSlides[2].paragraphCard}</p>
 			<p>{data.cardSlides[2].paragraphCard2}</p>
 		</div>
+
 		<div class="btn-container">
 			<Button
 				btnClass="btn-beige"
@@ -65,6 +71,7 @@
 			<Dot svgFill="var(--main-color-beige)" />
 			<h2>{data.cardSlides[1].titleCard}</h2>
 		</header>
+
 		<picture>
 			<img
 				width="783"
@@ -74,12 +81,39 @@
 				alt="{data.cardSlides[1].imageCardAltText}}"
 			/>
 		</picture>
+
 		<div class="paragraph-card">
 			<p>{data.cardSlides[1].paragraphCard}</p>
 			<p>{data.cardSlides[1].paragraphCard2}</p>
 		</div>
+		
 		<div class="btn-container">
 			<Button btnClass="btn-brown" href="/zaden" buttonText="Bekijk de zaden" svgFill="svg-beige" />
+		</div>
+	</article>
+
+	<article class="groenebieb">
+		<header class="header-card">
+			<Dot svgFill="var(--main-color-beige)" />
+			<h2>{data.cardSlides[3].titleCard}</h2>
+		</header>
+
+		<picture>
+			<img
+				width="783"
+				height="982"
+				loading="lazy"
+				src={data.cardSlides[3].imageCard.url}
+				alt=""
+			/>
+		</picture>
+
+		<div class="paragraph-card">
+			<p>{data.cardSlides[3].paragraphCard}</p>
+		</div>
+		
+		<div class="btn-container">
+			<Button btnClass="btn-green" href="/groenebieb" buttonText="Bekijk de groene bieb" svgFill="svg-beige" />
 		</div>
 	</article>
 </div>
@@ -109,7 +143,8 @@
 
 	.card-stekjes::before,
 	.card-zaden::before,
-	.card-gevel::before {
+	.card-gevel::before,
+	.groenebieb::before {
 		width: 20em;
 		height: 20em;
 		position: absolute;
@@ -119,7 +154,8 @@
 	}
 
 	.card-stekjes::before,
-	.card-zaden::before {
+	.card-zaden::before,
+	.groenebieb::before {
 		content: url(/assets/leaf-orange.svg);
 	}
 
@@ -146,7 +182,7 @@
 		max-width: 4em;
 	}
 
-	.card-stekjes {
+	.card-stekjes, .groenebieb {
 		background-color: var(--main-color-beige);
 		color: var(--main-color-green);
 	}
@@ -171,6 +207,10 @@
 	.paragraph-card p {
 		max-width: 24em;
 
+	}
+
+	p{
+		line-height: 2em;
 	}
 
 	.paragraph-card p:nth-of-type(2) {

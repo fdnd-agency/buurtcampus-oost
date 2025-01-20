@@ -90,6 +90,11 @@
 		.close-button {
 			margin-left: 23em;
 		}
+
+		button {
+			position: relative;
+			z-index: 100;
+		}
 	}
 
 	@media (min-width: 100rem) {

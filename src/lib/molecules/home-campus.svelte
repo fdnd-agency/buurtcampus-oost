@@ -41,6 +41,7 @@
 	p {
 		padding: 0.3em;
 		max-width: 32em;
+		line-height: 2em;
 	}
 
 	p:nth-of-type(1) {

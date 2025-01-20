@@ -50,6 +50,7 @@
 
     p{
         max-width: 50em;
+        line-height: 2em;
     }
 
     p:nth-of-type(1){
