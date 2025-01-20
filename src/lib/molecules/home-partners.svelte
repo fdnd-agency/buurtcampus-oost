@@ -9,7 +9,7 @@
     <p>{data.partnersInfos[0].paragraph2}</p>
     <Button 
         href="/partners"
-        buttonText="Bekijk onze partners"
+        btnText="Bekijk onze partners"
         btnClass="btn-beige"
         svgFill="svg-green"
     />
