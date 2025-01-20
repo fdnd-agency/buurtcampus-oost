@@ -65,4 +65,11 @@
 			padding: var(--section-padding-y) 15em;
 		}
 	}
+
+	@media (min-width: 100rem) {
+		p {
+			position: relative;
+			z-index: 100;
+		}
+	}
 </style>
