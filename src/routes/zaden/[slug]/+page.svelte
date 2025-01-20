@@ -62,17 +62,17 @@
   }
 
   .container {
-    padding: 2em;
+    padding: 2em 1em;
   }
 
   .stekje-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(calc(22em - 2 * 1.5em), 1fr));
     grid-gap: 2rem;
     width: 100%;
     background-color: #f9e9c2;
     border-radius: var(--border-bigCard);
-    padding: 2em;
+    padding: 1.5em 1em;
   }
   
   article {
@@ -90,25 +90,25 @@
   }
 
   @media screen and (min-width: 32em) {
-    .container {
-      padding: 2em 1em;
+      .container {
+        padding: 2em;
+      }
+
+      .stekje-container {
+        padding: 2em;
+      }
+
+      article img {
+        height: 20rem;
+      }
     }
 
-    .stekje-container {
-      padding: 1.5em;
+    /* desktop */
+    @media screen and (min-width: 64em) {
+      article img {
+        width: 15em; 
+        height: auto; 
+      }
     }
-
-    article img {
-      height: 20rem;
-    }
-  }
-
-  /* desktop */
-  @media screen and (min-width: 64em) {
-    article img {
-      width: 15em; 
-      height: auto; 
-    }
-  }
 </style>
   

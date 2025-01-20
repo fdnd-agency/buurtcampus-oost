@@ -14,7 +14,7 @@
 {/if}
 
 {#if data[type]?.voeding}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="voeding-summary">
             <img src="/assets/voeding-icon.svg" alt="Voeding icoon" aria-hidden="true">
             Voeding
@@ -24,7 +24,7 @@
 {/if}
 
 {#if data[type]?.temperatuur}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="temperatuur-summary">
             <img src="/assets/temperatuur-icon.svg" alt="Temperatuur icoon" aria-hidden="true">
             Kenmerken
@@ -34,7 +34,7 @@
 {/if}
 
 {#if data[type]?.giftig}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="giftig-summary">
             <img src="/assets/giftig-icon.svg" alt="Giftig icoon" aria-hidden="true">
             Giftig
@@ -44,7 +44,7 @@
 {/if}
 
 {#if data[type]?.verpotten}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="verpotten-summary">
             <img src="/assets/verpotten-icon.svg" alt="Verpotten icoon" aria-hidden="true">
             Verpotten
@@ -54,7 +54,7 @@
 {/if}
 
 {#if data[type]?.watergeven}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="watergeven-summary">
             <img src="/assets/watergeven-icon.svg" alt="Watergeven icoon" aria-hidden="true">
             Watergeven
@@ -64,7 +64,7 @@
 {/if}
 
 {#if data[type]?.zonlicht}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="zonlicht-summary">
             <img src="/assets/zonlicht-icon.svg" alt="Zonlicht icoon" aria-hidden="true">
             Zonlicht
@@ -74,7 +74,7 @@
 {/if}
 
 {#if data[type]?.stekken}
-    <details data-name="kenmerken">
+    <details data-name="kenmerken" open>
         <summary id="stekken-summary">
             <img src="/assets/stekken-icon.svg" alt="Stekken icoon" aria-hidden="true">
             Stekken
