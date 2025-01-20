@@ -285,9 +285,13 @@
 			width: 26em;
 			height: 26em;
 		}
+
 		h2 {
 			font-size: 7em;
 		}
+
+
+
 		.card-container article {
 			grid-template-columns: 36em 2fr;
 		}
