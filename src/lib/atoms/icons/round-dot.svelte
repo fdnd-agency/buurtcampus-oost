@@ -15,8 +15,7 @@
 
 <style>
 	svg {
-		margin: 0.7em;
-		z-index: 1;
+		display: none;
 	}
 
 	/* MEDIA QUERY TABLET = 768px */
