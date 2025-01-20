@@ -7,6 +7,8 @@ export { default as HarryWeather } from '$lib/atoms/buttons/harryWeather.svelte'
 export { default as Switch } from '$lib/atoms/buttons/switch.svelte';
 export { default as AgendaButton } from '$lib/atoms/buttons/agenda-button.svelte';
 export { default as GeveltuinButton } from '$lib/atoms/buttons/geveltuin-button.svelte';
+export { default as DropdownStekje } from '$lib/atoms/dropdownStekje.svelte';
+export { default as DropdownZaden } from '$lib/atoms/dropdownZaden.svelte';
 
 // === Icons ===
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
@@ -23,8 +25,9 @@ export { default as FontIncrease } from '$lib/atoms/icons/font-increase.svelte';
 export { default as Translate } from '$lib/atoms/icons/translate.svelte';
 export { default as Logo } from '$lib/atoms/icons/logo.svelte';
 export { default as Logoround } from '$lib/atoms/icons/logoround.svelte';
-// export { default as OtherRoundDot } from '$lib/atoms/icons/other-round-dot.svelte';
+export { default as Projectenrounddot } from '$lib/atoms/icons/Projecten-round-dot.svelte';
 export { default as ArrowDown } from '$lib/atoms/icons/arrow-down.svelte';
+
 
 // =========== MOLECULES ===========
 
@@ -35,6 +38,8 @@ export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte
 export { default as HomeCampus } from '$lib/molecules/home-campus.svelte';
 export { default as HomePartners } from '$lib/molecules/home-partners.svelte';
 export { default as ContactForm } from '$lib/molecules/contact-form.svelte';
+export { default as KenmerkenStekjes } from '$lib/molecules/kenmerkenStekjes.svelte';
+export { default as KenmerkenZaden } from '$lib/molecules/kenmerkenZaden.svelte';
 
 // =========== ORGANISMS ===========
 

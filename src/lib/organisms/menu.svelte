@@ -101,7 +101,7 @@
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
 						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
-						<li role="menuitem"><a href="/">Groenebieb</a></li>
+						<li role="menuitem"><a href="/groenebieb">Groenebieb</a></li>
 					</ul>
 				</li>
 				<li role="menuitem"><a href="/agenda">Agenda</a></li>
@@ -159,6 +159,7 @@
 	dialog[open] {
 		display: flex;
 		position: fixed;
+		font-size: 0.8em;
 		margin-left: 1rem;
 		align-items: center;
 		justify-content: center;
@@ -182,7 +183,7 @@
 	}
 
 	ul:first-child {
-		font-size: 3.5em;
+		font-size: 4em;
 	}
 
 	li {
@@ -221,6 +222,7 @@
 
 		dialog {
 			padding: 0;
+			z-index: 1000;
 			width: auto;
 			height: auto;
 			display: flex;
