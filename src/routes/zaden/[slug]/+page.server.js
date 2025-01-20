@@ -13,6 +13,8 @@ export const load = async ({ params }) => {
                 landvanherkomst
 				fotos {
 					url
+					width
+                  	height
 				}
 				watergeven
                 voeding
