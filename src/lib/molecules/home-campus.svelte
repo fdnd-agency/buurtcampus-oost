@@ -26,14 +26,14 @@
 
 	h2 {
 		font-family: var(--sub-header-font);
-		font-size:  clamp(2em, 5vw, 8em);
+		font-size: clamp(2em, 5vw, 8em);
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		line-height: 1;
 		padding-bottom: 0.7em;
 	}
-	
+
 	h2 span:nth-of-type(2) {
 		color: var(--main-color-orange);
 	}
@@ -80,19 +80,21 @@
 			padding: 0 9em var(--section-padding-y);
 		}
 
-        p{
-            margin-bottom: inherit;
-        }
+		p {
+			margin-bottom: inherit;
+		}
 	}
 
 	/* MEDIA QUERY TABLET L = 1250px */
 	@media (min-width: 78.1rem) {
 		section {
 			height: 70vh;
+			margin-left: -1.6rem;
 		}
 
-		article, p{
-			max-width: 43em
+		article,
+		p {
+			max-width: 43em;
 		}
 	}
 
@@ -102,9 +104,9 @@
 			padding: 0 15em var(--section-padding-y);
 		}
 
-		article, p{
-			max-width: 43em
+		article,
+		p {
+			max-width: 43em;
 		}
-
 	}
 </style>
