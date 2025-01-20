@@ -6,7 +6,8 @@
 
 <section>
 	<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
-	<h2>Agenda</h2>
+	<h2>{data.agendaTexts[1].title}</h2>
+	<p>{data.agendaTexts[1].agendaParagraph1}</p>
 	<AgendaInfoButton />
 	<AgendaCarousel {data} />
 </section>
@@ -23,13 +24,13 @@
 	img {
 		display: none;
 		position: absolute;
-		rotate: 120deg;
-		left: 0;
+		rotate: 60deg;
+		left: -13em;
 		transform: translateY(200px) translateX(150px);
 	}
 
 	h2 {
-		font-size:  clamp(2em, 5vw, 8em);
+		font-size: clamp(2em, 5vw, 8em);
 		padding-bottom: 0.7em;
 		font-family: var(--sub-header-font);
 		color: var(--main-color-brown);
@@ -37,11 +38,23 @@
 		z-index: 3;
 	}
 
+	p {
+		max-width: 21em;
+		margin-bottom: 2rem;
+		font-family: var(--paragraph-font);
+	}
+
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section {
 			padding: var(--section-padding-y) 0 var(--section-padding-y) var(--section-padding-x);
 		}
+
+		p {
+			z-index: 100;
+			max-width: 38em;
+		}
+
 		img {
 			display: block;
 		}
