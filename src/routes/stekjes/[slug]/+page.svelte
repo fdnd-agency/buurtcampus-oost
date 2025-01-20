@@ -75,7 +75,7 @@
 
     .stekje-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
       grid-gap: 2rem;
       width: 100%;
       background-color: #f9e9c2;
