@@ -9,7 +9,7 @@
 <header class="stekjes_detail">
   <div class="overlay"></div>
   <HarryWeather textTemp={data.stekje.absoluteTemperatuur}, name={data.stekje.naam} />
-  <img src="{data.stekje.fotos[0].url}" alt="{data.stekje.naam}" width="100%" height="20%" class="header" loading="lazy">
+  <img src="{data.stekje.fotos[0].url}" alt="" width={data.stekje.fotos[0]?.width || 'auto'} height={data.stekje.fotos[0]?.height || 'auto'}  class="header" loading="lazy">
 </header>
   
 <section class="container">
@@ -34,6 +34,7 @@
 
    .header{
       height: 40vh ;
+      width: 100%;
       object-fit: cover;
       margin: -1em 0;
     } 
