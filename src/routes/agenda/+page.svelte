@@ -18,7 +18,7 @@
 				<span>{data.agendas[0].price}</span>
 				<time>{data.agendas[0].time}</time>
 				<time>{data.agendas[0].date}</time>
-				<Button href="/agenda" buttonText="Meld je aan" btnClass="btn-green" svgFill="svg-beige" />
+				<Button href="/agenda" btnCText="Meld je aan" btnClass="btn-green" svgFill="svg-beige" />
 			</div>
 		</li>
 
