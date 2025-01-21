@@ -17,13 +17,21 @@
 			<ul>
 				<li class="title">{data.footers[0].titleAdres}</li>
 				<li>{data.footers[0].location}</li>
-				<li><a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={data.footers[0].adres}">{data.footers[0].adres}</a></li>
+				<li>
+					<a 
+						target="_blank" 
+						href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(data.footers[0].adres)}`}
+					>
+						{data.footers[0].adres}
+					</a>
+				</li>
 				<li>{data.footers[0].postalCode}</li>
 			</ul>
 			<ul>
 				<li class="title">{data.footers[0].titleContact}</li>
-				<li><a href="mailto:data.footers[0].email">{data.footers[0].email}</a></li>
-				<li><a href="tel:{data.footers[0].number}">{data.footers[0].number}</a></li>
+				<li><a href="{`mailto:${data.footers[0].email}`}">{data.footers[0].email}</a></li>
+				<li><a href={`tel:${data.footers[0].number.replace(/\s+/g, '')}`}>{data.footers[0].number}</a></li>
+				
 				<li>{data.footers[0].btwCode}</li>
 			</ul>
 			<ul>
@@ -76,6 +84,10 @@
 		left: -20%;
 	}
 
+	.left-svg, .right-svg {
+    	transition: transform 0.3s ease-in-out; 
+	}
+
 	.information {
 		display: flex;
 		align-items: top;
@@ -107,6 +119,21 @@
         transform: translateY(-5%) translateX(20%) rotate(20deg);
     }
 
+	.background .left-svg, .background .right-svg {
+    	transition-delay: 0.1s;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.left-svg, .right-svg {
+			transition: none;
+			transform: none; 
+		}
+		.background:hover .left-svg,
+		.background:hover .right-svg {
+			transform: unset;
+		}
+	}
+
 	/* MEDIA QUERY MOBILE = 1400px */
 	@media (min-width: 87.5em) {
 		.information {
@@ -126,6 +153,7 @@
 		footer {
 			height: max-content;
 			padding: var(--section-padding-y) 1em;
+			justify-content: unset;
 		}
 
 		.information {
