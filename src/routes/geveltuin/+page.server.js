@@ -6,10 +6,18 @@ export async function load() {
 	let query = gql`
 		query MyQuery {
 			heroHeaders {
+				id
+				createdAt
 				heading1
 				description
 				image {
 					url
+				}
+
+				carouselImage {
+					images {
+						url
+					}
 				}
 			}
 
@@ -22,14 +30,6 @@ export async function load() {
 					url
 				}
 				bulletText1
-			}
-			
-			carouselImages {
-				id
-				createdAt
-				images {
-					url
-				}
 			}
 		}
 	`;

@@ -5,12 +5,21 @@ export async function load() {
 	let query = gql`
 		query MyQuery {
 			heroHeaders {
+				id
+				createdAt
 				heading1
 				description
 				image {
 					url
 				}
+
+				carouselImage {
+					images {
+						url
+					}
+				}
 			}
+
 			overviewPages {
 				titel
 				product {

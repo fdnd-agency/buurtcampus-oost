@@ -1,10 +1,7 @@
 <script>
-	export let data;
-
-	console.log('Data in front-end:', data);
-
-	// Controleer of er carouselImages zijn en haal de lijst van afbeeldingen op
-	let images = data.carouselImages?.[0]?.images ?? [];
+	export let heroInfo; 
+	let images = heroInfo.carouselImage[0].images; 
+	console.log(images) 
 </script>
 
 <section class="carousel-container">
