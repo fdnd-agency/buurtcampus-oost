@@ -19,7 +19,6 @@
 		background-color: var(--main-color-beige);
 		font-weight: 500;
 		font-size: 1em;
-		border-radius: var(--border-card); /* Algemeen toepasbaar */
 	}
 
 	section::before {
@@ -40,6 +39,7 @@
 			align-items: center;
 			width: 81vw;
 			padding: 2em 2em;
+			border-radius: var(--border-card); 
 		}
 
 		section::after {
@@ -74,6 +74,7 @@
 	/* Groot scherm - vanaf 100rem */
 	@media (min-width: 100rem) {
 		section {
+			width: 71vw;
 			line-height: 3em;
 		}
 
@@ -83,6 +84,7 @@
 		}
 
 		p {
+			max-width: 65ch;
 			font-size: 1.5em;
 		}
 	}
