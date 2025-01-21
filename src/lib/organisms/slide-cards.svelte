@@ -94,7 +94,7 @@
 
 	<article class="groenebieb">
 		<header class="header-card">
-			<Dot svgFill="var(--main-color-beige)" />
+			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.cardSlides[3].titleCard}</h2>
 		</header>
 
