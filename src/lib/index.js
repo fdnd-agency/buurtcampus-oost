@@ -6,6 +6,7 @@ export { default as Button } from '$lib/atoms/buttons/button.svelte';
 export { default as HarryWeather } from '$lib/atoms/buttons/harryWeather.svelte';
 export { default as AgendaButton } from '$lib/atoms/buttons/agenda-button.svelte';
 export { default as GeveltuinButton } from '$lib/atoms/buttons/geveltuin-button.svelte';
+export { default as Dropdown } from '$lib/atoms/dropdown.svelte';
 
 // === Icons ===
 export { default as MenuIcon } from '$lib/atoms/icons/menu.svelte';
@@ -35,6 +36,7 @@ export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte
 export { default as HomeCampus } from '$lib/molecules/home-campus.svelte';
 export { default as HomePartners } from '$lib/molecules/home-partners.svelte';
 export { default as ContactForm } from '$lib/molecules/contact-form.svelte';
+export { default as Features } from '$lib/molecules/features.svelte';
 
 // =========== ORGANISMS ===========
 

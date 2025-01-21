@@ -17,12 +17,12 @@
 
 <style>
     section{
-        padding: 3em;
+        padding: var(--section-padding-y) 1em;
         display: flex;
-        height: 70vh;
         justify-content: center;
         flex-direction: column;
         align-items: start;
+        min-height: 70vh;
         background-color: var(--card-color-green);
         color: var(--main-color-beige);
         overflow: hidden;
@@ -43,13 +43,14 @@
 
     h2{
         font-family: var(--sub-header-font);
-        font-size: 3.5em;
+        font-size:  clamp(2em, 5vw, 8em);
         line-height: 1;
         padding-bottom: .7em;
     }
 
     p{
         max-width: 50em;
+        line-height: 2em;
     }
 
     p:nth-of-type(1){
@@ -65,25 +66,26 @@
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section{
-			padding:  4rem 7.5rem;
-		}
-		h2{
-            font-size: 4.5rem;
+			padding:  var(--section-padding-y) var(--section-padding-x);
 		}
 	}
 
-	/* MEDIA QUERY DESKTOP = 1500px */
-	@media (min-width: 93.75rem) {
-        section{
-            padding: 4rem 15em;
-        }
-    }
-
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
-        p{  
-            max-width: 68em;
+         p{
+			max-width: 43em
+		}
+    }
+
+    /* MEDIA QUERY DESKTOP = 1500px */
+	@media (min-width: 93.75rem) {
+        section{
+            padding: var(--section-padding-y) 15em;
         }
+
+        p{
+			max-width: 43em
+		}
     }
 
 </style>

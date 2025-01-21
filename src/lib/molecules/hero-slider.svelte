@@ -69,6 +69,7 @@
 		background-color: var(--main-color-green);
 		width: 100%;
 		height: 85vh;
+		
 	}
 	.overlay {
 		position: absolute;
@@ -77,6 +78,7 @@
 		width: 100%;
 		height: 85vh;
 		background: var(--image-gradient);
+		
 	}
 	header {
 		position: absolute;
@@ -86,6 +88,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		padding: 0 1em;
+		overflow: hidden;
 	}
 	h1 {
 		view-transition-name: h1;

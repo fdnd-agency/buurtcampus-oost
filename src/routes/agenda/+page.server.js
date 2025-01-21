@@ -26,6 +26,7 @@ export async function load() {
 				agendaParagraph3
 			}
 			agendaTexts {
+				title
 				agendaParagraph1
 				agendaParagraph2
 				agendaParagraph3
