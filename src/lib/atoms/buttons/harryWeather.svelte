@@ -1,6 +1,8 @@
 <script>
     import { onMount } from 'svelte'; 
     import Harry from '$lib/atoms/harry.svelte';
+    import { page } from '$app/stores';
+    import { get } from 'svelte/store';
 
     export let textTemp;
     export let name;
@@ -13,6 +15,7 @@
     let sentence = 'Ik ben even in de war';
     let detail = '';
     let isDesktop = false;
+    let isVisible = true;
 
     const numericTextTemp = parseFloat(textTemp) || 25;
 
@@ -83,6 +86,23 @@
         }
     }
 
+    let animationClass;
+
+    $: {
+        const currentPage = get(page).url.pathname;
+
+        switch (true) {
+            case currentPage.includes('stekjes'):
+                animationClass = 'stekjes';
+                break;
+            case currentPage.includes('zaden'):
+                animationClass = 'zaden';
+                break;
+            default:
+                animationClass = 'default';
+        }
+    }
+
     onMount(() => {
         getWeather();
 
@@ -99,13 +119,14 @@
     });
 </script>
 
-{#if weather}
-<aside>
+{#if weather && isVisible}
+<div class="harryMascot {animationClass}">
     <div class="weather-bubble">
         <blockquote>
             “{sentence}<span class="home_page"> {detail}</span>”
         </blockquote>
+        <button on:click={() => isVisible = false}>❌</button>
     </div>
     <Harry {mood} {environment} {textTemp}/>
-</aside>
+</div>
 {/if}
