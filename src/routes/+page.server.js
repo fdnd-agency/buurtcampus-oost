@@ -30,6 +30,14 @@ export async function load() {
 				address
 				buttonText
 			}
+
+			agendaTexts {
+				title
+				agendaParagraph1
+				agendaParagraph2
+				agendaParagraph3
+			}
+
 			campusInfos {
 				title
 				title2
