@@ -116,7 +116,7 @@
 <style>
 	/* MENU STYLING */
 	header {
-		z-index: 1;
+		z-index: 1000;
 		width: 100%;
 		position: absolute;
 	}
