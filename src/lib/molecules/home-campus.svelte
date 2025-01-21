@@ -7,6 +7,7 @@
 		<span>{data.campusInfos[0].title}</span>
 		<span>{data.campusInfos[0].title2}</span>
 	</h2>
+
 	<article>
 		<p>{data.campusInfos[0].paragraph}</p>
 		<p>{data.campusInfos[0].paragraph2}</p>
@@ -67,9 +68,11 @@
 		section {
 			padding: 0 var(--section-padding-x) var(--section-padding-y);
 		}
+
 		h2 {
 			padding-bottom: 0.7em;
 		}
+		
 		p {
 			max-width: 38em;
 		}
