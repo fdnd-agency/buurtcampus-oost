@@ -42,7 +42,7 @@
 	p {
 		padding: 0.3em;
 		max-width: 32em;
-		line-height: 2em;
+		line-height: var(--line-height-paragraph);
 	}
 
 	p:nth-of-type(1) {

@@ -57,6 +57,8 @@ html {
 	--section-padding-y: 4rem;
 	--section-padding-x: 7.5rem;
 
+	--line-height-paragraph: 1.8em;
+
 	--image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 

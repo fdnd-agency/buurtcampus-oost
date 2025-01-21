@@ -209,7 +209,7 @@
 	}
 
 	p {
-		line-height: 2em;
+		line-height: var(--line-height-paragraph);
 	}
 
 	.paragraph-card p:nth-of-type(2) {

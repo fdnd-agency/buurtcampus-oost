@@ -40,8 +40,8 @@
 
 	p {
 		max-width: 21em;
-		line-height: 2em;
 		margin-bottom: 2rem;
+		line-height: var(--line-height-paragraph);
 	}
 
 	/* MEDIA QUERY TABLET = 768px */
