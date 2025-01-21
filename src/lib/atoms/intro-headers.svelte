@@ -15,10 +15,11 @@
 		overflow: hidden;
 		margin: -2em auto;
 		padding: 1.5em;
-		line-height: 1.8em;
+		line-height: 1.9em;
 		background-color: var(--main-color-beige);
 		font-weight: 500;
 		font-size: 1em;
+		border-radius: var(--border-card); /* Algemeen toepasbaar */
 	}
 
 	section::before {
@@ -26,23 +27,25 @@
 		display: inline-flex;
 	}
 
+	section::after {
+		opacity: 0.5;
+		position: absolute;
+		transform: rotate(-45deg);
+		content: url(/assets/leaf-orange.svg);
+	}
+
+	/* Tablet - vanaf 48rem */
 	@media (min-width: 48rem) {
 		section {
-			margin: -2em auto;
 			align-items: center;
 			width: 81vw;
 			padding: 2em 2em;
-			border-radius: var(--border-card);
 		}
 
 		section::after {
 			width: 9rem;
 			top: 2.5em;
-			opacity: 0.5;
 			right: -4rem;
-			position: absolute;
-			transform: rotate(-45deg);
-			content: url(/assets/leaf-orange.svg);
 		}
 
 		section::before {
@@ -54,41 +57,32 @@
 		}
 	}
 
+	/* Desktop - vanaf 74rem */
 	@media (min-width: 74rem) {
 		section {
-			padding: 1.5em;
 			width: 70vw;
-			border-radius: var(--border-card);
+			padding: 1.5em;
 		}
 
 		section::after {
-			top: -1em;
 			width: 12rem;
-			opacity: 0.5;
+			top: -1em;
 			right: -4rem;
-			position: absolute;
-			transform: rotate(-45deg);
-			content: url(/assets/leaf-orange.svg);
-		}
-
-		section::before {
-			display: none;
-		}
-
-		p {
-			max-width: 65ch;
 		}
 	}
 
+	/* Groot scherm - vanaf 100rem */
 	@media (min-width: 100rem) {
+		section {
+			line-height: 3em;
+		}
+
 		section::after {
 			width: 15rem;
 			top: -3em;
 		}
 
 		p {
-			max-width: 65ch;
-			line-height: 1.8em;
 			font-size: 1.5em;
 		}
 	}
