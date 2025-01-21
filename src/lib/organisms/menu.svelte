@@ -159,9 +159,9 @@
 	dialog[open] {
 		display: flex;
 		position: fixed;
-		font-size: 0.8em;
 		margin-left: 1rem;
 		align-items: center;
+		line-height: 2.5rem;
 		justify-content: center;
 	}
 
@@ -184,14 +184,6 @@
 
 	ul:first-child {
 		font-size: 4em;
-	}
-
-	li {
-		border-bottom: 2px solid var(--main-color-green);
-	}
-
-	.dropdown-content li:last-child {
-		border-bottom: none;
 	}
 
 	a {
