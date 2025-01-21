@@ -222,7 +222,6 @@
 
 		dialog {
 			padding: 0;
-			z-index: 1000;
 			width: auto;
 			height: auto;
 			display: flex;
