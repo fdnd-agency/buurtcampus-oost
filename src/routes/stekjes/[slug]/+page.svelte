@@ -97,6 +97,13 @@
       border-radius: var(--border-card);
     }
 
+    /* temporary fix */
+    @media screen and (max-width: 375px) {
+      .stekje-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media screen and (min-width: 32em) {
       .container {
         padding: 2em;
