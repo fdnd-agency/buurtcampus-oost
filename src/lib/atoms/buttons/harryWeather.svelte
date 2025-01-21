@@ -8,8 +8,8 @@
     let city = 'Amsterdam';
     let weather;
 
-    let mood = 'blij';
-    let environment = 'neutraal';
+    let mood = 'happy';
+    let environment = 'neutral';
     let sentence = 'Ik ben even in de war';
     let detail = '';
     let isDesktop = false;
@@ -33,50 +33,50 @@
 
         switch (true) {
             case currentTemp >= numericTextTemp + 15:
-                mood = 'boos';
-                environment = 'zonnig';
+                mood = 'angry';
+                environment = 'sunny';
                 sentence = addRainSentence(`Het is echt te heet! ${currentTemp.toFixed(0)}°C.`);
                 detail = ` De ${name} vindt dit echt te warm.`;
                 break;
 
             case currentTemp >= numericTextTemp + 10:
-                mood = 'verdrietig';
-                environment = 'zonnig';
+                mood = 'sad';
+                environment = 'sunny';
                 sentence = addRainSentence(`Het is warm... ${currentTemp.toFixed(0)}°C.`);
                 detail = ` De ${name} voelt zich niet helemaal comfortabel.`;
                 break;
 
             case currentTemp >= numericTextTemp + 5:
-                mood = 'neutraal';
-                environment = 'zonnig';
+                mood = 'neutral';
+                environment = 'sunny';
                 sentence = addRainSentence(`Het is aangenaam. ${currentTemp.toFixed(0)}°C.`);
                 detail = ` De ${name} vindt het wel aangenaam.`;
                 break;
 
             case currentTemp >= numericTextTemp - 5 && currentTemp <= numericTextTemp + 5:
-                mood = 'blij';
-                environment = 'neutraal';
+                mood = 'happy';
+                environment = 'neutral';
                 sentence = addRainSentence(`Perfect weer! ${currentTemp.toFixed(0)}°C.`);
                 detail = ` De ${name} is helemaal tevreden.`;
                 break;
 
             case currentTemp <= numericTextTemp - 15:
-                mood = 'boos';
-                environment = 'koud';
-                sentence = addRainSentence(`Het is veel te koud! ${currentTemp.toFixed(0)}°C.`);
-                detail = ` De ${name} heeft het veel te koud.`;
+                mood = 'angry';
+                environment = 'cold';
+                sentence = addRainSentence(`Het is veel te cold! ${currentTemp.toFixed(0)}°C.`);
+                detail = ` De ${name} heeft het veel te cold.`;
                 break;
 
             case currentTemp <= numericTextTemp - 10:
-                mood = 'verdrietig';
-                environment = 'koud';
-                sentence = addRainSentence(`Het is behoorlijk koud, ${currentTemp.toFixed(0)}°C.`);
+                mood = 'sad';
+                environment = 'cold';
+                sentence = addRainSentence(`Het is behoorlijk cold, ${currentTemp.toFixed(0)}°C.`);
                 detail = ` De ${name} heeft het liever iets warmer.`;
                 break;
 
             case currentTemp <= numericTextTemp - 5:
-                mood = 'neutraal';
-                environment = 'koud';
+                mood = 'neutral';
+                environment = 'cold';
                 sentence = addRainSentence(`Het is een beetje fris. ${currentTemp.toFixed(0)}°C.`);
                 detail = ` De ${name} vindt het net te frisjes.`;
                 break;

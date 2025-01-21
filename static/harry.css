@@ -29,82 +29,95 @@
     transition: 200ms;
 }
 .harry {
-    .fluit, .sip, .dorst, .blij, .neutraal-2, .gek, .sangry, .neutraal, .bril, .sombrero, .sjaal, .billen{
+    .fluit, .sip, .dorst, .happy, .neutral-2, .gek, .sangry, .neutral, .bril, .sombrero, .scarf, .ass{
         opacity: 0;    
     }
-    .sangry, .neutraal{
+    .eyes-neutral {
         transform-origin: center;
         animation: blink 10s infinite;
     }
-    .arm_l, .arm_r ,.been_l ,.been_r {
+    /* .arm-l, .arm-r ,.leg-l ,.leg-r {
         stroke-width: 6px;
         stroke-miterlimit: 10;
         fill: #c17052;
         stroke: black;
-     }
-    .arm_l{
+     } */
+    .arm-l{
         transform: translateY(-20px) translateX(-10px) rotate(-55deg);
         transform-origin: right center;
     }
-    .arm_r{
+    .arm-r{
         transform: translateY(-20px) translateX(10px) rotate(55deg);
         transform-origin: left center;
     }
+    /* oba harry */
+    .eyes-star, .sad-tears, .eyes-neutral, .angry-brows,
+    .mouth-shock, .mouth-sad, .mouth-happy, .mouth-neutral, .mouth-tongue, .mouth-angry,
+    .plant-backwards,
+    .scarf {
+        opacity: 0;
+    }
 }
-.harry[data-mood="neutraal"]{
-    .neutraal-2{
+.harry[data-mood="neutral"]{
+    .mouth-neutral{
         opacity: 1;
     }
-    .neutraal{
+    .eyes-neutral {
         opacity: 1;
     }
-    .arm_l {
+    .arm-l {
         animation: wave 20s infinite;
     }
 }
-.harry[data-mood="blij"]{
-    .blij {
+.harry[data-mood="happy"]{
+    .mouth-happy {
         opacity: 1;
     }
-    .neutraal{
+    .eyes-neutral{
         opacity: 1;
     }
-    .arm_l {
+    .arm-l {
         animation: wave 20s infinite 1400ms;
     }
 }
-.harry[data-mood="dorst"]{
+/* .harry[data-mood="dorst"]{
     .dorst{
         opacity: 1;
     }
-    .neutraal{
+    .neutral{
         opacity: 1;
     }
-}
-.harry[data-mood="verdrietig"]{
-    .sip{
+} */
+.harry[data-mood="sad"]{
+    .mouth-sad{
         opacity: 1;
     }
-    .sangry{
+    .eyes-neutral {
         opacity: 1;
     }
+    .sad-tears {
+        opacity: 1;
+    }
+    /* .sangry{
+        opacity: 1;
+    } */
     .plant{
         opacity: 0;
     }
-    .arm_l{
+    .arm-l{
         --rotatearm: -65deg; 
         --translateXarm: -10px;
         --translateYarm: -20px;     
         transform-origin: right center;
     }
-    .arm_r{
+    .arm-r{
         --rotatearm: 65deg;
         --translateXarm: 10px;
         --translateYarm: -20px;
         transform-origin: left center;
     }
-    .arm_r,
-    .arm_l {
+    .arm-r,
+    .arm-l {
         animation: shoulders 5s infinite;
     }
     .pot {
@@ -112,34 +125,30 @@
         transform-origin: center;
     }
 }
-.harry[data-mood="boos"]{
-    .sip {
-            opacity: 1;
-    }
-    .sangry {
+
+.harry[data-mood="angry"]{
+    .eyes-neutral {
         opacity: 1;
-
-        .oog_l {
-            transform: rotate(45deg);
-        }
-
-        .oog_r {
-            transform: rotate(-45deg);
-        }
+    }
+    .angry-brows {
+        opacity: 1;
+    }
+    .mouth-angry {
+        opacity: 1;
     }
     .pot {
         animation: angry 0.3s infinite;
         transform-origin: center;
-        --normaal: 0deg;
-        --tril: 2deg;
+        --normal: 0deg;
+        --shake: 2deg;
     }
 }
-.harry[data-mood="gek"] {
-    .gek{
+
+.harry[data-mood="crazy"] {
+    .mouth-tongue{
         opacity: 1;
     }
-
-    .neutraal{
+    .eyes-neutral {
         opacity: 1;
     }
 }
@@ -149,15 +158,15 @@
         animation: twerkbody 0.7s infinite;
         transform-origin: top;
     }
-    .billen{
+    .ass {
         opacity: 1;
         animation: twerkbody 0.7s infinite;
     }
-    .bil_l{
+    .ass-l{
         animation-delay: 0.2s;
         animation: twerk 0.7s infinite;
     }
-    .bil_r{
+    .ass-r{
         animation: twerk 0.7s infinite;
     }
     .plant{
@@ -165,43 +174,45 @@
         animation: twerkbody 0.7s infinite;
         transform-origin: bottom;
     }
-    .been_l, .been_r{
+    .leg-l, .leg-r{
         transform: translateY(-10px);
     }
-    .arm_l{
+    .arm-l{
         animation: twerkarms 0.7s infinite;
         --rotatearm: 45deg;
     }
-    .arm_r{
+    .arm-r{
         animation: twerkarms 0.7s infinite;
         --rotatearm: -45deg;
     }
-    .pot, .billen, .bil_l, .bil_r, .plant, .arm_l, .arm_r{
+    .pot, .ass, .ass-l, .ass-r, .plant, .arm-l, .arm-r{
         animation-timing-function: ease-in;
     }
 }
 
-.harry[data-environment="zonnig"]{
+/* .harry[data-environment="sunny"]{
     .sombrero{
         opacity: 1;
     }
     .plant{
         opacity: 0;
     }
-}
-.harry[data-environment="koud"]{
-    .sjaal{
+} */
+
+.harry[data-environment="cold"]{
+    .scarf{
         opacity: 1;
     }
-    .mond{
+    .mouth{
         opacity: 0;
     }
 }
+
 .harry[data-environment="fel"]{
     .bril{
         opacity: 1;
     }
-}
+} 
 
 /* ANIMATIONS */
 @keyframes wave {
@@ -235,15 +246,15 @@
 }
 @keyframes angry {
     0% {
-        transform: rotate(var(--normaal));
+        transform: rotate(var(--normal));
     }
 
     50% {
-        transform: rotate(var(--tril));
+        transform: rotate(var(--shake));
     }
 
     100% {
-        transform: rotate(var(--normaal));
+        transform: rotate(var(--normal));
     }
 }
 @keyframes blink {
