@@ -15,6 +15,7 @@
 		overflow: hidden;
 		margin: -2em auto;
 		padding: 1.5em;
+		line-height: var(--line-height-paragraph);
 		background-color: var(--main-color-beige);
 		font-weight: 500;
 		font-size: 1em;
@@ -78,11 +79,13 @@
 	@media (min-width: 100rem) {
 		section{
 			width: 50vw;
+			line-height: var(--line-height-paragraph-big-screen);
 		}
 
 		section::after {
 			width: 15rem;
 			top: -3em;
+
 		}
 
 		p {
