@@ -43,11 +43,13 @@
         stroke: black;
      } */
     .arm-l{
-        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+        /* transform: translateY(-20px) translateX(-10px) rotate(-55deg); */
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
         transform-origin: right center;
     }
     .arm-r{
-        transform: translateY(-20px) translateX(10px) rotate(55deg);
+        /* transform: translateY(-20px) translateX(10px) rotate(55deg); */
+        transform: translateY(-20px) translateX(-12px) rotate(55deg);
         transform-origin: left center;
     }
     /* oba harry */
@@ -105,14 +107,14 @@
         opacity: 0;
     }
     .arm-l{
-        --rotatearm: -65deg; 
-        --translateXarm: -10px;
+        --rotatearm: -55deg; 
+        --translateXarm: 10px;
         --translateYarm: -20px;     
         transform-origin: right center;
     }
     .arm-r{
-        --rotatearm: 65deg;
-        --translateXarm: 10px;
+        --rotatearm: 55deg;
+        --translateXarm: -10px;
         --translateYarm: -20px;
         transform-origin: left center;
     }
@@ -217,31 +219,31 @@
 /* ANIMATIONS */
 @keyframes wave {
     0% {    
-        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
     }
 
     1% {
-        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
     }
 
     6% {
-        transform: translateY(-20px) translateX(-10px) rotate(45deg);
+        transform: translateY(-20px) translateX(12px) rotate(45deg);
     }
 
     7% {
-        transform: translateY(-20px) translateX(-10px) rotate(25deg);
+        transform: translateY(-20px) translateX(12px) rotate(25deg);
     }
 
     8% {
-        transform: translateY(-20px) translateX(-10px) rotate(45deg);
+        transform: translateY(-20px) translateX(12px) rotate(45deg);
     }
 
     11% {
-        transform: translateY(-20px) translateX(-10px) rotate(-55deg);    
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);    
     }
 
     100% {
-        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
     }
 }
 @keyframes angry {
