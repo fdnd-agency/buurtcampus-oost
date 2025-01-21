@@ -47,7 +47,7 @@ function handleSubmit(event) {
 
     <div class="fields-container">
         <div>
-            <label for="name">Voornaam:<span>*</span></label>
+            <label for="name">Voornaam:<span aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" placeholder="Voer je voornaam in" required bind:value={name} 
             on:input={saveToLocalStorage}
             oninvalid="this.setCustomValidity('Vul hier uw voornaam in')"
@@ -55,7 +55,7 @@ function handleSubmit(event) {
         </div>
         
         <div>
-            <label for="lastname">Achternaam:<span>*</span></label>
+            <label for="lastname">Achternaam:<span aria-hidden="true">*</span></label>
             <input type="text" id="lastname" name="lastname" placeholder="Voer je achternaam in" required bind:value={lastname} 
             on:input={saveToLocalStorage}
             oninvalid="this.setCustomValidity('Vul hier uw achternaam in')"
@@ -63,14 +63,14 @@ function handleSubmit(event) {
         </div>
         
         <div>
-            <label for="email">E-mail:<span>*</span></label>
+            <label for="email">E-mail:<span aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required bind:value={email} 
             on:input={saveToLocalStorage}
             oninvalid="this.setCustomValidity('Vul hier uw e-mail in')"
             oninput="this.setCustomValidity('')" />
         </div>
         
-        <label for="message">Stel je vraag of vertel voor welke workshop je je wilt aanmelden!<span>*</span></label>
+        <label for="message">Stel je vraag of vertel voor welke workshop je je wilt aanmelden!<span aria-hidden="true">*</span></label>
         <textarea id="message" name="message" cols="30" rows="10" placeholder="Typ hier je bericht" required bind:value={message} 
             on:input={saveToLocalStorage} 
             oninvalid="this.setCustomValidity('Vul hier uw vraag of bericht in')"
