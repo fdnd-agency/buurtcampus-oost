@@ -64,7 +64,7 @@
                 mood = 'angry';
                 environment = 'cold';
                 sentence = addRainSentence(`Het is veel te cold! ${currentTemp.toFixed(0)}°C.`);
-                detail = ` De ${name} heeft het veel te cold.`;
+                detail = ` De ${name} heeft het veel te koud.`;
                 break;
 
             case currentTemp <= numericTextTemp - 10:
