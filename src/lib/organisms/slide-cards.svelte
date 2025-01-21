@@ -51,7 +51,7 @@
 			<p>{data.cardSlides[2].paragraphCard2}</p>
 		</div>
 		<div class="btn-container">
-			<Button buttonClass="btn-beige" href="/geveltuin" buttonnText="Bekijk de tuin" svgFill="svg-green" />
+			<Button buttonClass="btn-beige" href="/geveltuin" buttonText="Bekijk de tuin" svgFill="svg-green" />
 		</div>
 	</article>
 
