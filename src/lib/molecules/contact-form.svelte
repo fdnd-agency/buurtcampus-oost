@@ -83,6 +83,15 @@ function handleSubmit(event) {
 
 <style>
 
+:root {
+    --invalid-color-red: #ff0000;
+	--invalid-input-background: #fffcfc;
+	--valid-input-background: #edffed;
+	--input-focus-color: #fafad2;
+	--input-border-color: #B37400;
+	--input-border-shadow: 0px 2px 4px hsl(32 37% 39% / 1);    
+}
+
 /* algemene form styling */
 form {
     display: flex;

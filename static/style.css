@@ -38,13 +38,6 @@ html {
 	--text-color-white: #fff;
 	--text-color-black: #000;
 
-	--invalid-color-red: #ff0000;
-	--invalid-input-background: #fffcfc;
-	--valid-input-background: #edffed;
-	--input-focus-color: #fafad2;
-	--input-border-color: #B37400;
-	--input-border-shadow: 0px 2px 4px hsl(32 37% 39% / 1);    
-
 	--header-font: 'Poppins-Black', sans-serif;
 	--sub-header-font: 'Poppins-Bold', sans-serif;
 	--paragraph-font: 'Poppins-Medium', sans-serif;
