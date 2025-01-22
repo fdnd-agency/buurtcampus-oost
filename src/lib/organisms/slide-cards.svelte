@@ -3,11 +3,6 @@
 	import { Dot, Button } from '$lib/index.js';
 </script>
 
-<script>
-	export let data;
-	import { Dot, Button } from '$lib/index.js';
-</script>
-
 <div class="card-container">
 <article class="card-stekjes">
 		<header class="header-card">
