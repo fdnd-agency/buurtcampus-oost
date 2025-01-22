@@ -1,73 +1,45 @@
-.stekjes_detail aside {
-    position: absolute;
-    right: 10rem;
-    bottom: -10rem;
-    color: black;
-    z-index: 0;
-    display: flex;
-    flex-direction: row;
-    animation: appearStekje 300ms ease-out 800ms forwards;
-}
+/* Harry --------------------------------------------------------- */
 
-.stekjes_detail .cartoon{
-    width: 10rem;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-    position: absolute;
-    rotate: 8deg;
-    z-index: 1;
-}
-.stekjes_detail .weather-bubble:after {
-    content: '';
-    position: absolute;
-    right: -8px;
-    bottom: 15%;
-    height: 20px;
-    width: 20px;
-    background: inherit;
-    border-radius: 2px;
-}
-
-.stekjes_detail .home_page {
-    display: inline;
-}
-
-aside {
+.harryMascot {
     position: absolute;
     right: 0;
-    color: black;
-    z-index: 1;
+    bottom: 0;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    --harry-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    animation: appear 0.5s ease forwards;
 }
+
+.cartoon {
+    width: 10rem;
+    height: 14rem;
+    rotate: 8deg;
+    filter: var(--harry-shadow);
+}
+
+/* Tekstwolk ----------------------------------------------------- */
 
 .weather-bubble {
     position: relative;
-    padding: .5rem;
     background-color: white;
-    max-width: 10rem;
+    padding: .5rem;
     border-radius: 0.5rem;
-    margin-bottom: .75rem;
-    filter: drop-shadow(1px 0px 2px rgb(0 0 0 / .25));
-    opacity: 0; 
-    transform: scale(0.5);
-    animation: popUp 0.5s ease forwards;
-    animation-delay: 1400ms; 
+    max-width: 10rem;
     text-align: center;
-    left: -11rem;
-    bottom: -31vh;
+    filter: var(--harry-shadow);
+    opacity: 0; 
+    animation: popUp 0.5s ease forwards;
+    animation-delay: 1400ms;
+    height: min-content;
+    margin-bottom: 2rem;
+    z-index: 2;
 }
-
-.stekjes_detail .weather-bubble {
-    display: flex;
-    min-height: 4rem;
-    align-items: center;
-    justify-content: center;
-    left: auto;
-    bottom: auto;
-}
-
 
 .weather-bubble:before {
     content: '🌸 Harry';
-    font-style: italic;
     font-weight: 600;
     color: pink;
     position: absolute;
@@ -80,7 +52,7 @@ aside {
     content: '';
     position: absolute;
     bottom: 8px;
-    right: -7px;
+    right: -8px;
     height: 20px;
     width: 20px;
     background: inherit;
@@ -89,15 +61,26 @@ aside {
     z-index: -1;
 }
 
-.weather-bubble blockquote {
-    font-style: italic;
-    border-left: 4px solid rgba(255, 255, 255, 0.6);
+.weather-bubble button {
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: inherit;
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+.weather-bubble button:hover {
+    cursor: pointer;
 }
 
-.weather-bubble blockquote span {
-    display: none;    
-}
+.default blockquote span { display: none; }
 
+/* Keyframes ----------------------------------------------------- */
+
+/* Tekstwolk */
 @keyframes popUp {
     0% {
         opacity: 0;
@@ -109,80 +92,69 @@ aside {
     }
 }
 
-.hero-slider .cartoon{
-    width: 10rem;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-    position: absolute;
-    bottom: -25rem;
-    animation: appearMobile 300ms ease-in-out 800ms forwards;
-}
+/* Harry home */
 
 @keyframes appear {
     0% {
-        rotate: -40deg ;
-        right: -9rem;
+        margin-bottom: -40rem;
     }
     100% {
-        rotate: -18deg ;
-        right: -3rem;
+        margin-bottom: -2rem;
     }
 }
 
-@keyframes appearMobile {
+@keyframes appearDesktop {
     0% {
-        bottom: -30rem;
+        rotate: -40deg;
+        margin-right: -9rem;
     }
     100% {
-        bottom: -40vh;
-        rotate: 2deg;
+        rotate: -18deg;
+        margin-right: -3rem;
     }
 }
+
+/* Harry stekjes en zaden */
 
 
 @keyframes appearStekje {
     0% {
-        bottom: -10rem;
+        margin-bottom: -10rem;
     }
     100% {
-        bottom: 2vh;
+        margin-bottom: 20rem;
     }
 }
 
+.stekjes, .zaden {
+    animation: appearStekje 0.5s ease forwards;
+    top: 0;
+}
+
+
+/* Media Queries ------------------------------------------------- */
+
+
 @media screen and (min-width: 48em) {
-    .hero-slider .cartoon{
-        width: 10rem;
-        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-        position: absolute;
-        rotate: -40deg;
-        right: -9rem;
-        bottom: -10rem;
-        animation: appear 300ms ease-in-out 800ms forwards;
-    }
-    .weather-bubble:after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        right: 40px;
-        height: 20px;
-        width: 20px;
-        background: inherit;
-        transform: rotate(45deg);
-        border-radius: 2px;
+    .harryMascot {
+        margin-bottom: 4rem;
+        margin-right: -9rem;
+        animation: appearDesktop 0.5s ease forwards;
     }
     .weather-bubble {
-        position: relative;
-        padding: .5rem;
-        background-color: white;
-        max-width: 12rem;
-        border-radius: 0.5rem;
-        margin-bottom: .75rem;
-        filter: drop-shadow(1px 0px 2px rgb(0 0 0 / .25));
-        opacity: 0; 
-        transform: scale(0.5);
-        animation: popUp 0.5s ease forwards;
-        animation-delay: 1400ms; 
-        text-align: center;
-        bottom: auto;
-        left: auto;
+        rotate: 18deg;
+        margin-bottom: 3rem;    
+        max-width: 15rem;
     }
+
+    .stekjes, .zaden {
+        animation: appearStekje 0.5s ease forwards;
+        margin-right: 10rem;
+    }
+
+    .stekjes .weather-bubble, .zaden .weather-bubble {
+        rotate: 0deg;
+        margin-bottom: 6rem;
+    }
+    
 }
