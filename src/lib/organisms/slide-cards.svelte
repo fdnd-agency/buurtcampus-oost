@@ -3,12 +3,18 @@
 	import { Dot, Button } from '$lib/index.js';
 </script>
 
+<script>
+	export let data;
+	import { Dot, Button } from '$lib/index.js';
+</script>
+
 <div class="card-container">
-	<article class="card-stekjes">
+<article class="card-stekjes">
 		<header class="header-card">
 			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.cardSlides[0].titleCard}</h2>
 		</header>
+
 		<picture>
 			<img
 				width="783"
@@ -18,10 +24,12 @@
 				alt="{data.cardSlides[0].imageCardAltText}}"
 			/>
 		</picture>
+
 		<div class="paragraph-card">
 			<p>{data.cardSlides[0].paragraphCard}</p>
 			<p>{data.cardSlides[0].paragraphCard2}</p>
 		</div>
+
 		<div class="btn-container">
 			<Button
 				buttonClass="btn-green"
@@ -37,6 +45,7 @@
 			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.cardSlides[2].titleCard}</h2>
 		</header>
+
 		<picture>
 			<img
 				width="783"
@@ -46,12 +55,19 @@
 				alt="{data.cardSlides[2].imageCardAltText}}"
 			/>
 		</picture>
+
 		<div class="paragraph-card">
 			<p>{data.cardSlides[2].paragraphCard}</p>
 			<p>{data.cardSlides[2].paragraphCard2}</p>
 		</div>
+
 		<div class="btn-container">
-			<Button buttonClass="btn-beige" href="/geveltuin" buttonText="Bekijk de tuin" svgFill="svg-green" />
+			<Button
+				buttonClass="btn-beige"
+				href="/geveltuin"
+				buttonText="Bekijk de tuin"
+				svgFill="svg-green"
+			/>
 		</div>
 	</article>
 
@@ -60,6 +76,7 @@
 			<Dot svgFill="var(--main-color-beige)" />
 			<h2>{data.cardSlides[1].titleCard}</h2>
 		</header>
+
 		<picture>
 			<img
 				width="783"
@@ -69,12 +86,39 @@
 				alt="{data.cardSlides[1].imageCardAltText}}"
 			/>
 		</picture>
+
 		<div class="paragraph-card">
 			<p>{data.cardSlides[1].paragraphCard}</p>
 			<p>{data.cardSlides[1].paragraphCard2}</p>
 		</div>
+		
 		<div class="btn-container">
 			<Button buttonClass="btn-brown" href="/zaden" buttonText="Bekijk de zaden" svgFill="svg-beige" />
+		</div>
+	</article>
+
+	<article class="groenebieb">
+		<header class="header-card">
+			<Dot svgFill="var(--main-color-orange)" />
+			<h2>{data.cardSlides[3].titleCard}</h2>
+		</header>
+
+		<picture>
+			<img
+				width="783"
+				height="982"
+				loading="lazy"
+				src={data.cardSlides[3].imageCard.url}
+				alt=""
+			/>
+		</picture>
+
+		<div class="paragraph-card">
+			<p>{data.cardSlides[3].paragraphCard}</p>
+		</div>
+		
+		<div class="btn-container">
+			<Button buttonClass="btn-green" href="/groenebieb" buttonText="Bekijk de groene bieb" svgFill="svg-beige" />
 		</div>
 	</article>
 </div>
@@ -90,19 +134,22 @@
 		margin: 0 auto;
 		border-radius: var(--border-bigCard);
 	}
+
 	.card-container,
 	article {
 		width: 100vw;
 		overflow: hidden;
 	}
+
 	.card-container article {
 		border-radius: var(--border-bigCard);
-		padding: 1em 0 2em;
-		z-index: 2;
+		padding: 2em 1em;
 	}
+
 	.card-stekjes::before,
 	.card-zaden::before,
-	.card-gevel::before {
+	.card-gevel::before,
+	.groenebieb::before {
 		width: 20em;
 		height: 20em;
 		position: absolute;
@@ -110,13 +157,17 @@
 		left: -4em;
 		transform: rotate(135deg);
 	}
+
 	.card-stekjes::before,
-	.card-zaden::before {
+	.card-zaden::before,
+	.groenebieb::before {
 		content: url(/assets/leaf-orange.svg);
 	}
+
 	.card-gevel::before {
 		content: url(/assets/leaf-green.svg);
 	}
+
 	.header-card,
 	picture,
 	.paragraph-card,
@@ -124,156 +175,184 @@
 		z-index: 2;
 		position: relative;
 	}
+
 	.header-card {
 		display: flex;
 	}
-	h2 {
-		font-family: var(--header-font);
-		font-size: clamp(2em, 5vw, 8em);
-		line-height: 95%;
-		max-width: 4em;
-	}
 
-	.card-stekjes {
+	h2{
+        font-family: var(--header-font);
+        font-size: clamp(2em, 5vw, 8em);
+        line-height: 95%;
+    }
+
+	.card-stekjes,
+	.groenebieb {
 		background-color: var(--main-color-beige);
 		color: var(--main-color-green);
 	}
+
 	.card-zaden {
 		background-color: var(--card-color-orange);
 		color: var(--main-color-brown);
 	}
+
 	.card-gevel {
 		background-color: var(--card-color-green);
 		color: var(--main-color-beige);
 	}
+
 	.paragraph-card {
-		margin: 0 3.5em;
 		display: flex;
 		flex-direction: column;
 		gap: 1.5em;
 	}
+
 	.paragraph-card p {
 		max-width: 24em;
 	}
+
+	p {
+		line-height: var(--line-height-paragraph);
+	}
+
 	.paragraph-card p:nth-of-type(2) {
 		display: none;
 	}
+
 	article picture {
 		display: flex;
 		justify-content: start;
-		max-width: 18em;
-		min-width: 13em;
-		margin: 2em 3.5em;
+		margin: 2em 0;
 		overflow: hidden;
-		min-height: 16em;
 		border-radius: var(--border-bigCard);
 	}
+
 	article img {
 		display: flex;
 		justify-content: center;
 		border-radius: var(--border-bigCard);
 		width: 100%;
 		height: 100%;
+		min-height: 23em;
+		min-width: 13em;
+		object-fit: cover;
 	}
+
 	.btn-container {
-		margin: 2em 3.5em;
+		margin: 2em 0;
 	}
 
-	/* MEDIA QUERY MOBILE = 400px */
-	@media (min-width: 25rem) {
-		.card-container,
+    /* MEDIA QUERY MOBILE = 400px */
+    @media (min-width: 25rem) {
+        .card-container,
 		article {
-			width: 95vw;
-		}
-		.card-container article {
-			display: grid;
-			justify-content: center;
-			padding: 2em;
-		}
-		h2 {
-			max-width: 7em;
-		}
-		article picture {
-			justify-content: center;
-			max-width: 23em;
-			min-width: 18em;
-		}
-	}
+            width: 95vw;
+        }
+        .card-container article {
+            display: grid;
+            justify-content: center;
+            padding: 2em;
+        }
+        h2 {
+            max-width: 7em;
+        }
+        article picture {
+            justify-content: center;
+			max-height: 22em;
+            min-width: 18em;
+        }
 
-	/* MEDIA QUERY TABLET = 768px */
-	@media (min-width: 48rem) {
-		.card-container article {
-			grid-template-columns: 23em 2fr;
-			justify-content: start;
-			gap: 2em;
-			padding: 2em;
-			height: 48em;
-		}
-		h2 {
-			width: 4em;
-		}
-		article picture {
-			justify-content: end;
-			min-width: 100%;
-			grid-column-start: 2;
-			grid-row-start: 1;
-			grid-row-end: 4;
-			margin: 0;
-		}
 		article img {
-			height: 100%;
-			width: 32em;
+			height: auto;
 		}
-		.paragraph-card p:nth-of-type(2) {
-			display: block;
+    }
+
+   /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        .card-container article{
+            grid-template-columns: 23em 2fr;
+            justify-content: start;
+            gap: 2em;
+            padding: 2em;
+            height: 48em;
+        }
+
+        h2 {
+            width: 4em;
+        }
+
+        article picture {
+            justify-content: end;
+            min-width: 100%;
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            margin: 0;  
+			max-height: none;
+        }
+
+        article img {
+            height: 100%;
+            width: 32em;
+        }
+
+        .paragraph-card p:nth-of-type(2) {
+            display: block;
+        }
+
+        .paragraph-card, .btn-container {
+            margin: 1em 0 0 4.2em;
+        }
+
+        .btn-container {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1100px */
+    @media (min-width: 68.75rem) {
+
+		.header-card {
+			margin-left: 2em;
 		}
 
-		.paragraph-card,
-		.btn-container {
-			margin: 1em 0 0 4.2em;
-		}
-		.btn-container {
-			display: flex;
-			align-items: flex-end;
-		}
-	}
+        .card-container article {
+            grid-template-columns: 28em 2fr;
+        }
 
-	/* MEDIA QUERY TABLET = 1100px */
-	@media (min-width: 68.75rem) {
-		.card-container article {
-			grid-template-columns: 28em 2fr;
-		}
-		.paragraph-card p {
-			max-width: 29em;
-		}
-		.paragraph-card,
-		.btn-container {
-			margin: 1em 0 0 6.2em;
-		}
-	}
+        .paragraph-card p {
+            max-width: 29em;
+        }
 
-	/* MEDIA QUERY TABLET = 1250px */
-	@media (min-width: 78.1rem) {
-		.card-stekjes::before,
+        .paragraph-card, .btn-container {
+            margin: 1em 0 0 6.2em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        .card-stekjes::before,
 		.card-zaden::before,
 		.card-gevel::before {
-			width: 26em;
-			height: 26em;
-		}
+            width: 26em;
+            height: 26em;
+        }
 
-		.card-container article {
-			grid-template-columns: 36em 2fr;
-		}
-		.paragraph-card p {
-			max-width: 32em;
-		}
-	}
+        .card-container article {
+            grid-template-columns: 36em 2fr;
+        }
+        .paragraph-card p {
+            max-width: 32em;
+        }
+    }
 
-	/* MEDIA QUERY DESKTOP = 1500px */
-	@media (min-width: 93.75rem) {
-		.card-container,
-		article {
-			width: 85vw;
-		}
-	}
+    /* MEDIA QUERY DESKTOP = 1500px */
+    @media (min-width: 93.75rem) {
+        .card-container,
+		    article {
+            width: 85vw;
+        }
+    }
 </style>

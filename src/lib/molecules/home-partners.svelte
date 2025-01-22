@@ -49,7 +49,8 @@
     }
 
     p{
-        max-width: 50em;
+        max-width: 65ch;
+        line-height: var(--line-height-paragraph);
     }
 
     p:nth-of-type(1){
@@ -71,9 +72,9 @@
 
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
-        p{  
-            max-width: 68em;
-        }
+         p{
+			max-width: 43em
+		}
     }
 
     /* MEDIA QUERY DESKTOP = 1500px */
@@ -81,6 +82,10 @@
         section{
             padding: var(--section-padding-y) 15em;
         }
+
+        p{
+			max-width: 43em
+		}
     }
 
 </style>

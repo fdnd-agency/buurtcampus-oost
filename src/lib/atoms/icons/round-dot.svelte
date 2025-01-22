@@ -15,8 +15,7 @@
 
 <style>
 	svg {
-		margin: 0.7em;
-		z-index: 1;
+		display: none;
 	}
 
 	/* MEDIA QUERY TABLET = 768px */
@@ -24,8 +23,9 @@
 		svg {
 			/* position: relative;
             top: .5em; */
-			margin: 1em;
+			margin: 1em 1em 1em 0;
 			width: 3em;
+			display: block;
 		}
 	}
 
@@ -33,6 +33,7 @@
 	@media (min-width: 68.75rem) {
 		svg {
 			top: 0.7em;
+			display: block;
 		}
 	}
 
@@ -40,12 +41,14 @@
 	@media (min-width: 78.1rem) {
 		svg {
 			top: 1.2em;
+			display: block;
 		}
 	}
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
 		svg {
 			margin-top: 0.3em;
+			display: block;
 		}
 	}
 
@@ -54,6 +57,7 @@
 			margin-top: 8em;
 			width: 2em;
 			height: 2em;
+			display: block;
 		}
 	}
 </style>

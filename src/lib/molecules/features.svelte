@@ -1,10 +1,12 @@
-<script>    
-    import { HarryWeather, DropdownZaden } from '$lib/index.js';
+<script>
+    import { HarryWeather, Dropdown } from '$lib/index.js';
+    
     export let data;
+    export let type; // 'stekjes' of 'zaden'
 </script>
 
 <section>
-    <DropdownZaden {data} />
+    <Dropdown {data} {type} />
 </section>
 
 <style>
