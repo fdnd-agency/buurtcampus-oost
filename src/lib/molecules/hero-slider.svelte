@@ -42,8 +42,8 @@
 		<div class="overlay"></div>
 
 		<header>
-			<h1>Samen <span>Groener</span> Leven</h1>
-			<h2>Inspireer & Deel je Groene Passie!</h2>
+			<h1>{data.headerTexts[0].heading1}</h1>
+			<h2>{data.headerTexts[0].description}</h2>
 			<HarryWeather />
 		</header>
 
@@ -91,7 +91,6 @@
 		overflow: hidden;
 	}
 	h1 {
-		view-transition-name: h1;
 		font-family: var(--header-font);
 		font-size: clamp(4em, 15vw, 5em);
 		color: var(--text-color-white);
@@ -100,8 +99,7 @@
 		width: 60%;
 	}
 	h2 {
-		view-transition-name: h2;
-		font-size: 1.6rem;
+		font-size: 2rem;
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
