@@ -29,6 +29,7 @@
 
 	.scroll-container {
 		display: flex;
+		gap: 2rem;
 		margin: 1rem;
 		overflow-x: auto;
 		scrollbar-width: none;
@@ -76,37 +77,38 @@
 		}
 
 		.scroll-container {
-			margin: 4em;
-			gap: 1rem;
+			margin: 5rem;
+			gap: 2rem;
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
-		/* @supports (animation-timeline: view()) {
+		@supports (animation-timeline: view()) {
 			.content {
 				animation-timeline: view(inline);
 				animation-name: animate-in-and-out;
 			}
 
 			@keyframes animate-in-and-out {
+				/* Verander de beginpositie van de animatie, zodat de afbeelding niet buiten beeld begint */
 				entry 0% {
 					opacity: 0;
-					transform: translate(100%);
+					transform: translateX(0); /* Begin op de originele positie */
 				}
 				entry 100% {
 					opacity: 1;
-					transform: translateX(0);
+					transform: translateX(0); /* Eindigt op de originele positie */
 				}
 
 				exit 0% {
 					opacity: 1;
-					transform: translateX(0);
+					transform: translateX(0); /* Begin de uitgang zonder te verschuiven */
 				}
 				exit 100% {
 					opacity: 0;
-					transform: translate(-10%);
+					transform: translate(-10%); /* De afbeelding beweegt naar links wanneer deze verdwijnt */
 				}
 			}
-		} */
+		}
 	}
 
 	@container carousel (min-width: 100rem) {
@@ -116,7 +118,7 @@
 		}
 
 		.scroll-container {
-			margin: 6rem;
+			margin: 4rem;
 			gap: 1rem;
 		}
 	}
