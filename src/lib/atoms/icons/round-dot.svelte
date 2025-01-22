@@ -23,7 +23,7 @@
 		svg {
 			/* position: relative;
             top: .5em; */
-			margin: 1em;
+			margin: 1em 1em 1em 0;
 			width: 3em;
 			display: block;
 		}

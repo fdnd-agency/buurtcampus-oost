@@ -7,6 +7,7 @@
 		<span>{data.campusInfos[0].title}</span>
 		<span>{data.campusInfos[0].title2}</span>
 	</h2>
+
 	<article>
 		<p>{data.campusInfos[0].paragraph}</p>
 		<p>{data.campusInfos[0].paragraph2}</p>
@@ -40,8 +41,8 @@
 
 	p {
 		padding: 0.3em;
-		max-width: 32em;
-		line-height: 2em;
+        max-width: 65ch;
+		line-height: var(--line-height-paragraph);
 	}
 
 	p:nth-of-type(1) {
@@ -67,11 +68,13 @@
 		section {
 			padding: 0 var(--section-padding-x) var(--section-padding-y);
 		}
+
 		h2 {
 			padding-bottom: 0.7em;
 		}
+		
 		p {
-			max-width: 38em;
+			max-width: 70ch;
 		}
 	}
 

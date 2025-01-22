@@ -39,9 +39,10 @@
 	}
 
 	p {
-		max-width: 21em;
-		line-height: 2em;
+		padding-right: 1em;
+		max-width: 65ch;
 		margin-bottom: 2rem;
+		line-height: var(--line-height-paragraph);
 	}
 
 	/* MEDIA QUERY TABLET = 768px */
@@ -52,7 +53,7 @@
 
 		p {
 			z-index: 100;
-			max-width: 38em;
+			max-width: 70ch;
 		}
 
 		img {

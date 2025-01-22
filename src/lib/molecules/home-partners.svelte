@@ -49,8 +49,8 @@
     }
 
     p{
-        max-width: 50em;
-        line-height: 2em;
+        max-width: 65ch;
+        line-height: var(--line-height-paragraph);
     }
 
     p:nth-of-type(1){
