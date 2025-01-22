@@ -92,14 +92,15 @@
 	}
 	h1 {
 		font-family: var(--header-font);
-		font-size: clamp(4em, 15vw, 5em);
+		font-size: clamp(0em, 12vw, 5em);
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
 		width: 60%;
 	}
+
 	h2 {
-		font-size: 2rem;
+		font-size: 1.6rem;
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
@@ -151,12 +152,28 @@
 			width: 100%;
 			text-align: center;
 		}
+
+		h2{
+			font-size: 2rem;
+		}
 	}
 
 	/* MEDIA QUERY DESKTOP = 1700px */
 	@media (min-width: 106.25rem) {
 		h1 {
-			font-size: clamp(5.8em, 12vw, 10em);
+			font-size: clamp(5em, 12vw, 10em);
+		}
+
+		h2{
+			font-size: 2rem;
 		}
 	}
+
+	@media (min-width: 100rem) {
+
+		h2{
+			font-size: 4em;
+		}
+	}
+
 </style>
