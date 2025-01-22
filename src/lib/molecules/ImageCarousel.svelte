@@ -1,7 +1,7 @@
 <script>
-	export let heroInfo; 
-	let images = heroInfo.carouselImage[0].images; 
-	console.log(images) 
+	export let heroInfo;
+	let images = heroInfo.carouselImage[0].images;
+	console.log(images);
 </script>
 
 <section class="carousel-container">
@@ -20,15 +20,16 @@
 
 <style>
 	.carousel-container {
-		margin-top: 5rem;
+		margin-top: 2rem;
 		overflow: hidden;
-		container-type: inline-size; /* Maak de container klaar voor container queries */
+		margin-bottom: -5rem;
+		container-type: inline-size;
 		container-name: carousel;
 	}
 
 	.scroll-container {
 		display: flex;
-		gap: 2rem;
+		margin: 1rem;
 		overflow-x: auto;
 		scrollbar-width: none;
 		scroll-snap-type: x mandatory;
@@ -50,25 +51,73 @@
 		padding: 0.5rem;
 	}
 
-	/* Container Query met rem-eenheden */
-	@container carousel (max-width: 37.5rem) { /* ~600px */
+	@container carousel (max-width: 37.5rem) {
 		.content {
 			min-width: 90%;
-			min-height: 12rem;
+			height: 40vh;
 		}
 	}
 
-	@container carousel (min-width: 37.5rem) and (max-width: 64rem) { /* 37.5rem ~600px tot 64rem ~1024px */
+	@container carousel (min-width: 37.5rem) and (max-width: 64rem) {
 		.content {
 			min-width: calc(50% - 1rem);
-			min-height: 15rem;
+			max-height: 30rem;
+		}
+
+		.scroll-container {
+			margin: 1rem;
 		}
 	}
 
-	@container carousel (min-width: 64rem) { /* >1024px */
+	@container carousel (min-width: 64rem) {
+		.content {
+			min-width: calc(20rem - 1.5rem);
+			max-height: 25rem;
+		}
+
+		.scroll-container {
+			margin: 4em;
+			gap: 1rem;
+		}
+
+		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
+		/* @supports (animation-timeline: view()) {
+			.content {
+				animation-timeline: view(inline);
+				animation-name: animate-in-and-out;
+			}
+
+			@keyframes animate-in-and-out {
+				entry 0% {
+					opacity: 0;
+					transform: translate(100%);
+				}
+				entry 100% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+
+				exit 0% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+				exit 100% {
+					opacity: 0;
+					transform: translate(-10%);
+				}
+			}
+		} */
+	}
+
+	@container carousel (min-width: 100rem) {
 		.content {
 			min-width: calc(25% - 1.5rem);
-			min-height: 18rem;
+			max-height: 30rem;
+		}
+
+		.scroll-container {
+			margin: 6rem;
+			gap: 1rem;
 		}
 	}
 </style>
