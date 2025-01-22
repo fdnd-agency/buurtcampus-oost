@@ -35,6 +35,7 @@
     animation-delay: 1400ms;
     height: min-content;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 .weather-bubble:before {
@@ -70,7 +71,9 @@
     background-color: inherit;
     border-radius: 50%;
     filter: grayscale(1);
-    
+}
+.weather-bubble button:hover {
+    cursor: pointer;
 }
 
 .default blockquote span { display: none; }

@@ -182,14 +182,15 @@
     }
 }
 
-/* .harry[data-environment="sunny"]{
-    .sombrero{
+.harry[data-environment="sunny"]{
+    .eyes-star {
         opacity: 1;
     }
-    .plant{
+
+    /* .plant{
         opacity: 0;
-    }
-} */
+    } */
+} 
 
 .harry[data-environment="cold"]{
     .scarf{
@@ -376,7 +377,6 @@
     }
 }
 @keyframes twerkarms {
-
     0%{
         transform: translateX(0) rotate(var(--rotatearm));
     }
@@ -397,4 +397,3 @@
         transform: translateX(0) rotate(var(--rotatearm));
     }
 }
-

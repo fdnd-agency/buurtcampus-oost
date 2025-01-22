@@ -3,8 +3,6 @@
     
     export let data;
     export let type; // 'stekjes' of 'zaden'
-    // Log de waarde van 'type'
-    console.log("Type in Dropdown:", type);
 </script>
 
 <section>
