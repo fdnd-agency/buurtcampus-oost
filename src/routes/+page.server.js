@@ -89,6 +89,13 @@ export async function load() {
 				description
 				id
 			}
+
+			headerTexts {
+				createdAt
+				heading1
+				id
+				description
+			}
 		}
 	`;
 

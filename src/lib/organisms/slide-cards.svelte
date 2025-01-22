@@ -27,7 +27,7 @@
 
 		<div class="btn-container">
 			<Button
-				btnClass="btn-green"
+				buttonClass="btn-green"
 				href="/stekjes"
 				buttonText="Bekijk de stekjes"
 				svgFill="svg-beige"
@@ -58,7 +58,7 @@
 
 		<div class="btn-container">
 			<Button
-				btnClass="btn-beige"
+				buttonClass="btn-beige"
 				href="/geveltuin"
 				buttonText="Bekijk de tuin"
 				svgFill="svg-green"
@@ -88,7 +88,7 @@
 		</div>
 		
 		<div class="btn-container">
-			<Button btnClass="btn-brown" href="/zaden" buttonText="Bekijk de zaden" svgFill="svg-beige" />
+			<Button buttonClass="btn-brown" href="/zaden" buttonText="Bekijk de zaden" svgFill="svg-beige" />
 		</div>
 	</article>
 
@@ -113,7 +113,7 @@
 		</div>
 		
 		<div class="btn-container">
-			<Button btnClass="btn-green" href="/groenebieb" buttonText="Bekijk de groene bieb" svgFill="svg-beige" />
+			<Button buttonClass="btn-green" href="/groenebieb" buttonText="Bekijk de groene bieb" svgFill="svg-beige" />
 		</div>
 	</article>
 </div>

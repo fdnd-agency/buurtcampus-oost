@@ -10,7 +10,7 @@
     <Button 
         href="/partners"
         buttonText="Bekijk onze partners"
-        btnClass="btn-beige"
+        buttonClass="btn-beige"
         svgFill="svg-green"
     />
 </section>
