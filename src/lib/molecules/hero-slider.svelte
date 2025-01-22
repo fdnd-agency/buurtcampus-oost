@@ -93,7 +93,7 @@
 
 	h1 {
 		font-family: var(--header-font);
-		font-size: clamp(0.1em, 12vw, 5em);
+		font-size: clamp(1em, 10vw, 5em);
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
@@ -101,7 +101,7 @@
 	}
 
 	h2 {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
