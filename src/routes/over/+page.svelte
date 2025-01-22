@@ -56,8 +56,8 @@
 
 	p {
 		margin-top: 1em;
-		line-height: 1.6em;
 		font-family: 'Poppins-Regular';
+		line-height: var(--line-height-paragraph);
 	}
 
 	p:nth-child(6) {

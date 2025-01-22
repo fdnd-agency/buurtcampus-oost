@@ -24,6 +24,8 @@ export async function load() {
                 }
                 fotos {
                   url
+                  width
+                  height
                 }
                 giftig
                 naam

@@ -48,6 +48,10 @@
 		background-color: var(--main-color-beige);
 	}
 
+	p{
+		line-height: var(--line-height-paragraph);
+	}
+
 	p,
 	ul {
 		margin-top: 3em;

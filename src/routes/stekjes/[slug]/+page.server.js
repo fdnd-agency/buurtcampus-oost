@@ -9,6 +9,8 @@ export const load = async ({ params }) => {
 				aanmelddatum
 				fotos {
 					url
+					width
+                  	height
 				}
 				giftig
 				landvanherkomst

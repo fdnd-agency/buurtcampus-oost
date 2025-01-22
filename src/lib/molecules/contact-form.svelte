@@ -47,26 +47,34 @@ function handleSubmit(event) {
 
     <div class="fields-container">
         <div>
-            <label for="name">Voornaam:<span>*</span></label>
+            <label for="name">Voornaam:<span aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" placeholder="Voer je voornaam in" required bind:value={name} 
-            on:input={saveToLocalStorage} />
+            on:input={saveToLocalStorage}
+            oninvalid="this.setCustomValidity('Vul hier uw voornaam in')"
+            oninput="this.setCustomValidity('')" />
         </div>
         
         <div>
-            <label for="lastname">Achternaam:<span>*</span></label>
+            <label for="lastname">Achternaam:<span aria-hidden="true">*</span></label>
             <input type="text" id="lastname" name="lastname" placeholder="Voer je achternaam in" required bind:value={lastname} 
-            on:input={saveToLocalStorage} />
+            on:input={saveToLocalStorage}
+            oninvalid="this.setCustomValidity('Vul hier uw achternaam in')"
+            oninput="this.setCustomValidity('')" />
         </div>
         
         <div>
-            <label for="email">E-mail:<span>*</span></label>
+            <label for="email">E-mail:<span aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required bind:value={email} 
-            on:input={saveToLocalStorage} />
+            on:input={saveToLocalStorage}
+            oninvalid="this.setCustomValidity('Vul hier uw e-mail in')"
+            oninput="this.setCustomValidity('')" />
         </div>
         
-        <label for="message">Stel je vraag of vertel voor welke workshop je je wilt aanmelden!<span>*</span></label>
+        <label for="message">Stel je vraag of vertel voor welke workshop je je wilt aanmelden!<span aria-hidden="true">*</span></label>
         <textarea id="message" name="message" cols="30" rows="10" placeholder="Typ hier je bericht" required bind:value={message} 
-        on:input={saveToLocalStorage}></textarea>
+            on:input={saveToLocalStorage} 
+            oninvalid="this.setCustomValidity('Vul hier uw vraag of bericht in')"
+            oninput="this.setCustomValidity('')" ></textarea>
     </div>
 
     <button type="submit" value="Verzenden">Verzenden</button>
@@ -74,6 +82,15 @@ function handleSubmit(event) {
 
 
 <style>
+
+:root {
+    --invalid-color-red: #ff0000;
+	--invalid-input-background: #fffcfc;
+	--valid-input-background: #edffed;
+	--input-focus-color: #fafad2;
+	--input-border-color: #B37400;
+	--input-border-shadow: 0px 2px 4px hsl(32 37% 39% / 1);    
+}
 
 /* algemene form styling */
 form {
@@ -158,7 +175,7 @@ button {
 .fields-container input[type='email'],
 .fields-container textarea { 
     border: none;
-    padding: 0.5rem;
+    padding: 0.75rem;
     box-shadow: var(--input-border-shadow);
     border-radius: var(--border-card);
     width: 100%;
@@ -234,21 +251,21 @@ button[type='submit']:hover {
 
 @media (prefers-reduced-motion: no-preference) {
 
-/* Plant valid animation */
+    /* Plant valid animation */
 
-.fields-container div:has(input:valid)::after {
-    opacity: 1;
-    scale: 1;
-    transform: translateY(0);
-}
+    .fields-container div:has(input:valid)::after {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
 
-.fields-container div:has(input:focus)::after,
-.fields-container div:has(input:focus:valid)::after {
-    transform: translateY(20%);
-    opacity:1;
-    scale: 1;
-    transition-delay: .3s;
-}
+    .fields-container div:has(input:focus)::after,
+    .fields-container div:has(input:focus:valid)::after {
+        transform: translateY(20%);
+        opacity:1;
+        scale: 1;
+        transition-delay: .3s;
+    }
 }
 
 </style>
