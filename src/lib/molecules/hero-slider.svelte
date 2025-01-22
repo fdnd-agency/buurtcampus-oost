@@ -90,9 +90,10 @@
 		padding: 0 1em;
 		overflow: hidden;
 	}
+
 	h1 {
 		font-family: var(--header-font);
-		font-size: clamp(0em, 12vw, 5em);
+		font-size: clamp(1em, 12vw, 5em);
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
