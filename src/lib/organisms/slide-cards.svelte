@@ -346,9 +346,8 @@
     /* MEDIA QUERY DESKTOP = 1500px */
     @media (min-width: 93.75rem) {
         .card-container,
-		article {
+		    article {
             width: 85vw;
         }
     }
 </style>
-
