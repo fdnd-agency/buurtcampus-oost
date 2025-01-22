@@ -46,7 +46,8 @@
     .mouth-shock, .mouth-sad, .mouth-happy, .mouth-neutral, .mouth-tongue, .mouth-angry,
     .plant-backwards,
     .scarf,
-    .ass {
+    .ass,
+    .heart-upsidedown {
         opacity: 0;
     }
 }
@@ -149,6 +150,12 @@
     .pot{
         animation: twerkbody 0.7s infinite;
         transform-origin: top;
+    }
+    .heart {
+        opacity: 0;
+    }
+    .heart-upsidedown {
+        opacity: 1;
     }
     .ass {
         opacity: 1;
