@@ -240,7 +240,8 @@
 
     /* MEDIA QUERY MOBILE = 400px */
     @media (min-width: 25rem) {
-        .card-container, article{
+        .card-container,
+		article {
             width: 95vw;
         }
         .card-container article {
@@ -248,10 +249,10 @@
             justify-content: center;
             padding: 2em;
         }
-        h2{
+        h2 {
             max-width: 7em;
         }
-        article picture{
+        article picture {
             justify-content: center;
 			max-height: 22em;
             min-width: 18em;
@@ -271,10 +272,12 @@
             padding: 2em;
             height: 48em;
         }
-        h2{
+
+        h2 {
             width: 4em;
         }
-        article picture{
+
+        article picture {
             justify-content: end;
             min-width: 100%;
             grid-column-start: 2;
@@ -283,18 +286,21 @@
             margin: 0;  
 			max-height: none;
         }
-        article img{
+
+        article img {
             height: 100%;
             width: 32em;
         }
-        .paragraph-card p:nth-of-type(2){
+
+        .paragraph-card p:nth-of-type(2) {
             display: block;
         }
 
-        .paragraph-card, .btn-container{
+        .paragraph-card, .btn-container {
             margin: 1em 0 0 4.2em;
         }
-        .btn-container{
+
+        .btn-container {
             display: flex;
             align-items: flex-end;
         }
@@ -307,28 +313,32 @@
 			margin-left: 2em;
 		}
 
-        .card-container article{
+        .card-container article {
             grid-template-columns: 28em 2fr;
         }
-        .paragraph-card p{
+
+        .paragraph-card p {
             max-width: 29em;
         }
-        .paragraph-card, .btn-container{
+
+        .paragraph-card, .btn-container {
             margin: 1em 0 0 6.2em;
         }
     }
 
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
-        .card-stekjes::before, .card-zaden::before, .card-gevel::before{
+        .card-stekjes::before,
+		.card-zaden::before,
+		.card-gevel::before {
             width: 26em;
             height: 26em;
         }
 
-        .card-container article{
+        .card-container article {
             grid-template-columns: 36em 2fr;
         }
-        .paragraph-card p{
+        .paragraph-card p {
             max-width: 32em;
         }
     }
