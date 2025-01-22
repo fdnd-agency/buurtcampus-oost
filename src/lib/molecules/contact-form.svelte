@@ -251,21 +251,21 @@ button[type='submit']:hover {
 
 @media (prefers-reduced-motion: no-preference) {
 
-/* Plant valid animation */
+    /* Plant valid animation */
 
-.fields-container div:has(input:valid)::after {
-    opacity: 1;
-    scale: 1;
-    transform: translateY(0);
-}
+    .fields-container div:has(input:valid)::after {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
 
-.fields-container div:has(input:focus)::after,
-.fields-container div:has(input:focus:valid)::after {
-    transform: translateY(20%);
-    opacity:1;
-    scale: 1;
-    transition-delay: .3s;
-}
+    .fields-container div:has(input:focus)::after,
+    .fields-container div:has(input:focus:valid)::after {
+        transform: translateY(20%);
+        opacity:1;
+        scale: 1;
+        transition-delay: .3s;
+    }
 }
 
 </style>
