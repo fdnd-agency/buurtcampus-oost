@@ -1,7 +1,6 @@
 <script>
 	export let heroInfo;
 	let images = heroInfo.carouselImage[0].images;
-	console.log(images);
 </script>
 
 <section class="carousel-container">
