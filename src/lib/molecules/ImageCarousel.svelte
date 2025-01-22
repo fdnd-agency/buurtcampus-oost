@@ -21,7 +21,7 @@
 	.carousel-container {
 		margin-top: 2rem;
 		overflow: hidden;
-		margin-bottom: -5rem;
+		margin-bottom: -6rem;
 		container-type: inline-size;
 		container-name: carousel;
 	}
@@ -66,6 +66,7 @@
 
 		.scroll-container {
 			margin: 1rem;
+			margin-bottom: 2rem;
 		}
 	}
 
@@ -77,7 +78,7 @@
 
 		.scroll-container {
 			margin: 5rem;
-			gap: 2rem;
+			gap: 1rem;
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
