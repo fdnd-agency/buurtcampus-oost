@@ -9,10 +9,11 @@
 
 <header class="stekjes_detail">
   <div class="overlay"></div>
-  <HarryWeather textTemp={data.stekje.absoluteTemperatuur}, name={data.stekje.naam} />
   <img src="{data.stekje.fotos[0].url}" alt="" width={data.stekje.fotos[0]?.width || 'auto'} height={data.stekje.fotos[0]?.height || 'auto'}  class="header" loading="lazy">
 </header>
-  
+
+<HarryWeather textTemp={data.stekje.absoluteTemperatuur} name={data.stekje.naam} />
+
 <section class="container">
   <div class="stekje-container">
     <article>

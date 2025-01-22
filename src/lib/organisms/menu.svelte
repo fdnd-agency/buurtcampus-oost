@@ -270,7 +270,6 @@
 		ul {
 			gap: 0.5em;
 			display: flex;
-			padding: 4em 0;
 			font-size: 1.4em;
 			flex-direction: row;
 			align-items: center;
