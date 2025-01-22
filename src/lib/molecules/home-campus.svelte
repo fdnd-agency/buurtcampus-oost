@@ -74,7 +74,7 @@
 		}
 		
 		p {
-			max-width: 38em;
+			max-width: 70ch;
 		}
 	}
 
