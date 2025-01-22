@@ -1,0 +1,406 @@
+.harryknop{
+    background-color: transparent;
+    border: none;
+}
+.halloharry .harryknop{
+    position: absolute;
+    z-index: 1;
+    right: 7vw;
+    top: calc(50vh - var(--margin-large) - 3rem);
+    transform: rotate(20deg);
+    transition: 200ms;
+    animation-timeline: view();
+    animation-name: hide;
+    animation-fill-mode: forwards;
+    animation-range-start: 80vh;
+    animation-range-end: 100vh;
+
+    &:hover{
+        transform: rotate(20deg) translate(.3rem, -.5rem);
+    }
+    .cartoon{
+        width: 8rem;
+    }
+}
+
+.cartoon g, .cartoon path{
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: 200ms;
+}
+.harry {
+    .eyes-neutral, .eyes-star {
+        transform-origin: center;
+        animation: blink 10s infinite;
+    }
+    .arm-l{
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
+        transform-origin: right center;
+    }
+    .arm-r{
+        transform: translateY(-20px) translateX(-12px) rotate(55deg);
+        transform-origin: left center;
+    }
+    /* oba harry */
+    .eyes-star, .sad-tears, .eyes-neutral, .angry-brows,
+    .mouth-shock, .mouth-sad, .mouth-happy, .mouth-neutral, .mouth-tongue, .mouth-angry,
+    .plant-backwards,
+    .scarf,
+    .ass,
+    .heart-upsidedown {
+        opacity: 0;
+    }
+}
+.harry[data-mood="neutral"]{
+    .mouth-neutral{
+        opacity: 1;
+    }
+    .eyes-neutral {
+        opacity: 1;
+    }
+    .arm-l {
+        animation: wave 20s infinite;
+    }
+}
+.harry[data-mood="happy"]{
+    .mouth-happy {
+        opacity: 1;
+    }
+    .eyes-neutral{
+        opacity: 1;
+    }
+    .arm-l {
+        animation: wave 20s infinite 1400ms;
+    }
+}
+/* .harry[data-mood="dorst"]{
+    .dorst{
+        opacity: 1;
+    }
+    .neutral{
+        opacity: 1;
+    }
+} */
+.harry[data-mood="sad"]{
+    .mouth-sad{
+        opacity: 1;
+    }
+    .eyes-neutral {
+        opacity: 1;
+    }
+    .sad-tears {
+        opacity: 1;
+    }
+    /* .sangry{
+        opacity: 1;
+    } */
+    .plant{
+        opacity: 0;
+    }
+    .arm-l{
+        --rotatearm: -55deg; 
+        --translateXarm: 10px;
+        --translateYarm: -20px;     
+        transform-origin: right center;
+    }
+    .arm-r{
+        --rotatearm: 55deg;
+        --translateXarm: -10px;
+        --translateYarm: -20px;
+        transform-origin: left center;
+    }
+    .arm-r,
+    .arm-l {
+        animation: shoulders 5s infinite;
+    }
+    .pot {
+        animation: sad 5s infinite;
+        transform-origin: center;
+    }
+}
+
+.harry[data-mood="angry"]{
+    .eyes-neutral {
+        opacity: 1;
+    }
+    .angry-brows {
+        opacity: 1;
+    }
+    .mouth-angry {
+        opacity: 1;
+    }
+    .pot {
+        animation: angry 0.3s infinite;
+        transform-origin: center;
+        --normal: 0deg;
+        --shake: 2deg;
+    }
+}
+
+.harry[data-mood="crazy"] {
+    .mouth-tongue{
+        opacity: 1;
+    }
+    .eyes-neutral {
+        opacity: 1;
+    }
+}
+
+.harry[data-mood="twerk"] {
+    .pot{
+        animation: twerkbody 0.7s infinite;
+        transform-origin: top;
+    }
+    .heart {
+        opacity: 0;
+    }
+    .heart-upsidedown {
+        opacity: 1;
+    }
+    .ass {
+        opacity: 1;
+        animation: twerkbody 0.7s infinite;
+    }
+    .ass-l{
+        animation-delay: 0.2s;
+        animation: twerk 0.7s infinite;
+    }
+    .ass-r{
+        animation: twerk 0.7s infinite;
+    }
+    .plant{
+        transform: rotateY(180deg);
+        animation: twerkbody 0.7s infinite;
+        transform-origin: bottom;
+    }
+    .leg-l, .leg-r{
+        transform: translateY(-10px);
+    }
+    .arm-l{
+        animation: twerkarms 0.7s infinite;
+        --rotatearm: 45deg;
+    }
+    .arm-r{
+        animation: twerkarms 0.7s infinite;
+        --rotatearm: -45deg;
+    }
+    .pot, .ass, .ass-l, .ass-r, .plant, .arm-l, .arm-r{
+        animation-timing-function: ease-in;
+    }
+}
+
+.harry[data-environment="sunny"]{
+    .eyes-star {
+        opacity: 1;
+    }
+
+    /* .plant{
+        opacity: 0;
+    } */
+} 
+
+.harry[data-environment="cold"]{
+    .scarf{
+        opacity: 1;
+    }
+    .mouth{
+        opacity: 0;
+    }
+}
+
+.harry[data-environment="fel"]{
+    .bril{
+        opacity: 1;
+    }
+} 
+
+/* ANIMATIONS */
+@keyframes wave {
+    0% {    
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
+    }
+
+    1% {
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
+    }
+
+    6% {
+        transform: translateY(-20px) translateX(12px) rotate(45deg);
+    }
+
+    7% {
+        transform: translateY(-20px) translateX(12px) rotate(25deg);
+    }
+
+    8% {
+        transform: translateY(-20px) translateX(12px) rotate(45deg);
+    }
+
+    11% {
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);    
+    }
+
+    100% {
+        transform: translateY(-20px) translateX(12px) rotate(-55deg);
+    }
+}
+@keyframes angry {
+    0% {
+        transform: rotate(var(--normal));
+    }
+
+    50% {
+        transform: rotate(var(--shake));
+    }
+
+    100% {
+        transform: rotate(var(--normal));
+    }
+}
+@keyframes blink {
+    0% {
+        transform: scaleY(1);
+    }
+
+    2% {
+        transform: scaleY(0.1);
+    }
+    4% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes sad {
+    0% {
+        transform: scale(1);
+    }
+
+    40%{
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.01);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    55% {
+        transform: scale(1.01);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: rotate(1);
+    }
+}
+@keyframes shoulders {
+    0%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    40%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    45%{
+        transform:  translateX(var(--translateXarm)) translateY(calc(var(--translateYarm) + 5px)) rotate(var(--rotatearm));
+    }
+
+    50%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    55%{
+        transform:  translateX(var(--translateXarm)) translateY(calc(var(--translateYarm) + 5px)) rotate(var(--rotatearm));
+    }
+
+    60%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+
+    100%{
+        transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
+    }
+}
+@keyframes hide {
+    0%{
+    transform: rotate(20deg) translate(0);    
+    }
+
+    100%{
+       transform: rotate(20deg) translate(-2vw, 3rem);    
+    }
+
+}
+@keyframes twerk {
+    0%{
+        transform: translateX(0) rotate(0) scaleY(1);
+    }
+
+    25%{
+        transform: translateX(-35px) rotate(-15deg) scaleY(1.2);
+    }
+
+    50%{
+        transform: translateX(0) rotate(0)  scaleY(1);
+    }
+
+    75%{
+        transform: translateX(35px) rotate(15deg) scaleY(1.2);
+    }
+
+    100%{
+        transform: translateX(0) rotate(0) scaleY(1);
+    }
+}
+@keyframes twerkbody {
+    0%{
+        transform: rotate(0);
+    }
+
+    20%{
+        transform: rotate(10deg);
+    }
+
+    50%{
+        transform: rotate(0);
+    }
+
+    80%{
+        transform: rotate(-10deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes twerkarms {
+    0%{
+        transform: translateX(0) rotate(var(--rotatearm));
+    }
+
+    20%{
+        transform: translateX(-10px) rotate(var(--rotatearm));
+    }
+
+    50%{
+        transform: translateX(0) rotate(var(--rotatearm));
+    }
+
+    80%{
+        transform: translateX(10px) rotate(var(--rotatearm));
+    }
+
+    100%{
+        transform: translateX(0) rotate(var(--rotatearm));
+    }
+}
