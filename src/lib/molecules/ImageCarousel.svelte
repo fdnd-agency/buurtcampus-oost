@@ -29,7 +29,7 @@
 
 	.scroll-container {
 		display: flex;
-		gap: 2rem;
+		gap: 1rem;
 		margin: 1rem;
 		overflow-x: auto;
 		scrollbar-width: none;
@@ -61,7 +61,7 @@
 
 	@container carousel (min-width: 37.5rem) and (max-width: 64rem) {
 		.content {
-			min-width: calc(50% - 1rem);
+			min-width: calc(20rem - 2rem);
 			max-height: 30rem;
 		}
 
@@ -72,7 +72,7 @@
 
 	@container carousel (min-width: 64rem) {
 		.content {
-			min-width: calc(20rem - 1.5rem);
+			min-width: calc(20rem - 2rem);
 			max-height: 25rem;
 		}
 
@@ -89,23 +89,24 @@
 			}
 
 			@keyframes animate-in-and-out {
-				/* Verander de beginpositie van de animatie, zodat de afbeelding niet buiten beeld begint */
 				entry 0% {
 					opacity: 0;
-					transform: translateX(0); /* Begin op de originele positie */
+					transform: translateX(0);
 				}
+
 				entry 100% {
 					opacity: 1;
-					transform: translateX(0); /* Eindigt op de originele positie */
+					transform: translateX(0);
 				}
 
 				exit 0% {
 					opacity: 1;
-					transform: translateX(0); /* Begin de uitgang zonder te verschuiven */
+					transform: translateX(0);
 				}
+
 				exit 100% {
 					opacity: 0;
-					transform: translate(-10%); /* De afbeelding beweegt naar links wanneer deze verdwijnt */
+					transform: translate(-10%);
 				}
 			}
 		}
@@ -113,7 +114,7 @@
 
 	@container carousel (min-width: 100rem) {
 		.content {
-			min-width: calc(25% - 1.5rem);
+			min-width: calc(25rem - 1.5rem);
 			max-height: 30rem;
 		}
 
