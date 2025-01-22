@@ -94,7 +94,8 @@
 	<dialog>
 		<button class="close-btn" id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
-			<ul role="menubar">
+			<ul id="main-menu" role="menubar">
+				<li role="menuitem"><a href="/">Home</a></li>
 				<li class="dropdown">
 					<button class="projecten-btn">Projecten <ArrowDown /></button>
 					<ul class="dropdown-content">
@@ -271,6 +272,10 @@
 
 		li {
 			border-bottom: none;
+		}
+
+		#main-menu > li:first-child {
+			display: none;
 		}
 
 		a {
