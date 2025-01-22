@@ -39,7 +39,7 @@
 	}
 
 	p {
-		max-width: 21em;
+        max-width: 65ch;
 		margin-bottom: 2rem;
 		line-height: var(--line-height-paragraph);
 	}

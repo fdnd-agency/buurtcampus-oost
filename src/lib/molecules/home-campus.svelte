@@ -41,7 +41,7 @@
 
 	p {
 		padding: 0.3em;
-		max-width: 32em;
+        max-width: 65ch;
 		line-height: var(--line-height-paragraph);
 	}
 
