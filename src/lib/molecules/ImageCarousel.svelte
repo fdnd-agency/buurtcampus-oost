@@ -184,7 +184,7 @@
 		}
 
 		.button-container:last-child p.desktop-only {
-			margin-left: 1rem; /* Zorgt ervoor dat 'Volgende' meer naar rechts verschuift */
+			margin-left: 1rem; 
 		}
 
 		p.desktop-only {
@@ -234,7 +234,6 @@
 		}
 
 		.scroll-container {
-			/* margin: 4rem; */
 			gap: 1rem;
 		}
 	}
