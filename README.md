@@ -56,4 +56,4 @@ Om de build versie van de website te bekijken run je `npm run build` in plaats v
 - [Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
 - [Hygraph](https://hygraph.com)
 - [Sveltekit](https://kit.svelte.dev/docs/introduction)
-- [Project board](https://github.com/orgs/fdnd-agency/projects/3/views/1)
+- [Project board](https://github.com/orgs/fdnd-agency/projects/3)
