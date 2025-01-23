@@ -58,7 +58,7 @@
 		{#if images.length > 0}
 			{#each images as image}
 				<div class="content">
-					<img src={image.url} alt="" />
+					<img src={image.url} alt="" loading="lazy" />
 				</div>
 			{/each}
 		{:else}
