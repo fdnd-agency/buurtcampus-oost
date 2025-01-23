@@ -33,25 +33,31 @@
 
 <section class="carousel-container">
 	<article class="caroussel-buttons hidden">
-		<button type="button" on:click={scrollPrev}
-			><img
-				class="arrow"
-				src="./assets/arrow-prev.svg"
-				alt="arrow-prev"
-				width="100"
-				loading="lazy"
-			/></button
-		>
+		<div class="button-container">
+			<button type="button" on:click={scrollPrev}
+				><img
+					class="arrow"
+					src="./assets/arrow-prev.svg"
+					alt="arrow-prev"
+					width="100"
+					loading="lazy"
+				/></button
+			>
+			<p class="desktop-only">Vorige</p>
+		</div>
 
-		<button type="button" on:click={scrollNext}
-			><img
-				class="arrow"
-				src="./assets/arrow-next.svg"
-				alt="arrow-next"
-				width="100"
-				loading="lazy"
-			/></button
-		>
+		<div class="button-container">
+			<button type="button" on:click={scrollNext}
+				><img
+					class="arrow"
+					src="./assets/arrow-next.svg"
+					alt="arrow-next"
+					width="100"
+					loading="lazy"
+				/></button
+			>
+			<p class="desktop-only">Volgende</p>
+		</div>
 	</article>
 
 	<div class="scroll-container" bind:this={carouselContainer}>
@@ -107,6 +113,10 @@
 
 	.hidden {
 		display: none !important;
+	}
+
+	p.desktop-only {
+		display: none;
 	}
 
 	@container carousel (max-width: 37.5rem) {
@@ -165,6 +175,25 @@
 
 		button:hover {
 			background: var(--main-color-green);
+		}
+
+		.button-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.button-container:last-child p.desktop-only {
+			margin-left: 1rem; /* Zorgt ervoor dat 'Volgende' meer naar rechts verschuift */
+		}
+
+		p.desktop-only {
+			font-size: 1em;
+			font-family: var(--paragraph-font);
+			color: var(--main-color-brown);
+			text-align: center;
+			display: block;
+			margin-top: 0.5rem;
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
