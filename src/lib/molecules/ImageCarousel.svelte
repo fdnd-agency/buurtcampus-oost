@@ -1,11 +1,39 @@
 <script>
+	import { onMount } from "svelte";
 	export let heroInfo;
 	let images = heroInfo.carouselImage[0].images;
+
+	let carouselContainer;
+
+	function scrollPrev() {
+		// Check if smooth scroll is supported
+		if ('scrollBehavior' in document.documentElement.style) {
+			carouselContainer.scrollBy({ left: -carouselContainer.offsetWidth, behavior: 'smooth' });
+		} else {
+			carouselContainer.scrollBy({ left: -carouselContainer.offsetWidth });
+		}
+	}
+
+	function scrollNext() {
+		// Check if smooth scroll is supported
+		if ('scrollBehavior' in document.documentElement.style) {
+			carouselContainer.scrollBy({ left: carouselContainer.offsetWidth, behavior: 'smooth' });
+		} else {
+			carouselContainer.scrollBy({ left: carouselContainer.offsetWidth });
+		}
+	}
+
+	onMount(() => {
+		const buttons = document.querySelector('.caroussel-buttons');
+		if (buttons) {
+			buttons.classList.remove('hidden');
+		}
+	});
 </script>
 
 <section class="carousel-container">
-	<article class="caroussel-buttons">
-		<button type="button" aria-label="previousbutton"
+	<article class="caroussel-buttons hidden">
+		<button type="button" aria-label="previousbutton" on:click={scrollPrev}
 			><img
 				class="arrow"
 				src="./assets/arrow-prev.svg"
@@ -15,7 +43,7 @@
 			/></button
 		>
 
-		<button type="button" aria-label="nextbutton"
+		<button type="button" aria-label="nextbutton" on:click={scrollNext}
 			><img
 				class="arrow"
 				src="./assets/arrow-next.svg"
@@ -26,7 +54,7 @@
 		>
 	</article>
 
-	<div class="scroll-container">
+	<div class="scroll-container" bind:this={carouselContainer}>
 		{#if images.length > 0}
 			{#each images as image}
 				<div class="content">
@@ -75,6 +103,10 @@
 
 	button {
 		display: none;
+	}
+
+	.hidden {
+		display: none !important;
 	}
 
 	@container carousel (max-width: 37.5rem) {
