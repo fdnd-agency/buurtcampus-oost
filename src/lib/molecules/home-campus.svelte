@@ -36,7 +36,7 @@
 	}
 
 	h2 span:nth-of-type(2) {
-		color: var(--main-color-orange);
+		color: var(--main-color-brown);
 	}
 
 	p {
