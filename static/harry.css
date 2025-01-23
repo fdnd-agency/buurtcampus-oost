@@ -148,7 +148,13 @@
     .heart {
         opacity: 0;
     }
+    .plant {
+        opacity: 0;
+    }
     .heart-upsidedown {
+        opacity: 1;
+    }
+    .plant-backwards {
         opacity: 1;
     }
     .ass {
@@ -257,7 +263,7 @@
     2% {
         transform: scaleY(0.1);
     }
-    
+
     4% {
         transform: scaleY(1);
     }
