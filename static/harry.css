@@ -2,6 +2,7 @@
     background-color: transparent;
     border: none;
 }
+
 .halloharry .harryknop{
     position: absolute;
     z-index: 1;
@@ -28,6 +29,7 @@
     transform-origin: center;
     transition: 200ms;
 }
+
 .harry {
     .eyes-neutral, .eyes-star {
         transform-origin: center;
@@ -46,10 +48,12 @@
     .mouth-shock, .mouth-sad, .mouth-happy, .mouth-neutral, .mouth-tongue, .mouth-angry,
     .plant-backwards,
     .scarf,
-    .ass {
+    .ass,
+    .heart-upsidedown {
         opacity: 0;
     }
 }
+
 .harry[data-mood="neutral"]{
     .mouth-neutral{
         opacity: 1;
@@ -61,6 +65,7 @@
         animation: wave 20s infinite;
     }
 }
+
 .harry[data-mood="happy"]{
     .mouth-happy {
         opacity: 1;
@@ -72,14 +77,7 @@
         animation: wave 20s infinite 1400ms;
     }
 }
-/* .harry[data-mood="dorst"]{
-    .dorst{
-        opacity: 1;
-    }
-    .neutral{
-        opacity: 1;
-    }
-} */
+
 .harry[data-mood="sad"]{
     .mouth-sad{
         opacity: 1;
@@ -90,9 +88,6 @@
     .sad-tears {
         opacity: 1;
     }
-    /* .sangry{
-        opacity: 1;
-    } */
     .plant{
         opacity: 0;
     }
@@ -150,6 +145,18 @@
         animation: twerkbody 0.7s infinite;
         transform-origin: top;
     }
+    .heart {
+        opacity: 0;
+    }
+    .plant-neutral {
+        opacity: 0;
+    }
+    .heart-upsidedown {
+        opacity: 1;
+    }
+    .plant-backwards {
+        opacity: 1;
+    }
     .ass {
         opacity: 1;
         animation: twerkbody 0.7s infinite;
@@ -186,10 +193,6 @@
     .eyes-star {
         opacity: 1;
     }
-
-    /* .plant{
-        opacity: 0;
-    } */
 } 
 
 .harry[data-environment="cold"]{
@@ -237,6 +240,7 @@
         transform: translateY(-20px) translateX(12px) rotate(-55deg);
     }
 }
+
 @keyframes angry {
     0% {
         transform: rotate(var(--normal));
@@ -250,6 +254,7 @@
         transform: rotate(var(--normal));
     }
 }
+
 @keyframes blink {
     0% {
         transform: scaleY(1);
@@ -258,6 +263,7 @@
     2% {
         transform: scaleY(0.1);
     }
+
     4% {
         transform: scaleY(1);
     }
@@ -266,6 +272,7 @@
         transform: scaleY(1);
     }
 }
+
 @keyframes sad {
     0% {
         transform: scale(1);
@@ -295,6 +302,7 @@
         transform: rotate(1);
     }
 }
+
 @keyframes shoulders {
     0%{
         transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
@@ -324,6 +332,7 @@
         transform:  translateX(var(--translateXarm)) translateY(var(--translateYarm)) rotate(var(--rotatearm));
     }
 }
+
 @keyframes hide {
     0%{
     transform: rotate(20deg) translate(0);    
@@ -332,8 +341,8 @@
     100%{
        transform: rotate(20deg) translate(-2vw, 3rem);    
     }
-
 }
+
 @keyframes twerk {
     0%{
         transform: translateX(0) rotate(0) scaleY(1);
@@ -355,6 +364,7 @@
         transform: translateX(0) rotate(0) scaleY(1);
     }
 }
+
 @keyframes twerkbody {
     0%{
         transform: rotate(0);
@@ -376,6 +386,7 @@
         transform: rotate(0);
     }
 }
+
 @keyframes twerkarms {
     0%{
         transform: translateX(0) rotate(var(--rotatearm));
