@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 	export let heroInfo;
 	let images = heroInfo.carouselImage[0].images;
 
@@ -33,7 +33,7 @@
 
 <section class="carousel-container">
 	<article class="caroussel-buttons hidden">
-		<button type="button" aria-label="previousbutton" on:click={scrollPrev}
+		<button type="button" on:click={scrollPrev}
 			><img
 				class="arrow"
 				src="./assets/arrow-prev.svg"
@@ -43,7 +43,7 @@
 			/></button
 		>
 
-		<button type="button" aria-label="nextbutton" on:click={scrollNext}
+		<button type="button" on:click={scrollNext}
 			><img
 				class="arrow"
 				src="./assets/arrow-next.svg"
