@@ -10,4 +10,5 @@
 ### Wat wordt aangeraden als eerste stap voor het volgende team?
 
 - Code refectoren.
-- De feedback verwerken die is gegeven tijdens de Code/design review met de professionals. [Code/design review 17-01-2025](https://github.com/fdnd-agency/buurtcampus-oost/issues/331#issuecomment-2598302431)
+- De feedback verwerken die is gegeven tijdens de Code/design review met de professionals.
+> [Code/design review 17-01-2025](https://github.com/fdnd-agency/buurtcampus-oost/issues/331#issuecomment-2598302431)
