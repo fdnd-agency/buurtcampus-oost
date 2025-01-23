@@ -69,7 +69,7 @@
 					<AgendaButton
 						href="/agenda"
 						buttonText="Aanmelden"
-						btnClass="btn-beige"
+						buttonClass="btn-beige"
 						svgFill="svg-brown"
 					/>
 				</div>

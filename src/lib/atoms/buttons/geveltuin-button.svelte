@@ -1,8 +1,8 @@
 <script>
-	export let href, buttonText, btnClass, svgFill;
+	export let href, buttonText, buttonClass, svgFill;
 </script>
 
-<a {href} class={btnClass}>
+<a {href} class={buttonClass}>
 	{buttonText}
 	<span>
 		<svg class={svgFill} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 47">

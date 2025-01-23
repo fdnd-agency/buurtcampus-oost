@@ -42,8 +42,8 @@
 		<div class="overlay"></div>
 
 		<header>
-			<h1>Samen <span>Groener</span> Leven</h1>
-			<h2>Inspireer & Deel je Groene Passie!</h2>
+			<h1>{data.headerTexts[0].heading1}</h1>
+			<h2>{data.headerTexts[0].description}</h2>
 			<HarryWeather />
 		</header>
 
@@ -69,6 +69,7 @@
 		background-color: var(--main-color-green);
 		width: 100%;
 		height: 85vh;
+		
 	}
 	.overlay {
 		position: absolute;
@@ -77,6 +78,7 @@
 		width: 100%;
 		height: 85vh;
 		background: var(--image-gradient);
+		
 	}
 	header {
 		position: absolute;
@@ -86,19 +88,20 @@
 		flex-direction: column;
 		align-items: flex-start;
 		padding: 0 1em;
+		overflow: hidden;
 	}
+
 	h1 {
-		view-transition-name: h1;
 		font-family: var(--header-font);
-		font-size: clamp(4em, 15vw, 5em);
+		font-size: clamp(1em, 10vw, 5em);
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
 		width: 60%;
 	}
+
 	h2 {
-		view-transition-name: h2;
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 		color: var(--text-color-white);
 		font-weight: 900;
 		line-height: 1.1em;
@@ -150,12 +153,28 @@
 			width: 100%;
 			text-align: center;
 		}
+
+		h2{
+			font-size: 2rem;
+		}
 	}
 
 	/* MEDIA QUERY DESKTOP = 1700px */
 	@media (min-width: 106.25rem) {
 		h1 {
-			font-size: clamp(5.8em, 12vw, 10em);
+			font-size: clamp(5em, 12vw, 10em);
+		}
+
+		h2{
+			font-size: 2rem;
 		}
 	}
+
+	@media (min-width: 100rem) {
+
+		h2{
+			font-size: 4em;
+		}
+	}
+
 </style>

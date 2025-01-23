@@ -46,6 +46,8 @@ export async function load() {
 						naam
 						fotos {
 							url
+							width
+							height
 						}
 					}
 				}

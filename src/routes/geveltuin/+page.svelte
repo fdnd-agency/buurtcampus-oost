@@ -17,7 +17,7 @@
 
 		<p class="intro-p">{data.facadeGardenActions[0].description}</p>
 
-		<ul class="action-ul" role="contentinfo">
+		<ul class="action-ul">
 			{#each bulletPoints1 as point}
 				{#if point.trim() !== ''}
 					<li>{point}</li>
@@ -26,7 +26,7 @@
 		</ul>
 
 		<GeveltuinButton
-			btnClass="btn-green"
+			buttonClass="btn-green"
 			href="/contact"
 			buttonText="Aanmelden"
 			svgFill="svg-beige"
@@ -48,6 +48,10 @@
 		margin-top: 5rem;
 		margin-bottom: 1rem;
 		background-color: var(--main-color-beige);
+	}
+
+	p{
+		line-height: var(--line-height-paragraph);
 	}
 
 	p,
@@ -135,6 +139,15 @@
 	}
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
+		h2,
+		.intro-p {
+			margin-left: 0.6rem;
+		}
+
+		p {
+			width: 55vw;
+		}
+
 		img {
 			width: 45vw;
 		}

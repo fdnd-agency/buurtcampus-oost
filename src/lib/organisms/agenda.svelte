@@ -6,7 +6,8 @@
 
 <section>
 	<img src="./assets/leaf-orange.svg" alt="" height="800" width="800" />
-	<h2>Agenda</h2>
+	<h2>{data.agendaTexts[1].title}</h2>
+	<p>{data.agendaTexts[1].agendaParagraph1}</p>
 	<AgendaInfoButton />
 	<AgendaCarousel {data} />
 </section>
@@ -17,19 +18,19 @@
 		z-index: 2;
 		max-width: 100%;
 		overflow: hidden;
-		padding: 4rem 0 4rem 1rem;
+		padding: var(--section-padding-y) 0 var(--section-padding-y) 1rem;
 	}
 
 	img {
 		display: none;
 		position: absolute;
-		rotate: 120deg;
-		left: 0;
+		rotate: 60deg;
+		left: -13em;
 		transform: translateY(200px) translateX(150px);
 	}
 
 	h2 {
-		font-size: 3.5rem;
+		font-size: clamp(2em, 5vw, 8em);
 		padding-bottom: 0.7em;
 		font-family: var(--sub-header-font);
 		color: var(--main-color-brown);
@@ -37,15 +38,24 @@
 		z-index: 3;
 	}
 
+	p {
+		padding-right: 1em;
+		max-width: 65ch;
+		margin-bottom: 2rem;
+		line-height: var(--line-height-paragraph);
+	}
+
 	/* MEDIA QUERY TABLET = 768px */
 	@media (min-width: 48rem) {
 		section {
-			padding: 4rem 0 4rem 7.5rem;
+			padding: var(--section-padding-y) 0 var(--section-padding-y) var(--section-padding-x);
 		}
 
-		h2 {
-			font-size: 4.5rem;
+		p {
+			z-index: 100;
+			max-width: 70ch;
 		}
+
 		img {
 			display: block;
 		}
@@ -53,8 +63,15 @@
 
 	/* MEDIA QUERY DESKTOP = 1500px */
 	@media (min-width: 93.75rem) {
-		/* section {
-			padding: 4rem 15em;
-		} */
+		section {
+			padding: var(--section-padding-y) 15em;
+		}
+	}
+
+	@media (min-width: 100rem) {
+		p {
+			position: relative;
+			z-index: 100;
+		}
 	}
 </style>

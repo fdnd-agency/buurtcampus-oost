@@ -12,14 +12,10 @@ export async function load() {
 				}
 			}
 
-			abouts {
+			groenebiebs {
 				createdAt
 				description
-				description2
-				description3
-				description4
 				id
-				title
 			}
 		}
 	`;

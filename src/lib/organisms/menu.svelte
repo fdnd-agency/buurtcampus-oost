@@ -6,9 +6,12 @@
 		const openButton = document.querySelector('#open-modal');
 		const closeButton = document.querySelector('#close-modal');
 		const navLinks = document.querySelectorAll('nav a');
+		const dropdownButton = document.querySelector('.projecten-btn');
+		const dropdownContent = document.querySelector('.dropdown-content');
 		const modal = document.querySelector('dialog');
 
 		const isMobileView = () => window.matchMedia('(max-width: 56.25em)').matches;
+		const isDesktopView = () => window.matchMedia('(min-width: 56.25em)').matches;
 
 		if (openButton && modal) {
 			openButton.addEventListener('click', () => {
@@ -50,6 +53,32 @@
 				}
 			});
 		}
+
+		if (dropdownButton && dropdownContent) {
+			// Event handler om de dropdown te toggelen
+			const handleDropdownToggle = (event) => {
+				if (isDesktopView()) {
+					event.preventDefault();
+					dropdownContent.style.display =
+						dropdownContent.style.display === 'block' ? 'none' : 'block';
+				}
+			};
+
+			// Event handler voor focus verlies
+			const handleFocusOut = (event) => {
+				if (isDesktopView() && !dropdownContent.contains(event.relatedTarget)) {
+					dropdownContent.style.display = 'none';
+				}
+			};
+
+			// Event listeners voor dropdown acties
+			dropdownButton.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter') handleDropdownToggle(event);
+			});
+
+			dropdownButton.addEventListener('click', handleDropdownToggle);
+			dropdownContent.addEventListener('focusout', handleFocusOut);
+		}
 	});
 </script>
 
@@ -65,14 +94,15 @@
 	<dialog>
 		<button class="close-btn" id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
-			<ul role="menubar">
+			<ul id="main-menu" role="menubar">
+				<li role="menuitem"><a href="/">Home</a></li>
 				<li class="dropdown">
 					<button class="projecten-btn">Projecten <ArrowDown /></button>
 					<ul class="dropdown-content">
 						<li role="menuitem"><a href="/stekjes">Stekjes</a></li>
 						<li role="menuitem"><a href="/zaden">Zaden</a></li>
 						<li role="menuitem"><a href="/geveltuin">Geveltuin</a></li>
-						<li role="menuitem"><a href="/">Groenebieb</a></li>
+						<li role="menuitem"><a href="/groenebieb">Groenebieb</a></li>
 					</ul>
 				</li>
 				<li role="menuitem"><a href="/agenda">Agenda</a></li>
@@ -85,8 +115,9 @@
 </header>
 
 <style>
+	/* MENU STYLING */
 	header {
-		z-index: 1;
+		z-index: 1000;
 		width: 100%;
 		position: absolute;
 	}
@@ -131,6 +162,7 @@
 		position: fixed;
 		margin-left: 1rem;
 		align-items: center;
+		line-height: 2.5rem;
 		justify-content: center;
 	}
 
@@ -152,19 +184,11 @@
 	}
 
 	ul:first-child {
-		font-size: 3.7em;
-	}
-
-	li {
-		border-bottom: 2px solid var(--main-color-green);
-	}
-
-	.dropdown-content li:last-child {
-		border-bottom: none;
+		font-size: 4em;
 	}
 
 	a {
-		font-size: 2rem;
+		font-size: 0.4em;
 		text-decoration: none;
 		font-family: var(--link-font);
 		color: var(--main-color-green);
@@ -239,7 +263,6 @@
 		ul {
 			gap: 0.5em;
 			display: flex;
-			padding: 4em 0;
 			font-size: 1.4em;
 			flex-direction: row;
 			align-items: center;
@@ -247,6 +270,10 @@
 
 		li {
 			border-bottom: none;
+		}
+
+		#main-menu > li:first-child {
+			display: none;
 		}
 
 		a {
