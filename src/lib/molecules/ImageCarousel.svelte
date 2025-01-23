@@ -4,6 +4,28 @@
 </script>
 
 <section class="carousel-container">
+	<article class="caroussel-buttons">
+		<button type="button" aria-label="previousbutton"
+			><img
+				class="arrow"
+				src="./assets/arrow-prev.svg"
+				alt="arrow-prev"
+				width="100"
+				loading="lazy"
+			/></button
+		>
+
+		<button type="button" aria-label="nextbutton"
+			><img
+				class="arrow"
+				src="./assets/arrow-next.svg"
+				alt="arrow-next"
+				width="100"
+				loading="lazy"
+			/></button
+		>
+	</article>
+
 	<div class="scroll-container">
 		{#if images.length > 0}
 			{#each images as image}
@@ -19,9 +41,9 @@
 
 <style>
 	.carousel-container {
-		margin-top: 2rem;
+		margin-top: 3rem;
 		overflow: hidden;
-		margin-bottom: -6rem;
+		margin-bottom: -4rem;
 		container-type: inline-size;
 		container-name: carousel;
 	}
@@ -51,6 +73,10 @@
 		padding: 0.5rem;
 	}
 
+	button {
+		display: none;
+	}
+
 	@container carousel (max-width: 37.5rem) {
 		.content {
 			min-width: 90%;
@@ -77,8 +103,36 @@
 		}
 
 		.scroll-container {
-			margin: 5rem;
 			gap: 1rem;
+		}
+
+		.carousel-container {
+			margin: 2rem;
+		}
+
+		.caroussel-buttons {
+			z-index: 3;
+			margin-left: 2rem;
+			position: relative;
+			width: 6em;
+			display: flex;
+			margin-bottom: 1em;
+			justify-content: space-between;
+		}
+
+		button {
+			width: 40px;
+			height: 40px;
+			border: none;
+			padding: 0.3em;
+			display: block;
+			cursor: pointer;
+			border-radius: 50%;
+			background-color: var(--main-color-brown);
+		}
+
+		button:hover {
+			background: var(--main-color-green);
 		}
 
 		/* SCROLL-DRIVEN-ANIMATIONS STYLING */
@@ -119,7 +173,7 @@
 		}
 
 		.scroll-container {
-			margin: 4rem;
+			/* margin: 4rem; */
 			gap: 1rem;
 		}
 	}
