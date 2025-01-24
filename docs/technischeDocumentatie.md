@@ -45,7 +45,7 @@ https://github.com/fdnd-agency/buurtcampus-oost/blob/47689846a6a7d57683fb55c11c8
 ### Harry SVG
 <img width="455" alt="Scherm­afbeelding 2025-01-24 om 07 25 44" src="https://github.com/user-attachments/assets/bd381c33-60ab-4d73-b838-1c0c3a4464d5" />
 
-De SVG van Harry ziet er zo uit: Het zijn eigenlijk allemaal lagen over elkaar heen. Die lagen worden dan uitgezet bij verschillende moods. Zo heb je bijvoorbeeld de `data-mood="angry"`, daar staan de lagen `.angry-brows`, `.angry-mouth` en `.eyes-neutral` aan met `opacity 0`, zie code hieronder.
+De SVG van Harry ziet er zo uit: Het zijn eigenlijk allemaal lagen over elkaar heen. Die lagen worden dan uitgezet bij verschillende moods. Zo heb je bijvoorbeeld de `data-mood="angry"`, daar staan de lagen `.angry-brows`, `.angry-mouth` en `.eyes-neutral` aan met `opacity: 1`, zie code hieronder.
 
 https://github.com/fdnd-agency/buurtcampus-oost/blob/679eef448fe46c11af956572ca3520507199de7e/static/harry.css#L116-L132
 
