@@ -43,4 +43,25 @@ https://github.com/fdnd-agency/buurtcampus-oost/blob/47689846a6a7d57683fb55c11c8
 https://github.com/fdnd-agency/buurtcampus-oost/blob/47689846a6a7d57683fb55c11c8a78f1c18603ff/src/routes/stekjes/%5Bslug%5D/%2Bpage.svelte#L15
 
 ### Harry SVG
-> Larissa legt dit nog uit.
+<img width="455" alt="Scherm­afbeelding 2025-01-24 om 07 25 44" src="https://github.com/user-attachments/assets/bd381c33-60ab-4d73-b838-1c0c3a4464d5" />
+
+De SVG van Harry ziet er zo uit: Het zijn eigenlijk allemaal lagen over elkaar heen. Die lagen worden dan uitgezet bij verschillende moods. Zo heb je bijvoorbeeld de `data-mood="angry"`, daar staan de lagen `.angry-brows`, `.angry-mouth` en `.eyes-neutral` aan met `opacity 0`, zie code hieronder.
+
+https://github.com/fdnd-agency/buurtcampus-oost/blob/679eef448fe46c11af956572ca3520507199de7e/static/harry.css#L116-L132
+
+In /src/lib/atoms/**harry.svelte** wordt dus de SVG ingeladen. Maar ook geven we daar `data-mood="{mood}" data-environment="{environment}` mee, zie code hieronder. Hierdoor kunnen we in de css de svg aanpassen d.m.v data-mood en data-environments. 
+https://github.com/fdnd-agency/buurtcampus-oost/blob/679eef448fe46c11af956572ca3520507199de7e/src/lib/atoms/harry.svelte#L9-L10
+
+### Mood of Environment toevoegen?
+Als je bijvoorbeeld een extra mood wilt toevoegen, moet je de `svg` aanpassen. Die kun je bijvoorbeeld openen in `Figma` of `Illustrator`. Dan voeg je toe wat je wilt toevoegen aan heel de `svg`, als het makkelijker zien is kun je een paar lagen even op uit zetten. *Het is belangrijk om de lagen een goede benaming te geven, want deze lagen ga je namenlijk stylen.
+Zo heb ik alle ogen in het mapje /eyes en noem ik ze eyes-neutral, eyes-star etc. 
+
+Dan export je de svg, bij Figma moet je daarnaast op de 3 puntjes drukken, om de id lagen aan te zetten, anders neemt het de benamingen niet over. Dan open je de svg in een editor en selecteer je wat je hebt toegevoegd. 
+Dit ziet er ongeveer zo uit:
+https://github.com/fdnd-agency/buurtcampus-oost/blob/679eef448fe46c11af956572ca3520507199de7e/src/lib/atoms/harry.svelte#L35-L40
+Dan koppieer je dat en voeg je toe in de /src/lib/atoms/**harry.svelte** file. Nu moet je de lagen die je hebt toegevoegd uit zetten en aan zetten bij welke `data-mood` of `data-enviroments` je het wilt.
+* Met exporteren worden de lagen `id's`, als je jouw stukje erbij plakt verander dan wel de laag naar `class`.
+
+Hier wordt alles uitgezet:
+https://github.com/fdnd-agency/buurtcampus-oost/blob/679eef448fe46c11af956572ca3520507199de7e/static/harry.css#L47-L54
+
