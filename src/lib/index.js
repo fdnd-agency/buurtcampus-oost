@@ -30,6 +30,7 @@ export { default as ArrowDown } from '$lib/atoms/icons/arrow-down.svelte';
 // =========== MOLECULES ===========
 
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
+export { default as ImageCarousel } from '$lib/molecules/ImageCarousel.svelte';
 export { default as HeroHeaders } from '$lib/molecules/hero-headers.svelte';
 export { default as OverViewPages } from '$lib/molecules/over-view-page.svelte';
 export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
