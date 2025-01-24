@@ -16,6 +16,7 @@ Alle code rondom Harry is te vinden in deze bestanden:
 - JS: /src/lib/atoms/buttons/harryWeather.svelte
 - SVG: /src/lib/atoms/harry.svelte
 - CSS: /static/harryWeather.css
+- CSS: /static/harry.css
 
 ### Harry Styles+animaties
 In het HarryWeather.css bestand kan je alle styling van Harry vinden. Wat dingen om op te letten:
