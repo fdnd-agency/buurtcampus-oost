@@ -1,7 +1,6 @@
 <script>
     export let data;
     import { HeroHeaders, OverViewPages, IntroHeaders, ImageCarousel} from '$lib/index.js';
-    // console.log(data.overviewPages[0].product.fotos.url);
 
 </script>
 
