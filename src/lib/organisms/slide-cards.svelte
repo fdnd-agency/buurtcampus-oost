@@ -4,7 +4,7 @@
 </script>
 
 <div class="card-container">
-<article class="card-stekjes">
+	<article class="card-stekjes">
 		<header class="header-card">
 			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{data.cardSlides[0].titleCard}</h2>
@@ -86,9 +86,14 @@
 			<p>{data.cardSlides[1].paragraphCard}</p>
 			<p>{data.cardSlides[1].paragraphCard2}</p>
 		</div>
-		
+
 		<div class="btn-container">
-			<Button buttonClass="btn-brown" href="/zaden" buttonText="Bekijk de zaden" svgFill="svg-beige" />
+			<Button
+				buttonClass="btn-brown"
+				href="/zaden"
+				buttonText="Bekijk de zaden"
+				svgFill="svg-beige"
+			/>
 		</div>
 	</article>
 
@@ -99,21 +104,20 @@
 		</header>
 
 		<picture>
-			<img
-				width="783"
-				height="982"
-				loading="lazy"
-				src={data.cardSlides[3].imageCard.url}
-				alt=""
-			/>
+			<img width="783" height="982" loading="lazy" src={data.cardSlides[3].imageCard.url} alt="" />
 		</picture>
 
 		<div class="paragraph-card">
 			<p>{data.cardSlides[3].paragraphCard}</p>
 		</div>
-		
+
 		<div class="btn-container">
-			<Button buttonClass="btn-green" href="/groenebieb" buttonText="Bekijk de groene bieb" svgFill="svg-beige" />
+			<Button
+				buttonClass="btn-green"
+				href="/groenebieb"
+				buttonText="Bekijk de groene bieb"
+				svgFill="svg-beige"
+			/>
 		</div>
 	</article>
 </div>
@@ -175,11 +179,11 @@
 		display: flex;
 	}
 
-	h2{
-        font-family: var(--header-font);
-        font-size: clamp(2em, 5vw, 8em);
-        line-height: 95%;
-    }
+	h2 {
+		font-family: var(--header-font);
+		font-size: clamp(2em, 5vw, 8em);
+		line-height: 95%;
+	}
 
 	.card-stekjes,
 	.groenebieb {
@@ -238,116 +242,117 @@
 		margin: 2em 0;
 	}
 
-    /* MEDIA QUERY MOBILE = 400px */
-    @media (min-width: 25rem) {
-        .card-container,
+	/* MEDIA QUERY MOBILE = 400px */
+	@media (min-width: 25rem) {
+		.card-container,
 		article {
-            width: 95vw;
-        }
-        .card-container article {
-            display: grid;
-            justify-content: center;
-            padding: 2em;
-        }
-        h2 {
-            max-width: 7em;
-        }
-        article picture {
-            justify-content: center;
+			width: 95vw;
+		}
+		.card-container article {
+			display: grid;
+			justify-content: center;
+			padding: 2em;
+		}
+		h2 {
+			max-width: 7em;
+		}
+		article picture {
+			justify-content: center;
 			max-height: 22em;
-            min-width: 18em;
-        }
+			min-width: 18em;
+		}
 
 		article img {
 			height: auto;
 		}
-    }
+	}
 
-   /* MEDIA QUERY TABLET = 768px */
-    @media (min-width: 48rem) {
-        .card-container article{
-            grid-template-columns: 23em 2fr;
-            justify-content: start;
-            gap: 2em;
-            padding: 2em;
-            height: 48em;
-        }
+	/* MEDIA QUERY TABLET = 768px */
+	@media (min-width: 48rem) {
+		.card-container article {
+			grid-template-columns: 23em 2fr;
+			justify-content: start;
+			gap: 2em;
+			padding: 2em;
+			height: 48em;
+		}
 
-        h2 {
-            width: 4em;
-        }
+		h2 {
+			width: 4em;
+		}
 
-        article picture {
-            justify-content: end;
-            min-width: 100%;
-            grid-column-start: 2;
-            grid-row-start: 1;
-            grid-row-end: 4;
-            margin: 0;  
+		article picture {
+			justify-content: end;
+			min-width: 100%;
+			grid-column-start: 2;
+			grid-row-start: 1;
+			grid-row-end: 4;
+			margin: 0;
 			max-height: none;
-        }
+		}
 
-        article img {
-            height: 100%;
-            width: 32em;
-        }
+		article img {
+			height: 100%;
+			width: 32em;
+		}
 
-        .paragraph-card p:nth-of-type(2) {
-            display: block;
-        }
+		.paragraph-card p:nth-of-type(2) {
+			display: block;
+		}
 
-        .paragraph-card, .btn-container {
-            margin: 1em 0 0 4.2em;
-        }
+		.paragraph-card,
+		.btn-container {
+			margin: 1em 0 0 4.2em;
+		}
 
-        .btn-container {
-            display: flex;
-            align-items: flex-end;
-        }
-    }
+		.btn-container {
+			display: flex;
+			align-items: flex-end;
+		}
+	}
 
-    /* MEDIA QUERY TABLET = 1100px */
-    @media (min-width: 68.75rem) {
-
+	/* MEDIA QUERY TABLET = 1100px */
+	@media (min-width: 68.75rem) {
 		.header-card {
 			margin-left: 2em;
 		}
 
-        .card-container article {
-            grid-template-columns: 28em 2fr;
-        }
+		.card-container article {
+			grid-template-columns: 28em 2fr;
+		}
 
-        .paragraph-card p {
-            max-width: 29em;
-        }
+		.paragraph-card p {
+			max-width: 29em;
+		}
 
-        .paragraph-card, .btn-container {
-            margin: 1em 0 0 6.2em;
-        }
-    }
+		.paragraph-card,
+		.btn-container {
+			margin: 1em 0 0 6.2em;
+		}
+	}
 
-    /* MEDIA QUERY TABLET = 1250px */
-    @media (min-width: 78.1rem) {
-        .card-stekjes::before,
+	/* MEDIA QUERY TABLET = 1250px */
+	@media (min-width: 78.1rem) {
+		.card-stekjes::before,
 		.card-zaden::before,
 		.card-gevel::before {
-            width: 26em;
-            height: 26em;
-        }
+			width: 26em;
+			height: 26em;
+		}
 
-        .card-container article {
-            grid-template-columns: 36em 2fr;
-        }
-        .paragraph-card p {
-            max-width: 32em;
-        }
-    }
+		.card-container article {
+			grid-template-columns: 36em 2fr;
+		}
+		.paragraph-card p {
+			max-width: 32em;
+		}
+	}
 
-    /* MEDIA QUERY DESKTOP = 1500px */
-    @media (min-width: 93.75rem) {
-        .card-container,
-		    article {
-            width: 85vw;
-        }
-    }
+	/* MEDIA QUERY DESKTOP = 1500px */
+	@media (min-width: 93.75rem) {
+		.card-container,
+		article {
+			width: 85vw;
+		}
+	}
 </style>
