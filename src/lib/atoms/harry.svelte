@@ -1,9 +1,9 @@
 <script>
-    export let mood = "neutraal"; // default mood
-    export let environment = "zonnig"
+    // export let mood = "neutraal"; // default mood
+    // export let environment = "zonnig"
 </script>
 
-
+<!-- 
 <div class="harry">
     <svg class="cartoon" width="531" height="595" viewBox="0 0 531 595" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g class="harry" data-mood="{mood}" data-environment="{environment}">
@@ -159,4 +159,4 @@
             </clipPath>
         </defs>
     </svg>        
-</div>
+</div> -->
