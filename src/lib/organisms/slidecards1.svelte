@@ -1,11 +1,12 @@
 <script>
-	import { Button } from '$lib';
+	import { Button, Dot } from '$lib';
 	export let data;
 </script>
 
 <section>
 	<article>
 		{#each data.cardSlides as cardSlide}
+			<Dot svgFill="var(--main-color-orange)" />
 			<h2>{cardSlide.titleCard}</h2>
 			<p>{cardSlide.paragraphCard}</p>
 			<p>{cardSlide.paragraphCard2}</p>
