@@ -44,7 +44,7 @@
 		<header>
 			<h1>{data.headerTexts[0].heading1}</h1>
 			<h2>{data.headerTexts[0].description}</h2>
-			<!-- <HarryWeather /> -->
+			<HarryWeather />
 		</header>
 
 		<ul class="hero-img-list">
