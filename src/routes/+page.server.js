@@ -18,6 +18,7 @@ export async function load() {
 					url
 				}
 				imageCardAltText
+				buttonStyles
 			}
 			agendas {
 				cardImage {

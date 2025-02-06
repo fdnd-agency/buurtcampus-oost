@@ -1,6 +1,5 @@
 <script>
 	import { Button } from '$lib';
-
 	export let data;
 </script>
 
@@ -20,6 +19,13 @@
 					alt="{cardSlide.imageCardAltText}}"
 				/>
 			</picture>
+
+			<Button
+				href={cardSlide.buttonStyles.href}
+				buttonText={cardSlide.buttonStyles.buttonText}
+				buttonClass={cardSlide.buttonStyles.buttonClass}
+				svgFill={cardSlide.buttonStyles.svgFill}
+			/>
 		{/each}
 	</article>
 </section>
