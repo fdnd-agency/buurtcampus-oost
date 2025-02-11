@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import { Button, Dot } from '$lib';
+	import { Button, Dot } from '$lib/index.js';
 </script>
 
 <section>
@@ -17,7 +17,7 @@
 					height="982"
 					loading="lazy"
 					src={cardSlide.imageCard.url}
-					alt="{cardSlide.imageCardAltText}}"
+					alt="{cardSlide.imageCardAltText}"
 				/>
 			</picture>
 
