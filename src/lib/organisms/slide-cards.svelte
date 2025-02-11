@@ -4,29 +4,40 @@
 </script>
 
 <section>
-	{#each data.cardSlides as cardSlide}
-		<article>
-			<Dot svgFill="var(--main-color-orange)" />
-			<h2>{cardSlide.titleCard}</h2>
-			<p>{cardSlide.paragraphCard}</p>
-			<p>{cardSlide.paragraphCard2}</p>
+	{#if data?.cardSlides?.length}
+		{#each data.cardSlides as cardSlide}
+			<article>
+				<Dot svgFill="var(--main-color-orange)" />
+				<h2>{cardSlide.titleCard}</h2>
+				<p>{cardSlide.paragraphCard}</p>
+				<p>{cardSlide.paragraphCard2}</p>
 
-			<picture>
-				<img
-					width="783"
-					height="982"
-					loading="lazy"
-					src={cardSlide.imageCard.url}
-					alt={cardSlide.imageCardAltText}
+				<picture>
+					<img
+						width="783"
+						height="982"
+						loading="lazy"
+						src={cardSlide.imageCard.url}
+						alt={cardSlide.imageCardAltText}
+					/>
+				</picture>
+
+				<Button
+					href={cardSlide.buttonStyles.href}
+					buttonText={cardSlide.buttonStyles.buttonText}
+					buttonClass={cardSlide.buttonStyles.buttonClass}
+					svgFill={cardSlide.buttonStyles.svgFill}
 				/>
-			</picture>
-
-			<Button
-				href={cardSlide.buttonStyles.href}
-				buttonText={cardSlide.buttonStyles.buttonText}
-				buttonClass={cardSlide.buttonStyles.buttonClass}
-				svgFill={cardSlide.buttonStyles.svgFill}
-			/>
-		</article>
-	{/each}
+			</article>
+		{/each}
+	{:else}
+		<p class="error-message">Geen projectkaarten gevonden.</p>
+	{/if}
 </section>
+
+<style>
+	.error-message {
+		font-size: 1.5rem;
+		color: var(--main-color-red);
+	}
+</style>
