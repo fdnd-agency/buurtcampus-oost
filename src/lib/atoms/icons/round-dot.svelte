@@ -10,10 +10,20 @@
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
 >
-	<circle cx="21" cy="21" r="21" fill={svgFill} />
+	<circle cx="21" cy="21" r="21" class={svgFill} />
 </svg>
 
 <style>
+	/* svgFill variants */
+
+	.svgfill-organge {
+		fill: var(--main-color-orange);
+	}
+
+	.svgfill-beige {
+		fill: var(--main-color-beige);
+	}
+
 	svg {
 		display: none;
 	}
