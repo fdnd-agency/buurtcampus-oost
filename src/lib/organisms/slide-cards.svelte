@@ -49,12 +49,14 @@
 		bottom: 3em;
 		margin: 0 auto;
 		z-index: 1;
+		overflow: hidden;
 		border-radius: var(--border-bigCard);
 	}
 
 	article::before {
 		content: url(/assets/leaf-orange.svg);
 		position: absolute;
+		top: 0;
 		width: 20em;
 		height: 20em;
 		left: -4em;
@@ -70,9 +72,24 @@
 	}
 
 	@container slidecards (min-width: 64rem) {
+		article {
+			padding: 2em 1em;
+			width: 95vw;
+			display: grid;
+			grid-template-columns: 2fr 2fr;
+		}
+
 		article::before {
 			width: 26em;
 			height: 26em;
+		}
+
+		article picture {
+			display: flex;
+			justify-content: end;
+			grid-column-start: 2;
+			grid-row-start: 1;
+			grid-row-end: 4;
 		}
 
 		img {

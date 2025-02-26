@@ -18,6 +18,7 @@
 
 <style>
 	h2 {
+		line-height: 95%;
 		margin-bottom: 0.5em;
 		font-size: clamp(2em, 5vw, 8em);
 		font-family: var(--header-font);
@@ -26,6 +27,16 @@
 	p {
 		padding: 0.5em;
 		line-height: var(--line-height-paragraph);
+	}
+
+	@container slidecards (min-width: 64rem) {
+		h2 {
+			font-size: clamp(5em, 5vw, 8em);
+		}
+
+		p {
+			max-width: 43em;
+		}
 	}
 
 	/* titleColor variants */
