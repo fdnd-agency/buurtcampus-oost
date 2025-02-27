@@ -7,11 +7,13 @@
 	{#if data?.cardSlides?.length}
 		{#each data.cardSlides as cardSlide}
 			<article class={cardSlide.cardStyles.backgroundColor}>
-				<Dot svgFill={cardSlide.svgStyles.svgFill} />
-				<CardslidesContent
-					titleCard={cardSlide.titleCard}
-					titleColor={cardSlide.cardStyles.titleColor}
-				/>
+				<header>
+					<Dot svgFill={cardSlide.svgStyles.svgFill} />
+					<CardslidesContent
+						titleCard={cardSlide.titleCard}
+						titleColor={cardSlide.cardStyles.titleColor}
+					/>
+				</header>
 
 				<picture>
 					<img width="783" height="982" loading="lazy" src={cardSlide.imageCard.url} alt="" />
@@ -23,12 +25,14 @@
 					paragraphColor={cardSlide.cardStyles.paragraphColor}
 				/>
 
-				<Button
-					href={cardSlide.buttonStyles.href}
-					buttonText={cardSlide.buttonStyles.buttonText}
-					buttonClass={cardSlide.buttonStyles.buttonClass}
-					svgFill={cardSlide.buttonStyles.svgFill}
-				/>
+				<div class="btn-container">
+					<Button
+						href={cardSlide.buttonStyles.href}
+						buttonText={cardSlide.buttonStyles.buttonText}
+						buttonClass={cardSlide.buttonStyles.buttonClass}
+						svgFill={cardSlide.buttonStyles.svgFill}
+					/>
+				</div>
 			</article>
 		{/each}
 	{:else}
@@ -72,6 +76,11 @@
 	}
 
 	@container slidecards (min-width: 64rem) {
+		header {
+			display: flex;
+			align-items: flex-start;
+		}
+
 		article {
 			padding: 2em 1em;
 			width: 95vw;
@@ -95,6 +104,11 @@
 		img {
 			height: 100%;
 			width: 32em;
+		}
+
+		.btn-container {
+			width: 14em;
+			margin: 0em 7em 0 4em;
 		}
 	}
 

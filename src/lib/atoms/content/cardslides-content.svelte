@@ -31,11 +31,13 @@
 
 	@container slidecards (min-width: 64rem) {
 		h2 {
+			width: 4em;
 			font-size: clamp(5em, 5vw, 8em);
 		}
 
 		p {
 			max-width: 43em;
+			margin: 0em 7em 0 4em;
 		}
 	}
 
