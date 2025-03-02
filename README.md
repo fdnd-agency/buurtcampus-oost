@@ -60,7 +60,6 @@ Om de build versie van de website te bekijken run je `npm run build` in plaats v
 
 **Studentenwerk Sprint 5: Fix The Flow** 
 
-| :--------------- | :--------------- | :--------------- |
 | Amber	| https://github.com/ambersr/fix-the-flow-interactive-website | https://ambersr.github.io/fix-the-flow-interactive-website/ 
 | Clarice	| https://github.com/Clarice-COD/fix-the-flow-interactive-website  | https://clarice-cod.github.io/fix-the-flow-interactive-website/ 
 | Kim	| https://github.com/kimnikitaschijf/fix-the-flow-interactive-website | https://kimnikitaschijf.github.io/fix-the-flow-interactive-website/ 
