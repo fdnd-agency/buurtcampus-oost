@@ -62,11 +62,11 @@ Om de build versie van de website te bekijken run je `npm run build` in plaats v
 
 |  |  |  | 
 | :--------------- | :--------------- | :--------------- |
-| Amber	| https://github.com/ambersr/fix-the-flow-interactive-website | https://ambersr.github.io/fix-the-flow-interactive-website/ 
-| Clarice	| https://github.com/Clarice-COD/fix-the-flow-interactive-website  | https://clarice-cod.github.io/fix-the-flow-interactive-website/ 
-| Kim	| https://github.com/kimnikitaschijf/fix-the-flow-interactive-website | https://kimnikitaschijf.github.io/fix-the-flow-interactive-website/ 
-| Ole	| https://github.com/OFRqq/fix-the-flow-interactive-website | https://ofrqq.github.io/fix-the-flow-interactive-website/ 
-| Anouar | https://github.com/Anouarab2/fix-the-flow-interactive-website | https://anouarab2.github.io/fix-the-flow-interactive-website/ 
-| Anouk	| https://github.com/AnoukdeRooij24/fix-the-flow-interactive-website | https://anoukderooij24.github.io/fix-the-flow-interactive-website/ 
-| Miel	| https://github.com/miel775/fix-the-flow-interactive-website	| https://miel775.github.io/fix-the-flow-interactive-website/ 
-| Sidney	| https://github.com/Sidopjescherm/fix-the-flow-interactive-website	| https://sidopjescherm.github.io/fix-the-flow-interactive-website/index.html
+| Amber	| [repository](https://github.com/ambersr/fix-the-flow-interactive-website) | [live site](https://ambersr.github.io/fix-the-flow-interactive-website/) 
+| Clarice	| [repository](https://github.com/Clarice-COD/fix-the-flow-interactive-website)  | [live site](https://clarice-cod.github.io/fix-the-flow-interactive-website/) 
+| Kim	| [repository](https://github.com/kimnikitaschijf/fix-the-flow-interactive-website) | [live site](https://kimnikitaschijf.github.io/fix-the-flow-interactive-website/) 
+| Ole	| [repository](https://github.com/OFRqq/fix-the-flow-interactive-website) | [live site](https://ofrqq.github.io/fix-the-flow-interactive-website/)
+| Anouar | [repository](https://github.com/Anouarab2/fix-the-flow-interactive-website) | [live site](https://anouarab2.github.io/fix-the-flow-interactive-website/) 
+| Anouk	| [repository](https://github.com/AnoukdeRooij24/fix-the-flow-interactive-website) | [live site](https://anoukderooij24.github.io/fix-the-flow-interactive-website/) 
+| Miel	| [repository](https://github.com/miel775/fix-the-flow-interactive-website)	| [live site](https://miel775.github.io/fix-the-flow-interactive-website/) 
+| Sidney	| [repository](https://github.com/Sidopjescherm/fix-the-flow-interactive-website)	| [live site](https://sidopjescherm.github.io/fix-the-flow-interactive-website/index.html)
