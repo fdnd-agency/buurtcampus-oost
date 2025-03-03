@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import { Button, Dot, CardslidesContent } from '$lib/index.js';
+	import { Button, Dot, CardslidesContent, CardslidesLeaf } from '$lib/index.js';
 </script>
 
 <section class="card-container">
@@ -8,6 +8,7 @@
 		{#each data.cardSlides as cardSlide}
 			<article class={cardSlide.cardStyles.backgroundColor}>
 				<header>
+					<CardslidesLeaf svgFill={cardSlide.leafSyles.svgFill} />
 					<Dot svgFill={cardSlide.svgStyles.svgFill} />
 					<CardslidesContent
 						titleCard={cardSlide.titleCard}
@@ -16,7 +17,7 @@
 				</header>
 
 				<picture>
-					<img width="783" height="982" loading="lazy" src={cardSlide.imageCard.url} alt="" />
+					<img width="100" height="100" loading="lazy" src={cardSlide.imageCard.url} alt="" />
 				</picture>
 
 				<CardslidesContent
@@ -55,17 +56,6 @@
 		z-index: 1;
 		overflow: hidden;
 		border-radius: var(--border-bigCard);
-	}
-
-	article::before {
-		content: url(/assets/leaf-orange.svg);
-		position: absolute;
-		top: 0;
-		width: 20em;
-		height: 20em;
-		left: -4em;
-		transform: rotate(135deg);
-		z-index: -1;
 	}
 
 	img {

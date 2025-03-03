@@ -21,6 +21,7 @@ export async function load() {
 				buttonStyles
 				cardStyles
 				svgStyles
+				leafSyles
 			}
 			agendas {
 				cardImage {

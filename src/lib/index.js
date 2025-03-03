@@ -28,6 +28,7 @@ export { default as ArrowDown } from '$lib/atoms/icons/arrow-down.svelte';
 
 // === Content ===
 export { default as CardslidesContent } from '$lib/atoms/content/cardslides-content.svelte';   
+export { default as CardslidesLeaf } from '$lib/atoms/content/cardslides-leaf.svelte';   
 
 // =========== MOLECULES ===========
 
