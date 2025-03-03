@@ -1,6 +1,9 @@
 # Bieb in Bloei 🌱
 
 Bieb in Bloei is een digitaal platform met daarop een overzicht van de duurzame projecten van de Buurtcampus Oost. 
+**Team Sprint 8**  
+Ties, Saif, Nadira, Kerem, Nayome, Sascha
+
 
 **Release Candidate**  
 [Live site](https://biebinbloei.agency.fdnd.nl/)
