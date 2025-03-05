@@ -1,11 +1,9 @@
 <script>
-  import Viewtransition from "$lib/viewtransitions.svelte";
+	export let data;
+	import { Menu, Footer } from '$lib/index.js';
 </script>
 
 
-<div class="app">
-
-  <Viewtransition />
-  <slot/>
-
-</div>
+<Menu/>
+<slot />
+<Footer {data} />

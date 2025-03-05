@@ -1,0 +1,162 @@
+/* Harry --------------------------------------------------------- */
+
+.harryMascot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    --harry-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    animation: appear 0.5s ease forwards;
+}
+
+.cartoon {
+    width: 10rem;
+    height: 14rem;
+    rotate: 8deg;
+    filter: var(--harry-shadow);
+}
+
+/* Tekstwolk ----------------------------------------------------- */
+
+.weather-bubble {
+    position: relative;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 0.5rem;
+    max-width: 10rem;
+    text-align: center;
+    filter: var(--harry-shadow);
+    opacity: 0; 
+    animation: popUp 0.5s ease forwards;
+    animation-delay: 1400ms;
+    height: min-content;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.weather-bubble:before {
+    content: '🌸 Harry';
+    font-weight: 600;
+    color: pink;
+    position: absolute;
+    top: -1.25rem;
+    left: 0.5rem;
+    font-size: .8rem;
+}
+
+.weather-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+    background: inherit;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.weather-bubble button {
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: inherit;
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+
+.weather-bubble button:hover {
+    cursor: pointer;
+}
+
+.default blockquote span { display: none; }
+
+/* Keyframes ----------------------------------------------------- */
+
+/* Tekstwolk */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Harry home */
+
+@keyframes appear {
+    0% {
+        margin-bottom: -40rem;
+    }
+
+    100% {
+        margin-bottom: -2rem;
+    }
+}
+
+@keyframes appearDesktop {
+    0% {
+        rotate: -40deg;
+        margin-right: -9rem;
+    }
+
+    100% {
+        rotate: -18deg;
+        margin-right: -3rem;
+    }
+}
+
+/* Harry stekjes en zaden */
+
+@keyframes appearStekje {
+    0% {
+        margin-bottom: -10rem;
+    }
+
+    100% {
+        margin-bottom: 20rem;
+    }
+}
+
+.stekjes, .zaden {
+    animation: appearStekje 0.5s ease forwards;
+    top: 0;
+}
+
+/* Media Queries ------------------------------------------------- */
+
+@media screen and (min-width: 48em) {
+    .harryMascot {
+        margin-bottom: 4rem;
+        margin-right: -9rem;
+        animation: appearDesktop 0.5s ease forwards;
+    }
+
+    .weather-bubble {
+        rotate: 18deg;
+        margin-bottom: 3rem;    
+        max-width: 15rem;
+    }
+
+    .stekjes, .zaden {
+        animation: appearStekje 0.5s ease forwards;
+        margin-right: 10rem;
+    }
+
+    .stekjes .weather-bubble, .zaden .weather-bubble {
+        rotate: 0deg;
+        margin-bottom: 6rem;
+    }
+}

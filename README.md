@@ -1,36 +1,79 @@
-# Plantswap
-![image](https://github.com/TimOosterveer/buurtcampus_oost_components/assets/112857270/63507a17-2858-4b15-a209-06753fa6b40d)
+# Bieb in Bloei 🌱
+
+Bieb in Bloei is een digitaal platform met daarop een overzicht van de duurzame projecten van de Buurtcampus Oost. 
+
+**Team Sprint 8**  
+Ties, Saif, Nadira, Kerem, Nayome, Sascha
 
 
-<h2 align="center">✨ About ✨ </h2>
-We've cultivated an amazing plant swap website for Stekjesbieb! 🌿 Visitors can explore various plants here and dive deeper into the plantswap initiative. We've added a touch of charm to make the experience even more delightful! ✨🌱
+**Release Candidate**  
+[Live site](https://biebinbloei.agency.fdnd.nl/)
 
-<h2 align="center"> 🍀The Website🍀</h2>
-<br>
-For the Stekjesbieb, we have developed an amazing plant swap website. 🌿
-Visitors can explore plants and learn more about the plant swap initiative. Upon visiting our website, you'll be greeted with an informative homepage. Here, we explain what plant swapping is and how you can participate in this initiative yourself. Furthermore, you can view all available cuttings on the website and find detailed information about each cutting on the individual detail page. 🌱
+**Studentenwerk Sprint 5: Fix The Flow** 
 
-Additionally, Stekjesbieb offers workshops where you can learn the best practices for caring for your cuttings. 🌸 These workshops can also be found on our website. Finally, on our contact page, you can find all the information about our location and the possibility to get in touch with us. 📌
-<h2 align="center"> 🪚Languages-Frameworks-Tools🪚</h2>
-<br>
-These are the tools, frameworks, and languages that were used to create this project💡
-<div>
- <br>
-    <img src="https://skillicons.dev/icons?i=html,css,javascript,github"><br>
-    <img src="https://skillicons.dev/icons?i=vscode,svelte,figma">
-</div>
+|  |  |  | 
+| :--------------- | :--------------- | :--------------- |
+| Amber	| [repository](https://github.com/ambersr/fix-the-flow-interactive-website) | [live site](https://ambersr.github.io/fix-the-flow-interactive-website/) 
+| Clarice	| [repository](https://github.com/Clarice-COD/fix-the-flow-interactive-website)  | [live site](https://clarice-cod.github.io/fix-the-flow-interactive-website/) 
+| Kim	| [repository](https://github.com/kimnikitaschijf/fix-the-flow-interactive-website) | [live site](https://kimnikitaschijf.github.io/fix-the-flow-interactive-website/) 
+| Ole	| [repository](https://github.com/OFRqq/fix-the-flow-interactive-website) | [live site](https://ofrqq.github.io/fix-the-flow-interactive-website/)
+| Anouar | [repository](https://github.com/Anouarab2/fix-the-flow-interactive-website) | [live site](https://anouarab2.github.io/fix-the-flow-interactive-website/) 
+| Anouk	| [repository](https://github.com/AnoukdeRooij24/fix-the-flow-interactive-website) | [live site](https://anoukderooij24.github.io/fix-the-flow-interactive-website/) 
+| Miel	| [repository](https://github.com/miel775/fix-the-flow-interactive-website)	| [live site](https://miel775.github.io/fix-the-flow-interactive-website/) 
+| Sidney	| [repository](https://github.com/Sidopjescherm/fix-the-flow-interactive-website)	| [live site](https://sidopjescherm.github.io/fix-the-flow-interactive-website/index.html)
 
-<h2 align="center"> 🔨Instalation guide🔨</h2>
-<br>
+## Buurtcampus Oost
 
-1. **Fork this repository.**
+De Buurtcampus is een dynamische, laagdrempelige plek waar iedereen zich welkom en uitgenodigd voelt om kennis op te doen, te ontwikkelen en te delen. Met als doel: samen de buurt duurzamer, gezonder en inclusiever maken.
+Bij de buurtcampus draaien verschillende duurzame projecten; De Stekjes bieb, De Zadenbieb en de Geveltuin. en er komen binnenkort nog meer duurzame projecten bij. Op het platform Bieb in Bloei krijgen deze projecten een gezicht.
 
-2. **Clone it using GitHub Desktop and open it in your preferred code editor.**
+## Het Team
 
-3. **This project utilizes a `.env` file for retrieving the API token.**
+- [**Nazneen (Teamlead)**](https://github.com/Nazneen05x)
+- [**Rutger**](https://github.com/rutgerkock)
+- [**Larissa**](https://github.com/Lmikkers)
+- [**Anne**](https://github.com/Annevd)
+- [**Wing San**](https://github.com/wingsvn)
 
-4. **Finally, install the dependencies by using `npm install` in your command line.**
+## Beschrijving
+Wij hebben de opdracht gekregen om de huidige live bieb-in-bloei website te optimaliseren en te verrijken. Eerder hebben een aantal CMD minor studenten een eigen versie van de bieb-in-bloei website ontwikkelt. Hierin hebben zij geëxperimenteerd met een weather API. Ook hebben ze concepten bedacht als een seizoensthema en mascotte Harry. Het was aan ons de taak om deze concepten in de live bieb-in-bloei website te integreren. Uiteindelijk hebben wij Harry de mascotte geïmplementeerd:
+
+* **Mascotte Harry:** geeft op een speelse manier tips over de verzorging van de stekjes en zaadjes. 
 
 
+### Verbeteringen
 
+Om de website publicatiegereed te maken hebben wij een [projectplan](https://github.com/fdnd-agency/buurtcampus-oost/issues/198) opgesteld, opgedeeld in _must haves, should haves & could haves_.
+Voorbeelden van verbeteringen die we hebben doorgevoerd:
+* Responsiveness verbeteren, optimaliseren en bugs oplossen
+* Contrastchecks doen, en deze verbeteren waar nodig
+* Verbeteringen en optimalisatie op componentbasis, zoals goede user feedback, pleasurable user experience, etc.
 
+## Visual
+
+![Group 2](https://github.com/user-attachments/assets/d1a639eb-9bcd-4881-bdbf-36cfec543f5c)
+
+- [Livelink](https://biebinbloei.agency.fdnd.nl/)
+
+## Kenmerken
+
+Dit project is opgezet met Sveltekit gecombineerd met het headless CMS Hygraph. In dit project hebben wij gewerkt met componenten in een Atomic mappenstructuur.
+
+## Installatie
+
+1. Clone dit project via github desktop of met `git clone https://github.com/fdnd-agency/buurtcampus-oost.git` in de terminal
+2. Open dit project in je editor
+3. Run `npm install` in de terminal
+4. Run `npm run dev` in de terminal
+5. Open de link op de localhost.
+
+Om de build versie van de website te bekijken run je `npm run build` in plaats van `npm run dev`, en vervolgens `npm run preview`.
+
+## Resources
+
+- [Live site](https://biebinbloei.agency.fdnd.nl/)
+- [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
+- [Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
+- [Hygraph](https://hygraph.com)
+- [Sveltekit](https://kit.svelte.dev/docs/introduction)
+- [Project board](https://github.com/orgs/fdnd-agency/projects/3)
