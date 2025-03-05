@@ -2,7 +2,7 @@
 
 .harryMascot {
     position: absolute;
-    overflow-x: hidden;
+    overflow: hidden;
     right: 0;
     bottom: 0;
     font-style: italic;
@@ -147,7 +147,8 @@
 
     .weather-bubble {
         rotate: 18deg;
-        margin-bottom: 3rem;    
+        margin-bottom: 3rem;  
+        margin-left: 1rem;  
         max-width: 15rem;
     }
 
@@ -158,6 +159,6 @@
 
     .stekjes .weather-bubble, .zaden .weather-bubble {
         rotate: 0deg;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
     }
 }
