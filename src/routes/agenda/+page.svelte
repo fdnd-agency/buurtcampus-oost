@@ -18,7 +18,7 @@
 				<span>{data.agendas[0].price}</span>
 				<time>{data.agendas[0].time}</time>
 				<time>{data.agendas[0].date}</time>
-				<Button href="/agenda" buttonText="Meld je aan" buttonClass="btn-green" svgFill="svg-beige" />
+				<Button href="/agenda" buttonText="Aanmelden" buttonClass="btn-green" svgFill="svg-beige" />
 			</div>
 		</li>
 
@@ -44,6 +44,12 @@
 						<address>{agenda.address}</address>
 						<span>{agenda.price}</span>
 						<time>{agenda.date}</time>
+						<Button
+							href="/contact"
+							buttonText="Aanmelden"
+							buttonClass="btn-brown"
+							svgFill="svg-beige"
+						/>
 					</div>
 				</li>
 			{/each}
@@ -150,7 +156,6 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
-		max-height: 12.5rem;
 		padding-right: 2rem;
 	}
 
@@ -162,11 +167,16 @@
 	.rest-cards > li div {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.rest-cards > li h2 {
-		padding: 0 0 2rem 0;
+		padding: 0 0 0.5rem 0;
 		font-size: 1.1rem;
+	}
+
+	.rest-cards > li div time {
+		margin-bottom: 1rem;
 	}
 
 	.no-styling {
@@ -252,7 +262,7 @@
 			z-index: 1;
 		}
 
-		.no-styling::after {
+		.no-styling::before {
 			content: url('assets/leaf-light-green.svg');
 			position: absolute;
 			height: 75%;
