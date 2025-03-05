@@ -18,6 +18,7 @@ export async function load() {
 					url
 				}
 				imageCardAltText
+				buttonStyles
 			}
 			agendas {
 				cardImage {
@@ -30,6 +31,14 @@ export async function load() {
 				address
 				buttonText
 			}
+
+			agendaTexts {
+				title
+				agendaParagraph1
+				agendaParagraph2
+				agendaParagraph3
+			}
+
 			campusInfos {
 				title
 				title2
@@ -80,6 +89,13 @@ export async function load() {
 				createdAt
 				description
 				id
+			}
+
+			headerTexts {
+				createdAt
+				heading1
+				id
+				description
 			}
 		}
 	`;

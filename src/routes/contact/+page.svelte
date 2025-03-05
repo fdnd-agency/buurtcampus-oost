@@ -75,8 +75,9 @@
     }
 
     p{
-        font-family: var(--paragraph-font);
         font-size: 1.2em;
+        font-family: var(--paragraph-font);
+        line-height: var(--line-height-paragraph);
     }
 
     iframe{

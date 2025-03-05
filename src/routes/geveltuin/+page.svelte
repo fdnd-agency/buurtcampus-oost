@@ -1,13 +1,15 @@
 <script>
 	export let data;
 	import { GeveltuinButton } from '$lib/index.js';
-	import { HeroHeaders, IntroHeaders } from '$lib/index.js';
+	import { HeroHeaders, IntroHeaders, ImageCarousel } from '$lib/index.js';
 
 	const bulletPoints1 = data.facadeGardenActions[0].bulletText1.split('.');
 </script>
 
 <HeroHeaders heroInfo={data.heroHeaders[2]} />
 <IntroHeaders heroInfo={data.heroHeaders[2]} />
+
+<ImageCarousel heroInfo={data.heroHeaders[2]} />
 
 <section class="beige">
 	<article>
@@ -24,9 +26,9 @@
 		</ul>
 
 		<GeveltuinButton
-			btnClass="btn-green"
+			buttonClass="btn-green"
 			href="/contact"
-			btnText="Aanmelden"
+			buttonText="Aanmelden"
 			svgFill="svg-beige"
 		/>
 	</article>
@@ -46,6 +48,10 @@
 		margin-top: 5rem;
 		margin-bottom: 1rem;
 		background-color: var(--main-color-beige);
+	}
+
+	p{
+		line-height: var(--line-height-paragraph);
 	}
 
 	p,
@@ -133,6 +139,15 @@
 	}
 
 	@media (min-width: 48rem) and (max-width: 64rem) {
+		h2,
+		.intro-p {
+			margin-left: 0.6rem;
+		}
+
+		p {
+			width: 55vw;
+		}
+
 		img {
 			width: 45vw;
 		}

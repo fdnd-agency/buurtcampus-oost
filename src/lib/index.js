@@ -4,7 +4,6 @@
 export { default as Navlink } from '$lib/atoms/buttons/navlink.svelte';
 export { default as Button } from '$lib/atoms/buttons/button.svelte';
 export { default as HarryWeather } from '$lib/atoms/buttons/harryWeather.svelte';
-export { default as Switch } from '$lib/atoms/buttons/switch.svelte';
 export { default as AgendaButton } from '$lib/atoms/buttons/agenda-button.svelte';
 export { default as GeveltuinButton } from '$lib/atoms/buttons/geveltuin-button.svelte';
 export { default as Dropdown } from '$lib/atoms/dropdown.svelte';
@@ -31,6 +30,7 @@ export { default as ArrowDown } from '$lib/atoms/icons/arrow-down.svelte';
 // =========== MOLECULES ===========
 
 export { default as HeroSlider } from '$lib/molecules/hero-slider.svelte';
+export { default as ImageCarousel } from '$lib/molecules/ImageCarousel.svelte';
 export { default as HeroHeaders } from '$lib/molecules/hero-headers.svelte';
 export { default as OverViewPages } from '$lib/molecules/over-view-page.svelte';
 export { default as AgendaCarousel } from '$lib/molecules/agenda-carousel.svelte';
@@ -45,4 +45,3 @@ export { default as Menu } from '$lib/organisms/menu.svelte';
 export { default as SlideCards } from '$lib/organisms/slide-cards.svelte';
 export { default as Footer } from '$lib/organisms/footer.svelte';
 export { default as Agenda } from '$lib/organisms/agenda.svelte';
-export { default as AccessibilityMenu } from '$lib/organisms/accessibility-menu.svelte';

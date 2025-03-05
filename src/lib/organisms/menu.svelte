@@ -94,7 +94,8 @@
 	<dialog>
 		<button class="close-btn" id="close-modal" aria-label="Close menu"><CloseIcon /></button>
 		<nav>
-			<ul role="menubar">
+			<ul id="main-menu" role="menubar">
+				<li role="menuitem"><a href="/">Home</a></li>
 				<li class="dropdown">
 					<button class="projecten-btn">Projecten <ArrowDown /></button>
 					<ul class="dropdown-content">
@@ -116,7 +117,7 @@
 <style>
 	/* MENU STYLING */
 	header {
-		z-index: 1;
+		z-index: 1000;
 		width: 100%;
 		position: absolute;
 	}
@@ -159,9 +160,9 @@
 	dialog[open] {
 		display: flex;
 		position: fixed;
-		font-size: 0.8em;
 		margin-left: 1rem;
 		align-items: center;
+		line-height: 2.5rem;
 		justify-content: center;
 	}
 
@@ -184,14 +185,6 @@
 
 	ul:first-child {
 		font-size: 4em;
-	}
-
-	li {
-		border-bottom: 2px solid var(--main-color-green);
-	}
-
-	.dropdown-content li:last-child {
-		border-bottom: none;
 	}
 
 	a {
@@ -222,7 +215,6 @@
 
 		dialog {
 			padding: 0;
-			z-index: 1000;
 			width: auto;
 			height: auto;
 			display: flex;
@@ -278,6 +270,10 @@
 
 		li {
 			border-bottom: none;
+		}
+
+		#main-menu > li:first-child {
+			display: none;
 		}
 
 		a {

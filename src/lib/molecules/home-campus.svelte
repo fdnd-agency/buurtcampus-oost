@@ -7,6 +7,7 @@
 		<span>{data.campusInfos[0].title}</span>
 		<span>{data.campusInfos[0].title2}</span>
 	</h2>
+
 	<article>
 		<p>{data.campusInfos[0].paragraph}</p>
 		<p>{data.campusInfos[0].paragraph2}</p>
@@ -26,22 +27,22 @@
 
 	h2 {
 		font-family: var(--sub-header-font);
-		font-size:  clamp(2em, 5vw, 8em);
+		font-size: clamp(2em, 5vw, 8em);
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		line-height: 1;
 		padding-bottom: 0.7em;
 	}
-	
+
 	h2 span:nth-of-type(2) {
-		color: var(--main-color-orange);
+		color: var(--main-color-brown);
 	}
 
 	p {
 		padding: 0.3em;
-		max-width: 32em;
-		font-family: var(--paragraph-font);
+        max-width: 65ch;
+		line-height: var(--line-height-paragraph);
 	}
 
 	p:nth-of-type(1) {
@@ -67,11 +68,13 @@
 		section {
 			padding: 0 var(--section-padding-x) var(--section-padding-y);
 		}
+
 		h2 {
 			padding-bottom: 0.7em;
 		}
+		
 		p {
-			max-width: 38em;
+			max-width: 70ch;
 		}
 	}
 
@@ -81,18 +84,21 @@
 			padding: 0 9em var(--section-padding-y);
 		}
 
-        p{
-            margin-bottom: inherit;
-        }
+		p {
+			margin-bottom: inherit;
+		}
 	}
 
 	/* MEDIA QUERY TABLET L = 1250px */
 	@media (min-width: 78.1rem) {
 		section {
 			height: 70vh;
+			margin-left: -1.6rem;
 		}
+
+		article,
 		p {
-			max-width: 68em;
+			max-width: 43em;
 		}
 	}
 
@@ -100,6 +106,11 @@
 	@media (min-width: 93.75rem) {
 		section {
 			padding: 0 15em var(--section-padding-y);
+		}
+
+		article,
+		p {
+			max-width: 43em;
 		}
 	}
 </style>

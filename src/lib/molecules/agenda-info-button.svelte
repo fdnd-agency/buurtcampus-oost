@@ -41,7 +41,7 @@
 	}
 
 	button {
-		z-index: 5;
+		z-index: 100;
 		width: 40px;
 		height: 40px;
 		border: none;
@@ -49,6 +49,9 @@
 		cursor: pointer;
 		margin-bottom: 1em;
 		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		background-color: var(--main-color-brown);
 	}
 
@@ -89,6 +92,18 @@
 
 		.close-button {
 			margin-left: 23em;
+		}
+
+		button {
+			position: relative;
+			z-index: 100;
+		}
+	}
+
+	@media (min-width: 100rem) {
+		button {
+			position: relative;
+			z-index: 100;
 		}
 	}
 </style>

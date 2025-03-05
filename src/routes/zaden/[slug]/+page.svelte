@@ -91,6 +91,10 @@
     border-radius: var(--border-card);
   }
 
+  p{
+      line-height: var(--line-height-paragraph);
+    }
+
   @media screen and (max-width: 375px) {
     .stekje-container {
       grid-template-columns: 1fr;

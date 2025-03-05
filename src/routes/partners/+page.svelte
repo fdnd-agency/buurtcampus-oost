@@ -56,7 +56,7 @@
 
 	p {
 		margin-top: 1em;
-		line-height: 1.6em;
+		line-height: var(--line-height-paragraph);
 	}
 
 	/* Error styling */

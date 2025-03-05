@@ -24,12 +24,13 @@
 	article {
 		width: 100%;
 		padding: 2em;
+		margin-top: 5em;
 		background-color: var(--main-color-beige);
 	}
 
 	p {
 		margin-top: 1em;
-		line-height: 1.6em;
+		line-height: var(--line-height-paragraph);
 	}
 
 	@media (min-width: 48rem) {
