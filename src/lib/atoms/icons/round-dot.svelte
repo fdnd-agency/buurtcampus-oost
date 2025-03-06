@@ -16,7 +16,7 @@
 <style>
 	/* svgFill variants */
 
-	.svgfill-organge {
+	.svgfill-orange {
 		fill: var(--main-color-orange);
 	}
 

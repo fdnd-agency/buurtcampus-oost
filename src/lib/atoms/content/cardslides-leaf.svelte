@@ -18,7 +18,7 @@
 		z-index: -1;
 	}
 
-	.card-gevel-svgFilll::before {
+	.card-gevel-svgFill::before {
 		content: url(/assets/leaf-green.svg);
 		position: absolute;
 		top: 0;
@@ -42,7 +42,7 @@
 			transform: rotate(202deg);
 		}
 
-		.card-gevel-svgFilll::before {
+		.card-gevel-svgFill::before {
 			top: -3em;
 			height: 20em;
 			left: 11em;
