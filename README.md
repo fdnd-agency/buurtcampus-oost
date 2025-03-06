@@ -53,9 +53,9 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 **Diverse prototypes**  
   
-[Experiment 1 Minor Web @CMD](https://buurtcampus-oost.onrender.com/)
-[Experiment 2 Minor Web @CMD](https://plantswap.vercel.app/)  
-[Experiment 3 Minor Web @CMD](https://plantswap-identifier.vercel.app/) 
+[Experiment 1 Minor Web @CMD](https://buurtcampus-oost.onrender.com/)  
+[Experiment 2 Minor Web @CMD](https://plantswap.vercel.app/)   
+[Experiment 3 Minor Web @CMD](https://plantswap-identifier.vercel.app/)   
 <!--
 [Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
 [Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
