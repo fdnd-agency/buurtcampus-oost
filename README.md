@@ -17,17 +17,6 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 [Content](https://github.com/fdnd-agency/buurtcampus-oost/tree/main/content)
 
-## Prototypes
-  
-[Live site](https://bieb-in-bloei.vercel.app/)    
-[Experiment Minor Web](https://buurtcampus-oost.onrender.com/)
-<!--
-[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
-[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
-[Minor @CMD](https://plantswap.vercel.app/)  
-[Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
--->
-
 ### API Endpoints
 [Hygraph Content API](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
@@ -61,3 +50,15 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 | Anouk	| [repository](https://github.com/AnoukdeRooij24/fix-the-flow-interactive-website) | [live site](https://anoukderooij24.github.io/fix-the-flow-interactive-website/) 
 | Miel	| [repository](https://github.com/miel775/fix-the-flow-interactive-website)	| [live site](https://miel775.github.io/fix-the-flow-interactive-website/) 
 | Sidney	| [repository](https://github.com/Sidopjescherm/fix-the-flow-interactive-website)	| [live site](https://sidopjescherm.github.io/fix-the-flow-interactive-website/index.html)
+
+**Diverse prototypes**  
+  
+[Experiment 1 Minor Web @CMD](https://buurtcampus-oost.onrender.com/)
+[Experiment 2 Minor Web @CMD](https://plantswap.vercel.app/)  
+[Experiment 3 Minor Web @CMD](https://plantswap-identifier.vercel.app/) 
+<!--
+[Team Tolga @FDND](https://performance-matters-optimized-website.onrender.com/)  
+[Team Joelle @FDND](https://fair-plum-chimpanzee-cuff.cyclic.app/)  
+[Minor @CMD](https://plantswap.vercel.app/)  
+[Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
+-->
