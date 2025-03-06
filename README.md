@@ -28,15 +28,18 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 [Minor 1 @CMD](https://plantswap-identifier.vercel.app/) 
 -->
 
-## Resources Semester 2
+### API Endpoints
+[Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
-[API Bieb in Bloei Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
+**Directus**  
+* https://fdnd-agency.directus.app/items/bib_stekjes
+* https://fdnd-agency.directus.app/items/bib_workshops
 
 <!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx0k=/?share_link_id=406873123775)-->
 
 ## Studentenwerk
 
-**Studentenwerk Sprint 8: Server-Side Rendering**  
+**Sprint 8: Server-Side Rendering**  
 |  |  |  | 
 | :--------------- | :--------------- | :--------------- |
 | Ties	| [repository](...) | [live site](...) 
@@ -46,7 +49,7 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 | Nayome	| [repository](...) | [live site](...) 
 | Sascha	| [repository](...) | [live site](...) 
 
-**Studentenwerk Sprint 5: Fix The Flow** 
+**Sprint 5: Fix The Flow** 
 
 |  |  |  | 
 | :--------------- | :--------------- | :--------------- |
