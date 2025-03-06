@@ -26,6 +26,9 @@ export { default as Logoround } from '$lib/atoms/icons/logoround.svelte';
 export { default as Projectenrounddot } from '$lib/atoms/icons/Projecten-round-dot.svelte';
 export { default as ArrowDown } from '$lib/atoms/icons/arrow-down.svelte';
 
+// === Content ===
+export { default as CardslidesContent } from '$lib/atoms/content/cardslides-content.svelte';   
+export { default as CardslidesLeaf } from '$lib/atoms/content/cardslides-leaf.svelte';   
 
 // =========== MOLECULES ===========
 
