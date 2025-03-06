@@ -36,7 +36,7 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 
 ## Studentenwerk
 
-**Studentenwerk Sprint 8**  
+**Studentenwerk Sprint 8: Server-Side Rendering**  
 |  |  |  | 
 | :--------------- | :--------------- | :--------------- |
 | Ties	| [repository](...) | [live site](...) 
