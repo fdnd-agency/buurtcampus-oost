@@ -37,7 +37,6 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 ## Studentenwerk
 
 **Studentenwerk Sprint 8**  
-Ties, Saif, Nadira, Kerem, Nayome, Sascha
 |  |  |  | 
 | :--------------- | :--------------- | :--------------- |
 | Ties	| [repository](...) | [live site](...) 
