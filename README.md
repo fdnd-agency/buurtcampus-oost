@@ -46,7 +46,6 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 | Nayome	| [repository](...) | [live site](...) 
 | Sascha	| [repository](...) | [live site](...) 
 
-
 **Studentenwerk Sprint 5: Fix The Flow** 
 
 |  |  |  | 
