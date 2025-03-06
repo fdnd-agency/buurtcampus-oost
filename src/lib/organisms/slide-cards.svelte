@@ -58,13 +58,84 @@
 		border-radius: var(--border-bigCard);
 	}
 
-	img {
+	img,
+	picture {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		border-radius: var(--border-bigCard);
 	}
 
+	/* backgroundColor variants */
+	.bg-green {
+		background-color: var(--card-color-green);
+	}
+
+	.bg-beige {
+		background-color: var(--main-color-beige);
+	}
+
+	.bg-brown {
+		background-color: var(--card-color-brown);
+	}
+
+	.bg-orange {
+		background-color: var(--card-color-orange);
+	}
+
+	.error-message {
+		font-size: 1.5rem;
+		color: var(--main-color-red);
+	}
+
+	/* Container Queries */
+
+	/* Ipad mini */
+	@container slidecards (min-width: 37.5rem) and (max-width: 50rem) {
+		header {
+			display: flex;
+			margin-top: 3em;
+			align-items: flex-start;
+		}
+
+		img {
+			height: 50vw;
+		}
+
+		.btn-container {
+			width: 14em;
+			margin: 0em 7em 0 1em;
+		}
+	}
+
+	/* Ipad air and Ipad pro */
+	@container slidecards (min-width: 50rem) and (max-width: 64rem) {
+		header {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		article {
+			width: 95vw;
+			display: grid;
+			grid-template-columns: 2fr 2fr;
+		}
+
+		article picture {
+			display: flex;
+			justify-content: end;
+			grid-column-start: 2;
+			grid-row-start: 1;
+			grid-row-end: 4;
+		}
+
+		.btn-container {
+			width: 14em;
+			margin: 0em 7em 0 0;
+		}
+	}
+
+	/* Desktop */
 	@container slidecards (min-width: 64rem) {
 		header {
 			display: flex;
@@ -102,25 +173,10 @@
 		}
 	}
 
-	/* backgroundColor variants */
-	.bg-green {
-		background-color: var(--card-color-green);
-	}
-
-	.bg-beige {
-		background-color: var(--main-color-beige);
-	}
-
-	.bg-brown {
-		background-color: var(--card-color-brown);
-	}
-
-	.bg-orange {
-		background-color: var(--card-color-orange);
-	}
-
-	.error-message {
-		font-size: 1.5rem;
-		color: var(--main-color-red);
+	@container slidecards (min-width: 100rem) {
+		header {
+			display: flex;
+			align-items: baseline;
+		}
 	}
 </style>
