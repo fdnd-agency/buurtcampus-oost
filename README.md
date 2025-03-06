@@ -29,7 +29,7 @@ Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oo
 -->
 
 ### API Endpoints
-[Hygraph](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
+[Hygraph Content API](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master)
 
 **Directus**  
 * https://fdnd-agency.directus.app/items/bib_stekjes
