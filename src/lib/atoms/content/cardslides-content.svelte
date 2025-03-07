@@ -29,36 +29,25 @@
 		line-height: var(--line-height-paragraph);
 	}
 
-	/* titleColor variants */
+	/* titleColor & paragraphColor variants */
 
-	.title-green {
-		color: var(--main-color-green);
-	}
-
-	.title-beige {
-		color: var(--main-color-beige);
-	}
-
-	.title-brown {
-		color: var(--main-color-brown);
-	}
-
-	/* paragraphColor variants */
-
+	.title-green,
 	.paragraph-green {
 		color: var(--main-color-green);
 	}
 
+	.title-beige,
 	.paragraph-beige {
 		color: var(--main-color-beige);
 	}
 
+	.title-brown,
 	.paragraph-brown {
 		color: var(--main-color-brown);
 	}
 
 	/* Container Queries */
-	
+
 	/* Ipad mini */
 	@container slidecards (min-width: 37.5em) and (max-width: 50em) {
 		p {
