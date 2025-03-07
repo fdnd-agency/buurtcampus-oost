@@ -19,6 +19,9 @@ export async function load() {
 				}
 				imageCardAltText
 				buttonStyles
+				cardStyles
+				svgStyles
+				leafStyles
 			}
 			agendas {
 				cardImage {
