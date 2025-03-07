@@ -43,6 +43,7 @@
 					<div>
 						<address>{agenda.address}</address>
 						<span>{agenda.price}</span>
+						<time>{agenda.time}</time>
 						<time>{agenda.date}</time>
 						<Button
 							href="/contact"
