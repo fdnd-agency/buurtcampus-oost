@@ -60,7 +60,7 @@
 	/* Container Queries */
 	
 	/* Ipad mini */
-	@container slidecards (min-width: 37.5rem) and (max-width: 50rem) {
+	@container slidecards (min-width: 37.5em) and (max-width: 50em) {
 		p {
 			margin: 0.5em;
 			padding: 0.5em;
@@ -69,7 +69,7 @@
 	}
 
 	/* Ipad air and Ipad pro */
-	@container slidecards (min-width: 50rem) and (max-width: 64rem) {
+	@container slidecards (min-width: 50em) and (max-width: 64em) {
 		h2 {
 			max-width: 80%;
 			font-size: clamp(3rem, 5vw, 7rem);
@@ -81,7 +81,7 @@
 	}
 
 	/* Desktop */
-	@container slidecards (min-width: 64rem) {
+	@container slidecards (min-width: 64em) {
 		h2 {
 			width: 4em;
 			font-size: clamp(3em, 5vw, 6em);

@@ -8,7 +8,7 @@
 		{#each data.cardSlides as cardSlide}
 			<article class={cardSlide.cardStyles.backgroundColor}>
 				<header>
-					<CardslidesLeaf svgFill={cardSlide.leafSyles.svgFill} />
+					<CardslidesLeaf svgFill={cardSlide.leafStyles.svgFill} />
 					<Dot svgFill={cardSlide.svgStyles.svgFill} />
 					<CardslidesContent
 						titleCard={cardSlide.titleCard}
@@ -50,8 +50,8 @@
 	article {
 		align-items: center;
 		position: relative;
-		padding: 2em 1em;
-		bottom: 3em;
+		padding: 2rem 1rem;
+		bottom: 3rem;
 		margin: 0 auto;
 		z-index: 1;
 		overflow: hidden;
@@ -94,7 +94,7 @@
 	@container slidecards (min-width: 37.5rem) and (max-width: 50rem) {
 		header {
 			display: flex;
-			margin-top: 3em;
+			margin-top: 3rem;
 			align-items: flex-start;
 		}
 
@@ -103,8 +103,8 @@
 		}
 
 		.btn-container {
-			width: 14em;
-			margin: 0em 7em 0 1em;
+			width: 14rem;
+			margin: 0rem 7rem 0 1rem;
 		}
 	}
 
@@ -131,7 +131,7 @@
 
 		.btn-container {
 			width: 14em;
-			margin: 0em 7em 0 0;
+			margin: 0rem 7em 0 0;
 		}
 	}
 
@@ -143,15 +143,15 @@
 		}
 
 		article {
-			padding: 2em 1em;
+			padding: 2rem 1rem;
 			width: 95vw;
 			display: grid;
 			grid-template-columns: 2fr 2fr;
 		}
 
 		article::before {
-			width: 26em;
-			height: 26em;
+			width: 26rem;
+			height: 26rem;
 		}
 
 		article picture {
@@ -164,12 +164,12 @@
 
 		img {
 			height: 100%;
-			width: 32em;
+			width: 32rem;
 		}
 
 		.btn-container {
-			width: 14em;
-			margin: 0em 7em 0 4em;
+			width: 14rem;
+			margin: 0rem 7rem 0 4rem;
 		}
 	}
 
